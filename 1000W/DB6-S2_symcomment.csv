@@ -1,0 +1,48 @@
+(*((volatile unsigned char  *)0xA000)),40960,P0OUT,0
+(*((volatile unsigned char  *)0xA010)),40976,P0IN,0
+flg_SCI0.bits.bit5       ,1868,bflg_SCI0_rx_busy,0
+flg_fault.bits.bit2      ,1584,bflg_trip_stop,0
+flg_ctrl.bits.bit2  ,768,bflg_running,0
+flg_ctrl.bits.bit0  ,768,bflg_askfor_run,0
+flg_delaytime.bits.bit4  ,772,bflg_stop_space_delaytime,0
+flg_PWM.bits.bit15      ,824,bflg_bootstrap_charger_finish,0
+flg_ctrl.bits.bit1  ,768,bflg_askfor_stop,0
+flg_ctrl.bits.bit6  ,768,bflg_Current_Direction,0
+flg_prot.bits.bit11,1592,bflg_prot_Udc_LU,0
+flg_SCI0.bits.bit7       ,1484,bflg_SCI0_fault,0
+flg_fault.bits.bit4      ,1384,bflg_trip_lock,0
+flg_fault.bits.bit3      ,1384,bflg_trip_clear,0
+(*((volatile unsigned char  *)0xA005)),40965,P5OUT,0
+(*((volatile unsigned char  *)0xA015)),40981,P5IN,0
+((*((volatile unsigned char  *)0xA015)) & 0x02)   ,40981,SPRY_PIN_LEVEL,0
+flg_fault.bits.bit0,1388,bflg_Idc_fault,0
+flg_Hall.bits.bit5,1044,bflg_Hall_fault,0
+flg_Hall.bits.bit6,1044,bflg_Hall_error,0
+flg_PWM.bits.bit0   ,824,bflg_askfor_calc_outpercent,0
+flg_ctrl.bits.bit7  ,768,bflg_fan_running,0
+flg_Hall.bits.bit3,1044,bflg_actual_direction,0
+(((*((volatile unsigned char  *)0xA010)) & 0x04) >> 2)     ,40976,ALM_PIN_LEVEL,0
+(((*((volatile unsigned char  *)0xA010)) & 0x04) >> 3)     ,40976,ALM_PIN_LEVEL,0
+(((*((volatile unsigned char  *)0xA010)) & 0x08) >> 3)     ,40976,ALM_PIN_LEVEL,0
+flg_prot.bits.bit0,1460,bflg_prot_ALM,0
+((((*((volatile unsigned char  *)0xA015)) & 0x01) << 2) | ((*((volatile unsigned char  *)0xA014)) & 0x03))  ,40981,HALL_PIN,0
+(((*((volatile unsigned char  *)0xA012)) & 0x10) >> 3) | (((*((volatile unsigned char  *)0xA012)) & 0x02) >> 1)  ,40978,COMM_ADDRESS,0
+((~(*((volatile unsigned char  *)0xA012)) & 0x10) >> 3) | ((~(*((volatile unsigned char  *)0xA012)) & 0x02) >> 1)  ,40978,COMM_ADDRESS,0
+flg_fault.bits.bit1,1424,bflg_Tm_fault,0
+flg_delaytime.bits.bit5  ,772,bflg_powerup_delaytime,0
+flg_SCI0.bits.bit8       ,1520,bflg_SCI0_type_ok,0
+(unsigned char *)1,768,MOTOR_ID_MAX,0
+flg_Hall.bits.bit7,1012,bflg_prot_Hall_direction,0
+flg_prot.bits.bit6,1424,bflg_prot_Iout_decfreq,0
+flg_prot.bits.bit14,1424,bflg_prot_Tm_decfreq,0
+(*((volatile unsigned short *)0xA514)),42260,TCMP0A,0
+(*((volatile unsigned short *)0xA50C)),42252,PWMSEL0,0
+(*((volatile unsigned short *)0xA6E0)),42720,AN1BUFB0,0
+(*((volatile unsigned short *)0xA6B0)),42672,AN1BUF00,0
+(unsigned char *)0,0,MOTOR_p,0
+(((*((volatile unsigned char  *)0xA010)) & 0x01) >> 1)     ,40976,SPRY_PIN_LEVEL,0
+(((*((volatile unsigned char  *)0xA010)) & 0x01))     ,40976,SPRY_PIN_LEVEL,0
+flg_prot.bits.bit2,1424,bflg_prot_Iout_POC,0
+flg_prot.bits.bit3,1424,bflg_prot_Iout_OC,0
+flg_ctrl.bits.bit4  ,768,bflg_free_stop,0
+flg_Hall.bits.bit2,1012,bflg_no_direction,0

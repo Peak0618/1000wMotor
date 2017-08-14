@@ -1,0 +1,4 @@
+Address_Area  = 40000000-40006321
+Write_Address = 40006322
+CRC_Value     = D7BD
+CRC_Type      = CRC16-LSB

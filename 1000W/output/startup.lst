@@ -1,0 +1,554 @@
+                                             startup.lst	Page 1
+***   PanaX Series MN103S/MN103L Cross Assembler   ***
+Loc       Object            Line        Source
+
+                              1  	
+                              2  	;-- #include files  ------------------
+                              3  	
+                              4  	;-- #define macro definition    ------------------
+                              5  	;--       valid only in this file
+                              6  	;control registers
+                              7  	
+                              8  	P6OUT	 equ  0x0000A006
+                              9  	
+                              10  	IVAR0   equ 0x00008000
+                              11  	IVAR1   equ 0x00008004
+                              12  	IVAR2   equ 0x00008008
+                              13  	IVAR3   equ 0x0000800c
+                              14  	IVAR4   equ 0x00008010
+                              15  	IVAR5   equ 0x00008014
+                              16  	IVAR6   equ 0x00008018
+                              17  	
+                              18  	CPUM    equ 0x00008040
+                              19  	ROMCTR  equ 0x00008078
+                              20  	NMICR   equ 0x00008900
+                              21  	IAGR    equ 0x00008a00
+                              22  	CKCTR   equ 0x00008280
+                              23  	OSCCNT	equ 0x0000A800
+                              24  	OSCLOCK	equ 0x0000A804
+                              25  	PCNT    equ 0x0000AFF2
+                              26  	
+                              27  	IRQ_DISABLE   equ 0x0000      ;IRQ disable (set mask level 0) 0x0700
+                              28  	RAM_SIZE      equ 0x1000      ;MASK  RAM size 4K byte
+                              29  	STACK_SIZE    equ 0x300       ;stack size 768 byte
+                              30  	START_VECTOR  equ 0x40000000
+                              31  	OSC_SEL       equ 0x0000      ; operation clock select : 0x0000 = Internal oscillation  0x0002 = External oscillation
+                              32  	PLL_SEL       equ 0x0000      ; PLL multiply select   : 0x0000= 4 multiply , 0x0001= 6multiply, 0x0002= 8 multiply
+                              33  	MCLK_SEL      equ 0x0003      ; MCLK frequency select : 0x0001= 1/4, 0x0002= 1/2, 0x0003= 1/1
+                              34  	IOCLK_SEL     equ 0x0030      ; IOCLK frequency select: 0x0010= 1/8, 0x0020= 1/4, 0x0030= 1/2
+                              35  	WAIT_200US    equ 200         ; Plase select 0.0002 * (oscillating frequency /2) / 5.
+                              36  	                              ; (WARNING :It might actually take time more than 200us by the alignment.)
+                              37  	
+                              38  	;-- function prototype declaration  ------------------
+                              39  	;--       valid only in this file
+                              40  	  global  _main, _0main, _irq_vct_tbl
+                              41  	  global  _enable_irq, _0enable_irq
+                              42  	  global  _disable_irq, _0disable_irq
+                              43  	  global  _set_imask, _0set_imask
+                              44  	  global  _irq_group00
+                              45  	  ;将自定义的汇编语言函数声明为全局函数
+                              46  	  global  _dmuls_h,_0dmuls_h
+                              47  	  global  _dmuls_l,_0dmuls_l
+                              48  	  
+                              49  	  global  _dmulu_h,_0dmulu_h
+                              50  	  global  _dmulu_l,_0dmulu_l
+                              51  	
+                              52  	;-- RAM/structure declaration   ------------------
+                              53  	;--       valid only in this file
+                              54  	;section
+                              55  	.text            SECTION "ax",PROGBITS,PUBLIC  ;text area
+                              56  	.rodata          SECTION "a",PROGBITS,PUBLIC ;constant area
+                              57  	           align 4
+                              58  	.MN.data         SECTION "aw",NOBITS,PUBLIC  ;initialized data area
+                              59  	           align 4
+                              60  	.MN.romdata      SECTION "a",PROGBITS,PUBLIC ;ROM data area
+                              61  	           align 4
+                              62  	.MN.romdataend   SECTION "a",NOBITS,PUBLIC ;end of ROM data area
+                              63  	           align 4
+                              64  	.bss             SECTION "aw",NOBITS,PUBLIC  ;non-initialized external data area
+                              65  	           align 4
+                              66  	.MN.bssend       SECTION "aw",NOBITS,PUBLIC  ;end of non-initialized data area
+                              67  	           align 4
+                              68  	
+                              69  	
+                              70  	.text  SECTION
+                              71  	
+                              72  	;stack define
+                              73  	.bss    SECTION "aw", NOBITS,PUBLIC
+                              74  	  ALIGN 4
+                              75  	
+00000000                      76  	stack   ds  STACK_SIZE
+00000300                      77  	stack_end
+                              78  	
+                              79  	;---------------------------------------------------------------------------------------------------
+                              80  	;---------------------------------------------------------------------------------------------------
+                              81  	
+                              82  	.text   SECTION "ax", PROGBITS,PUBLIC
+                              83  	    ALIGN 1
+00000000                      84  	_reset              ;branch here after reset (set 0x40000000 when linking!)
+00000000  DC00000000        + 85  	    jmp _start
+                              86  	
+                              87  	    offset  0x00000008      ;branch when NMI occurs (set 0x40000008 when linking!)
+                              88  	
+                              89  	;---------------------------------------------------------------------------------------------------
+                              90  	;-  Function name   : usr_nmi, irq_lev0-6
+                              91  	;-  Content : interrupt vector control
+                              92  	;-      : 
+                              93  	;-
+                              94  	;-  argument    : none
+                              95  	;-      : 
+                              96  	;-
+                              97  	;-  Return value    : none
+                              98  	;-      : 
+                              99  	;-
+                              100  	;-  Date/Author : 
+                              101  	;-  Change Log  : 
+                              102  	;-      : 
+                              103  	;---------------------------------------------------------------------------------------------------
+                              104  	;-- NMI program ------------------------------------------------------------------------------------
+00000008                      105  	usr_nmi   
+00000008  CF08                106  	    movm  [other],(sp)      ;back up of d0,d1,a0,a1,mdr,lir,lar
+                              107  	
+0000000a  F6F0                108  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+0000000c  4200                109  	    mov d0,(sp)             ;d0 -> stack
+0000000e  F8FEFC              110  	    add -4,sp               ;sp - 4 -> sp  
+                              111  	      
+00000011  380089              112  	    movhu (NMICR),d0        ;NMI detection
+00000014  F8E007              113  	    and 0x0007,d0           ;NMI?
+00000017  C800              + 114  	    beq endnmi
+00000019  FCDC00000000      + 115  	    mov _irq_group00,a0     ;
+0000001f  F0F0                116  	    calls (a0)
+00000021                      117  	endnmi    
+00000021  FCCCFFFF0000        118  	    mov 0x0000ffff,d0       ;clear ID
+00000027  030089              119  	    movhu d0,(NMICR)        ;clear NMI factor flag
+0000002a  380089              120  	    movhu (NMICR),d0        ;read as dummy
+                              121  	
+0000002d  F8FE04              122  	    add 4,sp                ;sp + 4 -> sp
+00000030  5800                123  	    mov (sp),d0             ;stack -> d0
+00000032  F500                124  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              125  	    
+00000034  CE08                126  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+00000036  F0FD                127  	    rti                     ;end of NMI
+                              128  	
+                              129  	;-- Lv.0 -------------------------------------------------------------------------------------------
+00000038                      130  	irq_lev0            ;branch here when interruption at level 0. set this address to (IVAR0).
+00000038  CF08                131  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              132  	
+0000003a  F6F0                133  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+0000003c  4200                134  	    mov d0,(sp)             ;d0 -> stack
+0000003e  F8FEFC              135  	    add -4,sp               ;sp - 4 -> sp 
+                              136  	
+00000041  38008A              137  	    movhu (IAGR),d0     ;read group number
+00000044  F8E07C              138  	    and 0x007c,d0
+00000047  FCDC00000000      + 139  	    mov _irq_vct_tbl,a0
+0000004d  F380                140  	    mov (d0,a0),a0
+0000004f  F0F0                141  	    calls (a0)        ;call interrupt hundler of each group
+                              142  	
+00000051  F8FE04              143  	    add 4,sp                ;sp + 4 -> sp
+00000054  5800                144  	    mov (sp),d0             ;stack -> d0
+00000056  F500                145  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              146  	
+00000058  CE08                147  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+0000005a  F0FD                148  	    rti
+                              149  	
+                              150  	;-- Lv.1 -------------------------------------------------------------------------------------------
+0000005c                      151  	irq_lev1            ;branch here when interruption at level 1. set this address to (IVAR1).
+0000005c  CF08                152  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              153  	
+0000005e  F6F0                154  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+00000060  4200                155  	    mov d0,(sp)             ;d0 -> stack
+00000062  F8FEFC              156  	    add -4,sp               ;sp - 4 -> sp 
+                              157  	
+00000065  38008A              158  	    movhu (IAGR),d0     ;read group number
+00000068  F8E07C              159  	    and 0x007c,d0
+0000006b  FCDC00000000      + 160  	    mov _irq_vct_tbl,a0
+00000071  F380                161  	    mov (d0,a0),a0
+00000073  F0F0                162  	    calls (a0)        ;call interrupt hundler of each group
+                              163  	
+00000075  F8FE04              164  	    add 4,sp                ;sp + 4 -> sp
+00000078  5800                165  	    mov (sp),d0             ;stack -> d0
+0000007a  F500                166  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              167  	
+0000007c  CE08                168  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+0000007e  F0FD                169  	    rti
+                              170  	
+                              171  	;-- Lv.2 -------------------------------------------------------------------------------------------
+00000080                      172  	irq_lev2            ;branch here when interruption at level 2. set this address to (IVAR2).
+00000080  CF08                173  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              174  	
+00000082  F6F0                175  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+00000084  4200                176  	    mov d0,(sp)             ;d0 -> stack
+00000086  F8FEFC              177  	    add -4,sp               ;sp - 4 -> sp 
+                              178  	
+00000089  38008A              179  	    movhu (IAGR),d0     ;read group number
+0000008c  F8E07C              180  	    and 0x007c,d0
+0000008f  FCDC00000000      + 181  	    mov _irq_vct_tbl,a0
+00000095  F380                182  	    mov (d0,a0),a0
+00000097  F0F0                183  	    calls (a0)        ;call interrupt hundler of each group
+                              184  	
+00000099  F8FE04              185  	    add 4,sp                ;sp + 4 -> sp
+0000009c  5800                186  	    mov (sp),d0             ;stack -> d0
+0000009e  F500                187  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              188  	
+000000a0  CE08                189  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+000000a2  F0FD                190  	    rti
+                              191  	
+                              192  	;-- Lv.3 -------------------------------------------------------------------------------------------
+000000a4                      193  	irq_lev3            ;branch here when interruption at level 3. set this address to (IVAR3).
+000000a4  CF08                194  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              195  	
+000000a6  F6F0                196  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+000000a8  4200                197  	    mov d0,(sp)             ;d0 -> stack
+000000aa  F8FEFC              198  	    add -4,sp               ;sp - 4 -> sp 
+                              199  	
+000000ad  38008A              200  	    movhu (IAGR),d0     ;read group number
+000000b0  F8E07C              201  	    and 0x007c,d0
+000000b3  FCDC00000000      + 202  	    mov _irq_vct_tbl,a0
+000000b9  F380                203  	    mov (d0,a0),a0
+000000bb  F0F0                204  	    calls (a0)        ;call interrupt hundler of each group
+                              205  	
+000000bd  F8FE04              206  	    add 4,sp                ;sp + 4 -> sp
+000000c0  5800                207  	    mov (sp),d0             ;stack -> d0
+000000c2  F500                208  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              209  	
+000000c4  CE08                210  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+000000c6  F0FD                211  	    rti
+                              212  	
+                              213  	;-- Lv.4 -------------------------------------------------------------------------------------------
+000000c8                      214  	irq_lev4            ;branch here when interruption at level 4. set this address to (IVAR4).
+000000c8  CF08                215  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              216  	
+000000ca  F6F0                217  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+000000cc  4200                218  	    mov d0,(sp)             ;d0 -> stack
+000000ce  F8FEFC              219  	    add -4,sp               ;sp - 4 -> sp 
+                              220  	
+000000d1  38008A              221  	    movhu (IAGR),d0     ;read group number
+000000d4  F8E07C              222  	    and 0x007c,d0
+000000d7  FCDC00000000      + 223  	    mov _irq_vct_tbl,a0
+000000dd  F380                224  	    mov (d0,a0),a0
+000000df  F0F0                225  	    calls (a0)        ;call interrupt hundler of each group
+                              226  	
+000000e1  F8FE04              227  	    add 4,sp                ;sp + 4 -> sp
+000000e4  5800                228  	    mov (sp),d0             ;stack -> d0
+000000e6  F500                229  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              230  	
+000000e8  CE08                231  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+000000ea  F0FD                232  	    rti
+                              233  	
+                              234  	;-- Lv.5 -------------------------------------------------------------------------------------------
+000000ec                      235  	irq_lev5            ;branch here when interruption at level 5. set this address to (IVAR5).
+000000ec  CF08                236  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              237  	
+000000ee  F6F0                238  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+000000f0  4200                239  	    mov d0,(sp)             ;d0 -> stack
+000000f2  F8FEFC              240  	    add -4,sp               ;sp - 4 -> sp 
+                              241  	
+000000f5  38008A              242  	    movhu (IAGR),d0     ;read group number
+000000f8  F8E07C              243  	    and 0x007c,d0
+000000fb  FCDC00000000      + 244  	    mov _irq_vct_tbl,a0
+00000101  F380                245  	    mov (d0,a0),a0
+00000103  F0F0                246  	    calls (a0)        ;call interrupt hundler of each group
+                              247  	
+00000105  F8FE04              248  	    add 4,sp                ;sp + 4 -> sp
+00000108  5800                249  	    mov (sp),d0             ;stack -> d0
+0000010a  F500                250  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              251  	
+0000010c  CE08                252  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+0000010e  F0FD                253  	    rti
+                              254  	
+                              255  	;-- Lv.6 -------------------------------------------------------------------------------------------
+00000110                      256  	irq_lev6            ;branch here when interruption at level 6. set this address to (IVAR6).
+00000110  CF08                257  	    movm  [other],(sp)      ;back up d0,d1,a0,a1,mdr,lir,lar
+                              258  	
+00000112  F6F0                259  	    udf15 d0,d0             ;mdrq->d0 (udf15 = getx)  
+00000114  4200                260  	    mov d0,(sp)             ;d0 -> stack
+00000116  F8FEFC              261  	    add -4,sp               ;sp - 4 -> sp 
+                              262  	
+00000119  38008A              263  	    movhu (IAGR),d0     ;read group number
+0000011c  F8E07C              264  	    and 0x007c,d0
+0000011f  FCDC00000000      + 265  	    mov _irq_vct_tbl,a0
+00000125  F380                266  	    mov (d0,a0),a0
+00000127  F0F0                267  	    calls (a0)        ;call interrupt hundler of each group
+                              268  	
+00000129  F8FE04              269  	    add 4,sp                ;sp + 4 -> sp
+0000012c  5800                270  	    mov (sp),d0             ;stack -> d0
+0000012e  F500                271  	    udf20 d0,d0             ;d0 -> mdrq  (udf20 = putx)
+                              272  	
+00000130  CE08                273  	    movm  (sp),[other]      ;repair d0,d1,a0,a1,mdr,lir,lar
+00000132  F0FD                274  	    rti
+                              275  	
+                              276  	;---------------------------------------------------------------------------------------------------
+                              277  	;-  Function name : enable_irq, disable_irq, set_imask
+                              278  	;-  Content     : PSW control
+                              279  	;-          : If you change LV or IE flags of ICR register, make interrupts enabled after finishing the change of flags.
+                              280  	;-          : In manual, Wait exists to change value certainly by synchronizing store buffer.
+                              281  	;-          : But value changes certainly without synchronization because of enable() task
+                              282  	;-
+                              283  	;-  Argument    : none
+                              284  	;-          : 
+                              285  	;-
+                              286  	;-  Return value  : none
+                              287  	;-          : 
+                              288  	;-
+                              289  	;-  Date/Author   : 
+                              290  	;-  Change Log    : 
+                              291  	;-      : 
+                              292  	;---------------------------------------------------------------------------------------------------
+00000134                      293  	_enable_irq             ;PSW access
+                              294  	_0enable_irq  funcinfo _enable_irq,0,[]
+00000134  FAFD0008            295  	    or  0x0800,psw      ;enable all interrupt
+00000138  CB                  296  	    nop                 ;nop * 2 wait for loading to psw
+00000139  CB                  297  	    nop
+0000013a  DF0000              298  	    ret
+                              299  	
+0000013d                      300  	_disable_irq            ;PSW access
+                              301  	_0disable_irq   funcinfo _disable_irq,0,[]
+0000013d  FAFCFFF7            302  	    and 0xF7FF,psw      ;disable interrupt
+00000141  CB                  303  	    nop                 ;nop * 2 wait for loading to psw
+00000142  CB                  304  	    nop
+00000143  DF0000              305  	    ret
+                              306  	
+                              307  	;set interrupt level to register D0
+00000146                      308  	_set_imask            ;PSW access
+                              309  	_0set_imask funcinfo _set_imask,0,[]
+00000146  F2E5                310  	    mov psw,d1
+00000148  FAE1FFF8            311  	    and 0xf8ff,d1
+0000014c  F8E007              312  	    and 0x0007,d0
+0000014f  F8C008              313  	    asl 8,d0          ;bp10-bp8 = IM
+00000152  F211                314  	    or  d0,d1
+00000154  F2F7                315  	    mov d1,psw
+00000156  CB                  316  	    nop
+00000157  CB                  317  	    nop
+00000158  DF0000              318  	    ret
+                              319  	;---------------------------------------------------------------------------------------------------
+                              320  	;自定义的汇编语句的函数
+                              321  	;-----------------------------------------------------------
+                              322  	;有符号的32bit*32bit得到higher 32bit的程序
+0000015b                      323  	_dmuls_h
+                              324  	_0dmuls_h   funcinfo _dmuls_h,0,[]
+0000015b  F604                325  	   udf00 d1,d0   ; d0 * d1 -> mdr(higher 32bit), d1(lower 32bit)
+0000015d  F6F0                326  	   udf15 d0,d0   ; mdrq -> d0
+0000015f  F0FC                327  	   rts
+                              328  	;-----------------------------------------------------------
+                              329  	;有符号的32bit*32bit得到lower 32bit的程序   
+00000161                      330  	_dmuls_l
+                              331  	_0dmuls_l   funcinfo _dmuls_l,0,[]
+00000161  F604                332  	   udf00 d1,d0   ; d0 * d1 -> mdr(higher 32bit), d0(lower 32bit)
+00000163  F0FC                333  	   rts
+                              334  	;-----------------------------------------------------------
+                              335  	;无符号的32bit*32bit得到higher 32bit的程序
+00000165                      336  	_dmulu_h
+                              337  	_0dmulu_h   funcinfo _dmulu_h,0,[]
+00000165  F614                338  	   udf01 d1,d0   ; d0 * d1 -> mdr(higher 32bit), d1(lower 32bit)
+00000167  F6F0                339  	   udf15 d0,d0   ; mdrq -> d0
+00000169  F0FC                340  	   rts
+                              341  	;-----------------------------------------------------------
+                              342  	;无符号的32bit*32bit得到lower 32bit的程序   
+0000016b                      343  	_dmulu_l
+                              344  	_0dmulu_l   funcinfo _dmulu_l,0,[]
+0000016b  F614                345  	   udf01 d1,d0   ; d0 * d1 -> mdr(higher 32bit), d0(lower 32bit)
+0000016d  F0FC                346  	   rts
+                              347  	
+                              348  	;---------------------------------------------------------------------------------------------------
+                              349  	;-  Function name   : start
+                              350  	;-  Content : reset start
+                              351  	;-      : program initialize routine
+                              352  	;-
+                              353  	;-  Argument    : none
+                              354  	;-      : 
+                              355  	;-
+                              356  	;-  Return value    : none
+                              357  	;-      : 
+                              358  	;-
+                              359  	;-  Date/Author : 
+                              360  	;-  Change Log  : 
+                              361  	;-      : 
+                              362  	;---------------------------------------------------------------------------------------------------
+0000016f                      363  	_start
+                              364  	
+                              365  	;*--- init control registers ---*
+0000016f  00                  366  	    clr d0
+00000170  014080              367  	    mov d0,(CPUM)       ;CPUM NORMAL mode
+                              368  	
+00000173  2C0401              369  	    mov 0x0104,d0      ;40MHz ROMCTR 2 cycle access
+                              370  	    ;mov 0x0204,d0       ;60MHz ROMCTR 3 cycle access
+00000176  017880              371  	    mov d0,(ROMCTR)
+                              372  	
+                              373  	;*--- set Interrupt Enable Flag ---*
+00000179  8000                374  	    mov IRQ_DISABLE,d0      ;disable all interrupt
+0000017b  F2F3                375  	    mov d0,psw
+0000017d  CB                  376  	    nop
+0000017e  CB                  377  	    nop
+                              378  	
+                              379  	; set ivar
+0000017f  FCCC00000000      + 380  	    mov irq_lev0,d0     ;set interrupt vector register of level 0
+00000185  030080              381  	    movhu d0,(IVAR0)
+00000188  FCCC00000000      + 382  	    mov irq_lev1,d0     ;set interrupt vector register of level 1
+0000018e  030480              383  	    movhu d0,(IVAR1)
+00000191  FCCC00000000      + 384  	    mov irq_lev2,d0     ;set interrupt vector register of level 2
+00000197  030880              385  	    movhu d0,(IVAR2)
+0000019a  FCCC00000000      + 386  	    mov irq_lev3,d0     ;set interrupt vector register of level 3
+000001a0  030C80              387  	    movhu d0,(IVAR3)
+000001a3  FCCC00000000      + 388  	    mov irq_lev4,d0     ;set interrupt vector register of level 4
+000001a9  031080              389  	    movhu d0,(IVAR4)
+000001ac  FCCC00000000      + 390  	    mov irq_lev5,d0     ;set interrupt vector register of level 5
+000001b2  031480              391  	    movhu d0,(IVAR5)
+000001b5  FCCC00000000      + 392  	    mov irq_lev6,d0     ;set interrupt vector register of level 6
+000001bb  031880              393  	    movhu d0,(IVAR6)
+                              394  	
+                              395  	;*--- stack clear ---*
+000001be  FCDC00000000      + 396  	    mov stack+STACK_SIZE, a0    ;set stack pointer
+000001c4  F2F0                397  	    mov a0, sp
+                              398  	
+000001c6  F8FEFC              399  	    add -4, sp
+                              400  	    
+                              401  	;*--- oscillation setting---*
+000001c9  8000                402  	    mov OSC_SEL,d0        
+000001cb  A000                403  	    cmp 0,d0
+000001cd  C800              + 404  		  beq osc_ok
+000001cf  8500                405  	    mov 0x0000,d1     
+000001d1  0504A8              406  		  mov d1,(OSCLOCK)     ;Oscillation control register (OSCCNT) Writing enable
+000001d4  8001                407  	    mov 0x0001,d0     
+000001d6  0100A8              408  		  mov d0,(OSCCNT)      ; External oscillation feedback ON        
+000001d9  2DC800              409  		  mov WAIT_200US,d1    ;(1)The counter for the loop is set. 
+000001dc                      410  	ext_wait
+000001dc  FCC501000000        411  		  sub 1,d1             ;(2)The counter for the loop is decreased. 
+000001e2  C900              + 412  		  bne ext_wait         ;(3/1)(branched/not branched)It loops when the condition is unapproval.
+000001e4  CB                  413  		  nop                  ;(1)correction for branch.
+000001e5  CB                  414  	    nop                  ;(1)correction for branch.
+000001e6  F8E400              415  		  or OSC_SEL,d0        ;OSCSEL is selected.
+000001e9  0100A8              416  	 	  mov d0,(OSCCNT)      ;operation clock  to the External oscillation  
+000001ec                      417  	osc_ok
+000001ec  8501                418  	    mov 0x0001,d1     
+000001ee  0504A8              419  	    mov d1,(OSCLOCK)     ;Oscillation control register (OSCCNT) Writing disable
+000001f1  CB                  420  	    nop
+000001f2  CB                  421  	    nop   
+                              422  		  
+                              423  	;*--- clock setting---*
+                              424  	
+000001f3  8000                425  	    mov PLL_SEL,d0        ;PLL multiply ratio is selected.
+000001f5  03F2AF              426  	    movhu d0,(PCNT)       ;The setting is forwarded to the PCNT register.
+000001f8  2DC800              427  	    mov WAIT_200US,d1     ;(1)The counter for the loop is set. 
+000001fb                      428  	cloop
+000001fb  FCC501000000        429  	    sub 1,d1              ;(2)The counter for the loop is decreased. 
+00000201  C900              + 430  	    bne cloop             ;(3/1)(branched/not branched)It loops when the condition is unapproval.
+00000203  CB                  431  	    nop                   ;(1)correction for branch.
+00000204  CB                  432  	    nop                   ;(1)correction for branch.
+00000205  F8E420              433  	    or  0x0020,d0         ;(1)PLL output is selected.
+00000208  03F2AF              434  	    movhu d0,(PCNT)       ;The setting is forwarded to the PCNT register.
+0000020b  8030                435  	    mov IOCLK_SEL,d0      ;IOCLK is selected.
+0000020d  F8E403              436  	    or  MCLK_SEL,d0       ;MCLK is selected.
+00000210  F8E480              437  	    or  0x0080,d0         ;bit7-6 is set to 0x10.
+00000213  038082              438  	    movhu d0,(CKCTR)      ;The setting is forwarded to the CKCTR register.
+                              439  	
+                              440  	;*--- RAM clear ---*
+                              441  	;clear _BSS, _GBSS        ;clear RAM of non-initialized area
+00000216  2D0010              442  	    mov RAM_SIZE, d1      ;clear all RAM area
+00000219  A500                443  	    cmp 0, d1
+0000021b  C300              + 444  	    ble bc_skip           ;skip if there are no BSS,GBSS.
+                              445  	    
+0000021d  9000                446  	    mov 0, a0             ;address of top of RAM
+0000021f  00                  447  	    clr d0                ;clear register D0
+00000220                      448  	bc_loop
+00000220  60                  449  	    mov d0, (a0)          ;clear RAM
+00000221  50                  450  	    inc4  a0              ;address decrement(by 4 Byte)
+00000222  29FC                451  	    add -4, d1            ;update loop counter
+00000224  C100              + 452  	    bgt bc_loop           ;jump to bc_loop if it is not end of RAM area
+00000226                      453  	bc_skip
+                              454  	
+                              455  	;*--- RAM init ---*
+                              456  	; copy _ROMDATA, _GROMDATA -> _DATA, _GDATA ;
+00000226  FCCD00000000      + 457  	    mov .MN.romdataend - .MN.romdata,d1 ;set size of initialized data area
+0000022c  A500                458  	    cmp 0, d1
+0000022e  C300              + 459  	    ble dc_skip       ;skip if there are no initialized data
+                              460  	
+00000230  FCDC00000000      + 461  	    mov .MN.romdata, a0     ;top address of initialized data area
+00000236  FCDD00000000      + 462  	    mov .MN.data, a1      ;top address of initialized data area (destination)
+0000023c                      463  	dc_loop
+0000023c  70                  464  	    mov (a0), d0      ;read initialized data
+0000023d  50                  465  	    inc4  a0          ;address increment(by 4 Byte)
+0000023e  61                  466  	    mov d0, (a1)      ;write initialized data
+0000023f  51                  467  	    inc4  a1          ;address increment(by 4 Byte)
+00000240  29FC                468  	    add -4, d1        ;update loop counter
+00000242  C100              + 469  	    bgt dc_loop       ;jump to bc_loop if it is not end of RAM area
+                              470  	
+00000244                      471  	dc_skip
+00000244  00                  472  	    clr d0            ;clear register DO
+00000245  81                  473  	    mov d0, d1        ;clear register D1
+00000246  82                  474  	    mov d0, d2        ;clear register D2
+00000247  83                  475  	    mov d0, d3        ;clear register D3
+00000248  F1E0                476  	    mov d0, a0        ;clear register A0
+0000024a  F1E1                477  	    mov d0, a1        ;clear register A1
+0000024c  F1E2                478  	    mov d0, a2        ;clear register A2
+0000024e  F1E3                479  	    mov d0, a3        ;clear register A3
+00000250  DD000000000000    + 480  	    call  _0main        ;branch to main routine
+                              481  	
+00000257  CA00              + 482  	    bra dc_skip
+                              483  	
+                              484  	    end
+                                             startup.lst	Page 2
+*** Symbol Table ***
+Address/Value	Class	Section			  Symbol
+
+0000a006	L	(ABS)                     P6OUT
+00008000	L	(ABS)                     IVAR0
+00008004	L	(ABS)                     IVAR1
+00008008	L	(ABS)                     IVAR2
+0000800c	L	(ABS)                     IVAR3
+00008010	L	(ABS)                     IVAR4
+00008014	L	(ABS)                     IVAR5
+00008018	L	(ABS)                     IVAR6
+00008040	L	(ABS)                     CPUM
+00008078	L	(ABS)                     ROMCTR
+00008900	L	(ABS)                     NMICR
+00008a00	L	(ABS)                     IAGR
+00008280	L	(ABS)                     CKCTR
+0000a800	L	(ABS)                     OSCCNT
+0000a804	L	(ABS)                     OSCLOCK
+0000aff2	L	(ABS)                     PCNT
+00000000	L	(ABS)                     IRQ_DISABLE
+00001000	L	(ABS)                     RAM_SIZE
+00000300	L	(ABS)                     STACK_SIZE
+40000000	L	(ABS)                     START_VECTOR
+00000000	L	(ABS)                     OSC_SEL
+00000000	L	(ABS)                     PLL_SEL
+00000003	L	(ABS)                     MCLK_SEL
+00000030	L	(ABS)                     IOCLK_SEL
+000000c8	L	(ABS)                     WAIT_200US
+00000000	G				  _0main
+00000000	G				  _irq_vct_tbl
+00000134	G	.text                     _enable_irq
+00000134	G	.text                     _0enable_irq
+0000013d	G	.text                     _disable_irq
+0000013d	G	.text                     _0disable_irq
+00000146	G	.text                     _set_imask
+00000146	G	.text                     _0set_imask
+00000000	G				  _irq_group00
+0000015b	G	.text                     _dmuls_h
+0000015b	G	.text                     _0dmuls_h
+00000161	G	.text                     _dmuls_l
+00000161	G	.text                     _0dmuls_l
+00000165	G	.text                     _dmulu_h
+00000165	G	.text                     _0dmulu_h
+0000016b	G	.text                     _dmulu_l
+0000016b	G	.text                     _0dmulu_l
+00000000	L	.bss                      stack
+00000300	L	.bss                      stack_end
+00000000	L	.text                     _reset
+0000016f	L	.text                     _start
+00000008	L	.text                     usr_nmi
+00000021	L	.text                     endnmi
+00000038	L	.text                     irq_lev0
+0000005c	L	.text                     irq_lev1
+00000080	L	.text                     irq_lev2
+000000a4	L	.text                     irq_lev3
+000000c8	L	.text                     irq_lev4
+000000ec	L	.text                     irq_lev5
+00000110	L	.text                     irq_lev6
+000001ec	L	.text                     osc_ok
+000001dc	L	.text                     ext_wait
+000001fb	L	.text                     cloop
+00000226	L	.text                     bc_skip
+00000220	L	.text                     bc_loop
+00000244	L	.text                     dc_skip
+0000023c	L	.text                     dc_loop
