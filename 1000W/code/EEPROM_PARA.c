@@ -276,7 +276,7 @@ const int16_t App_para[][APP_PARA_CNT] =
         0,     //No.101  num_MOTOR_Lq
         0,     //No.102  num_MOTOR_EMF
         1800,  //No.103  num_MOTOR_max_n  单位：rpm
-        3300,  //No.104  num_MOTOR_CCW     起始相位角 单位：0.1度 
+        3300,  //No.104  num_MOTOR_CCW    起始相位角 单位：0.1度 
         3300,  //No.105  num_MOTOR_CW     起始相位角 单位：0.1度  
     },
     

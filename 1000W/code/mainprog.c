@@ -624,28 +624,28 @@ void timer_op(void) //定时处理子程序，用于处理所有的定时延时程序
 //------------------------------------------------------------------------------
 void fan_ctrl_deal(void)     //压缩机控制程序
 {
-	  if (bflg_running == 0)    //如果是停机状态
-	  {
-	  	  if ((bflg_powerup_delaytime == 0)&&(bflg_stop_space_delaytime == 0)
-	  	  	&& (bflg_trip_stop == 0)&&(bflg_trip_lock == 0)&& (SPRY_PIN_LEVEL == 1))    //如果停机延时到且无故障，且主继电器吸合
-	  	  {
-	  	  	  if (bflg_askfor_run == 1)   //如果请求运行，且设定频率不为0
-	  	  	  {
-	  	  	  	  if (bflg_bootstrap_charger == 0)  //如果未自举充电
-	  	  	  	  {
-	  	  	  	  	  bflg_bootstrap_charger = 1;   //置自举充电标志
-	  	  	  	  	  //----------------------------------------------------------
-	  	  	  	      //硬件保护开启
-	  	  	  	      if (ram_para[num_prot_ALM_cnt] == 0)    //如果参数设定计数次数为0
+    if (bflg_running == 0)    //如果是停机状态
+    {
+        if ((bflg_powerup_delaytime == 0)&&(bflg_stop_space_delaytime == 0)
+        && (bflg_trip_stop == 0)&&(bflg_trip_lock == 0)&& (SPRY_PIN_LEVEL == 1))    //如果停机延时到且无故障，且主继电器吸合
+        {
+            if (bflg_askfor_run == 1)   //如果请求运行，且设定频率不为0
+            {
+                if (bflg_bootstrap_charger == 0)  //如果未自举充电
+                {
+                    bflg_bootstrap_charger = 1;   //置自举充电标志
+                    //----------------------------------------------------------
+                    //硬件保护开启
+                    if (ram_para[num_prot_ALM_cnt] == 0)    //如果参数设定计数次数为0
                     {
-   	                    PWMOFF0B = 0x7026;//0xF026;//
-   	                    
-   	                    PWMOFF0B1 &= ~0x0001;     //清PRTBST0位，释放PWM0引脚硬件保护B功能
-   	                    PWMOFF0B |= 0x0001;
+                        PWMOFF0B = 0x7026;//0xF026;//
+
+                        PWMOFF0B1 &= ~0x0001;     //清PRTBST0位，释放PWM0引脚硬件保护B功能
+                        PWMOFF0B |= 0x0001;
                     }
                     else
                     {
-   	                    PWMOFF0B = 0x0000;        //计数次数不为0时，不用硬件保护
+                        PWMOFF0B = 0x0000;        //计数次数不为0时，不用硬件保护
                     }
                     //----------------------------------------------------------
                     //开启IRQ03外中断，用于ALM保护
@@ -657,166 +657,164 @@ void fan_ctrl_deal(void)     //压缩机控制程序
                     gss_bootstrap_charger_delaytimer = 0;
                     //----------------------------------------------------------
                     //霍尔信号相关处理
-                
+
                     //----------------------------------------------------------
                     //开启霍尔信号中断
                     *(unsigned char *)&G29ICR = 0x03;  //清除外中断IRQ09、IRQ08请求标志
                     *(unsigned char *)&G30ICR = 0x01;  //清除外中断IRQ10请求标志
-                    
+
                     G29ICR |= 0x0300;        //置外中断IRQ09、IRQ08使能标志
                     G30ICR |= 0x0100;        //置外中断IRQ10使能标志
                     //----------------------------------------------------------
-	  	  	  	  }
-	  	  	  	  else if (bflg_bootstrap_charger_delaytime == 0)  //如果自举充电完成
-	  	  	  	  {
-	  	  	  	  	  bflg_bootstrap_charger = 0;   //清自举充电标志
-	  	  	  	  	  //--------------------------------------
-	  	  	  	      bflg_fan_running = 1;   //置风机运行标志
-	  	  	  	      bflg_running = 1;       //置运行标志
-	  	  	  	      bflg_askfor_run = 0;
-	  	  	  	      
-	  	  	  	      bflg_theta_ctrl1 = 0;
-        	          bflg_theta_ctrl2 = 0;
-	  	  	  	      //----------------------------------------------------------
-	  	  	  	      //确定起始角度
-	  	  	  	      gus_Hall_value = HALL_PIN;    //得到霍尔信号值
-	                  gsc_Hall_sector = gsc_sector_table[gus_Hall_value];    //得到Hall区间
-	                  
-						    	  if (bflg_current_direction == 0)    //如果要求转向为逆时针
-						    	  {
-						    	      gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
-						            gul_theta.uword.low  = 0;
-						                                
-						            //gul_theta.word.high = theta.word.high;
-						    	  }
-						        else  //如果实际转向为顺时针
-						    	  {
-						    	  	  gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
-						            gul_theta.uword.low  = 0;
-						                                
-						            //gul_theta.word.high = theta.word.high;
-						    	  }    
+                }
+                else if (bflg_bootstrap_charger_delaytime == 0)  //如果自举充电完成
+                {
+                    bflg_bootstrap_charger = 0;   //清自举充电标志
+                    //--------------------------------------
+                    bflg_fan_running = 1;   //置风机运行标志
+                    bflg_running = 1;       //置运行标志
+                    bflg_askfor_run = 0;
+
+                    bflg_theta_ctrl1 = 0;
+                    bflg_theta_ctrl2 = 0;
+                    //----------------------------------------------------------
+                    //确定起始角度
+                    gus_Hall_value = HALL_PIN;    //得到霍尔信号值
+                    gsc_Hall_sector = gsc_sector_table[gus_Hall_value];    //得到Hall区间
+
+                    if (bflg_current_direction == 0)    //如果要求转向为逆时针
+                    {
+                        gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
+                        gul_theta.uword.low  = 0;
+
+                        //gul_theta.word.high = theta.word.high;
+                    }
+                    else  //如果实际转向为顺时针
+                    {
+                        gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
+                        gul_theta.uword.low  = 0;
+
+                        //gul_theta.word.high = theta.word.high;
+                    }    
                     gul_theta.uword.high += 300;
                     theta.ulword = gul_theta.ulword;
-                    						    	      
+
                     //gus_Hall_watchdog = 0;//debug
-    	  	  	  	  //--------------------------------------
-    	  	  	  	  //得到积分初值
-    	  	  	  	  gsl_FreqPI_integral = gsl_PI_initval;
-    	  	  	  	  //----------------------------------------------------------
-	  	  	  	      bflg_askfor_calc_outpercent = 1; //置请求计算输出调制率标志
-	  	  	  	      //----------------------------------------------------------
-	  	  	  	      open_pwm();             //开始PWM输出
-	  	  	  	      //--------------------------------------	  	  	  	      
-	  	  	  	      gus_freq_out = gus_freq_real;
-	  	  	  	      
-	  	  	  	      
-	  	  	  	  }
-	  	  	  }
-	  	  }
-	  }
-	  else  //如果是开机状态
-	  {
-	  	  if (bflg_hostComm_shutdown == 1)//上位机紧急停机命令
-	  	  {
-	  	  	  bflg_fan_running = 0;  //清风机运行标志
-	  	  	  
-	  	  	  bflg_running = 0;      //清除运行标志
-	  	  	  bflg_askfor_stop = 0;  //清请求停止标志
-	  	  	  
-	  	  	  shut_pwm();            //关闭PWM   	  	
-			  	  
-			  	  bflg_hostComm_shutdown = 0;
-			  	  bflg_stop_space_delaytime = 1;
-		        gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];		  	  	
-	  	  }
-	  	  else if (bflg_trip_stop == 1)   //如果是故障停机
-	  	  {
-	  	  	  bflg_fan_running = 0;  //清风机运行标志
-	  	  	  
-	  	  	  bflg_running = 0;      //清除运行标志
-	  	  	  bflg_askfor_stop = 0;  //清请求停止标志
-	  	  	  
-	  	  	  ///shut_pwm();            //关闭PWM(bflg_trip_stop置1函数中已经关闭PWM)
-	  	  	     
-	  	      //-----------------------------------
-	  	      if ((bflg_prot_Iout_OL == 1)||(bflg_prot_Iout_POC == 1) || (bflg_prot_Iout_OC == 1))
-	  	      {
-	  	      	  guc_Iout_fault_cnt++;
-	  	  	      if (guc_Iout_fault_cnt >= 5) 
-			  	  	  {
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
-			  	  	  }
-			  	  	  else
-			  	  	  {
-			  	          bflg_trip_clear = 1;
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = 2;//停机2s后重新启动	  	  	  	
-			  	  	  }		  	      	 
-	  	      }
-	  	      else if (bflg_prot_ALM == 1)
-	  	      {
-	  	      	  guc_ALM_fault_cnt++;
-			  	  	  if (guc_ALM_fault_cnt >= 3)
-			  	  	  {
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
-			  	  	  }
-			  	  	  else
-			  	  	  {
-			  	          bflg_trip_clear = 1;
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = 5;//停机2s后重新启动	  	  	  	
-			  	  	  }		  	      	   
-	  	      }	  	      
-	  	      else if (bflg_prot_motor_block == 1)
-	  	      {
-	  	      	  guc_motor_block_cnt++;
-			  	  	  if (guc_motor_block_cnt >= 5)
-			  	  	  {
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
-			  	  	  }
-			  	  	  else
-			  	  	  {
-			  	          bflg_trip_clear = 1;
-			  	          bflg_stop_space_delaytime = 1;
-		                gss_stop_space_delaytimer = 2;//停机2s后重新启动	  	  	  	
-			  	  	  }		  	      	   
-	  	      }
-	  	      else
-	  	      {
-			  	      bflg_stop_space_delaytime = 1;
-		            gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	      	
-	  	      } 
-	  	  }
-	  	  else if (bflg_askfor_stop == 1) //如果有请求停止标志
-	  	  {
-	  	  	  bflg_fan_running = 0;      //清风机运行标志
- 
-	  	  	  if (gus_freq_real <= ram_para[num_shut_freq])   //启动频率 debug
-	  	  	  {
-	  	  	  	  bflg_running = 0;       //清除运行标志
-	  	  	  	  bflg_askfor_stop = 0;   //清请求停止标志
-	  	  	  	  
-	  	  	  	  shut_pwm();             //关闭PWM
-	  	  	  	  
-	  	  	  	  bflg_stop_space_delaytime = 1;
+                    //--------------------------------------
+                    //得到积分初值
+                    gsl_FreqPI_integral = gsl_PI_initval;
+                    //----------------------------------------------------------
+                    bflg_askfor_calc_outpercent = 1; //置请求计算输出调制率标志
+                    //----------------------------------------------------------
+                    open_pwm();             //开始PWM输出
+                    //--------------------------------------	  	  	  	      
+                    gus_freq_out = gus_freq_real;
+                }
+            }
+        }
+    }
+    else  //如果是开机状态
+    {
+        if (bflg_hostComm_shutdown == 1)//上位机紧急停机命令
+        {
+            bflg_fan_running = 0;  //清风机运行标志
+
+            bflg_running = 0;      //清除运行标志
+            bflg_askfor_stop = 0;  //清请求停止标志
+
+            shut_pwm();            //关闭PWM   	  	
+
+            bflg_hostComm_shutdown = 0;
+            bflg_stop_space_delaytime = 1;
+            gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];		  	  	
+        }
+        else if (bflg_trip_stop == 1)   //如果是故障停机
+        {
+            bflg_fan_running = 0;  //清风机运行标志
+
+            bflg_running = 0;      //清除运行标志
+            bflg_askfor_stop = 0;  //清请求停止标志
+
+            ///shut_pwm();            //关闭PWM(bflg_trip_stop置1函数中已经关闭PWM)
+
+            //-----------------------------------
+            if ((bflg_prot_Iout_OL == 1)||(bflg_prot_Iout_POC == 1) || (bflg_prot_Iout_OC == 1))
+            {
+                guc_Iout_fault_cnt++;
+                if (guc_Iout_fault_cnt >= 5) 
+                {
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
+                }
+                else
+                {
+                    bflg_trip_clear = 1;
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = 2;//停机2s后重新启动	  	  	  	
+                }		  	      	 
+            }
+            else if (bflg_prot_ALM == 1)
+            {
+                guc_ALM_fault_cnt++;
+                if (guc_ALM_fault_cnt >= 3)
+                {
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
+                }
+                else
+                {
+                    bflg_trip_clear = 1;
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = 5;//停机2s后重新启动	  	  	  	
+                }		  	      	   
+            }	  	      
+            else if (bflg_prot_motor_block == 1)
+            {
+                guc_motor_block_cnt++;
+                if (guc_motor_block_cnt >= 5)
+                {
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	  	  	
+                }
+                else
+                {
+                    bflg_trip_clear = 1;
+                    bflg_stop_space_delaytime = 1;
+                    gss_stop_space_delaytimer = 2;//停机2s后重新启动	  	  	  	
+                }		  	      	   
+            }
+            else
+            {
+                bflg_stop_space_delaytime = 1;
+                gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];	  	      	
+            } 
+        }
+        else if (bflg_askfor_stop == 1) //如果有请求停止标志
+        {
+            bflg_fan_running = 0;      //清风机运行标志
+
+            if (gus_freq_real <= ram_para[num_shut_freq])   //启动频率 debug
+            {
+                bflg_running = 0;       //清除运行标志
+                bflg_askfor_stop = 0;   //清请求停止标志
+
+                shut_pwm();             //关闭PWM
+
+                bflg_stop_space_delaytime = 1;
                 gss_stop_space_delaytimer = ram_para[num_stop_space_delaytime];
-	  	  	  }
-	  	  }
-	  	  else 
-	  	  {
-		        if ((bflg_current_direction == bflg_actual_direction)
-		        	&& (gus_freq_out >= 500)&&(gus_freq_real >= 500))//ram_para[num_min_freq]))
-		        {
-		     	      guc_motor_block_cnt = 5;
-		    	      guc_Iout_fault_cnt = 5;
-		    	      guc_ALM_fault_cnt = 3;	
-		        } 	  	  	
-	  	  }
-	  }
+            }
+        }
+        else 
+        {
+            if ((bflg_current_direction == bflg_actual_direction)
+            && (gus_freq_out >= 500)&&(gus_freq_real >= 500))//ram_para[num_min_freq]))
+            {
+                guc_motor_block_cnt = 5;
+                guc_Iout_fault_cnt = 5;
+                guc_ALM_fault_cnt = 3;	
+            } 	  	  	
+        }
+    }
 }
 //------------------------------------------------------------------------------
 void freq_ctrl_deal(void)     //频率控制程序
@@ -1062,7 +1060,7 @@ void trip_lampblink_deal(void)     //故障灯闪烁程序,在10ms定时任务中调用
         if (gus_trip_flash_count > 0)   //如果闪烁次数已经减到零，则开始3秒间隔延时
         {
             gus_trip_flash_timer++;
-            if (gus_trip_flash_timer >= 30)  //每0.30秒闪烁一次
+            if (gus_trip_flash_timer >= 30)  //每0.30秒闪烁一次 //PEAK 原来30
             {
                 gus_trip_flash_timer = 0;
                 NOT_TRIP_LAMP_PIN;

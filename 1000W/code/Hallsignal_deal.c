@@ -34,15 +34,15 @@ flag_type flg_Hall;
 uint16_t  PhaseValues_CCW[6]; //逆时针旋转，正弦波驱动时的区间对应的起始相位角
 uint16_t  PhaseValues_CW[6];  //顺时针旋转，正弦波驱动时的区间对应的起始相位角
 //------------------------------------------------------------------------------
-const int8_t gsc_sector_table[] = {-1, 0, 2, 1, 4, 5, 3, -1};    //霍尔信号区间表
+const int8_t gsc_sector_table[] = {-1, 0, 2, 1, 4, 5, 3, -1};    //霍尔信号区间表 //peak只能是120°安装，
 
 lword_type Hall_trigger_time;      //霍尔信号触发时刻寄存器
 
 uint32_t  gul_Hall_trigger;        //霍尔信号触发器
 uint32_t  gul_Hall_past_trigger;   //上次霍尔信号触发器
 
-uint32_t  gul_Hall_delt_trigger;
-uint32_t  gul_Hall_past_delt_trigger;
+uint32_t  gul_Hall_delt_trigger;        //peak本次霍尔信号间隔时间，其实就是定时器的计数值
+uint32_t  gul_Hall_past_delt_trigger;   //peak上一次霍尔信号的时间间隔，.......
 uint32_t  gul_Hall_delt_trigger_buffer; //霍尔信号时间差缓冲器
 
 uint16_t  gus_Hall_value;          //霍尔信号触发值
@@ -62,13 +62,13 @@ uint16_t  gus_same_HV_cnt;
 uint16_t  gus_same_HW_cnt;
 uint16_t  gus_Hall_same_cnt;
 
-uint16_t  gus_stall_rate;
+uint16_t  gus_stall_rate;    //peak失速率
 
 //f=1/T=1/6*detl_t=1/(6*delt_cnt/20M)=(20M/6)/delt_cnt  (Hz)=[(20M/6)/delt_cnt]*100 (0.01Hz)
 #define   FREQ_FACTOR    ((20000000 / 6) * 100)    //计算当前频率的计算因子 (精确到0.01Hz)
 
-uint16_t  gus_Hall_freq;
-uint16_t  gus_Hall_freq_mod;
+uint16_t  gus_Hall_freq;     //peak通过一次霍尔变化滤波后得到的频率（类似实时）
+uint16_t  gus_Hall_freq_mod; //peak滤波后的....................余数
 
 uint16_t  gus_Hall_speed;
 
@@ -76,11 +76,11 @@ uint16_t  gus_sensor_startup_timer; //开机测速阶段计时器
 //------------------------------------------------------------------------------
 uint16_t  gus_avr_realfreq_cnt;
 uint32_t  gul_avr_realfreq_sum;
-uint16_t  gus_avr_realfreq;
+uint16_t  gus_avr_realfreq;         //peak 通过一个机械周期的方式得到的平均频率
 
-uint16_t  gus_freq_array_len; //实际频率数组长度
+uint16_t  gus_freq_array_len;      //实际频率数组长度 peak转子转一个机械周期，定子经历多少个霍尔信号的变动
 
-uint16_t  gus_realfreq_array[50]; //用于计算频率平均值的数组
+uint16_t  gus_realfreq_array[50];  //用于计算频率平均值的数组
 //------------------------------------------------------------------------------
 uint16_t  gus_motor_overspeed;     //电机超速频率
 
@@ -103,7 +103,12 @@ void Hall_configure(void)     //霍尔信号口配置
     //--------------------------------------------------------------------------
     //reg_bit  |  7   |  6   |  5   |  4   |  3   |  2   |  1   |  0   |  
     // flag    |  -   |  -   | IR1  | IR1  |  -   |  -   | ID1  | ID0  | 
-    //at reset |  0   |  0   |  0   |  0   |  0   |  0   |  0   |  0   |
+    //at reset |  0   |  0   |  0   |  0   |  0   |  0   |  0   |  0   | 
+    //--------------------------------------------------------------------------
+    // peak:  ID Interrupt detected
+    //        IR Interrupt request
+    //        IE Enabled
+    //        LV Set an interrupt level
     //--------------------------------------------------------------------------
     G5ICR = 0x0000;      //禁止timer5,timer4下溢中断
     G6ICR = 0x0000;      //禁止timer7,timer6下溢中断
@@ -228,7 +233,7 @@ void Hall_configure(void)     //霍尔信号口配置
     //at reset |  0   |  0   |  0   |  0   |  0   |  0   |  0   |  0   |
     //--------------------------------------------------------------------------
     //reg_bit  |  7   |  6   |  5   |  4   |  3   |  2   |  1   |  0   |  
-    // flag    |  -   |  -   | -    |  -  |  P41NFCK1~0 |  P40NFCK1~0 | 
+    // flag    |  -   |  -   | -    |  -   |  P41NFCK1~0 |  P40NFCK1~0 | 
     //at reset |  0   |  0   |  0   |  0   |  0   |  0   |  0   |  0   |
     //--------------------------------------------------------------------------
     NFCLK2 = 0x000F;     //P40,P41 选择 1/32 IOCLK
@@ -321,55 +326,62 @@ void Hall_configure(void)     //霍尔信号口配置
     //ID1~ID0 : 中断检测标志     
     //--------------------------------------------------------------------------
     G30ICR = 0x1000;     //霍尔信号的中断优先级设为1 (仅低于ALM)
-	  //--------------------------------------------------------------------------
-	  guc_motor_ID = 0;    //初始化电机ID号为0
-	  motor_var_init();    //电机相关变量程序化
+    //--------------------------------------------------------------------------
+    guc_motor_ID = 0;    //初始化电机ID号为0
+    motor_var_init();    //电机相关变量程序化
 }
 //------------------------------------------------------------------------------
 void motor_var_init(void)     //电机相关变量程序化，在Hall初始化和通讯ID变更程序中调用
 {
-	  uint32_t lul_tmp;
+    uint32_t lul_tmp;
     
     //--------------------------------------------------------------------------
     //确定正弦波驱动逆时针旋转每个霍尔信号区间的起始相位角
-    PhaseValues_CCW[0] = ram_para[num_MOTOR_CCW];//motor_para[guc_motor_ID][MOTOR_CCW];
-    PhaseValues_CCW[1] = ((PhaseValues_CCW[0] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
-    PhaseValues_CCW[2] = ((PhaseValues_CCW[1] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
-    PhaseValues_CCW[3] = ((PhaseValues_CCW[2] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
-    PhaseValues_CCW[4] = ((PhaseValues_CCW[3] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
-    PhaseValues_CCW[5] = ((PhaseValues_CCW[4] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
+    PhaseValues_CCW[0] = ram_para[num_MOTOR_CCW];//motor_para[guc_motor_ID][MOTOR_CCW];     //peak 330 0
+    PhaseValues_CCW[1] = ((PhaseValues_CCW[0] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4); //     30 0
+    PhaseValues_CCW[2] = ((PhaseValues_CCW[1] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4); //     90 0
+    PhaseValues_CCW[3] = ((PhaseValues_CCW[2] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4); //     150 0
+    PhaseValues_CCW[4] = ((PhaseValues_CCW[3] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4); //     210 0
+    PhaseValues_CCW[5] = ((PhaseValues_CCW[4] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4); //     270 0
     //--------------------------------------------------------------------------
     //确定正弦波驱动顺时针旋转每个霍尔信号区间的起始相位角
-    PhaseValues_CW[0]= ram_para[num_MOTOR_CW];//motor_para[guc_motor_ID][MOTOR_CW];
-    PhaseValues_CW[5]= ((PhaseValues_CW[0] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
-    PhaseValues_CW[4]= ((PhaseValues_CW[5] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
+    PhaseValues_CW[0]= ram_para[num_MOTOR_CW];//motor_para[guc_motor_ID][MOTOR_CW];         // 330 0
+    PhaseValues_CW[5]= ((PhaseValues_CW[0] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);    // 30  0
+    PhaseValues_CW[4]= ((PhaseValues_CW[5] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);    // 90  0
     PhaseValues_CW[3]= ((PhaseValues_CW[4] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
     PhaseValues_CW[2]= ((PhaseValues_CW[3] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);
     PhaseValues_CW[1]= ((PhaseValues_CW[2] + SIN_TAB_LENGTH_4 / 6) % SIN_TAB_LENGTH_4);	 
-	  //--------------------------------------------------------------------------
-	  //频率平均数个数=电机极对数*电周期Hall数*圈数
-	  gus_freq_array_len = ram_para[num_MOTOR_p] * 6 * 1;//motor_para[guc_motor_ID][MOTOR_p]
-	  for (gus_avr_realfreq_cnt = 0; gus_avr_realfreq_cnt < 50; gus_avr_realfreq_cnt++)
-	  {
-	  	   gus_realfreq_array[gus_avr_realfreq_cnt] = 0;
-	  }
-	  gus_avr_realfreq_cnt = 0;
-	  //--------------------------------------------------------------------------
-	  //Hall故障检测信号相同次数=电机极对数*电周期Hall数*圈数
-	  gus_Hall_same_cnt = ram_para[num_MOTOR_p] * 6 * 20;//10;//2;//debug堵转时间太短
-	  //--------------------------------------------------------------------------
-	  //得到电机超速频率
-	  lul_tmp = ram_para[num_MOTOR_max_n];//motor_para[guc_motor_ID][MOTOR_max_n];
-	  lul_tmp *= ram_para[num_motor_overspeed];
-	  lul_tmp /= 1000;
-	  gus_motor_overspeed = (uint16_t)lul_tmp;
-	  //--------------------------------------------------------------------------
+    //--------------------------------------------------------------------------
+    //频率平均数个数=电机极对数*电周期Hall数*圈数
+    gus_freq_array_len = ram_para[num_MOTOR_p] * 6 * 1;//motor_para[guc_motor_ID][MOTOR_p]  
+    for (gus_avr_realfreq_cnt = 0; gus_avr_realfreq_cnt < 50; gus_avr_realfreq_cnt++)  //pea计算频率
+    {
+        gus_realfreq_array[gus_avr_realfreq_cnt] = 0;
+    }
+    gus_avr_realfreq_cnt = 0;
+    //--------------------------------------------------------------------------  //peak判断反向时最大的次数
+    //Hall故障检测信号相同次数=电机极对数*电周期Hall数*圈数
+    gus_Hall_same_cnt = ram_para[num_MOTOR_p] * 6 * 20;//10;//2;//debug堵转时间太短 
+    //--------------------------------------------------------------------------
+    //得到电机超速频率
+    lul_tmp = ram_para[num_MOTOR_max_n];//motor_para[guc_motor_ID][MOTOR_max_n];
+    lul_tmp *= ram_para[num_motor_overspeed];
+    lul_tmp /= 1000;
+    gus_motor_overspeed = (uint16_t)lul_tmp;   //peak 超过最大转速的 110%100
+    //--------------------------------------------------------------------------
 }
 //------------------------------------------------------------------------------
+/************************************************************************************************************************************************************
+函数功能：1、初次运行时判断转动方向                      2、获取霍尔值和对应处在的霍尔扇区 
+          3、霍尔值变化一次的时间                  3、转动方向的判断
+          5、获取该要动作的扇区
+
+函数位置：系统中断中，分别在3个霍尔元件对应的引脚中断函数中--------------ok
+*************************************************************************************************************************************************************/
 void Hall_input_int(void)     //Hall信号输入中断服务程序
 {
-      //------------------------------------------------------
-      //捕获当前中断触发的时刻
+    //------------------------------------------------------
+    //捕获当前中断触发的时刻
     TM4MD &= 0x7F;  //停止TM4BC~TM7BC 32bit计数
     Hall_trigger_time.uword.low = TM45BC;
     Hall_trigger_time.uword.high = TM67BC;
@@ -377,37 +389,37 @@ void Hall_input_int(void)     //Hall信号输入中断服务程序
     //------------------------------------------------------
     if (bflg_hall_int == 0)   //如果是首次进入霍尔中断
     {
-    	  bflg_hall_int = 1;    //置首次进入霍尔中断标志
-    	  
-    	  gul_Hall_trigger = Hall_trigger_time.ulword;   //得到出发时刻
-    	  //gul_Hall_past_trigger = gul_Hall_trigger;
-    	  
-    	  gus_Hall_value = HALL_PIN;                     //得到霍尔信号值
-    	  gus_Hall_past_value = gus_Hall_value;
-    	  
-    	  gsc_Hall_sector = gsc_sector_table[gus_Hall_value]; //得到霍尔扇区值
-    	  gsc_Hall_past_sector = gsc_Hall_sector;
-    	  
-    	  //theta.word.high = gul_theta.word.high + 600;   //向前走60°相位
+        bflg_hall_int = 1;    //置首次进入霍尔中断标志
+
+        gul_Hall_trigger = Hall_trigger_time.ulword;   //得到出发时刻
+        //gul_Hall_past_trigger = gul_Hall_trigger;
+
+        gus_Hall_value = HALL_PIN;                     //得到霍尔信号值
+        gus_Hall_past_value = gus_Hall_value; 
+
+        gsc_Hall_sector = gsc_sector_table[gus_Hall_value]; //得到霍尔扇区值
+        gsc_Hall_past_sector = gsc_Hall_sector;
+
+        //theta.word.high = gul_theta.word.high + 600;   //向前走60°相位
         //theta.word.low  = 0;
-        
+
         //gul_theta.word.high = theta.word.high;
-    	  if (bflg_current_direction == 0)    //如果要求转向为逆时针
-    	  {
-    	      gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
+        if (bflg_current_direction == 0)    //如果要求转向为逆时针
+        {
+            gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
             gul_theta.uword.low  = 0;
-                                
+
             //gul_theta.word.high = theta.word.high;
-    	  }
+        }
         else  //如果实际转向为顺时针
-    	  {
-    	  	  gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
+        {
+            gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
             gul_theta.uword.low  = 0;
-                                
+                    
             //gul_theta.word.high = theta.word.high;
-    	  }    
-    	      
-    	  if (bflg_theta_ctrl1 == 0)///
+        }    
+
+        if (bflg_theta_ctrl1 == 0)/// peak ？？
         {
             gul_theta.uword.high += 300;
             theta.ulword = gul_theta.ulword;
@@ -422,134 +434,138 @@ void Hall_input_int(void)     //Hall信号输入中断服务程序
     }
     else
     {
-    	  //因计数器为递减计数，所以此处使用上次计数值减本次计数值
-    	  gul_Hall_delt_trigger_buffer = gul_Hall_trigger - Hall_trigger_time.ulword;
-    	  //if (gul_Hall_delt_trigger_buffer > 40000)  //当计数值小于40000时，无效（即实测频率大于83.33Hz）
-    	  //if (gul_Hall_delt_trigger_buffer > 35000)  //当计数值小于35000时，无效（即实测频率大于95.24Hz（1429rpm）） 
-    	  //if (gul_Hall_delt_trigger_buffer > 27500)  //当计数值小于27500时，无效（即实测频率大于120Hz（1818rpm））     	  
-    	  if (gul_Hall_delt_trigger_buffer > 27500)  //当计数值小于27500时，无效（即实测频率大于120Hz（1818rpm）1000W-4对极电机转速1800rpm=60*120/极对数4））     	      	  
-    	  {
-    	  	  //gul_Hall_past_trigger = gul_Hall_trigger;
-    	  	  gul_Hall_trigger = Hall_trigger_time.ulword;
-    	  	  //----------------------------------------------
-    	  	if (gss_Hall_value_buffer != HALL_PIN)
-    	  	{
-    	  	  gss_Hall_value_buffer = HALL_PIN;
-    	  	  //----------------------------------------------
-    	  	  if ((gss_Hall_value_buffer != 0) && (gss_Hall_value_buffer != 7))
-    	  	  {
-    	  	  	  if ((bflg_hall_update == 0) && (bflg_no_direction == 0))   //如果无霍尔信号更新标志且无旋转方向标志
-    	  	  	  {
-    	  	  	  	  gul_Hall_past_delt_trigger = gul_Hall_delt_trigger;    //保存上一次的时间间隔
-    	  	  	  	  gul_Hall_delt_trigger = gul_Hall_delt_trigger_buffer;  //记录本次的时间间隔
-    	  	  	  	  
-    	  	  	  	  bflg_hall_update = 1;
-    	  	  	  }
-    	  	  	  //--------------------------------------------------------------
-    	  	  	  gus_Hall_past_value = gus_Hall_value;       //保存上次霍尔信号值
-    	  	  	  gus_Hall_value = gss_Hall_value_buffer;     //记录本次霍尔信号值
-    	  	  	  
-    	  	  	  gsc_Hall_past_sector = gsc_Hall_sector;     //保存上次扇区值
-    	  	  	  gsc_Hall_sector = gsc_sector_table[gus_Hall_value];   //记录本次扇区值
-    	  	  	  //--------------------------------------------------------------
-    	  	  	  bflg_past_actual_direction = bflg_actual_direction;   //保存上次实际转向标志
-    	  	  	  //--------------------------------------------------------------
-    	  	  	  //判断实际旋转方向
-    	  	  	  if (gsc_Hall_sector == ((gsc_Hall_past_sector + 1) % 6))
-    	  	  	  {
-    	  	  	  	  bflg_actual_direction = 0;    //实际转向为顺时针
-    	  	  	  	  bflg_no_direction = 0;        //清无法判断旋转方向标志
+        //因计数器为递减计数，所以此处使用上次计数值减本次计数值
+        gul_Hall_delt_trigger_buffer = gul_Hall_trigger - Hall_trigger_time.ulword;
+        //if (gul_Hall_delt_trigger_buffer > 40000)  //当计数值小于40000时，无效（即实测频率大于83.33Hz）
+        //if (gul_Hall_delt_trigger_buffer > 35000)  //当计数值小于35000时，无效（即实测频率大于95.24Hz（1429rpm）） 
+        //if (gul_Hall_delt_trigger_buffer > 27500)  //当计数值小于27500时，无效（即实测频率大于120Hz（1818rpm））     	  
+        if (gul_Hall_delt_trigger_buffer > 27500)    //当计数值小于27500时，无效（即实测频率大于120Hz（1818rpm）1000W-4对极电机转速1800rpm=60*120/极对数4））     	      	  
+        {                                            //peak 太快不行(因电机有最高速度的限制)
+            //gul_Hall_past_trigger = gul_Hall_trigger;
+            gul_Hall_trigger = Hall_trigger_time.ulword;
+            //----------------------------------------------
+            if (gss_Hall_value_buffer != HALL_PIN)
+            {
+                gss_Hall_value_buffer = HALL_PIN;
+                //----------------------------------------------
+                if ((gss_Hall_value_buffer != 0) && (gss_Hall_value_buffer != 7))  //peak 不是60度的霍尔安装
+                {
+                    if ((bflg_hall_update == 0) && (bflg_no_direction == 0))   //如果无霍尔信号更新标志且无旋转方向标志
+                    {
+                        gul_Hall_past_delt_trigger = gul_Hall_delt_trigger;    //保存上一次的时间间隔
+                        gul_Hall_delt_trigger = gul_Hall_delt_trigger_buffer;  //记录本次的时间间隔
 
-    	  	  	  }
-    	  	  	  else if (gsc_Hall_sector == ((gsc_Hall_past_sector + 5) % 6))
-    	  	  	  {
-    	  	  	  	  bflg_actual_direction = 1;    //实际转向为逆时针
-    	  	  	  	  bflg_no_direction = 0;        //清无法判断旋转方向标志
-    	  	  	  }
-    	  	  	  else
-    	  	  	  {
-    	  	  	  	  bflg_no_direction = 1;        //置无法判断旋转方向标志
-    	  	  	  }
-    	  	  	  //--------------------------------------------------------------
-    	  	  	  if (bflg_running == 1)
-    	  	  	  {
-    	  	  	      //if (bflg_current_direction == bflg_actual_direction)   //如果实际转向与要求转向一致
-    	  	  	      //{
-    	  	  	  	      if (bflg_no_direction == 0)    //如果运行且可以判断转向
-    	  	  	  	      {
-										    	  if (bflg_current_direction == 0)    //如果要求转向为逆时针
-										    	  {
-										    	      gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
-										            gul_theta.uword.low  = 0;
-										                                
-										            //gul_theta.word.high = theta.word.high;
-										    	  }
-										        else  //如果实际转向为顺时针
-										    	  {
-										    	  	  gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
-										            gul_theta.uword.low  = 0;
-										                                
-										            //gul_theta.word.high = theta.word.high;
-										    	  }    
-										    	      
-											    	if (bflg_theta_ctrl1 == 0)///
-											      {
-											          gul_theta.uword.high += 300;
-											          theta.ulword = gul_theta.ulword;
-											          bflg_theta_ctrl2 = 0;
-											      }
-											      else
-											      {
-											          theta.ulword = gul_theta.ulword;
-											          bflg_theta_ctrl2 = 1;
-											      }        
-       
-										        //??gul_theta.word.high = theta.word.high;
-    	  	  	  	      }
-    	  	  	  	      //------------------------------------------------------
-    	  	  	      //}
-    	  	  	      //else
-    	  	  	      if ((bflg_current_direction != bflg_actual_direction)   //如果实际转向与要求转向不一致
-    	  	  	         || (bflg_no_direction == 1))
-    	  	  	      {
-    	  	  	  	      //theta.word.high = gul_theta.word.high + 600;
-    	  	  	  	      //theta.word.low  = 0;
-    	  	  	  	      //gul_theta.word.high = theta.word.high;
-    	  	  	  	      
-    	  	  	  	      gus_same_direction_cnt = 0;
-    	  	  	  	      if (bflg_prot_Hall_direction == 0)
-    	  	  	  	      {
-    	  	  	  	  	      gus_dif_direction_cnt++;
-    	  	  	  	  	      /*if (gus_dif_direction_cnt >= 120)
-    	  	  	  	  	      {
-    	  	  	  	  	      	  gus_dif_direction_cnt = 0;
-    	  	  	  	  	      	  bflg_prot_Hall_direction = 1;
-    	  	  	  	  	      	  trip_stop_deal(Hall_direct_FAULT_CODE);
-    	  	  	  	  	      }*/
-    	  	  	  	      }
-    	  	  	      } 
-    	  	  	      else 
-    	  	  	      {
-    	  	  	  	      if (gus_dif_direction_cnt != 0)
-    	  	  	  	      {
-    	  	  	  	  	      gus_same_direction_cnt++;
-    	  	  	  	  	      if (gus_same_direction_cnt >= 12)
-    	  	  	  	  	      {
-    	  	  	  	  	  	      gus_same_direction_cnt = 0;
-    	  	  	  	  	  	      gus_dif_direction_cnt = 0;
-    	  	  	  	  	      }
-    	  	  	  	      }    	  	  	      	
-    	  	  	      }
-    	  	  	  }
-    	  	  }
-    	  	}
-    	  }
+                        bflg_hall_update = 1;
+                    }
+                    //--------------------------------------------------------------
+                    gus_Hall_past_value = gus_Hall_value;       //保存上次霍尔信号值
+                    gus_Hall_value = gss_Hall_value_buffer;     //记录本次霍尔信号值
+
+                    gsc_Hall_past_sector = gsc_Hall_sector;     //保存上次扇区值
+                    gsc_Hall_sector = gsc_sector_table[gus_Hall_value];   //记录本次扇区值
+                    //--------------------------------------------------------------
+                    bflg_past_actual_direction = bflg_actual_direction;   //保存上次实际转向标志
+                    //--------------------------------------------------------------
+                    //判断实际旋转方向
+                    if (gsc_Hall_sector == ((gsc_Hall_past_sector + 1) % 6))
+                    {
+                        bflg_actual_direction = 0;    //实际转向为顺时针
+                        bflg_no_direction = 0;        //清无法判断旋转方向标志
+
+                    }
+                    else if (gsc_Hall_sector == ((gsc_Hall_past_sector + 5) % 6))
+                    {
+                        bflg_actual_direction = 1;    //实际转向为逆时针
+                        bflg_no_direction = 0;        //清无法判断旋转方向标志
+                    }
+                    else
+                    {
+                        bflg_no_direction = 1;        //置无法判断旋转方向标志
+                    }
+                    //--------------------------------------------------------------
+                    if (bflg_running == 1)
+                    {
+                        //if (bflg_current_direction == bflg_actual_direction)   //如果实际转向与要求转向一致
+                        //{
+                        if (bflg_no_direction == 0)    //如果运行且可以判断转向
+                        {
+                            if (bflg_current_direction == 0)    //如果要求转向为逆时针
+                            {
+                                gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
+                                gul_theta.uword.low  = 0;
+
+                                //gul_theta.word.high = theta.word.high;
+                            }
+                            else  //如果实际转向为顺时针
+                            {
+                                gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
+                                gul_theta.uword.low  = 0;
+
+                                //gul_theta.word.high = theta.word.high;
+                            }    
+
+                            if (bflg_theta_ctrl1 == 0)///
+                            {
+                                gul_theta.uword.high += 300;
+                                theta.ulword = gul_theta.ulword;
+                                bflg_theta_ctrl2 = 0;
+                            }
+                            else
+                            {
+                                theta.ulword = gul_theta.ulword;
+                                bflg_theta_ctrl2 = 1;
+                            }        
+
+                            //??gul_theta.word.high = theta.word.high;
+                        }
+                        //------------------------------------------------------
+                        //}
+                        //else
+                        if ((bflg_current_direction != bflg_actual_direction)   //如果实际转向与要求转向不一致
+                        || (bflg_no_direction == 1))
+                        {
+                            //theta.word.high = gul_theta.word.high + 600;
+                            //theta.word.low  = 0;
+                            //gul_theta.word.high = theta.word.high;
+
+                            gus_same_direction_cnt = 0;
+                            if (bflg_prot_Hall_direction == 0)
+                            {
+                                gus_dif_direction_cnt++;
+                                /*if (gus_dif_direction_cnt >= 120)
+                                {
+                                gus_dif_direction_cnt = 0;
+                                bflg_prot_Hall_direction = 1;
+                                trip_stop_deal(Hall_direct_FAULT_CODE);
+                                }*/
+                            }
+                        } 
+                        else 
+                        {
+                            if (gus_dif_direction_cnt != 0)
+                            {
+                                gus_same_direction_cnt++;
+                                if (gus_same_direction_cnt >= 12)
+                                {
+                                    gus_same_direction_cnt = 0;
+                                    gus_dif_direction_cnt = 0;
+                                }
+                            }    	  	  	      	
+                        }
+                    }
+                }
+            }
+        }
     }
     //------------------------------------------------------
     gus_Hall_watchdog = 0;    //清霍尔信号看门狗 
     //------------------------------------------------------
 }
-//------------------------------------------------------------------------------
+/************************************************************************************************************************************************************
+函数功能：
+
+函数位置：主循环---------------------------ok
+*************************************************************************************************************************************************************/
 void Hall_updata_deal(void)        //霍尔信号更新处理程序
 {
 	  uint16_t lus_index;
@@ -559,9 +575,9 @@ void Hall_updata_deal(void)        //霍尔信号更新处理程序
 	  {
         //----------------------------------------------------------------------
         //关于霍尔信号W故障的判断
-        if ((gus_Hall_past_value & 0x0001) == (gus_Hall_value & 0x0001))
-        {
-        	  gus_same_HW_cnt++;     //霍尔信号W相同计数器增加
+        if ((gus_Hall_past_value & 0x0001) == (gus_Hall_value & 0x0001))  //peak判P40(W) P41(V) P50(U)  的引脚电平 
+        {                                                                 
+        	  gus_same_HW_cnt++;     //霍尔信号W相同计数器增加                                
         }
         else
         {
@@ -608,13 +624,13 @@ void Hall_updata_deal(void)        //霍尔信号更新处理程序
         //----------------------------------------------------------------------
         //计算实测转速
         ltmp1.ulword = FREQ_FACTOR;
-        ltmp1.ulword /= gul_Hall_delt_trigger;     //得到本次实测频率
+        ltmp1.ulword /= gul_Hall_delt_trigger;     //得到本次实测频率 //peak供电的电源的频率
         
         bflg_hall_update = 0;       //清允许更新霍尔信号位置标志
         //--------------------------------------------------
         gus_realfreq_array[gus_avr_realfreq_cnt] = ltmp1.uword.low;
         gus_avr_realfreq_cnt++;
-        if (gus_avr_realfreq_cnt >= gus_freq_array_len)
+        if (gus_avr_realfreq_cnt >= gus_freq_array_len) //
         {
         	  gus_avr_realfreq_cnt = 0;
         } 
@@ -627,22 +643,22 @@ void Hall_updata_deal(void)        //霍尔信号更新处理程序
         ltmp2.ulword = gul_avr_realfreq_sum;
         ltmp2.ulword /= gus_freq_array_len;
         gul_avr_realfreq_sum = 0;
-        gus_avr_realfreq = ltmp2.uword.low;
+        gus_avr_realfreq = ltmp2.uword.low;        
         //--------------------------------------------------
         //对Hallfreq进行1/4根木滤波
         ltmp2.ulword = lowpass_filter(gus_Hall_freq, gus_Hall_freq_mod, ltmp1.uword.low, 2);
-        gus_Hall_freq = ltmp2.uword.high;
+        gus_Hall_freq = ltmp2.uword.high;            
         gus_Hall_freq_mod = ltmp2.uword.low;
         //--------------------------------------------------
         if (bflg_running == 1)///
         {
-        	  if ((gus_Hall_freq > 500)&&(bflg_actual_direction == bflg_current_direction))
-        	  {
-        	  	  if (bflg_theta_ctrl1 == 0)
-        	  	  {
-        	  	      bflg_theta_ctrl1 = 1;
-        	      } 
-        	  }        	  	
+            if ((gus_Hall_freq > 500)&&(bflg_actual_direction == bflg_current_direction))
+            {
+                if (bflg_theta_ctrl1 == 0)
+                {
+                    bflg_theta_ctrl1 = 1;
+                } 
+            }        	  	
         }
         else
         {
@@ -669,20 +685,20 @@ void Hall_updata_deal(void)        //霍尔信号更新处理程序
         //gus_speed_real = gus_Hall_speed;
         //----------------------------------------------
         //计算相位超前角
-        if (gus_Hall_freq > ram_para[num_PhaseAdvStartFreq])
+        if (gus_Hall_freq > ram_para[num_PhaseAdvStartFreq])  //peak 1000
         {
         	  ltmp1.ulword = gus_Hall_freq;
         	  ltmp1.ulword -= ram_para[num_PhaseAdvStartFreq];
         	  ltmp1.ulword *= ram_para[num_PhaseAdvSlope];
         	  ltmp1.ulword /= 5000;
-        	  gus_phase_adv_degree = ltmp1.ulword;
+        	  gus_phase_adv_degree = ltmp1.ulword;        // ??
         }
         else
         {
         	  gus_phase_adv_degree = 0;
         }
         
-        if (gus_phase_adv_degree >= ram_para[num_phase_max_degree])
+        if (gus_phase_adv_degree >= ram_para[num_phase_max_degree])  //peak 580
         {
         	  gus_phase_adv_degree = ram_para[num_phase_max_degree];
         }
@@ -701,141 +717,158 @@ void Hall_updata_deal(void)        //霍尔信号更新处理程序
         //--------------------------------------------------
 	  }
 }
-//------------------------------------------------------------------------------
+/******************************************************************************************************************************************************************
+函数功能: 检测的霍尔值是按照60度安装时报错
+
+函数位置：10ms-----------------ok
+*****************************************************************************************************************************************************************/
 void Hall_fault_delaytime(void)    //霍尔信号故障延时程序，在10ms定时程序中调用
 {
-	  if ((HALL_PIN == 0) || (HALL_PIN == 7))
-	  {
-	  	  if (bflg_Hall_fault == 0)
-	  	  {
-	  	  	  gss_Hall_fault_delaytimer++;
-	  	  	  if (gss_Hall_fault_delaytimer >= 100)   //1s
-	  	  	  {
-	  	  	  	  gss_Hall_fault_delaytimer = 0;
-	  	  	  	  bflg_Hall_fault = 1;
-	  	  	  	  trip_stop_deal(Hall_FAULT_CODE);
-	  	  	  }
-	  	  }
-	  }
-	  else
-	  {
+    if ((HALL_PIN == 0) || (HALL_PIN == 7))
+    {
+        if (bflg_Hall_fault == 0)
+        {
+            gss_Hall_fault_delaytimer++;
+            if (gss_Hall_fault_delaytimer >= 100)   //1s
+            {
+                gss_Hall_fault_delaytimer = 0;
+                bflg_Hall_fault = 1;
+                trip_stop_deal(Hall_FAULT_CODE);
+            }
+        }
+    }
+    else
+    {
         gss_Hall_fault_delaytimer = 0;
 
         if (bflg_running == 0) //故障停机标志清除后，再清除故障标志
         {
             bflg_Hall_fault = 0;   
         }	  	  
-     }
+    }
 }
-//------------------------------------------------------------------------------
+
+/**********************************************************************************************************************************************************************************
+函数功能：当检测到霍尔信号经过设定的时间内没有变化，则认为是霍尔信号故障
+
+函数位置：10ms-------------------ok
+**********************************************************************************************************************************************************************************/
 void Hall_error_delaytime(void)    //霍尔信号错延时程序，加入10ms定时程序中
 {
-	  if (bflg_running == 1)
-	  {
-	  	  if ((gus_same_HW_cnt >= gus_Hall_same_cnt) || (gus_same_HV_cnt >= gus_Hall_same_cnt) || (gus_same_HU_cnt >= gus_Hall_same_cnt))
-	  	  {
-	  	  	  gus_same_HW_cnt = 0;
-	  	  	  gus_same_HV_cnt = 0;
-	  	  	  gus_same_HU_cnt = 0;
-	  	  	  
-	  	  	  if (bflg_Hall_error == 0)
-	  	  	  {
-	  	  	  	  bflg_Hall_error = 1;
-	  	  	  	  trip_stop_deal(Hall_FAULT_CODE);
-	  	  	  }
-	  	  }
-	  }
-	  else
-	  {
-	  	  gus_same_HW_cnt = 0;
-	  	  gus_same_HV_cnt = 0;
-	  	  gus_same_HU_cnt = 0;
-	  	  
-    	  if (bflg_running == 0) //故障停机标志清除后，再清除故障标志
-    	  {
-    	       bflg_Hall_error = 0;
+    if (bflg_running == 1)
+    {
+        if ((gus_same_HW_cnt >= gus_Hall_same_cnt) || (gus_same_HV_cnt >= gus_Hall_same_cnt) || (gus_same_HU_cnt >= gus_Hall_same_cnt))
+        {
+            gus_same_HW_cnt = 0;
+            gus_same_HV_cnt = 0;
+            gus_same_HU_cnt = 0;
+
+            if (bflg_Hall_error == 0)
+            {
+                bflg_Hall_error = 1;
+                trip_stop_deal(Hall_FAULT_CODE);
+            }
+        }
+    }
+    else
+    {
+        gus_same_HW_cnt = 0;
+        gus_same_HV_cnt = 0;
+        gus_same_HU_cnt = 0;
+
+        if (bflg_running == 0) //故障停机标志清除后，再清除故障标志
+        {
+            bflg_Hall_error = 0;
         }	  	    
-	  }
+    }
 }
-//------------------------------------------------------------------------------
+/**********************************************************************************************************************************************************************************
+函数功能： 霍尔信号方向错
+
+函数位置： 10ms-------------------------------------------ok
+**********************************************************************************************************************************************************************************/
 void Hall_direction_delaytime(void)     //霍尔信号方向错延时程序，加入10ms定时程序中
 {
-	  if (bflg_running == 1)
-	  {
-	  	  if (gus_dif_direction_cnt >= gus_Hall_same_cnt)
-    	  {
-    	  	  gus_dif_direction_cnt = 0;
-    	  	  
-    	  	  if (bflg_prot_Hall_direction == 0)
-    	  	  {
-    	  	      bflg_prot_Hall_direction = 1;
-    	  	      trip_stop_deal(Hall_direct_FAULT_CODE);
-    	  	  }    
-    	  }
-	  }
-	  else
-	  {
-	  	  gus_dif_direction_cnt = 0;
-	  	  
-    	  if (bflg_running == 0) //故障停机标志清除后，再清除故障标志
-    	  {
-    	      bflg_prot_Hall_direction = 0;    
+    if (bflg_running == 1)
+    {
+        if (gus_dif_direction_cnt >= gus_Hall_same_cnt)
+        {
+            gus_dif_direction_cnt = 0;
+
+            if (bflg_prot_Hall_direction == 0)
+            {
+                bflg_prot_Hall_direction = 1;
+                trip_stop_deal(Hall_direct_FAULT_CODE);
+            }    
+        }
+    }
+    else
+    {
+        gus_dif_direction_cnt = 0;
+
+        if (bflg_running == 0) //故障停机标志清除后，再清除故障标志
+        {
+            bflg_prot_Hall_direction = 0;    
         }	  	    
-	  }
+    }
 }
-//------------------------------------------------------------------------------
+/**********************************************************************************************************************************************************************************
+函数功能： 
+
+函数位置： 
+**********************************************************************************************************************************************************************************/
 void Hall_off_delaytime(void)      //霍尔信号停止延时程序，在10ms定时程序中调用
 {
     gus_Hall_watchdog++;
     if (gus_Hall_watchdog >= 50)//debug
     {
-    	  gus_Hall_watchdog = 0;
-    	  
-    	  gus_same_HW_cnt = 0;
-    	  gus_same_HV_cnt = 0;
-    	  gus_same_HU_cnt = 0;
-    	  //--------------------------------------------------
-    	  for (gus_avr_realfreq_cnt = 0; gus_avr_realfreq_cnt < gus_freq_array_len; gus_avr_realfreq_cnt++)
-	      {
-	  	      gus_realfreq_array[gus_avr_realfreq_cnt] = 0;
-	      }
-	      gus_avr_realfreq_cnt = 0;
-	      //--------------------------------------------------
-	      gus_avr_realfreq = 0;
-	      gus_Hall_freq = 0;
-	      gus_Hall_freq_mod = 0;
-	      gus_freq_real = 0;
-	      
-	      gus_Hall_speed = 0;
-	      gus_speed_real = 0;
-	      
-	      bflg_hall_int = 0;      //清霍尔信号中断标志
-	      //--------------------------------------------------
-	      //确定Hall区间
-	      gus_Hall_value = HALL_PIN; //得到霍尔信号值
-	      gsc_Hall_sector = gsc_sector_table[gus_Hall_value];
-	      //--------------------------------------------------
-	      //gus_freq_out = 0;
-        
+        gus_Hall_watchdog = 0;
+
+        gus_same_HW_cnt = 0;
+        gus_same_HV_cnt = 0;
+        gus_same_HU_cnt = 0;
+        //--------------------------------------------------
+        for (gus_avr_realfreq_cnt = 0; gus_avr_realfreq_cnt < gus_freq_array_len; gus_avr_realfreq_cnt++)
+        {
+            gus_realfreq_array[gus_avr_realfreq_cnt] = 0;
+        }
+        gus_avr_realfreq_cnt = 0;
+        //--------------------------------------------------
+        gus_avr_realfreq = 0;
+        gus_Hall_freq = 0;
+        gus_Hall_freq_mod = 0;
+        gus_freq_real = 0;
+
+        gus_Hall_speed = 0;
+        gus_speed_real = 0;
+
+        bflg_hall_int = 0;      //清霍尔信号中断标志
+        //--------------------------------------------------
+        //确定Hall区间
+        gus_Hall_value = HALL_PIN; //得到霍尔信号值
+        gsc_Hall_sector = gsc_sector_table[gus_Hall_value];
+        //--------------------------------------------------
+        //gus_freq_out = 0;
+
         //gus_Uout_real = 0;
         //gsl_FreqPI_integral = 0;
-        
-    	  if (bflg_current_direction == 0)    //如果要求转向为逆时针
-    	  {
-    	      gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector];
+
+        if (bflg_current_direction == 0)    //如果要求转向为逆时针
+        {
+            gul_theta.uword.high = PhaseValues_CCW[gsc_Hall_sector]; //peak对应区间的起始相位角
             gul_theta.uword.low  = 0;
-                                
+
             //gul_theta.word.high = theta.word.high;
-    	  }
+        }
         else  //如果实际转向为顺时针
-    	  {
-    	  	  gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
+        {
+            gul_theta.uword.high = PhaseValues_CW[gsc_Hall_sector];
             gul_theta.uword.low  = 0;
-                                
+
             //gul_theta.word.high = theta.word.high;
-    	  }    
-    	  //----------------------------
-    	  if (bflg_theta_ctrl1 == 0)///debug
+        }    
+        //----------------------------
+        if (bflg_theta_ctrl1 == 0)///debug  //peak ??
         {
             gul_theta.uword.high += 300;
             theta.ulword = gul_theta.ulword;
@@ -847,15 +880,15 @@ void Hall_off_delaytime(void)      //霍尔信号停止延时程序，在10ms定时程序中调用
             bflg_theta_ctrl2 = 1;
         }      	      
         //theta.ulword = gul_theta.ulword;
-	  	  //--------------------------------------
-	  	  //得到积分初值
-	  	  //gsl_FreqPI_integral = gsl_PI_initval;
-        
+        //--------------------------------------
+        //得到积分初值
+        //gsl_FreqPI_integral = gsl_PI_initval;
+
         if (bflg_actual_direction != bflg_current_direction)
         {
-        	  gus_freq_out = 0;
+            gus_freq_out = 0;
         }
-        
+
         bflg_actual_direction = bflg_current_direction;
     }
 }

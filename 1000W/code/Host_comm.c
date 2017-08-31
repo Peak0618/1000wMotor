@@ -971,169 +971,168 @@ void SCI0_rx_data_deal(void)  //通讯接收数据处理程序
     //------------------------------------------------------
     if (guc_SCI0_rx_buffer[0] == SCI0_RX_MIN_ORDER)    //如果是老协议
     {
-    	  if (guc_SCI0_rx_len == 8)  //如果是通用协议
-    	  {
-    	  	  rs485_crc.uword = CRC16(guc_SCI0_rx_buffer, guc_SCI0_rx_len - 2);
+        if (guc_SCI0_rx_len == 8)  //如果是通用协议
+        {
+            rs485_crc.uword = CRC16(guc_SCI0_rx_buffer, guc_SCI0_rx_len - 2);
     	      
-    	      if ((rs485_crc.ubyte.low == guc_SCI0_rx_buffer[guc_SCI0_rx_len - 2])
-             && (rs485_crc.ubyte.high == guc_SCI0_rx_buffer[guc_SCI0_rx_len - 1]))
+            if ((rs485_crc.ubyte.low == guc_SCI0_rx_buffer[guc_SCI0_rx_len - 2])
+            && (rs485_crc.ubyte.high == guc_SCI0_rx_buffer[guc_SCI0_rx_len - 1]))
             {
-        	      guc_SCI0_type_cnt = 0;
-        	      bflg_SCI0_type_ok = 1;
-		        	  gus_SCI0_check_delaytimer = 0;
-		        	  gss_SCI0_init_delaytimer = 0; 
-		        	          	      
-        	      bflg_SCI0_tx_delaytime = 1;
-	  	  	      gss_SCI0_tx_delaytimer = 10;
-	  	  	      
-	  	  	      bflg_SCI0_rx_delaytime = 0;
-	  	  	      gss_SCI0_rx_delaytimer = 0;
-	  	  	      
-	  	  	      bflg_SCI0_fault = 0;
-	  	  	      gss_SCI0_fault_delaytimer = 0;
-	  	  	      //------------------------------------------
-	  	  	      //确定发送数据长度
-	  	  	      guc_SCI0_tx_len = 8;
-	  	  	      
-	  	  	      if (bflg_host_ctrl == 1)
-	  	  	      {	
-			  	  	      //确定ID号
-			  	  	      luc_tmp = guc_SCI0_rx_buffer[3];
-			  	  	      if ((luc_tmp >= APP_ID_MIN)&&(luc_tmp <= APP_ID_MAX))       
-			  	  	      {
-			  	  	  	      guc_motor_ID_error_cnt = 0;
-			  	  	  	      bflg_motor_ID_error = 0;
-			  	  	  	      
-			  	  	  	      guc_motor_ID = 0;   //老协议默认为0
-			  	  	  	      //--------------------------------------
-			  	  	  	      //得到上位机设定转速
-			  	  	          lus_tmp = guc_SCI0_rx_buffer[2];
-			  	  	          lus_tmp &= 0x7F;
-			  	  	          lus_tmp <<= 8;
-			  	  	          lus_tmp += guc_SCI0_rx_buffer[1];
-			  	  	          
-			  	  	          if (lus_tmp > ram_para[num_MOTOR_max_n])//motor_para[guc_motor_ID][MOTOR_max_n])
-			  	  	          {
-			  	  	          	  lus_tmp = ram_para[num_MOTOR_max_n];//motor_para[guc_motor_ID][MOTOR_max_n];
-			  	  	          }
-			  	  	          
-			  	  	          gus_host_speed_set = lus_tmp;
-			  	  	  	      //--------------------------------------
-			  	  	  	      if (gus_host_speed_set == 0)
-			  	  	          {
-			  	  	  	          //bflg_askfor_run = 0;
-			  	  	  	          //bflg_askfor_stop = 1;	  	  	  	         
-			  	  	  	          bflg_host_running = 0;
-			  	  	  	          
-			  	  	  	          motor_var_init();    //停机时，电机相关变量程序化
-			  	  	  	          
-			  	  	  	          gus_host_setfreq = 0;
-			  	  	  	          
-			  	  	  	          guc_Iout_fault_cnt = 0;
-			  	  	  	          guc_motor_block_cnt = 0;	 
-			  	  	  	          guc_ALM_fault_cnt = 0; 	  	  	  	          
-			  	  	  	          
-			  	  	  	          if ((bflg_trip_stop == 1) && (bflg_trip_clear == 0))    //如果是故障阶段，且无清故障标志
-			  	  	  	          {
-			  	  	  	  	          gss_trip_clear_cnt++;
-			  	  	  	  	          if (gss_trip_clear_cnt >= 10)
-			  	  	  	  	          {
-			  	  	  	  	  	          gss_trip_clear_cnt = 0;
-			  	  	  	  	  	          bflg_trip_clear = 1;  	  	  	  	  	          
-			  	  	  	  	          }
-			  	  	  	          }
-			  	  	          }
-			  	  	          else
-			  	  	          {
-			  	  	  	          //bflg_askfor_run = 1;
-			  	  	  	          //bflg_askfor_stop = 0;
-			  	  	  	          bflg_host_running = 1;
-			  	  	  	          
-			  	  	  	          lus_tmp = gus_host_speed_set;
-			  	  	  	          lus_tmp *= ram_para[num_MOTOR_p];//motor_para[guc_motor_ID][MOTOR_p];
-			  	  	              lus_tmp *= 5;
-			  	  	              lus_tmp /= 3;
-			  	  	              
-			  	  	              gus_host_setfreq = lus_tmp;
-			  	  	              		  	  	               
-			  	  	              if (gus_host_setfreq > gus_MAX_setfreq)
-			  	  	              {
-			  	  	              	  gus_host_setfreq = gus_MAX_setfreq;
-			  	  	              }				  	  	              
-			  	  	          }
-			                  //--------------------------------------
-			                  //旋转方向判断
-			                  luc_tmp = guc_SCI0_rx_buffer[2];
-			  	  	          luc_tmp &= 0x80;
-			  	  	          
-			  	  	          if (bflg_running == 0)   //如果当前未运行
-			  	  	          {
-			  	  	  	          if (luc_tmp == 0)    // 0
-			  	  	              {
-			  	  	  	              bflg_current_direction = 0;     //顺时针旋转标志
-			  	  	              }
-			  	  	              else
-			  	  	              {
-			  	  	  	              bflg_current_direction = 1;     //逆时针旋转标志
-			  	  	              }
-			  	  	          }
-			  	  	          else    //如果当前运行
-			  	  	          {
-			  	  	  	          if (gus_host_speed_set != 0)
-			  	  	  	          {
-			  	  	  	  	          if ((luc_tmp == 0) && (bflg_current_direction == 1))
-			  	  	  	  	          {
-			  	  	  	  	  	          //bflg_askfor_run = 0;
-			  	  	  	                  //bflg_askfor_stop = 1;
-			  	  	  	  	  	          bflg_host_running = 0;
-			  	  	  	  	  	          
-			  	  	  	  	  	          gus_host_speed_set = 0;
-			  	  	  	  	  	          gus_host_setfreq = 0;
-			  	  	  	  	          }
-			  	  	  	  	          else if ((luc_tmp != 0) && (bflg_current_direction == 0))
-			  	  	  	              {
-			  	  	  	  	  	          //bflg_askfor_run = 0;
-			  	  	  	                  //bflg_askfor_stop = 1;
-			  	  	  	  	  	          bflg_host_running = 0;
-			  	  	  	  	  	          
-			  	  	  	  	  	          gus_host_speed_set = 0;
-			  	  	  	  	  	          gus_host_setfreq = 0;	
-			  	  	  	              	
-			  	  	  	              }
-			  	  	  	          }
-			  	  	          }
-			  	  	      }
-			  	  	      else //如果ID号超限
-			  	  	      {
-			  	  	  	      guc_motor_ID_error_cnt++;
-			  	  	  	      if (guc_motor_ID_error_cnt >= 10)  //错10次
-			  	  	  	      {
-			  	  	  	  	      guc_motor_ID_error_cnt = 0;
-			  	  	  	  	      
-			  	  	  	  	      if (bflg_motor_ID_error == 0)
-			  	  	  	          {
-			  	  	  	  	          bflg_motor_ID_error = 1;   //置ID号错标志
-			  	  	  	  	          trip_stop_deal(MOTOR_ID_ERR_CODE);
-			  	  	  	          }
-			  	  	  	      }			  	  	      	
-			  	  	      }
-			  	  	  }  
+                guc_SCI0_type_cnt = 0;
+                bflg_SCI0_type_ok = 1;
+                gus_SCI0_check_delaytimer = 0;
+                gss_SCI0_init_delaytimer = 0; 
+
+                bflg_SCI0_tx_delaytime = 1;
+                gss_SCI0_tx_delaytimer = 10;
+
+                bflg_SCI0_rx_delaytime = 0;
+                gss_SCI0_rx_delaytimer = 0;
+
+                bflg_SCI0_fault = 0;
+                gss_SCI0_fault_delaytimer = 0;
+                //------------------------------------------
+                //确定发送数据长度
+                guc_SCI0_tx_len = 8;
+
+                if (bflg_host_ctrl == 1)
+                {	
+                    //确定ID号
+                    luc_tmp = guc_SCI0_rx_buffer[3];
+                    if ((luc_tmp >= APP_ID_MIN)&&(luc_tmp <= APP_ID_MAX))       
+                    {
+                        guc_motor_ID_error_cnt = 0;
+                        bflg_motor_ID_error = 0;
+
+                        guc_motor_ID = 0;   //老协议默认为0
+                        //--------------------------------------
+                        //得到上位机设定转速
+                        lus_tmp = guc_SCI0_rx_buffer[2];
+                        lus_tmp &= 0x7F;
+                        lus_tmp <<= 8;
+                        lus_tmp += guc_SCI0_rx_buffer[1];
+
+                        if (lus_tmp > ram_para[num_MOTOR_max_n])//motor_para[guc_motor_ID][MOTOR_max_n])
+                        {
+                            lus_tmp = ram_para[num_MOTOR_max_n];//motor_para[guc_motor_ID][MOTOR_max_n];
+                        }
+
+                        gus_host_speed_set = lus_tmp;
+                        //--------------------------------------
+                        if (gus_host_speed_set == 0)
+                        {
+                            //bflg_askfor_run = 0;
+                            //bflg_askfor_stop = 1;	  	  	  	         
+                            bflg_host_running = 0;
+
+                            motor_var_init();    //停机时，电机相关变量程序化
+
+                            gus_host_setfreq = 0;
+
+                            guc_Iout_fault_cnt = 0;
+                            guc_motor_block_cnt = 0;	 
+                            guc_ALM_fault_cnt = 0; 	  	  	  	          
+
+                            if ((bflg_trip_stop == 1) && (bflg_trip_clear == 0))    //如果是故障阶段，且无清故障标志
+                            {
+                                gss_trip_clear_cnt++;
+                                if (gss_trip_clear_cnt >= 10)
+                                {
+                                    gss_trip_clear_cnt = 0;
+                                    bflg_trip_clear = 1;  	  	  	  	  	          
+                                }
+                            }
+                        }
+                        else
+                        {
+                            //bflg_askfor_run = 1;
+                            //bflg_askfor_stop = 0;
+                            bflg_host_running = 1;
+
+                            lus_tmp = gus_host_speed_set;
+                            lus_tmp *= ram_para[num_MOTOR_p];//motor_para[guc_motor_ID][MOTOR_p];
+                            lus_tmp *= 5;
+                            lus_tmp /= 3;
+
+                            gus_host_setfreq = lus_tmp;
+
+                            if (gus_host_setfreq > gus_MAX_setfreq)
+                            {
+                                gus_host_setfreq = gus_MAX_setfreq;
+                            }				  	  	              
+                        }
+                        //--------------------------------------
+                        //旋转方向判断
+                        luc_tmp = guc_SCI0_rx_buffer[2];
+                        luc_tmp &= 0x80;
+
+                        if (bflg_running == 0)   //如果当前未运行
+                        {
+                            if (luc_tmp == 0)    // 0
+                            {
+                                bflg_current_direction = 0;     //顺时针旋转标志
+                            }
+                            else
+                            {
+                                bflg_current_direction = 1;     //逆时针旋转标志
+                            }
+                        }
+                        else    //如果当前运行
+                        {
+                            if (gus_host_speed_set != 0)
+                            {
+                                if ((luc_tmp == 0) && (bflg_current_direction == 1))
+                                {
+                                    //bflg_askfor_run = 0;
+                                    //bflg_askfor_stop = 1;
+                                    bflg_host_running = 0;
+
+                                    gus_host_speed_set = 0;
+                                    gus_host_setfreq = 0;
+                                }
+                                else if ((luc_tmp != 0) && (bflg_current_direction == 0))
+                                {
+                                    //bflg_askfor_run = 0;
+                                    //bflg_askfor_stop = 1;
+                                    bflg_host_running = 0;
+
+                                    gus_host_speed_set = 0;
+                                    gus_host_setfreq = 0;	
+                                }
+                            }
+                        }
+                    }
+                    else //如果ID号超限
+                    {
+                        guc_motor_ID_error_cnt++;
+                        if (guc_motor_ID_error_cnt >= 10)  //错10次
+                        {
+                            guc_motor_ID_error_cnt = 0;
+
+                            if (bflg_motor_ID_error == 0)
+                            {
+                                bflg_motor_ID_error = 1;   //置ID号错标志
+                                trip_stop_deal(MOTOR_ID_ERR_CODE);
+                            }
+                        }			  	  	      	
+                    }
+                }  
             }
             else   //如果校验和不对
             {
-        	      if (bflg_SCI0_type_ok == 0)  //如果未确定协议
-        	      {
-        	  	      guc_SCI0_type_cnt++;
-        	  	      if (guc_SCI0_type_cnt >= 5)  //如果超过10校验错误
-        	  	      {
-        	  	      	  guc_SCI0_type_cnt = 0;
-        	  	      	  bflg_SCI0_type_ok = 1;
-        	  	      	  
-        	  	      	  guc_SCI0_rx_len = 4;      //接收字节长度改为4
-        	  	      }
-        	      }
+                if (bflg_SCI0_type_ok == 0)  //如果未确定协议
+                {
+                    guc_SCI0_type_cnt++;
+                    if (guc_SCI0_type_cnt >= 5)  //如果超过10校验错误
+                    {
+                        guc_SCI0_type_cnt = 0;
+                        bflg_SCI0_type_ok = 1;
+
+                        guc_SCI0_rx_len = 4;      //接收字节长度改为4
+                    }
+                }
             }
-    	  }
+        }
     	  else if (guc_SCI0_rx_len == 4)  //如果是海尔协议
     	  {
     	  	  luc_tmp = guc_SCI0_rx_buffer[0];
@@ -1143,10 +1142,10 @@ void SCI0_rx_data_deal(void)  //通讯接收数据处理程序
     	  	  
     	  	  if (luc_tmp == guc_SCI0_rx_buffer[3]) //如果校验和正确
     	  	  {
-    	  	  	  guc_SCI0_type_cnt = 0;
-        	      bflg_SCI0_type_ok = 1;
-		        	  gus_SCI0_check_delaytimer = 0;
-		        	  gss_SCI0_init_delaytimer = 0; 
+                guc_SCI0_type_cnt = 0;
+                bflg_SCI0_type_ok = 1;
+                gus_SCI0_check_delaytimer = 0;
+                gss_SCI0_init_delaytimer = 0; 
 		        	          	      
         	      bflg_SCI0_tx_delaytime = 1;
 	  	  	      gss_SCI0_tx_delaytimer = 10;
@@ -1361,24 +1360,24 @@ void SCI0_rx_data_deal(void)  //通讯接收数据处理程序
 	  	  	  	          	   	    //disable_irq();   //关总中断
 	  	  	  	          	   	    
 	  	  	  	          	   	    ram_para[num_PhaseAdvSlope] = lus_tmp;
-													        //计算相位超前角
-													        if (gus_Hall_freq > ram_para[num_PhaseAdvStartFreq])
-													        {
-													        	  ltmp1.ulword = gus_Hall_freq;
-													        	  ltmp1.ulword -= ram_para[num_PhaseAdvStartFreq];
-													        	  ltmp1.ulword *= ram_para[num_PhaseAdvSlope];
-													        	  ltmp1.ulword /= 5000;
-													        	  gus_phase_adv_degree = ltmp1.ulword;
-													        }
-													        else
-													        {
-													        	  gus_phase_adv_degree = 0;
-													        }	  
-													        //------------------------------
-													        if (gus_phase_adv_degree >= ram_para[num_phase_max_degree])
-													        {
-													        	  gus_phase_adv_degree = ram_para[num_phase_max_degree];
-													        }												        	  	  	          	   	    
+							        //计算相位超前角
+							        if (gus_Hall_freq > ram_para[num_PhaseAdvStartFreq])
+							        {
+							        	  ltmp1.ulword = gus_Hall_freq;
+							        	  ltmp1.ulword -= ram_para[num_PhaseAdvStartFreq];
+							        	  ltmp1.ulword *= ram_para[num_PhaseAdvSlope];
+							        	  ltmp1.ulword /= 5000;
+							        	  gus_phase_adv_degree = ltmp1.ulword;
+							        }
+							        else
+							        {
+							        	  gus_phase_adv_degree = 0;
+							        }	  
+							        //------------------------------
+							        if (gus_phase_adv_degree >= ram_para[num_phase_max_degree])
+							        {
+							        	  gus_phase_adv_degree = ram_para[num_phase_max_degree];
+							        }												        	  	  	          	   	    
 	  	  	  	          	   	    //writeword_to_eeprom(&(ram_para[num_PhaseAdvSlope]), num_PhaseAdvSlope, 1);  //按字写EEPROM的程序
 	  	  	  	          	   	    //clear_watchdog();
 	  	  	  	          	   	    

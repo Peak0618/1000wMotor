@@ -10,20 +10,20 @@
 #OPTION
 ;Host/Version/File				Options
 MN103S/MN103L Windows V5.4R1 code\startup.as		-e -g -l -W2702 -o output\startup.ro
-MN103S/MN103L Windows V5.4R1 OP0g.080		-j -e -l -g -O -o AS0g.080
-MN103S/MN103L Windows V5.4R1 OP0s.j00		-j -e -l -g -O -o AS0s.j00
-MN103S/MN103L Windows V5.4R1 OP0k.p70		-j -e -l -g -O -o AS0k.p70
-MN103S/MN103L Windows V5.4R1 OP00.c20		-j -e -l -g -O -o AS00.c20
-MN103S/MN103L Windows V5.4R1 OP04.i80		-j -e -l -g -O -o AS04.i80
-MN103S/MN103L Windows V5.4R1 OP0c.c10		-j -e -l -g -O -o AS0c.c10
-MN103S/MN103L Windows V5.4R1 OP0s.j70		-j -e -l -g -O -o AS0s.j70
-MN103S/MN103L Windows V5.4R1 OP08.280		-j -e -l -g -O -o AS08.280
-MN103S/MN103L Windows V5.4R1 OP00.u80		-j -e -l -g -O -o AS00.u80
-MN103S/MN103L Windows V5.4R1 OP0c.080		-j -e -l -g -O -o AS0c.080
-MN103S/MN103L Windows V5.4R1 OP0c.380		-j -e -l -g -O -o AS0c.380
-MN103S/MN103L Windows V5.4R1 OP0c.t80		-j -e -l -g -O -o AS0c.t80
-MN103S/MN103L Windows V5.4R1 OP0c.750		-j -e -l -g -O -o AS0c.750
-MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
+MN103S/MN103L Windows V5.4R1 OP0c.ue1		-j -e -l -g -O -o AS0c.ue1
+MN103S/MN103L Windows V5.4R1 OP0o.re1		-j -e -l -g -O -o AS0o.re1
+MN103S/MN103L Windows V5.4R1 OP04.1c1		-j -e -l -g -O -o AS04.1c1
+MN103S/MN103L Windows V5.4R1 OP0k.5c1		-j -e -l -g -O -o AS0k.5c1
+MN103S/MN103L Windows V5.4R1 OP0g.ld1		-j -e -l -g -O -o AS0g.ld1
+MN103S/MN103L Windows V5.4R1 OP0k.c51		-j -e -l -g -O -o AS0k.c51
+MN103S/MN103L Windows V5.4R1 OP0s.sa1		-j -e -l -g -O -o AS0s.sa1
+MN103S/MN103L Windows V5.4R1 OP0o.8e1		-j -e -l -g -O -o AS0o.8e1
+MN103S/MN103L Windows V5.4R1 OP0k.qd1		-j -e -l -g -O -o AS0k.qd1
+MN103S/MN103L Windows V5.4R1 OP0g.ie1		-j -e -l -g -O -o AS0g.ie1
+MN103S/MN103L Windows V5.4R1 OP0s.ba1		-j -e -l -g -O -o AS0s.ba1
+MN103S/MN103L Windows V5.4R1 OP0c.6c1		-j -e -l -g -O -o AS0c.6c1
+MN103S/MN103L Windows V5.4R1 OP04.ad1		-j -e -l -g -O -o AS04.ad1
+MN103S/MN103L Windows V5.4R1 OP0c.131		-j -e -l -g -O -o AS0c.131
 
 #################################################
 #	MEMORY MAP INFORMATION			#
@@ -41,7 +41,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000000		00000e0f	"n"	.debug_frame        
 00000000		000008f7	"n"	.debug_abbrev       
 00000000		00009563	"n"	.debug_line         
-00000000		00008460	"n"	.debug_info         
+00000000		00008505	"n"	.debug_info         
 00000000		00000bef	"n"	.debug_MN_rsc       
 00000000		00000d10	"n"	.debug_aranges      
 
@@ -58,7 +58,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000000		0000000d	"n"	0001	.debug_frame
 00000000		0000001b	"n"	0001	.debug_abbrev
 00000000		00000764	"n"	0001	.debug_line
-00000000		00000069	"n"	0001	.debug_info
+00000000		00000074	"n"	0001	.debug_info
 00000000		00000000	FILE	0000	vector.ro 
 40000259		000001d4	"ax"	0001	.text     
 4000522c		0000007c	"a"	0004	.rodata   
@@ -67,7 +67,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000304		00000000	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00000069		0000094b	"n"	0001	.debug_info
+00000074		00000956	"n"	0001	.debug_info
 0000001b		000000a9	"n"	0001	.debug_abbrev
 00000000		0000010d	"n"	0001	.debug_MN_rsc
 00000764		00000483	"n"	0001	.debug_line
@@ -81,7 +81,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000304		00000024	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-000009b4		000009a0	"n"	0001	.debug_info
+000009ca		000009ab	"n"	0001	.debug_info
 000000c4		0000009e	"n"	0001	.debug_abbrev
 0000010d		000000d6	"n"	0001	.debug_MN_rsc
 00000be7		000010ab	"n"	0001	.debug_line
@@ -95,7 +95,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000328		00000000	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00001354		00000549	"n"	0001	.debug_info
+00001375		00000554	"n"	0001	.debug_info
 00000162		00000074	"n"	0001	.debug_abbrev
 000001e3		00000000	"n"	0001	.debug_MN_rsc
 00001c92		00000000	"n"	0001	.debug_line
@@ -109,7 +109,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000328		00000084	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-0000189d		00000dab	"n"	0001	.debug_info
+000018c9		00000db6	"n"	0001	.debug_info
 000001d6		000000b5	"n"	0001	.debug_abbrev
 000001e3		000001e3	"n"	0001	.debug_MN_rsc
 00001c92		000013da	"n"	0001	.debug_line
@@ -123,7 +123,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 000003ac		00000058	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00002648		00000aa9	"n"	0001	.debug_info
+0000267f		00000ab4	"n"	0001	.debug_info
 0000028b		000000b5	"n"	0001	.debug_abbrev
 000003c6		000000d8	"n"	0001	.debug_MN_rsc
 0000306c		0000085c	"n"	0001	.debug_line
@@ -137,7 +137,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000404		000000d0	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-000030f1		00000b0e	"n"	0001	.debug_info
+00003133		00000b19	"n"	0001	.debug_info
 00000340		0000009d	"n"	0001	.debug_abbrev
 0000049e		00000022	"n"	0001	.debug_MN_rsc
 000038c8		00000bf8	"n"	0001	.debug_line
@@ -151,7 +151,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 000004d4		000000e0	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00003bff		000005b9	"n"	0001	.debug_info
+00003c4c		000005c4	"n"	0001	.debug_info
 000003dd		00000074	"n"	0001	.debug_abbrev
 000004c0		00000000	"n"	0001	.debug_MN_rsc
 000044c0		00000000	"n"	0001	.debug_line
@@ -165,7 +165,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 000005b4		00000000	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-000041b8		000007c2	"n"	0001	.debug_info
+00004210		000007cd	"n"	0001	.debug_info
 00000451		000000bc	"n"	0001	.debug_abbrev
 000004c0		000000df	"n"	0001	.debug_MN_rsc
 000044c0		00000615	"n"	0001	.debug_line
@@ -179,7 +179,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 000005b4		0000002c	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-0000497a		00000a1f	"n"	0001	.debug_info
+000049dd		00000a2a	"n"	0001	.debug_info
 0000050d		0000009f	"n"	0001	.debug_abbrev
 0000059f		000000e9	"n"	0001	.debug_MN_rsc
 00004ad5		00000cbe	"n"	0001	.debug_line
@@ -193,7 +193,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 000005e0		00000068	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00005399		00000efd	"n"	0001	.debug_info
+00005407		00000f08	"n"	0001	.debug_info
 000005ac		0000009b	"n"	0001	.debug_abbrev
 00000688		00000062	"n"	0001	.debug_MN_rsc
 00005793		000014fe	"n"	0001	.debug_line
@@ -207,7 +207,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000648		00000010	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00006296		000009d8	"n"	0001	.debug_info
+0000630f		000009e3	"n"	0001	.debug_info
 00000647		000000e7	"n"	0001	.debug_abbrev
 000006ea		000001d8	"n"	0001	.debug_MN_rsc
 00006c91		000009f6	"n"	0001	.debug_line
@@ -221,7 +221,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000658		00000000	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00006c6e		000005b5	"n"	0001	.debug_info
+00006cf2		000005c0	"n"	0001	.debug_info
 0000072e		00000087	"n"	0001	.debug_abbrev
 000008c2		0000007a	"n"	0001	.debug_MN_rsc
 00007687		00000103	"n"	0001	.debug_line
@@ -235,7 +235,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000658		00000000	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-00007223		0000056c	"n"	0001	.debug_info
+000072b2		00000577	"n"	0001	.debug_info
 000007b5		00000074	"n"	0001	.debug_abbrev
 0000093c		00000000	"n"	0001	.debug_MN_rsc
 0000778a		00000000	"n"	0001	.debug_line
@@ -249,7 +249,7 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 40006324		00000000	"a"	0004	.MN.romdataend
 00000658		0000004a	"aw"	0004	.bss      
 000006a4		00000000	"aw"	0004	.MN.bssend
-0000778f		00000cd1	"n"	0001	.debug_info
+00007829		00000cdc	"n"	0001	.debug_info
 00000829		000000ce	"n"	0001	.debug_abbrev
 0000093c		000002b3	"n"	0001	.debug_MN_rsc
 0000778a		00001dd9	"n"	0001	.debug_line
@@ -1151,38 +1151,38 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000209	L	NOTYPE		.LDW256                      
 4000042d	L	NOTYPE		.LPC_END                     
 0000001b	L	NOTYPE		.LAB_TOP                     
-00000069	L	NOTYPE		.LI_TOP                      
-000009b4	L	NOTYPE		.LI_E                        
-0000006d	L	NOTYPE		.LI_B                        
+00000074	L	NOTYPE		.LI_TOP                      
+000009ca	L	NOTYPE		.LI_E                        
+00000078	L	NOTYPE		.LI_B                        
 00000764	L	NOTYPE		.LLN_TOP                     
-00000102	L	NOTYPE		.LDW25                       
-00000104	L	NOTYPE		.LDW26                       
-00000109	L	NOTYPE		.LDW27                       
-0000010e	L	NOTYPE		.LDW28                       
-00000118	L	NOTYPE		.LDW10                       
-00000123	L	NOTYPE		.LDW9                        
-0000012d	L	NOTYPE		.LDW8                        
-0000013b	L	NOTYPE		.LDW7                        
-00000144	L	NOTYPE		.LDW6                        
-0000014e	L	NOTYPE		.LDW5                        
-00000157	L	NOTYPE		.LDW4                        
-00000165	L	NOTYPE		.LDW3                        
-0000016e	L	NOTYPE		.LDW2                        
-00000178	L	NOTYPE		.LDW1                        
-00000215	L	NOTYPE		.LDW11                       
-00000231	L	NOTYPE		.LDW12                       
-0000024d	L	NOTYPE		.LDW13                       
-0000029d	L	NOTYPE		.LDW14                       
-000002b9	L	NOTYPE		.LDW15                       
-000002e8	L	NOTYPE		.LDW16                       
-00000304	L	NOTYPE		.LDW17                       
-00000333	L	NOTYPE		.LDW18                       
-00000399	L	NOTYPE		.LDW19                       
-000003b5	L	NOTYPE		.LDW20                       
-000003d1	L	NOTYPE		.LDW21                       
-00000419	L	NOTYPE		.LDW22                       
-00000522	L	NOTYPE		.LDW23                       
-0000054f	L	NOTYPE		.LDW24                       
+00000118	L	NOTYPE		.LDW25                       
+0000011a	L	NOTYPE		.LDW26                       
+0000011f	L	NOTYPE		.LDW27                       
+00000124	L	NOTYPE		.LDW28                       
+0000012e	L	NOTYPE		.LDW10                       
+00000139	L	NOTYPE		.LDW9                        
+00000143	L	NOTYPE		.LDW8                        
+00000151	L	NOTYPE		.LDW7                        
+0000015a	L	NOTYPE		.LDW6                        
+00000164	L	NOTYPE		.LDW5                        
+0000016d	L	NOTYPE		.LDW4                        
+0000017b	L	NOTYPE		.LDW3                        
+00000184	L	NOTYPE		.LDW2                        
+0000018e	L	NOTYPE		.LDW1                        
+0000022b	L	NOTYPE		.LDW11                       
+00000247	L	NOTYPE		.LDW12                       
+00000263	L	NOTYPE		.LDW13                       
+000002b3	L	NOTYPE		.LDW14                       
+000002cf	L	NOTYPE		.LDW15                       
+000002fe	L	NOTYPE		.LDW16                       
+0000031a	L	NOTYPE		.LDW17                       
+00000349	L	NOTYPE		.LDW18                       
+000003af	L	NOTYPE		.LDW19                       
+000003cb	L	NOTYPE		.LDW20                       
+000003e7	L	NOTYPE		.LDW21                       
+0000042f	L	NOTYPE		.LDW22                       
+00000538	L	NOTYPE		.LDW23                       
+00000565	L	NOTYPE		.LDW24                       
 00000be7	L	NOTYPE		.LLN_E                       
 00000768	L	NOTYPE		.LLN_B                       
 0000078f	L	NOTYPE		.LLN_P_E                     
@@ -1906,34 +1906,34 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000310	G	OBJ		_flg_SCI1                    
 40000e9f	L	NOTYPE		.LPC_END                     
 000000c4	L	NOTYPE		.LAB_TOP                     
-000009b4	L	NOTYPE		.LI_TOP                      
-00001354	L	NOTYPE		.LI_E                        
-000009b8	L	NOTYPE		.LI_B                        
+000009ca	L	NOTYPE		.LI_TOP                      
+00001375	L	NOTYPE		.LI_E                        
+000009ce	L	NOTYPE		.LI_B                        
 00000be7	L	NOTYPE		.LLN_TOP                     
-00000a4f	L	NOTYPE		.LDW10                       
-00000a5a	L	NOTYPE		.LDW9                        
-00000a64	L	NOTYPE		.LDW8                        
-00000a72	L	NOTYPE		.LDW7                        
-00000a7b	L	NOTYPE		.LDW6                        
-00000a85	L	NOTYPE		.LDW5                        
-00000a8e	L	NOTYPE		.LDW4                        
-00000a9c	L	NOTYPE		.LDW3                        
-00000aa5	L	NOTYPE		.LDW2                        
-00000aaf	L	NOTYPE		.LDW1                        
-00000b4c	L	NOTYPE		.LDW11                       
-00000b68	L	NOTYPE		.LDW12                       
-00000b84	L	NOTYPE		.LDW13                       
-00000bd4	L	NOTYPE		.LDW14                       
-00000bf0	L	NOTYPE		.LDW15                       
-00000c1f	L	NOTYPE		.LDW16                       
-00000c3b	L	NOTYPE		.LDW17                       
-00000c6a	L	NOTYPE		.LDW18                       
-00000cd0	L	NOTYPE		.LDW19                       
-00000cec	L	NOTYPE		.LDW20                       
-00000d08	L	NOTYPE		.LDW21                       
-00000d50	L	NOTYPE		.LDW22                       
-00000e59	L	NOTYPE		.LDW23                       
-00000e86	L	NOTYPE		.LDW24                       
+00000a70	L	NOTYPE		.LDW10                       
+00000a7b	L	NOTYPE		.LDW9                        
+00000a85	L	NOTYPE		.LDW8                        
+00000a93	L	NOTYPE		.LDW7                        
+00000a9c	L	NOTYPE		.LDW6                        
+00000aa6	L	NOTYPE		.LDW5                        
+00000aaf	L	NOTYPE		.LDW4                        
+00000abd	L	NOTYPE		.LDW3                        
+00000ac6	L	NOTYPE		.LDW2                        
+00000ad0	L	NOTYPE		.LDW1                        
+00000b6d	L	NOTYPE		.LDW11                       
+00000b89	L	NOTYPE		.LDW12                       
+00000ba5	L	NOTYPE		.LDW13                       
+00000bf5	L	NOTYPE		.LDW14                       
+00000c11	L	NOTYPE		.LDW15                       
+00000c40	L	NOTYPE		.LDW16                       
+00000c5c	L	NOTYPE		.LDW17                       
+00000c8b	L	NOTYPE		.LDW18                       
+00000cf1	L	NOTYPE		.LDW19                       
+00000d0d	L	NOTYPE		.LDW20                       
+00000d29	L	NOTYPE		.LDW21                       
+00000d71	L	NOTYPE		.LDW22                       
+00000e7a	L	NOTYPE		.LDW23                       
+00000ea7	L	NOTYPE		.LDW24                       
 00001c92	L	NOTYPE		.LLN_E                       
 00000beb	L	NOTYPE		.LLN_B                       
 00000c14	L	NOTYPE		.LLN_P_E                     
@@ -1948,35 +1948,35 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 400052a8	G	OBJ		_sin_table                   
 40000e9f	L	NOTYPE		.LPC_END                     
 00000162	L	NOTYPE		.LAB_TOP                     
-00001354	L	NOTYPE		.LI_TOP                      
-0000189d	L	NOTYPE		.LI_E                        
-00001358	L	NOTYPE		.LI_B                        
-000013e4	L	NOTYPE		.LDW10                       
-000013ef	L	NOTYPE		.LDW9                        
-000013f9	L	NOTYPE		.LDW8                        
-00001407	L	NOTYPE		.LDW7                        
-00001410	L	NOTYPE		.LDW6                        
-0000141a	L	NOTYPE		.LDW5                        
-00001423	L	NOTYPE		.LDW4                        
-00001431	L	NOTYPE		.LDW3                        
-0000143a	L	NOTYPE		.LDW2                        
-00001444	L	NOTYPE		.LDW25                       
-00001449	L	NOTYPE		.LDW26                       
-00001454	L	NOTYPE		.LDW1                        
-000014f1	L	NOTYPE		.LDW11                       
-0000150d	L	NOTYPE		.LDW12                       
-00001529	L	NOTYPE		.LDW13                       
-00001579	L	NOTYPE		.LDW14                       
-00001595	L	NOTYPE		.LDW15                       
-000015c4	L	NOTYPE		.LDW16                       
-000015e0	L	NOTYPE		.LDW17                       
-0000160f	L	NOTYPE		.LDW18                       
-00001675	L	NOTYPE		.LDW19                       
-00001691	L	NOTYPE		.LDW20                       
-000016ad	L	NOTYPE		.LDW21                       
-000016f5	L	NOTYPE		.LDW22                       
-000017fe	L	NOTYPE		.LDW23                       
-0000182b	L	NOTYPE		.LDW24                       
+00001375	L	NOTYPE		.LI_TOP                      
+000018c9	L	NOTYPE		.LI_E                        
+00001379	L	NOTYPE		.LI_B                        
+00001410	L	NOTYPE		.LDW10                       
+0000141b	L	NOTYPE		.LDW9                        
+00001425	L	NOTYPE		.LDW8                        
+00001433	L	NOTYPE		.LDW7                        
+0000143c	L	NOTYPE		.LDW6                        
+00001446	L	NOTYPE		.LDW5                        
+0000144f	L	NOTYPE		.LDW4                        
+0000145d	L	NOTYPE		.LDW3                        
+00001466	L	NOTYPE		.LDW2                        
+00001470	L	NOTYPE		.LDW25                       
+00001475	L	NOTYPE		.LDW26                       
+00001480	L	NOTYPE		.LDW1                        
+0000151d	L	NOTYPE		.LDW11                       
+00001539	L	NOTYPE		.LDW12                       
+00001555	L	NOTYPE		.LDW13                       
+000015a5	L	NOTYPE		.LDW14                       
+000015c1	L	NOTYPE		.LDW15                       
+000015f0	L	NOTYPE		.LDW16                       
+0000160c	L	NOTYPE		.LDW17                       
+0000163b	L	NOTYPE		.LDW18                       
+000016a1	L	NOTYPE		.LDW19                       
+000016bd	L	NOTYPE		.LDW20                       
+000016d9	L	NOTYPE		.LDW21                       
+00001721	L	NOTYPE		.LDW22                       
+0000182a	L	NOTYPE		.LDW23                       
+00001857	L	NOTYPE		.LDW24                       
 00000218	L	NOTYPE		.LAR_E                       
 000001fc	L	NOTYPE		.LAR_B                       
 00000000	F	103S/103L       PWM_CTRL.ro
@@ -2868,35 +2868,35 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000003a6	G	OBJ		_gus_speed_out               
 400019d4	L	NOTYPE		.LPC_END                     
 000001d6	L	NOTYPE		.LAB_TOP                     
-0000189d	L	NOTYPE		.LI_TOP                      
-00002648	L	NOTYPE		.LI_E                        
-000018a1	L	NOTYPE		.LI_B                        
+000018c9	L	NOTYPE		.LI_TOP                      
+0000267f	L	NOTYPE		.LI_E                        
+000018cd	L	NOTYPE		.LI_B                        
 00001c92	L	NOTYPE		.LLN_TOP                     
-00001938	L	NOTYPE		.LDW10                       
-00001943	L	NOTYPE		.LDW9                        
-0000194d	L	NOTYPE		.LDW8                        
-0000195b	L	NOTYPE		.LDW7                        
-00001964	L	NOTYPE		.LDW6                        
-0000196e	L	NOTYPE		.LDW5                        
-00001977	L	NOTYPE		.LDW4                        
-00001985	L	NOTYPE		.LDW3                        
-0000198e	L	NOTYPE		.LDW2                        
-00001998	L	NOTYPE		.LDW1                        
-00001a35	L	NOTYPE		.LDW11                       
-00001a51	L	NOTYPE		.LDW12                       
-00001a6d	L	NOTYPE		.LDW13                       
-00001abd	L	NOTYPE		.LDW14                       
-00001ad9	L	NOTYPE		.LDW15                       
-00001b08	L	NOTYPE		.LDW16                       
-00001b24	L	NOTYPE		.LDW17                       
-00001b53	L	NOTYPE		.LDW18                       
-00001bb9	L	NOTYPE		.LDW19                       
-00001bd5	L	NOTYPE		.LDW20                       
-00001bf1	L	NOTYPE		.LDW21                       
-00001c39	L	NOTYPE		.LDW22                       
-00001d42	L	NOTYPE		.LDW23                       
-00001d6f	L	NOTYPE		.LDW24                       
-00001dde	L	NOTYPE		.LDW25                       
+0000196f	L	NOTYPE		.LDW10                       
+0000197a	L	NOTYPE		.LDW9                        
+00001984	L	NOTYPE		.LDW8                        
+00001992	L	NOTYPE		.LDW7                        
+0000199b	L	NOTYPE		.LDW6                        
+000019a5	L	NOTYPE		.LDW5                        
+000019ae	L	NOTYPE		.LDW4                        
+000019bc	L	NOTYPE		.LDW3                        
+000019c5	L	NOTYPE		.LDW2                        
+000019cf	L	NOTYPE		.LDW1                        
+00001a6c	L	NOTYPE		.LDW11                       
+00001a88	L	NOTYPE		.LDW12                       
+00001aa4	L	NOTYPE		.LDW13                       
+00001af4	L	NOTYPE		.LDW14                       
+00001b10	L	NOTYPE		.LDW15                       
+00001b3f	L	NOTYPE		.LDW16                       
+00001b5b	L	NOTYPE		.LDW17                       
+00001b8a	L	NOTYPE		.LDW18                       
+00001bf0	L	NOTYPE		.LDW19                       
+00001c0c	L	NOTYPE		.LDW20                       
+00001c28	L	NOTYPE		.LDW21                       
+00001c70	L	NOTYPE		.LDW22                       
+00001d79	L	NOTYPE		.LDW23                       
+00001da6	L	NOTYPE		.LDW24                       
+00001e15	L	NOTYPE		.LDW25                       
 0000306c	L	NOTYPE		.LLN_E                       
 00001c96	L	NOTYPE		.LLN_B                       
 00001cbf	L	NOTYPE		.LLN_P_E                     
@@ -3293,34 +3293,34 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000003c0	G	OBJ		_gus_Udc_tmp                 
 40001dc8	L	NOTYPE		.LPC_END                     
 0000028b	L	NOTYPE		.LAB_TOP                     
-00002648	L	NOTYPE		.LI_TOP                      
-000030f1	L	NOTYPE		.LI_E                        
-0000264c	L	NOTYPE		.LI_B                        
+0000267f	L	NOTYPE		.LI_TOP                      
+00003133	L	NOTYPE		.LI_E                        
+00002683	L	NOTYPE		.LI_B                        
 0000306c	L	NOTYPE		.LLN_TOP                     
-000026e5	L	NOTYPE		.LDW10                       
-000026f0	L	NOTYPE		.LDW9                        
-000026fa	L	NOTYPE		.LDW8                        
-00002708	L	NOTYPE		.LDW7                        
-00002711	L	NOTYPE		.LDW6                        
-0000271b	L	NOTYPE		.LDW5                        
-00002724	L	NOTYPE		.LDW4                        
-00002732	L	NOTYPE		.LDW3                        
-0000273b	L	NOTYPE		.LDW2                        
-00002745	L	NOTYPE		.LDW1                        
-000027e2	L	NOTYPE		.LDW11                       
-000027fe	L	NOTYPE		.LDW12                       
-0000281a	L	NOTYPE		.LDW13                       
-0000286a	L	NOTYPE		.LDW14                       
-00002886	L	NOTYPE		.LDW15                       
-000028b5	L	NOTYPE		.LDW16                       
-000028d1	L	NOTYPE		.LDW17                       
-00002900	L	NOTYPE		.LDW18                       
-00002966	L	NOTYPE		.LDW19                       
-00002982	L	NOTYPE		.LDW20                       
-0000299e	L	NOTYPE		.LDW21                       
-000029e6	L	NOTYPE		.LDW22                       
-00002aef	L	NOTYPE		.LDW23                       
-00002b1c	L	NOTYPE		.LDW24                       
+00002727	L	NOTYPE		.LDW10                       
+00002732	L	NOTYPE		.LDW9                        
+0000273c	L	NOTYPE		.LDW8                        
+0000274a	L	NOTYPE		.LDW7                        
+00002753	L	NOTYPE		.LDW6                        
+0000275d	L	NOTYPE		.LDW5                        
+00002766	L	NOTYPE		.LDW4                        
+00002774	L	NOTYPE		.LDW3                        
+0000277d	L	NOTYPE		.LDW2                        
+00002787	L	NOTYPE		.LDW1                        
+00002824	L	NOTYPE		.LDW11                       
+00002840	L	NOTYPE		.LDW12                       
+0000285c	L	NOTYPE		.LDW13                       
+000028ac	L	NOTYPE		.LDW14                       
+000028c8	L	NOTYPE		.LDW15                       
+000028f7	L	NOTYPE		.LDW16                       
+00002913	L	NOTYPE		.LDW17                       
+00002942	L	NOTYPE		.LDW18                       
+000029a8	L	NOTYPE		.LDW19                       
+000029c4	L	NOTYPE		.LDW20                       
+000029e0	L	NOTYPE		.LDW21                       
+00002a28	L	NOTYPE		.LDW22                       
+00002b31	L	NOTYPE		.LDW23                       
+00002b5e	L	NOTYPE		.LDW24                       
 000038c8	L	NOTYPE		.LLN_E                       
 00003070	L	NOTYPE		.LLN_B                       
 0000309b	L	NOTYPE		.LLN_P_E                     
@@ -3815,38 +3815,38 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000440	G	OBJ		_gul_Hall_past_trigger       
 400025a1	L	NOTYPE		.LPC_END                     
 00000340	L	NOTYPE		.LAB_TOP                     
-000030f1	L	NOTYPE		.LI_TOP                      
-00003bff	L	NOTYPE		.LI_E                        
-000030f5	L	NOTYPE		.LI_B                        
+00003133	L	NOTYPE		.LI_TOP                      
+00003c4c	L	NOTYPE		.LI_E                        
+00003137	L	NOTYPE		.LI_B                        
 000038c8	L	NOTYPE		.LLN_TOP                     
-00003193	L	NOTYPE		.LDW10                       
-0000319e	L	NOTYPE		.LDW9                        
-000031a8	L	NOTYPE		.LDW8                        
-000031b6	L	NOTYPE		.LDW7                        
-000031bf	L	NOTYPE		.LDW6                        
-000031c9	L	NOTYPE		.LDW28                       
-000031d3	L	NOTYPE		.LDW25                       
-000031dd	L	NOTYPE		.LDW5                        
-000031e6	L	NOTYPE		.LDW4                        
-000031f4	L	NOTYPE		.LDW3                        
-000031fd	L	NOTYPE		.LDW2                        
-00003207	L	NOTYPE		.LDW1                        
-00003210	L	NOTYPE		.LDW26                       
-00003215	L	NOTYPE		.LDW27                       
-000032b3	L	NOTYPE		.LDW11                       
-000032cf	L	NOTYPE		.LDW12                       
-000032eb	L	NOTYPE		.LDW13                       
-0000333b	L	NOTYPE		.LDW14                       
-00003357	L	NOTYPE		.LDW15                       
-00003386	L	NOTYPE		.LDW16                       
-000033a2	L	NOTYPE		.LDW17                       
-000033d1	L	NOTYPE		.LDW18                       
-00003437	L	NOTYPE		.LDW19                       
-00003453	L	NOTYPE		.LDW20                       
-0000346f	L	NOTYPE		.LDW21                       
-000034b7	L	NOTYPE		.LDW22                       
-000035c0	L	NOTYPE		.LDW23                       
-000035ed	L	NOTYPE		.LDW24                       
+000031e0	L	NOTYPE		.LDW10                       
+000031eb	L	NOTYPE		.LDW9                        
+000031f5	L	NOTYPE		.LDW8                        
+00003203	L	NOTYPE		.LDW7                        
+0000320c	L	NOTYPE		.LDW6                        
+00003216	L	NOTYPE		.LDW28                       
+00003220	L	NOTYPE		.LDW25                       
+0000322a	L	NOTYPE		.LDW5                        
+00003233	L	NOTYPE		.LDW4                        
+00003241	L	NOTYPE		.LDW3                        
+0000324a	L	NOTYPE		.LDW2                        
+00003254	L	NOTYPE		.LDW1                        
+0000325d	L	NOTYPE		.LDW26                       
+00003262	L	NOTYPE		.LDW27                       
+00003300	L	NOTYPE		.LDW11                       
+0000331c	L	NOTYPE		.LDW12                       
+00003338	L	NOTYPE		.LDW13                       
+00003388	L	NOTYPE		.LDW14                       
+000033a4	L	NOTYPE		.LDW15                       
+000033d3	L	NOTYPE		.LDW16                       
+000033ef	L	NOTYPE		.LDW17                       
+0000341e	L	NOTYPE		.LDW18                       
+00003484	L	NOTYPE		.LDW19                       
+000034a0	L	NOTYPE		.LDW20                       
+000034bc	L	NOTYPE		.LDW21                       
+00003504	L	NOTYPE		.LDW22                       
+0000360d	L	NOTYPE		.LDW23                       
+0000363a	L	NOTYPE		.LDW24                       
 000044c0	L	NOTYPE		.LLN_E                       
 000038cc	L	NOTYPE		.LLN_B                       
 000038fc	L	NOTYPE		.LLN_P_E                     
@@ -3864,39 +3864,39 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000004d4	G	OBJ		_ram_para                    
 400025a1	L	NOTYPE		.LPC_END                     
 000003dd	L	NOTYPE		.LAB_TOP                     
-00003bff	L	NOTYPE		.LI_TOP                      
-000041b8	L	NOTYPE		.LI_E                        
-00003c03	L	NOTYPE		.LI_B                        
-00003c91	L	NOTYPE		.LDW10                       
-00003c9c	L	NOTYPE		.LDW9                        
-00003ca6	L	NOTYPE		.LDW8                        
-00003cb4	L	NOTYPE		.LDW7                        
-00003cbd	L	NOTYPE		.LDW6                        
-00003cc7	L	NOTYPE		.LDW28                       
-00003ccc	L	NOTYPE		.LDW29                       
-00003cd6	L	NOTYPE		.LDW5                        
-00003cdf	L	NOTYPE		.LDW4                        
-00003ced	L	NOTYPE		.LDW3                        
-00003cf6	L	NOTYPE		.LDW2                        
-00003d00	L	NOTYPE		.LDW27                       
-00003d0a	L	NOTYPE		.LDW25                       
-00003d0f	L	NOTYPE		.LDW30                       
-00003d1c	L	NOTYPE		.LDW26                       
-00003d29	L	NOTYPE		.LDW1                        
-00003dc6	L	NOTYPE		.LDW11                       
-00003de2	L	NOTYPE		.LDW12                       
-00003dfe	L	NOTYPE		.LDW13                       
-00003e4e	L	NOTYPE		.LDW14                       
-00003e6a	L	NOTYPE		.LDW15                       
-00003e99	L	NOTYPE		.LDW16                       
-00003eb5	L	NOTYPE		.LDW17                       
-00003ee4	L	NOTYPE		.LDW18                       
-00003f4a	L	NOTYPE		.LDW19                       
-00003f66	L	NOTYPE		.LDW20                       
-00003f82	L	NOTYPE		.LDW21                       
-00003fca	L	NOTYPE		.LDW22                       
-000040d3	L	NOTYPE		.LDW23                       
-00004100	L	NOTYPE		.LDW24                       
+00003c4c	L	NOTYPE		.LI_TOP                      
+00004210	L	NOTYPE		.LI_E                        
+00003c50	L	NOTYPE		.LI_B                        
+00003ce9	L	NOTYPE		.LDW10                       
+00003cf4	L	NOTYPE		.LDW9                        
+00003cfe	L	NOTYPE		.LDW8                        
+00003d0c	L	NOTYPE		.LDW7                        
+00003d15	L	NOTYPE		.LDW6                        
+00003d1f	L	NOTYPE		.LDW28                       
+00003d24	L	NOTYPE		.LDW29                       
+00003d2e	L	NOTYPE		.LDW5                        
+00003d37	L	NOTYPE		.LDW4                        
+00003d45	L	NOTYPE		.LDW3                        
+00003d4e	L	NOTYPE		.LDW2                        
+00003d58	L	NOTYPE		.LDW27                       
+00003d62	L	NOTYPE		.LDW25                       
+00003d67	L	NOTYPE		.LDW30                       
+00003d74	L	NOTYPE		.LDW26                       
+00003d81	L	NOTYPE		.LDW1                        
+00003e1e	L	NOTYPE		.LDW11                       
+00003e3a	L	NOTYPE		.LDW12                       
+00003e56	L	NOTYPE		.LDW13                       
+00003ea6	L	NOTYPE		.LDW14                       
+00003ec2	L	NOTYPE		.LDW15                       
+00003ef1	L	NOTYPE		.LDW16                       
+00003f0d	L	NOTYPE		.LDW17                       
+00003f3c	L	NOTYPE		.LDW18                       
+00003fa2	L	NOTYPE		.LDW19                       
+00003fbe	L	NOTYPE		.LDW20                       
+00003fda	L	NOTYPE		.LDW21                       
+00004022	L	NOTYPE		.LDW22                       
+0000412b	L	NOTYPE		.LDW23                       
+00004158	L	NOTYPE		.LDW24                       
 00000750	L	NOTYPE		.LAR_E                       
 0000071c	L	NOTYPE		.LAR_B                       
 00000000	F	103S/103L       EEPROM_RW.ro
@@ -4186,36 +4186,36 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000007f5	L	NOTYPE		.LDW234                      
 4000288c	L	NOTYPE		.LPC_END                     
 00000451	L	NOTYPE		.LAB_TOP                     
-000041b8	L	NOTYPE		.LI_TOP                      
-0000497a	L	NOTYPE		.LI_E                        
-000041bc	L	NOTYPE		.LI_B                        
+00004210	L	NOTYPE		.LI_TOP                      
+000049dd	L	NOTYPE		.LI_E                        
+00004214	L	NOTYPE		.LI_B                        
 000044c0	L	NOTYPE		.LLN_TOP                     
-00004254	L	NOTYPE		.LDW10                       
-0000425f	L	NOTYPE		.LDW9                        
-00004269	L	NOTYPE		.LDW8                        
-00004277	L	NOTYPE		.LDW7                        
-00004280	L	NOTYPE		.LDW6                        
-0000428a	L	NOTYPE		.LDW5                        
-00004293	L	NOTYPE		.LDW27                       
-00004298	L	NOTYPE		.LDW4                        
-000042a6	L	NOTYPE		.LDW3                        
-000042af	L	NOTYPE		.LDW2                        
-000042b9	L	NOTYPE		.LDW26                       
-000042be	L	NOTYPE		.LDW1                        
-0000435b	L	NOTYPE		.LDW11                       
-00004377	L	NOTYPE		.LDW12                       
-00004393	L	NOTYPE		.LDW13                       
-000043e3	L	NOTYPE		.LDW14                       
-000043ff	L	NOTYPE		.LDW15                       
-0000442e	L	NOTYPE		.LDW16                       
-0000444a	L	NOTYPE		.LDW17                       
-00004479	L	NOTYPE		.LDW18                       
-000044df	L	NOTYPE		.LDW19                       
-000044fb	L	NOTYPE		.LDW20                       
-00004517	L	NOTYPE		.LDW21                       
-0000455f	L	NOTYPE		.LDW22                       
-00004668	L	NOTYPE		.LDW23                       
-00004695	L	NOTYPE		.LDW24                       
+000042b7	L	NOTYPE		.LDW10                       
+000042c2	L	NOTYPE		.LDW9                        
+000042cc	L	NOTYPE		.LDW8                        
+000042da	L	NOTYPE		.LDW7                        
+000042e3	L	NOTYPE		.LDW6                        
+000042ed	L	NOTYPE		.LDW5                        
+000042f6	L	NOTYPE		.LDW27                       
+000042fb	L	NOTYPE		.LDW4                        
+00004309	L	NOTYPE		.LDW3                        
+00004312	L	NOTYPE		.LDW2                        
+0000431c	L	NOTYPE		.LDW26                       
+00004321	L	NOTYPE		.LDW1                        
+000043be	L	NOTYPE		.LDW11                       
+000043da	L	NOTYPE		.LDW12                       
+000043f6	L	NOTYPE		.LDW13                       
+00004446	L	NOTYPE		.LDW14                       
+00004462	L	NOTYPE		.LDW15                       
+00004491	L	NOTYPE		.LDW16                       
+000044ad	L	NOTYPE		.LDW17                       
+000044dc	L	NOTYPE		.LDW18                       
+00004542	L	NOTYPE		.LDW19                       
+0000455e	L	NOTYPE		.LDW20                       
+0000457a	L	NOTYPE		.LDW21                       
+000045c2	L	NOTYPE		.LDW22                       
+000046cb	L	NOTYPE		.LDW23                       
+000046f8	L	NOTYPE		.LDW24                       
 00004ad5	L	NOTYPE		.LLN_E                       
 000044c4	L	NOTYPE		.LLN_B                       
 000044ee	L	NOTYPE		.LLN_P_E                     
@@ -4763,36 +4763,36 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000005de	G	OBJ		_gus_tmppin                  
 40002fd2	L	NOTYPE		.LPC_END                     
 0000050d	L	NOTYPE		.LAB_TOP                     
-0000497a	L	NOTYPE		.LI_TOP                      
-00005399	L	NOTYPE		.LI_E                        
-0000497e	L	NOTYPE		.LI_B                        
+000049dd	L	NOTYPE		.LI_TOP                      
+00005407	L	NOTYPE		.LI_E                        
+000049e1	L	NOTYPE		.LI_B                        
 00004ad5	L	NOTYPE		.LLN_TOP                     
-00004a17	L	NOTYPE		.LDW10                       
-00004a22	L	NOTYPE		.LDW9                        
-00004a2c	L	NOTYPE		.LDW8                        
-00004a3a	L	NOTYPE		.LDW7                        
-00004a43	L	NOTYPE		.LDW6                        
-00004a4d	L	NOTYPE		.LDW5                        
-00004a56	L	NOTYPE		.LDW26                       
-00004a60	L	NOTYPE		.LDW25                       
-00004a6a	L	NOTYPE		.LDW4                        
-00004a78	L	NOTYPE		.LDW3                        
-00004a81	L	NOTYPE		.LDW2                        
-00004a8b	L	NOTYPE		.LDW1                        
-00004b28	L	NOTYPE		.LDW11                       
-00004b44	L	NOTYPE		.LDW12                       
-00004b60	L	NOTYPE		.LDW13                       
-00004bb0	L	NOTYPE		.LDW14                       
-00004bcc	L	NOTYPE		.LDW15                       
-00004bfb	L	NOTYPE		.LDW16                       
-00004c17	L	NOTYPE		.LDW17                       
-00004c46	L	NOTYPE		.LDW18                       
-00004cac	L	NOTYPE		.LDW19                       
-00004cc8	L	NOTYPE		.LDW20                       
-00004ce4	L	NOTYPE		.LDW21                       
-00004d2c	L	NOTYPE		.LDW22                       
-00004e35	L	NOTYPE		.LDW23                       
-00004e62	L	NOTYPE		.LDW24                       
+00004a85	L	NOTYPE		.LDW10                       
+00004a90	L	NOTYPE		.LDW9                        
+00004a9a	L	NOTYPE		.LDW8                        
+00004aa8	L	NOTYPE		.LDW7                        
+00004ab1	L	NOTYPE		.LDW6                        
+00004abb	L	NOTYPE		.LDW5                        
+00004ac4	L	NOTYPE		.LDW26                       
+00004ace	L	NOTYPE		.LDW25                       
+00004ad8	L	NOTYPE		.LDW4                        
+00004ae6	L	NOTYPE		.LDW3                        
+00004aef	L	NOTYPE		.LDW2                        
+00004af9	L	NOTYPE		.LDW1                        
+00004b96	L	NOTYPE		.LDW11                       
+00004bb2	L	NOTYPE		.LDW12                       
+00004bce	L	NOTYPE		.LDW13                       
+00004c1e	L	NOTYPE		.LDW14                       
+00004c3a	L	NOTYPE		.LDW15                       
+00004c69	L	NOTYPE		.LDW16                       
+00004c85	L	NOTYPE		.LDW17                       
+00004cb4	L	NOTYPE		.LDW18                       
+00004d1a	L	NOTYPE		.LDW19                       
+00004d36	L	NOTYPE		.LDW20                       
+00004d52	L	NOTYPE		.LDW21                       
+00004d9a	L	NOTYPE		.LDW22                       
+00004ea3	L	NOTYPE		.LDW23                       
+00004ed0	L	NOTYPE		.LDW24                       
 00005793	L	NOTYPE		.LLN_E                       
 00004ad9	L	NOTYPE		.LLN_B                       
 00004b04	L	NOTYPE		.LLN_P_E                     
@@ -5648,34 +5648,34 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000005fc	G	OBJ		_gss_stop_space_delaytimer   
 40003a9d	L	NOTYPE		.LPC_END                     
 000005ac	L	NOTYPE		.LAB_TOP                     
-00005399	L	NOTYPE		.LI_TOP                      
-00006296	L	NOTYPE		.LI_E                        
-0000539d	L	NOTYPE		.LI_B                        
+00005407	L	NOTYPE		.LI_TOP                      
+0000630f	L	NOTYPE		.LI_E                        
+0000540b	L	NOTYPE		.LI_B                        
 00005793	L	NOTYPE		.LLN_TOP                     
-00005438	L	NOTYPE		.LDW10                       
-00005443	L	NOTYPE		.LDW9                        
-0000544d	L	NOTYPE		.LDW8                        
-0000545b	L	NOTYPE		.LDW7                        
-00005464	L	NOTYPE		.LDW6                        
-0000546e	L	NOTYPE		.LDW5                        
-00005477	L	NOTYPE		.LDW4                        
-00005485	L	NOTYPE		.LDW3                        
-0000548e	L	NOTYPE		.LDW2                        
-00005498	L	NOTYPE		.LDW1                        
-00005535	L	NOTYPE		.LDW11                       
-00005551	L	NOTYPE		.LDW12                       
-0000556d	L	NOTYPE		.LDW13                       
-000055bd	L	NOTYPE		.LDW14                       
-000055d9	L	NOTYPE		.LDW15                       
-00005608	L	NOTYPE		.LDW16                       
-00005624	L	NOTYPE		.LDW17                       
-00005653	L	NOTYPE		.LDW18                       
-000056b9	L	NOTYPE		.LDW19                       
-000056d5	L	NOTYPE		.LDW20                       
-000056f1	L	NOTYPE		.LDW21                       
-00005739	L	NOTYPE		.LDW22                       
-00005842	L	NOTYPE		.LDW23                       
-0000586f	L	NOTYPE		.LDW24                       
+000054b1	L	NOTYPE		.LDW10                       
+000054bc	L	NOTYPE		.LDW9                        
+000054c6	L	NOTYPE		.LDW8                        
+000054d4	L	NOTYPE		.LDW7                        
+000054dd	L	NOTYPE		.LDW6                        
+000054e7	L	NOTYPE		.LDW5                        
+000054f0	L	NOTYPE		.LDW4                        
+000054fe	L	NOTYPE		.LDW3                        
+00005507	L	NOTYPE		.LDW2                        
+00005511	L	NOTYPE		.LDW1                        
+000055ae	L	NOTYPE		.LDW11                       
+000055ca	L	NOTYPE		.LDW12                       
+000055e6	L	NOTYPE		.LDW13                       
+00005636	L	NOTYPE		.LDW14                       
+00005652	L	NOTYPE		.LDW15                       
+00005681	L	NOTYPE		.LDW16                       
+0000569d	L	NOTYPE		.LDW17                       
+000056cc	L	NOTYPE		.LDW18                       
+00005732	L	NOTYPE		.LDW19                       
+0000574e	L	NOTYPE		.LDW20                       
+0000576a	L	NOTYPE		.LDW21                       
+000057b2	L	NOTYPE		.LDW22                       
+000058bb	L	NOTYPE		.LDW23                       
+000058e8	L	NOTYPE		.LDW24                       
 00006c91	L	NOTYPE		.LLN_E                       
 00005797	L	NOTYPE		.LLN_B                       
 000057c4	L	NOTYPE		.LLN_P_E                     
@@ -6179,38 +6179,38 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000bfd	L	NOTYPE		.LDW435                      
 40004101	L	NOTYPE		.LPC_END                     
 00000647	L	NOTYPE		.LAB_TOP                     
-00006296	L	NOTYPE		.LI_TOP                      
-00006c6e	L	NOTYPE		.LI_E                        
-0000629a	L	NOTYPE		.LI_B                        
+0000630f	L	NOTYPE		.LI_TOP                      
+00006cf2	L	NOTYPE		.LI_E                        
+00006313	L	NOTYPE		.LI_B                        
 00006c91	L	NOTYPE		.LLN_TOP                     
-0000633b	L	NOTYPE		.LDW10                       
-00006346	L	NOTYPE		.LDW9                        
-00006350	L	NOTYPE		.LDW8                        
-0000635e	L	NOTYPE		.LDW7                        
-00006367	L	NOTYPE		.LDW6                        
-00006371	L	NOTYPE		.LDW5                        
-0000637a	L	NOTYPE		.LDW37                       
-0000637f	L	NOTYPE		.LDW26                       
-00006384	L	NOTYPE		.LDW27                       
-0000638e	L	NOTYPE		.LDW4                        
-0000639c	L	NOTYPE		.LDW3                        
-000063a5	L	NOTYPE		.LDW2                        
-000063af	L	NOTYPE		.LDW1                        
-0000644c	L	NOTYPE		.LDW11                       
-00006468	L	NOTYPE		.LDW12                       
-00006484	L	NOTYPE		.LDW13                       
-000064d4	L	NOTYPE		.LDW14                       
-000064f0	L	NOTYPE		.LDW15                       
-0000651f	L	NOTYPE		.LDW16                       
-0000653b	L	NOTYPE		.LDW17                       
-0000656a	L	NOTYPE		.LDW18                       
-000065d0	L	NOTYPE		.LDW19                       
-000065ec	L	NOTYPE		.LDW20                       
-00006608	L	NOTYPE		.LDW21                       
-00006650	L	NOTYPE		.LDW22                       
-00006759	L	NOTYPE		.LDW23                       
-00006786	L	NOTYPE		.LDW24                       
-000067e1	L	NOTYPE		.LDW25                       
+000063bf	L	NOTYPE		.LDW10                       
+000063ca	L	NOTYPE		.LDW9                        
+000063d4	L	NOTYPE		.LDW8                        
+000063e2	L	NOTYPE		.LDW7                        
+000063eb	L	NOTYPE		.LDW6                        
+000063f5	L	NOTYPE		.LDW5                        
+000063fe	L	NOTYPE		.LDW37                       
+00006403	L	NOTYPE		.LDW26                       
+00006408	L	NOTYPE		.LDW27                       
+00006412	L	NOTYPE		.LDW4                        
+00006420	L	NOTYPE		.LDW3                        
+00006429	L	NOTYPE		.LDW2                        
+00006433	L	NOTYPE		.LDW1                        
+000064d0	L	NOTYPE		.LDW11                       
+000064ec	L	NOTYPE		.LDW12                       
+00006508	L	NOTYPE		.LDW13                       
+00006558	L	NOTYPE		.LDW14                       
+00006574	L	NOTYPE		.LDW15                       
+000065a3	L	NOTYPE		.LDW16                       
+000065bf	L	NOTYPE		.LDW17                       
+000065ee	L	NOTYPE		.LDW18                       
+00006654	L	NOTYPE		.LDW19                       
+00006670	L	NOTYPE		.LDW20                       
+0000668c	L	NOTYPE		.LDW21                       
+000066d4	L	NOTYPE		.LDW22                       
+000067dd	L	NOTYPE		.LDW23                       
+0000680a	L	NOTYPE		.LDW24                       
+00006865	L	NOTYPE		.LDW25                       
 00007687	L	NOTYPE		.LLN_E                       
 00006c95	L	NOTYPE		.LLN_B                       
 00006cc8	L	NOTYPE		.LLN_P_E                     
@@ -6275,34 +6275,34 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 00000c3d	L	NOTYPE		.LDW66                       
 40004167	L	NOTYPE		.LPC_END                     
 0000072e	L	NOTYPE		.LAB_TOP                     
-00006c6e	L	NOTYPE		.LI_TOP                      
-00007223	L	NOTYPE		.LI_E                        
-00006c72	L	NOTYPE		.LI_B                        
+00006cf2	L	NOTYPE		.LI_TOP                      
+000072b2	L	NOTYPE		.LI_E                        
+00006cf6	L	NOTYPE		.LI_B                        
 00007687	L	NOTYPE		.LLN_TOP                     
-00006d0a	L	NOTYPE		.LDW10                       
-00006d15	L	NOTYPE		.LDW9                        
-00006d1f	L	NOTYPE		.LDW8                        
-00006d2d	L	NOTYPE		.LDW7                        
-00006d36	L	NOTYPE		.LDW6                        
-00006d40	L	NOTYPE		.LDW5                        
-00006d49	L	NOTYPE		.LDW4                        
-00006d57	L	NOTYPE		.LDW3                        
-00006d60	L	NOTYPE		.LDW2                        
-00006d6a	L	NOTYPE		.LDW1                        
-00006e07	L	NOTYPE		.LDW11                       
-00006e23	L	NOTYPE		.LDW12                       
-00006e3f	L	NOTYPE		.LDW13                       
-00006e8f	L	NOTYPE		.LDW14                       
-00006eab	L	NOTYPE		.LDW15                       
-00006eda	L	NOTYPE		.LDW16                       
-00006ef6	L	NOTYPE		.LDW17                       
-00006f25	L	NOTYPE		.LDW18                       
-00006f8b	L	NOTYPE		.LDW19                       
-00006fa7	L	NOTYPE		.LDW20                       
-00006fc3	L	NOTYPE		.LDW21                       
-0000700b	L	NOTYPE		.LDW22                       
-00007114	L	NOTYPE		.LDW23                       
-00007141	L	NOTYPE		.LDW24                       
+00006d99	L	NOTYPE		.LDW10                       
+00006da4	L	NOTYPE		.LDW9                        
+00006dae	L	NOTYPE		.LDW8                        
+00006dbc	L	NOTYPE		.LDW7                        
+00006dc5	L	NOTYPE		.LDW6                        
+00006dcf	L	NOTYPE		.LDW5                        
+00006dd8	L	NOTYPE		.LDW4                        
+00006de6	L	NOTYPE		.LDW3                        
+00006def	L	NOTYPE		.LDW2                        
+00006df9	L	NOTYPE		.LDW1                        
+00006e96	L	NOTYPE		.LDW11                       
+00006eb2	L	NOTYPE		.LDW12                       
+00006ece	L	NOTYPE		.LDW13                       
+00006f1e	L	NOTYPE		.LDW14                       
+00006f3a	L	NOTYPE		.LDW15                       
+00006f69	L	NOTYPE		.LDW16                       
+00006f85	L	NOTYPE		.LDW17                       
+00006fb4	L	NOTYPE		.LDW18                       
+0000701a	L	NOTYPE		.LDW19                       
+00007036	L	NOTYPE		.LDW20                       
+00007052	L	NOTYPE		.LDW21                       
+0000709a	L	NOTYPE		.LDW22                       
+000071a3	L	NOTYPE		.LDW23                       
+000071d0	L	NOTYPE		.LDW24                       
 0000778a	L	NOTYPE		.LLN_E                       
 0000768b	L	NOTYPE		.LLN_B                       
 000076b5	L	NOTYPE		.LLN_P_E                     
@@ -6318,37 +6318,37 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 400060ae	G	OBJ		_ad_to_Tm                    
 40004167	L	NOTYPE		.LPC_END                     
 000007b5	L	NOTYPE		.LAB_TOP                     
-00007223	L	NOTYPE		.LI_TOP                      
-0000778f	L	NOTYPE		.LI_E                        
-00007227	L	NOTYPE		.LI_B                        
-000072b3	L	NOTYPE		.LDW10                       
-000072be	L	NOTYPE		.LDW9                        
-000072c8	L	NOTYPE		.LDW8                        
-000072d6	L	NOTYPE		.LDW7                        
-000072df	L	NOTYPE		.LDW6                        
-000072e9	L	NOTYPE		.LDW27                       
-000072ee	L	NOTYPE		.LDW28                       
-000072f8	L	NOTYPE		.LDW5                        
-00007301	L	NOTYPE		.LDW4                        
-0000730f	L	NOTYPE		.LDW3                        
-00007318	L	NOTYPE		.LDW2                        
-00007322	L	NOTYPE		.LDW25                       
-00007327	L	NOTYPE		.LDW26                       
-00007331	L	NOTYPE		.LDW1                        
-000073ce	L	NOTYPE		.LDW11                       
-000073ea	L	NOTYPE		.LDW12                       
-00007406	L	NOTYPE		.LDW13                       
-00007456	L	NOTYPE		.LDW14                       
-00007472	L	NOTYPE		.LDW15                       
-000074a1	L	NOTYPE		.LDW16                       
-000074bd	L	NOTYPE		.LDW17                       
-000074ec	L	NOTYPE		.LDW18                       
-00007552	L	NOTYPE		.LDW19                       
-0000756e	L	NOTYPE		.LDW20                       
-0000758a	L	NOTYPE		.LDW21                       
-000075d2	L	NOTYPE		.LDW22                       
-000076db	L	NOTYPE		.LDW23                       
-00007708	L	NOTYPE		.LDW24                       
+000072b2	L	NOTYPE		.LI_TOP                      
+00007829	L	NOTYPE		.LI_E                        
+000072b6	L	NOTYPE		.LI_B                        
+0000734d	L	NOTYPE		.LDW10                       
+00007358	L	NOTYPE		.LDW9                        
+00007362	L	NOTYPE		.LDW8                        
+00007370	L	NOTYPE		.LDW7                        
+00007379	L	NOTYPE		.LDW6                        
+00007383	L	NOTYPE		.LDW27                       
+00007388	L	NOTYPE		.LDW28                       
+00007392	L	NOTYPE		.LDW5                        
+0000739b	L	NOTYPE		.LDW4                        
+000073a9	L	NOTYPE		.LDW3                        
+000073b2	L	NOTYPE		.LDW2                        
+000073bc	L	NOTYPE		.LDW25                       
+000073c1	L	NOTYPE		.LDW26                       
+000073cb	L	NOTYPE		.LDW1                        
+00007468	L	NOTYPE		.LDW11                       
+00007484	L	NOTYPE		.LDW12                       
+000074a0	L	NOTYPE		.LDW13                       
+000074f0	L	NOTYPE		.LDW14                       
+0000750c	L	NOTYPE		.LDW15                       
+0000753b	L	NOTYPE		.LDW16                       
+00007557	L	NOTYPE		.LDW17                       
+00007586	L	NOTYPE		.LDW18                       
+000075ec	L	NOTYPE		.LDW19                       
+00007608	L	NOTYPE		.LDW20                       
+00007624	L	NOTYPE		.LDW21                       
+0000766c	L	NOTYPE		.LDW22                       
+00007775	L	NOTYPE		.LDW23                       
+000077a2	L	NOTYPE		.LDW24                       
 00000bc0	L	NOTYPE		.LAR_E                       
 00000b9c	L	NOTYPE		.LAR_B                       
 00000000	F	103S/103L       Host_comm.ro
@@ -7662,36 +7662,36 @@ MN103S/MN103L Windows V5.4R1 OP0c.e20		-j -e -l -g -O -o AS0c.e20
 000006a0	G	OBJ		_gus_host_test               
 4000522a	L	NOTYPE		.LPC_END                     
 00000829	L	NOTYPE		.LAB_TOP                     
-0000778f	L	NOTYPE		.LI_TOP                      
-00008460	L	NOTYPE		.LI_E                        
-00007793	L	NOTYPE		.LI_B                        
+00007829	L	NOTYPE		.LI_TOP                      
+00008505	L	NOTYPE		.LI_E                        
+0000782d	L	NOTYPE		.LI_B                        
 0000778a	L	NOTYPE		.LLN_TOP                     
-0000782b	L	NOTYPE		.LDW10                       
-00007836	L	NOTYPE		.LDW9                        
-00007840	L	NOTYPE		.LDW8                        
-0000784e	L	NOTYPE		.LDW7                        
-00007857	L	NOTYPE		.LDW6                        
-00007861	L	NOTYPE		.LDW5                        
-0000786a	L	NOTYPE		.LDW41                       
-0000786f	L	NOTYPE		.LDW25                       
-00007879	L	NOTYPE		.LDW4                        
-00007887	L	NOTYPE		.LDW3                        
-00007890	L	NOTYPE		.LDW2                        
-0000789a	L	NOTYPE		.LDW1                        
-00007937	L	NOTYPE		.LDW11                       
-00007953	L	NOTYPE		.LDW12                       
-0000796f	L	NOTYPE		.LDW13                       
-000079bf	L	NOTYPE		.LDW14                       
-000079db	L	NOTYPE		.LDW15                       
-00007a0a	L	NOTYPE		.LDW16                       
-00007a26	L	NOTYPE		.LDW17                       
-00007a55	L	NOTYPE		.LDW18                       
-00007abb	L	NOTYPE		.LDW19                       
-00007ad7	L	NOTYPE		.LDW20                       
-00007af3	L	NOTYPE		.LDW21                       
-00007b3b	L	NOTYPE		.LDW22                       
-00007c44	L	NOTYPE		.LDW23                       
-00007c71	L	NOTYPE		.LDW24                       
+000078d0	L	NOTYPE		.LDW10                       
+000078db	L	NOTYPE		.LDW9                        
+000078e5	L	NOTYPE		.LDW8                        
+000078f3	L	NOTYPE		.LDW7                        
+000078fc	L	NOTYPE		.LDW6                        
+00007906	L	NOTYPE		.LDW5                        
+0000790f	L	NOTYPE		.LDW41                       
+00007914	L	NOTYPE		.LDW25                       
+0000791e	L	NOTYPE		.LDW4                        
+0000792c	L	NOTYPE		.LDW3                        
+00007935	L	NOTYPE		.LDW2                        
+0000793f	L	NOTYPE		.LDW1                        
+000079dc	L	NOTYPE		.LDW11                       
+000079f8	L	NOTYPE		.LDW12                       
+00007a14	L	NOTYPE		.LDW13                       
+00007a64	L	NOTYPE		.LDW14                       
+00007a80	L	NOTYPE		.LDW15                       
+00007aaf	L	NOTYPE		.LDW16                       
+00007acb	L	NOTYPE		.LDW17                       
+00007afa	L	NOTYPE		.LDW18                       
+00007b60	L	NOTYPE		.LDW19                       
+00007b7c	L	NOTYPE		.LDW20                       
+00007b98	L	NOTYPE		.LDW21                       
+00007be0	L	NOTYPE		.LDW22                       
+00007ce9	L	NOTYPE		.LDW23                       
+00007d16	L	NOTYPE		.LDW24                       
 00009563	L	NOTYPE		.LLN_E                       
 0000778e	L	NOTYPE		.LLN_B                       
 000077b8	L	NOTYPE		.LLN_P_E                     

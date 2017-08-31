@@ -417,810 +417,811 @@ Loc       Object            Line        Source
 00000021  00000000          + 411  		DD	.LPC_TOP	;; DW_AT_low_pc
 00000025  00000000          + 412  		DD	.LPC_END	;; DW_AT_high_pc
 00000029  0100                413  		DW	0x1	;; DW_AT_language
-0000002b  463A5C576F726B20    414  		DC	"F:\\Work Projects\\MotorDrive\\1000W_MotorDrive\\SoftWare\\1000W",0x0	;; DW_AT_comp_dir
+0000002b  463A5C576F726B20    414  		DC	"F:\\Work Projects\\MotorDrive\\1000W_MotorDrive\\SoftWare\\1000wMotor\\1000W",0x0	;; DW_AT_comp_dir
 00000033  50726F6A65637473    414  	
 0000003b  5C4D6F746F724472    414  	
 00000043  6976655C31303030    414  	
 0000004b  575F4D6F746F7244    414  	
 00000053  726976655C536F66    414  	
 0000005b  74576172655C3130    414  	
-00000063  30305700            414  	
-00000067  4D4E313033532053    415  		DC	"MN103S Series C Compiler Windows V5.4R1 Nov 30 2011",0x0	;; DW_AT_producer
-0000006f  6572696573204320    415  	
-00000077  436F6D70696C6572    415  	
-0000007f  2057696E646F7773    415  	
-00000087  2056352E34523120    415  	
-0000008f  4E6F762033302032    415  	
-00000097  30313100            415  	
-0000009b  00                  416  		DC	0x0	;; DW_AT_identifier_case
+00000063  3030774D6F746F72    414  	
+0000006b  5C313030305700      414  	
+00000072  4D4E313033532053    415  		DC	"MN103S Series C Compiler Windows V5.4R1 Nov 30 2011",0x0	;; DW_AT_producer
+0000007a  6572696573204320    415  	
+00000082  436F6D70696C6572    415  	
+0000008a  2057696E646F7773    415  	
+00000092  2056352E34523120    415  	
+0000009a  4E6F762033302032    415  	
+000000a2  30313100            415  	
+000000a6  00                  416  		DC	0x0	;; DW_AT_identifier_case
                               417  	;; entry 2
-0000009c                      418  	.LDW10
-0000009c  02                  419  		DC	0x2	;; abbrev_code
-0000009d  646F75626C6500      420  		DC	"double",0x0	;; DW_AT_name
-000000a4  08                  421  		DC	0x8	;; DW_AT_byte_size
-000000a5  0400                422  		DW	0x4	;; DW_AT_encoding
+000000a7                      418  	.LDW10
+000000a7  02                  419  		DC	0x2	;; abbrev_code
+000000a8  646F75626C6500      420  		DC	"double",0x0	;; DW_AT_name
+000000af  08                  421  		DC	0x8	;; DW_AT_byte_size
+000000b0  0400                422  		DW	0x4	;; DW_AT_encoding
                               423  	;; entry 3
-000000a7                      424  	.LDW9
-000000a7  02                  425  		DC	0x2	;; abbrev_code
-000000a8  666C6F617400        426  		DC	"float",0x0	;; DW_AT_name
-000000ae  04                  427  		DC	0x4	;; DW_AT_byte_size
-000000af  0400                428  		DW	0x4	;; DW_AT_encoding
+000000b2                      424  	.LDW9
+000000b2  02                  425  		DC	0x2	;; abbrev_code
+000000b3  666C6F617400        426  		DC	"float",0x0	;; DW_AT_name
+000000b9  04                  427  		DC	0x4	;; DW_AT_byte_size
+000000ba  0400                428  		DW	0x4	;; DW_AT_encoding
                               429  	;; entry 4
-000000b1                      430  	.LDW8
-000000b1  02                  431  		DC	0x2	;; abbrev_code
-000000b2  6C6F6E67206C6F6E    432  		DC	"long long",0x0	;; DW_AT_name
-000000ba  6700                432  	
-000000bc  08                  433  		DC	0x8	;; DW_AT_byte_size
-000000bd  0700                434  		DW	0x7	;; DW_AT_encoding
+000000bc                      430  	.LDW8
+000000bc  02                  431  		DC	0x2	;; abbrev_code
+000000bd  6C6F6E67206C6F6E    432  		DC	"long long",0x0	;; DW_AT_name
+000000c5  6700                432  	
+000000c7  08                  433  		DC	0x8	;; DW_AT_byte_size
+000000c8  0700                434  		DW	0x7	;; DW_AT_encoding
                               435  	;; entry 5
-000000bf                      436  	.LDW7
-000000bf  02                  437  		DC	0x2	;; abbrev_code
-000000c0  6C6F6E6700          438  		DC	"long",0x0	;; DW_AT_name
-000000c5  04                  439  		DC	0x4	;; DW_AT_byte_size
-000000c6  0700                440  		DW	0x7	;; DW_AT_encoding
+000000ca                      436  	.LDW7
+000000ca  02                  437  		DC	0x2	;; abbrev_code
+000000cb  6C6F6E6700          438  		DC	"long",0x0	;; DW_AT_name
+000000d0  04                  439  		DC	0x4	;; DW_AT_byte_size
+000000d1  0700                440  		DW	0x7	;; DW_AT_encoding
                               441  	;; entry 6
-000000c8                      442  	.LDW6
-000000c8  02                  443  		DC	0x2	;; abbrev_code
-000000c9  73686F727400        444  		DC	"short",0x0	;; DW_AT_name
-000000cf  02                  445  		DC	0x2	;; DW_AT_byte_size
-000000d0  0700                446  		DW	0x7	;; DW_AT_encoding
+000000d3                      442  	.LDW6
+000000d3  02                  443  		DC	0x2	;; abbrev_code
+000000d4  73686F727400        444  		DC	"short",0x0	;; DW_AT_name
+000000da  02                  445  		DC	0x2	;; DW_AT_byte_size
+000000db  0700                446  		DW	0x7	;; DW_AT_encoding
                               447  	;; entry 7
-000000d2                      448  	.LDW5
-000000d2  02                  449  		DC	0x2	;; abbrev_code
-000000d3  6368617200          450  		DC	"char",0x0	;; DW_AT_name
-000000d8  01                  451  		DC	0x1	;; DW_AT_byte_size
-000000d9  0800                452  		DW	0x8	;; DW_AT_encoding
+000000dd                      448  	.LDW5
+000000dd  02                  449  		DC	0x2	;; abbrev_code
+000000de  6368617200          450  		DC	"char",0x0	;; DW_AT_name
+000000e3  01                  451  		DC	0x1	;; DW_AT_byte_size
+000000e4  0800                452  		DW	0x8	;; DW_AT_encoding
                               453  	;; entry 8
-000000db                      454  	.LDW4
-000000db  02                  455  		DC	0x2	;; abbrev_code
-000000dc  6C6F6E67206C6F6E    456  		DC	"long long",0x0	;; DW_AT_name
-000000e4  6700                456  	
-000000e6  08                  457  		DC	0x8	;; DW_AT_byte_size
-000000e7  0500                458  		DW	0x5	;; DW_AT_encoding
+000000e6                      454  	.LDW4
+000000e6  02                  455  		DC	0x2	;; abbrev_code
+000000e7  6C6F6E67206C6F6E    456  		DC	"long long",0x0	;; DW_AT_name
+000000ef  6700                456  	
+000000f1  08                  457  		DC	0x8	;; DW_AT_byte_size
+000000f2  0500                458  		DW	0x5	;; DW_AT_encoding
                               459  	;; entry 9
-000000e9                      460  	.LDW3
-000000e9  02                  461  		DC	0x2	;; abbrev_code
-000000ea  6C6F6E6700          462  		DC	"long",0x0	;; DW_AT_name
-000000ef  04                  463  		DC	0x4	;; DW_AT_byte_size
-000000f0  0500                464  		DW	0x5	;; DW_AT_encoding
+000000f4                      460  	.LDW3
+000000f4  02                  461  		DC	0x2	;; abbrev_code
+000000f5  6C6F6E6700          462  		DC	"long",0x0	;; DW_AT_name
+000000fa  04                  463  		DC	0x4	;; DW_AT_byte_size
+000000fb  0500                464  		DW	0x5	;; DW_AT_encoding
                               465  	;; entry 10
-000000f2                      466  	.LDW2
-000000f2  02                  467  		DC	0x2	;; abbrev_code
-000000f3  73686F727400        468  		DC	"short",0x0	;; DW_AT_name
-000000f9  02                  469  		DC	0x2	;; DW_AT_byte_size
-000000fa  0500                470  		DW	0x5	;; DW_AT_encoding
+000000fd                      466  	.LDW2
+000000fd  02                  467  		DC	0x2	;; abbrev_code
+000000fe  73686F727400        468  		DC	"short",0x0	;; DW_AT_name
+00000104  02                  469  		DC	0x2	;; DW_AT_byte_size
+00000105  0500                470  		DW	0x5	;; DW_AT_encoding
                               471  	;; entry 11
-000000fc                      472  	.LDW1
-000000fc  02                  473  		DC	0x2	;; abbrev_code
-000000fd  6368617200          474  		DC	"char",0x0	;; DW_AT_name
-00000102  01                  475  		DC	0x1	;; DW_AT_byte_size
-00000103  0600                476  		DW	0x6	;; DW_AT_encoding
+00000107                      472  	.LDW1
+00000107  02                  473  		DC	0x2	;; abbrev_code
+00000108  6368617200          474  		DC	"char",0x0	;; DW_AT_name
+0000010d  01                  475  		DC	0x1	;; DW_AT_byte_size
+0000010e  0600                476  		DW	0x6	;; DW_AT_encoding
                               477  	;; entry 12
-00000105  03                  478  		DC	0x3	;; abbrev_code
-00000106  636861725F7400      479  		DC	"char_t",0x0	;; DW_AT_name
-0000010d  00000000          + 480  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000110  03                  478  		DC	0x3	;; abbrev_code
+00000111  636861725F7400      479  		DC	"char_t",0x0	;; DW_AT_name
+00000118  00000000          + 480  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               481  	;; entry 13
-00000111  03                  482  		DC	0x3	;; abbrev_code
-00000112  696E74385F7400      483  		DC	"int8_t",0x0	;; DW_AT_name
-00000119  00000000          + 484  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000011c  03                  482  		DC	0x3	;; abbrev_code
+0000011d  696E74385F7400      483  		DC	"int8_t",0x0	;; DW_AT_name
+00000124  00000000          + 484  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               485  	;; entry 14
-0000011d  03                  486  		DC	0x3	;; abbrev_code
-0000011e  696E7431365F7400    487  		DC	"int16_t",0x0	;; DW_AT_name
-00000126  00000000          + 488  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000128  03                  486  		DC	0x3	;; abbrev_code
+00000129  696E7431365F7400    487  		DC	"int16_t",0x0	;; DW_AT_name
+00000131  00000000          + 488  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               489  	;; entry 15
-0000012a  03                  490  		DC	0x3	;; abbrev_code
-0000012b  696E7433325F7400    491  		DC	"int32_t",0x0	;; DW_AT_name
-00000133  00000000          + 492  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+00000135  03                  490  		DC	0x3	;; abbrev_code
+00000136  696E7433325F7400    491  		DC	"int32_t",0x0	;; DW_AT_name
+0000013e  00000000          + 492  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               493  	;; entry 16
-00000137  03                  494  		DC	0x3	;; abbrev_code
-00000138  696E7436345F7400    495  		DC	"int64_t",0x0	;; DW_AT_name
-00000140  00000000          + 496  		DD	.LDW4-.LI_TOP	;; DW_AT_type
+00000142  03                  494  		DC	0x3	;; abbrev_code
+00000143  696E7436345F7400    495  		DC	"int64_t",0x0	;; DW_AT_name
+0000014b  00000000          + 496  		DD	.LDW4-.LI_TOP	;; DW_AT_type
                               497  	;; entry 17
-00000144  03                  498  		DC	0x3	;; abbrev_code
-00000145  75696E74385F7400    499  		DC	"uint8_t",0x0	;; DW_AT_name
-0000014d  00000000          + 500  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+0000014f  03                  498  		DC	0x3	;; abbrev_code
+00000150  75696E74385F7400    499  		DC	"uint8_t",0x0	;; DW_AT_name
+00000158  00000000          + 500  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               501  	;; entry 18
-00000151  03                  502  		DC	0x3	;; abbrev_code
-00000152  75696E7431365F74    503  		DC	"uint16_t",0x0	;; DW_AT_name
-0000015a  00                  503  	
-0000015b  00000000          + 504  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000015c  03                  502  		DC	0x3	;; abbrev_code
+0000015d  75696E7431365F74    503  		DC	"uint16_t",0x0	;; DW_AT_name
+00000165  00                  503  	
+00000166  00000000          + 504  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               505  	;; entry 19
-0000015f  03                  506  		DC	0x3	;; abbrev_code
-00000160  75696E7433325F74    507  		DC	"uint32_t",0x0	;; DW_AT_name
-00000168  00                  507  	
-00000169  00000000          + 508  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+0000016a  03                  506  		DC	0x3	;; abbrev_code
+0000016b  75696E7433325F74    507  		DC	"uint32_t",0x0	;; DW_AT_name
+00000173  00                  507  	
+00000174  00000000          + 508  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               509  	;; entry 20
-0000016d  03                  510  		DC	0x3	;; abbrev_code
-0000016e  75696E7436345F74    511  		DC	"uint64_t",0x0	;; DW_AT_name
-00000176  00                  511  	
-00000177  00000000          + 512  		DD	.LDW8-.LI_TOP	;; DW_AT_type
+00000178  03                  510  		DC	0x3	;; abbrev_code
+00000179  75696E7436345F74    511  		DC	"uint64_t",0x0	;; DW_AT_name
+00000181  00                  511  	
+00000182  00000000          + 512  		DD	.LDW8-.LI_TOP	;; DW_AT_type
                               513  	;; entry 21
-0000017b  03                  514  		DC	0x3	;; abbrev_code
-0000017c  666C6F617433325F    515  		DC	"float32_t",0x0	;; DW_AT_name
-00000184  7400                515  	
-00000186  00000000          + 516  		DD	.LDW9-.LI_TOP	;; DW_AT_type
+00000186  03                  514  		DC	0x3	;; abbrev_code
+00000187  666C6F617433325F    515  		DC	"float32_t",0x0	;; DW_AT_name
+0000018f  7400                515  	
+00000191  00000000          + 516  		DD	.LDW9-.LI_TOP	;; DW_AT_type
                               517  	;; entry 22
-0000018a  03                  518  		DC	0x3	;; abbrev_code
-0000018b  666C6F617436345F    519  		DC	"float64_t",0x0	;; DW_AT_name
-00000193  7400                519  	
-00000195  00000000          + 520  		DD	.LDW10-.LI_TOP	;; DW_AT_type
+00000195  03                  518  		DC	0x3	;; abbrev_code
+00000196  666C6F617436345F    519  		DC	"float64_t",0x0	;; DW_AT_name
+0000019e  7400                519  	
+000001a0  00000000          + 520  		DD	.LDW10-.LI_TOP	;; DW_AT_type
                               521  	;; entry 23
-00000199                      522  	.LDW11
-00000199  04                  523  		DC	0x4	;; abbrev_code
-0000019a  08                  524  		DC	0x8	;; DW_AT_byte_size
+000001a4                      522  	.LDW11
+000001a4  04                  523  		DC	0x4	;; abbrev_code
+000001a5  08                  524  		DC	0x8	;; DW_AT_byte_size
                               525  	;; entry 24
-0000019b  05                  526  		DC	0x5	;; abbrev_code
-0000019c  6C6F7700            527  		DC	"low",0x0	;; DW_AT_name
+000001a6  05                  526  		DC	0x5	;; abbrev_code
+000001a7  6C6F7700            527  		DC	"low",0x0	;; DW_AT_name
                               528  				;; DW_AT_data_member_location
-000001a0  02                  529  		DC	0x2	;;   size of loc_exp
-000001a1  23                  530  		DC	0x23	;;   DW_OP_plus_uconst
-000001a2  00                  531  		DC	0x0	;;     operand
-000001a3  00000000          + 532  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000001ab  02                  529  		DC	0x2	;;   size of loc_exp
+000001ac  23                  530  		DC	0x23	;;   DW_OP_plus_uconst
+000001ad  00                  531  		DC	0x0	;;     operand
+000001ae  00000000          + 532  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               533  	;; entry 25
-000001a7  05                  534  		DC	0x5	;; abbrev_code
-000001a8  6869676800          535  		DC	"high",0x0	;; DW_AT_name
+000001b2  05                  534  		DC	0x5	;; abbrev_code
+000001b3  6869676800          535  		DC	"high",0x0	;; DW_AT_name
                               536  				;; DW_AT_data_member_location
-000001ad  02                  537  		DC	0x2	;;   size of loc_exp
-000001ae  23                  538  		DC	0x23	;;   DW_OP_plus_uconst
-000001af  04                  539  		DC	0x4	;;     operand
-000001b0  00000000          + 540  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000001b8  02                  537  		DC	0x2	;;   size of loc_exp
+000001b9  23                  538  		DC	0x23	;;   DW_OP_plus_uconst
+000001ba  04                  539  		DC	0x4	;;     operand
+000001bb  00000000          + 540  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               541  	;; NULL ENTRY 26
-000001b4  00                  542  		DC	0x0
+000001bf  00                  542  		DC	0x0
                               543  	;; entry 27
-000001b5                      544  	.LDW12
-000001b5  04                  545  		DC	0x4	;; abbrev_code
-000001b6  08                  546  		DC	0x8	;; DW_AT_byte_size
+000001c0                      544  	.LDW12
+000001c0  04                  545  		DC	0x4	;; abbrev_code
+000001c1  08                  546  		DC	0x8	;; DW_AT_byte_size
                               547  	;; entry 28
-000001b7  05                  548  		DC	0x5	;; abbrev_code
-000001b8  6C6F7700            549  		DC	"low",0x0	;; DW_AT_name
+000001c2  05                  548  		DC	0x5	;; abbrev_code
+000001c3  6C6F7700            549  		DC	"low",0x0	;; DW_AT_name
                               550  				;; DW_AT_data_member_location
-000001bc  02                  551  		DC	0x2	;;   size of loc_exp
-000001bd  23                  552  		DC	0x23	;;   DW_OP_plus_uconst
-000001be  00                  553  		DC	0x0	;;     operand
-000001bf  00000000          + 554  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000001c7  02                  551  		DC	0x2	;;   size of loc_exp
+000001c8  23                  552  		DC	0x23	;;   DW_OP_plus_uconst
+000001c9  00                  553  		DC	0x0	;;     operand
+000001ca  00000000          + 554  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               555  	;; entry 29
-000001c3  05                  556  		DC	0x5	;; abbrev_code
-000001c4  6869676800          557  		DC	"high",0x0	;; DW_AT_name
+000001ce  05                  556  		DC	0x5	;; abbrev_code
+000001cf  6869676800          557  		DC	"high",0x0	;; DW_AT_name
                               558  				;; DW_AT_data_member_location
-000001c9  02                  559  		DC	0x2	;;   size of loc_exp
-000001ca  23                  560  		DC	0x23	;;   DW_OP_plus_uconst
-000001cb  04                  561  		DC	0x4	;;     operand
-000001cc  00000000          + 562  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000001d4  02                  559  		DC	0x2	;;   size of loc_exp
+000001d5  23                  560  		DC	0x23	;;   DW_OP_plus_uconst
+000001d6  04                  561  		DC	0x4	;;     operand
+000001d7  00000000          + 562  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               563  	;; NULL ENTRY 30
-000001d0  00                  564  		DC	0x0
+000001db  00                  564  		DC	0x0
                               565  	;; entry 31
-000001d1                      566  	.LDW13
-000001d1  06                  567  		DC	0x6	;; abbrev_code
-000001d2  08                  568  		DC	0x8	;; DW_AT_byte_size
+000001dc                      566  	.LDW13
+000001dc  06                  567  		DC	0x6	;; abbrev_code
+000001dd  08                  568  		DC	0x8	;; DW_AT_byte_size
                               569  	;; entry 32
-000001d3  05                  570  		DC	0x5	;; abbrev_code
-000001d4  646C776F726400      571  		DC	"dlword",0x0	;; DW_AT_name
+000001de  05                  570  		DC	0x5	;; abbrev_code
+000001df  646C776F726400      571  		DC	"dlword",0x0	;; DW_AT_name
                               572  				;; DW_AT_data_member_location
-000001db  02                  573  		DC	0x2	;;   size of loc_exp
-000001dc  23                  574  		DC	0x23	;;   DW_OP_plus_uconst
-000001dd  00                  575  		DC	0x0	;;     operand
-000001de  00000000          + 576  		DD	.LDW4-.LI_TOP	;; DW_AT_type
+000001e6  02                  573  		DC	0x2	;;   size of loc_exp
+000001e7  23                  574  		DC	0x23	;;   DW_OP_plus_uconst
+000001e8  00                  575  		DC	0x0	;;     operand
+000001e9  00000000          + 576  		DD	.LDW4-.LI_TOP	;; DW_AT_type
                               577  	;; entry 33
-000001e2  05                  578  		DC	0x5	;; abbrev_code
-000001e3  6C776F726400        579  		DC	"lword",0x0	;; DW_AT_name
+000001ed  05                  578  		DC	0x5	;; abbrev_code
+000001ee  6C776F726400        579  		DC	"lword",0x0	;; DW_AT_name
                               580  				;; DW_AT_data_member_location
-000001e9  02                  581  		DC	0x2	;;   size of loc_exp
-000001ea  23                  582  		DC	0x23	;;   DW_OP_plus_uconst
-000001eb  00                  583  		DC	0x0	;;     operand
-000001ec  00000000          + 584  		DD	.LDW11-.LI_TOP	;; DW_AT_type
+000001f4  02                  581  		DC	0x2	;;   size of loc_exp
+000001f5  23                  582  		DC	0x23	;;   DW_OP_plus_uconst
+000001f6  00                  583  		DC	0x0	;;     operand
+000001f7  00000000          + 584  		DD	.LDW11-.LI_TOP	;; DW_AT_type
                               585  	;; entry 34
-000001f0  05                  586  		DC	0x5	;; abbrev_code
-000001f1  75646C776F726400    587  		DC	"udlword",0x0	;; DW_AT_name
+000001fb  05                  586  		DC	0x5	;; abbrev_code
+000001fc  75646C776F726400    587  		DC	"udlword",0x0	;; DW_AT_name
                               588  				;; DW_AT_data_member_location
-000001f9  02                  589  		DC	0x2	;;   size of loc_exp
-000001fa  23                  590  		DC	0x23	;;   DW_OP_plus_uconst
-000001fb  00                  591  		DC	0x0	;;     operand
-000001fc  00000000          + 592  		DD	.LDW8-.LI_TOP	;; DW_AT_type
+00000204  02                  589  		DC	0x2	;;   size of loc_exp
+00000205  23                  590  		DC	0x23	;;   DW_OP_plus_uconst
+00000206  00                  591  		DC	0x0	;;     operand
+00000207  00000000          + 592  		DD	.LDW8-.LI_TOP	;; DW_AT_type
                               593  	;; entry 35
-00000200  05                  594  		DC	0x5	;; abbrev_code
-00000201  756C776F726400      595  		DC	"ulword",0x0	;; DW_AT_name
+0000020b  05                  594  		DC	0x5	;; abbrev_code
+0000020c  756C776F726400      595  		DC	"ulword",0x0	;; DW_AT_name
                               596  				;; DW_AT_data_member_location
-00000208  02                  597  		DC	0x2	;;   size of loc_exp
-00000209  23                  598  		DC	0x23	;;   DW_OP_plus_uconst
-0000020a  00                  599  		DC	0x0	;;     operand
-0000020b  00000000          + 600  		DD	.LDW12-.LI_TOP	;; DW_AT_type
+00000213  02                  597  		DC	0x2	;;   size of loc_exp
+00000214  23                  598  		DC	0x23	;;   DW_OP_plus_uconst
+00000215  00                  599  		DC	0x0	;;     operand
+00000216  00000000          + 600  		DD	.LDW12-.LI_TOP	;; DW_AT_type
                               601  	;; NULL ENTRY 36
-0000020f  00                  602  		DC	0x0
+0000021a  00                  602  		DC	0x0
                               603  	;; entry 37
-00000210  03                  604  		DC	0x3	;; abbrev_code
-00000211  646C776F72645F74    605  		DC	"dlword_type",0x0	;; DW_AT_name
-00000219  79706500            605  	
-0000021d  00000000          + 606  		DD	.LDW13-.LI_TOP	;; DW_AT_type
+0000021b  03                  604  		DC	0x3	;; abbrev_code
+0000021c  646C776F72645F74    605  		DC	"dlword_type",0x0	;; DW_AT_name
+00000224  79706500            605  	
+00000228  00000000          + 606  		DD	.LDW13-.LI_TOP	;; DW_AT_type
                               607  	;; entry 38
-00000221                      608  	.LDW14
-00000221  04                  609  		DC	0x4	;; abbrev_code
-00000222  04                  610  		DC	0x4	;; DW_AT_byte_size
+0000022c                      608  	.LDW14
+0000022c  04                  609  		DC	0x4	;; abbrev_code
+0000022d  04                  610  		DC	0x4	;; DW_AT_byte_size
                               611  	;; entry 39
-00000223  05                  612  		DC	0x5	;; abbrev_code
-00000224  6C6F7700            613  		DC	"low",0x0	;; DW_AT_name
+0000022e  05                  612  		DC	0x5	;; abbrev_code
+0000022f  6C6F7700            613  		DC	"low",0x0	;; DW_AT_name
                               614  				;; DW_AT_data_member_location
-00000228  02                  615  		DC	0x2	;;   size of loc_exp
-00000229  23                  616  		DC	0x23	;;   DW_OP_plus_uconst
-0000022a  00                  617  		DC	0x0	;;     operand
-0000022b  00000000          + 618  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000233  02                  615  		DC	0x2	;;   size of loc_exp
+00000234  23                  616  		DC	0x23	;;   DW_OP_plus_uconst
+00000235  00                  617  		DC	0x0	;;     operand
+00000236  00000000          + 618  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               619  	;; entry 40
-0000022f  05                  620  		DC	0x5	;; abbrev_code
-00000230  6869676800          621  		DC	"high",0x0	;; DW_AT_name
+0000023a  05                  620  		DC	0x5	;; abbrev_code
+0000023b  6869676800          621  		DC	"high",0x0	;; DW_AT_name
                               622  				;; DW_AT_data_member_location
-00000235  02                  623  		DC	0x2	;;   size of loc_exp
-00000236  23                  624  		DC	0x23	;;   DW_OP_plus_uconst
-00000237  02                  625  		DC	0x2	;;     operand
-00000238  00000000          + 626  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000240  02                  623  		DC	0x2	;;   size of loc_exp
+00000241  23                  624  		DC	0x23	;;   DW_OP_plus_uconst
+00000242  02                  625  		DC	0x2	;;     operand
+00000243  00000000          + 626  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               627  	;; NULL ENTRY 41
-0000023c  00                  628  		DC	0x0
+00000247  00                  628  		DC	0x0
                               629  	;; entry 42
-0000023d                      630  	.LDW15
-0000023d  04                  631  		DC	0x4	;; abbrev_code
-0000023e  04                  632  		DC	0x4	;; DW_AT_byte_size
+00000248                      630  	.LDW15
+00000248  04                  631  		DC	0x4	;; abbrev_code
+00000249  04                  632  		DC	0x4	;; DW_AT_byte_size
                               633  	;; entry 43
-0000023f  05                  634  		DC	0x5	;; abbrev_code
-00000240  4C4C00              635  		DC	"LL",0x0	;; DW_AT_name
+0000024a  05                  634  		DC	0x5	;; abbrev_code
+0000024b  4C4C00              635  		DC	"LL",0x0	;; DW_AT_name
                               636  				;; DW_AT_data_member_location
-00000243  02                  637  		DC	0x2	;;   size of loc_exp
-00000244  23                  638  		DC	0x23	;;   DW_OP_plus_uconst
-00000245  00                  639  		DC	0x0	;;     operand
-00000246  00000000          + 640  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000024e  02                  637  		DC	0x2	;;   size of loc_exp
+0000024f  23                  638  		DC	0x23	;;   DW_OP_plus_uconst
+00000250  00                  639  		DC	0x0	;;     operand
+00000251  00000000          + 640  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               641  	;; entry 44
-0000024a  05                  642  		DC	0x5	;; abbrev_code
-0000024b  4C4800              643  		DC	"LH",0x0	;; DW_AT_name
+00000255  05                  642  		DC	0x5	;; abbrev_code
+00000256  4C4800              643  		DC	"LH",0x0	;; DW_AT_name
                               644  				;; DW_AT_data_member_location
-0000024e  02                  645  		DC	0x2	;;   size of loc_exp
-0000024f  23                  646  		DC	0x23	;;   DW_OP_plus_uconst
-00000250  01                  647  		DC	0x1	;;     operand
-00000251  00000000          + 648  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000259  02                  645  		DC	0x2	;;   size of loc_exp
+0000025a  23                  646  		DC	0x23	;;   DW_OP_plus_uconst
+0000025b  01                  647  		DC	0x1	;;     operand
+0000025c  00000000          + 648  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               649  	;; entry 45
-00000255  05                  650  		DC	0x5	;; abbrev_code
-00000256  484C00              651  		DC	"HL",0x0	;; DW_AT_name
+00000260  05                  650  		DC	0x5	;; abbrev_code
+00000261  484C00              651  		DC	"HL",0x0	;; DW_AT_name
                               652  				;; DW_AT_data_member_location
-00000259  02                  653  		DC	0x2	;;   size of loc_exp
-0000025a  23                  654  		DC	0x23	;;   DW_OP_plus_uconst
-0000025b  02                  655  		DC	0x2	;;     operand
-0000025c  00000000          + 656  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000264  02                  653  		DC	0x2	;;   size of loc_exp
+00000265  23                  654  		DC	0x23	;;   DW_OP_plus_uconst
+00000266  02                  655  		DC	0x2	;;     operand
+00000267  00000000          + 656  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               657  	;; entry 46
-00000260  05                  658  		DC	0x5	;; abbrev_code
-00000261  484800              659  		DC	"HH",0x0	;; DW_AT_name
+0000026b  05                  658  		DC	0x5	;; abbrev_code
+0000026c  484800              659  		DC	"HH",0x0	;; DW_AT_name
                               660  				;; DW_AT_data_member_location
-00000264  02                  661  		DC	0x2	;;   size of loc_exp
-00000265  23                  662  		DC	0x23	;;   DW_OP_plus_uconst
-00000266  03                  663  		DC	0x3	;;     operand
-00000267  00000000          + 664  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000026f  02                  661  		DC	0x2	;;   size of loc_exp
+00000270  23                  662  		DC	0x23	;;   DW_OP_plus_uconst
+00000271  03                  663  		DC	0x3	;;     operand
+00000272  00000000          + 664  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               665  	;; NULL ENTRY 47
-0000026b  00                  666  		DC	0x0
+00000276  00                  666  		DC	0x0
                               667  	;; entry 48
-0000026c                      668  	.LDW16
-0000026c  04                  669  		DC	0x4	;; abbrev_code
-0000026d  04                  670  		DC	0x4	;; DW_AT_byte_size
+00000277                      668  	.LDW16
+00000277  04                  669  		DC	0x4	;; abbrev_code
+00000278  04                  670  		DC	0x4	;; DW_AT_byte_size
                               671  	;; entry 49
-0000026e  05                  672  		DC	0x5	;; abbrev_code
-0000026f  6C6F7700            673  		DC	"low",0x0	;; DW_AT_name
+00000279  05                  672  		DC	0x5	;; abbrev_code
+0000027a  6C6F7700            673  		DC	"low",0x0	;; DW_AT_name
                               674  				;; DW_AT_data_member_location
-00000273  02                  675  		DC	0x2	;;   size of loc_exp
-00000274  23                  676  		DC	0x23	;;   DW_OP_plus_uconst
-00000275  00                  677  		DC	0x0	;;     operand
-00000276  00000000          + 678  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000027e  02                  675  		DC	0x2	;;   size of loc_exp
+0000027f  23                  676  		DC	0x23	;;   DW_OP_plus_uconst
+00000280  00                  677  		DC	0x0	;;     operand
+00000281  00000000          + 678  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               679  	;; entry 50
-0000027a  05                  680  		DC	0x5	;; abbrev_code
-0000027b  6869676800          681  		DC	"high",0x0	;; DW_AT_name
+00000285  05                  680  		DC	0x5	;; abbrev_code
+00000286  6869676800          681  		DC	"high",0x0	;; DW_AT_name
                               682  				;; DW_AT_data_member_location
-00000280  02                  683  		DC	0x2	;;   size of loc_exp
-00000281  23                  684  		DC	0x23	;;   DW_OP_plus_uconst
-00000282  02                  685  		DC	0x2	;;     operand
-00000283  00000000          + 686  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000028b  02                  683  		DC	0x2	;;   size of loc_exp
+0000028c  23                  684  		DC	0x23	;;   DW_OP_plus_uconst
+0000028d  02                  685  		DC	0x2	;;     operand
+0000028e  00000000          + 686  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               687  	;; NULL ENTRY 51
-00000287  00                  688  		DC	0x0
+00000292  00                  688  		DC	0x0
                               689  	;; entry 52
-00000288                      690  	.LDW17
-00000288  04                  691  		DC	0x4	;; abbrev_code
-00000289  04                  692  		DC	0x4	;; DW_AT_byte_size
+00000293                      690  	.LDW17
+00000293  04                  691  		DC	0x4	;; abbrev_code
+00000294  04                  692  		DC	0x4	;; DW_AT_byte_size
                               693  	;; entry 53
-0000028a  05                  694  		DC	0x5	;; abbrev_code
-0000028b  4C4C00              695  		DC	"LL",0x0	;; DW_AT_name
+00000295  05                  694  		DC	0x5	;; abbrev_code
+00000296  4C4C00              695  		DC	"LL",0x0	;; DW_AT_name
                               696  				;; DW_AT_data_member_location
-0000028e  02                  697  		DC	0x2	;;   size of loc_exp
-0000028f  23                  698  		DC	0x23	;;   DW_OP_plus_uconst
-00000290  00                  699  		DC	0x0	;;     operand
-00000291  00000000          + 700  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000299  02                  697  		DC	0x2	;;   size of loc_exp
+0000029a  23                  698  		DC	0x23	;;   DW_OP_plus_uconst
+0000029b  00                  699  		DC	0x0	;;     operand
+0000029c  00000000          + 700  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               701  	;; entry 54
-00000295  05                  702  		DC	0x5	;; abbrev_code
-00000296  4C4800              703  		DC	"LH",0x0	;; DW_AT_name
+000002a0  05                  702  		DC	0x5	;; abbrev_code
+000002a1  4C4800              703  		DC	"LH",0x0	;; DW_AT_name
                               704  				;; DW_AT_data_member_location
-00000299  02                  705  		DC	0x2	;;   size of loc_exp
-0000029a  23                  706  		DC	0x23	;;   DW_OP_plus_uconst
-0000029b  01                  707  		DC	0x1	;;     operand
-0000029c  00000000          + 708  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002a4  02                  705  		DC	0x2	;;   size of loc_exp
+000002a5  23                  706  		DC	0x23	;;   DW_OP_plus_uconst
+000002a6  01                  707  		DC	0x1	;;     operand
+000002a7  00000000          + 708  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               709  	;; entry 55
-000002a0  05                  710  		DC	0x5	;; abbrev_code
-000002a1  484C00              711  		DC	"HL",0x0	;; DW_AT_name
+000002ab  05                  710  		DC	0x5	;; abbrev_code
+000002ac  484C00              711  		DC	"HL",0x0	;; DW_AT_name
                               712  				;; DW_AT_data_member_location
-000002a4  02                  713  		DC	0x2	;;   size of loc_exp
-000002a5  23                  714  		DC	0x23	;;   DW_OP_plus_uconst
-000002a6  02                  715  		DC	0x2	;;     operand
-000002a7  00000000          + 716  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002af  02                  713  		DC	0x2	;;   size of loc_exp
+000002b0  23                  714  		DC	0x23	;;   DW_OP_plus_uconst
+000002b1  02                  715  		DC	0x2	;;     operand
+000002b2  00000000          + 716  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               717  	;; entry 56
-000002ab  05                  718  		DC	0x5	;; abbrev_code
-000002ac  484800              719  		DC	"HH",0x0	;; DW_AT_name
+000002b6  05                  718  		DC	0x5	;; abbrev_code
+000002b7  484800              719  		DC	"HH",0x0	;; DW_AT_name
                               720  				;; DW_AT_data_member_location
-000002af  02                  721  		DC	0x2	;;   size of loc_exp
-000002b0  23                  722  		DC	0x23	;;   DW_OP_plus_uconst
-000002b1  03                  723  		DC	0x3	;;     operand
-000002b2  00000000          + 724  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002ba  02                  721  		DC	0x2	;;   size of loc_exp
+000002bb  23                  722  		DC	0x23	;;   DW_OP_plus_uconst
+000002bc  03                  723  		DC	0x3	;;     operand
+000002bd  00000000          + 724  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               725  	;; NULL ENTRY 57
-000002b6  00                  726  		DC	0x0
+000002c1  00                  726  		DC	0x0
                               727  	;; entry 58
-000002b7                      728  	.LDW18
-000002b7  06                  729  		DC	0x6	;; abbrev_code
-000002b8  04                  730  		DC	0x4	;; DW_AT_byte_size
+000002c2                      728  	.LDW18
+000002c2  06                  729  		DC	0x6	;; abbrev_code
+000002c3  04                  730  		DC	0x4	;; DW_AT_byte_size
                               731  	;; entry 59
-000002b9  05                  732  		DC	0x5	;; abbrev_code
-000002ba  6C776F726400        733  		DC	"lword",0x0	;; DW_AT_name
+000002c4  05                  732  		DC	0x5	;; abbrev_code
+000002c5  6C776F726400        733  		DC	"lword",0x0	;; DW_AT_name
                               734  				;; DW_AT_data_member_location
-000002c0  02                  735  		DC	0x2	;;   size of loc_exp
-000002c1  23                  736  		DC	0x23	;;   DW_OP_plus_uconst
-000002c2  00                  737  		DC	0x0	;;     operand
-000002c3  00000000          + 738  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000002cb  02                  735  		DC	0x2	;;   size of loc_exp
+000002cc  23                  736  		DC	0x23	;;   DW_OP_plus_uconst
+000002cd  00                  737  		DC	0x0	;;     operand
+000002ce  00000000          + 738  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               739  	;; entry 60
-000002c7  05                  740  		DC	0x5	;; abbrev_code
-000002c8  776F726400          741  		DC	"word",0x0	;; DW_AT_name
+000002d2  05                  740  		DC	0x5	;; abbrev_code
+000002d3  776F726400          741  		DC	"word",0x0	;; DW_AT_name
                               742  				;; DW_AT_data_member_location
-000002cd  02                  743  		DC	0x2	;;   size of loc_exp
-000002ce  23                  744  		DC	0x23	;;   DW_OP_plus_uconst
-000002cf  00                  745  		DC	0x0	;;     operand
-000002d0  00000000          + 746  		DD	.LDW14-.LI_TOP	;; DW_AT_type
+000002d8  02                  743  		DC	0x2	;;   size of loc_exp
+000002d9  23                  744  		DC	0x23	;;   DW_OP_plus_uconst
+000002da  00                  745  		DC	0x0	;;     operand
+000002db  00000000          + 746  		DD	.LDW14-.LI_TOP	;; DW_AT_type
                               747  	;; entry 61
-000002d4  05                  748  		DC	0x5	;; abbrev_code
-000002d5  6279746500          749  		DC	"byte",0x0	;; DW_AT_name
+000002df  05                  748  		DC	0x5	;; abbrev_code
+000002e0  6279746500          749  		DC	"byte",0x0	;; DW_AT_name
                               750  				;; DW_AT_data_member_location
-000002da  02                  751  		DC	0x2	;;   size of loc_exp
-000002db  23                  752  		DC	0x23	;;   DW_OP_plus_uconst
-000002dc  00                  753  		DC	0x0	;;     operand
-000002dd  00000000          + 754  		DD	.LDW15-.LI_TOP	;; DW_AT_type
+000002e5  02                  751  		DC	0x2	;;   size of loc_exp
+000002e6  23                  752  		DC	0x23	;;   DW_OP_plus_uconst
+000002e7  00                  753  		DC	0x0	;;     operand
+000002e8  00000000          + 754  		DD	.LDW15-.LI_TOP	;; DW_AT_type
                               755  	;; entry 62
-000002e1  05                  756  		DC	0x5	;; abbrev_code
-000002e2  756C776F726400      757  		DC	"ulword",0x0	;; DW_AT_name
+000002ec  05                  756  		DC	0x5	;; abbrev_code
+000002ed  756C776F726400      757  		DC	"ulword",0x0	;; DW_AT_name
                               758  				;; DW_AT_data_member_location
-000002e9  02                  759  		DC	0x2	;;   size of loc_exp
-000002ea  23                  760  		DC	0x23	;;   DW_OP_plus_uconst
-000002eb  00                  761  		DC	0x0	;;     operand
-000002ec  00000000          + 762  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000002f4  02                  759  		DC	0x2	;;   size of loc_exp
+000002f5  23                  760  		DC	0x23	;;   DW_OP_plus_uconst
+000002f6  00                  761  		DC	0x0	;;     operand
+000002f7  00000000          + 762  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               763  	;; entry 63
-000002f0  05                  764  		DC	0x5	;; abbrev_code
-000002f1  75776F726400        765  		DC	"uword",0x0	;; DW_AT_name
+000002fb  05                  764  		DC	0x5	;; abbrev_code
+000002fc  75776F726400        765  		DC	"uword",0x0	;; DW_AT_name
                               766  				;; DW_AT_data_member_location
-000002f7  02                  767  		DC	0x2	;;   size of loc_exp
-000002f8  23                  768  		DC	0x23	;;   DW_OP_plus_uconst
-000002f9  00                  769  		DC	0x0	;;     operand
-000002fa  00000000          + 770  		DD	.LDW16-.LI_TOP	;; DW_AT_type
+00000302  02                  767  		DC	0x2	;;   size of loc_exp
+00000303  23                  768  		DC	0x23	;;   DW_OP_plus_uconst
+00000304  00                  769  		DC	0x0	;;     operand
+00000305  00000000          + 770  		DD	.LDW16-.LI_TOP	;; DW_AT_type
                               771  	;; entry 64
-000002fe  05                  772  		DC	0x5	;; abbrev_code
-000002ff  756279746500        773  		DC	"ubyte",0x0	;; DW_AT_name
+00000309  05                  772  		DC	0x5	;; abbrev_code
+0000030a  756279746500        773  		DC	"ubyte",0x0	;; DW_AT_name
                               774  				;; DW_AT_data_member_location
-00000305  02                  775  		DC	0x2	;;   size of loc_exp
-00000306  23                  776  		DC	0x23	;;   DW_OP_plus_uconst
-00000307  00                  777  		DC	0x0	;;     operand
-00000308  00000000          + 778  		DD	.LDW17-.LI_TOP	;; DW_AT_type
+00000310  02                  775  		DC	0x2	;;   size of loc_exp
+00000311  23                  776  		DC	0x23	;;   DW_OP_plus_uconst
+00000312  00                  777  		DC	0x0	;;     operand
+00000313  00000000          + 778  		DD	.LDW17-.LI_TOP	;; DW_AT_type
                               779  	;; NULL ENTRY 65
-0000030c  00                  780  		DC	0x0
+00000317  00                  780  		DC	0x0
                               781  	;; entry 66
-0000030d  03                  782  		DC	0x3	;; abbrev_code
-0000030e  6C776F72645F7479    783  		DC	"lword_type",0x0	;; DW_AT_name
-00000316  706500              783  	
-00000319  00000000          + 784  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+00000318  03                  782  		DC	0x3	;; abbrev_code
+00000319  6C776F72645F7479    783  		DC	"lword_type",0x0	;; DW_AT_name
+00000321  706500              783  	
+00000324  00000000          + 784  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               785  	;; entry 67
-0000031d                      786  	.LDW19
-0000031d  04                  787  		DC	0x4	;; abbrev_code
-0000031e  04                  788  		DC	0x4	;; DW_AT_byte_size
+00000328                      786  	.LDW19
+00000328  04                  787  		DC	0x4	;; abbrev_code
+00000329  04                  788  		DC	0x4	;; DW_AT_byte_size
                               789  	;; entry 68
-0000031f  05                  790  		DC	0x5	;; abbrev_code
-00000320  6C6F7700            791  		DC	"low",0x0	;; DW_AT_name
+0000032a  05                  790  		DC	0x5	;; abbrev_code
+0000032b  6C6F7700            791  		DC	"low",0x0	;; DW_AT_name
                               792  				;; DW_AT_data_member_location
-00000324  02                  793  		DC	0x2	;;   size of loc_exp
-00000325  23                  794  		DC	0x23	;;   DW_OP_plus_uconst
-00000326  00                  795  		DC	0x0	;;     operand
-00000327  00000000          + 796  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000032f  02                  793  		DC	0x2	;;   size of loc_exp
+00000330  23                  794  		DC	0x23	;;   DW_OP_plus_uconst
+00000331  00                  795  		DC	0x0	;;     operand
+00000332  00000000          + 796  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               797  	;; entry 69
-0000032b  05                  798  		DC	0x5	;; abbrev_code
-0000032c  6869676800          799  		DC	"high",0x0	;; DW_AT_name
+00000336  05                  798  		DC	0x5	;; abbrev_code
+00000337  6869676800          799  		DC	"high",0x0	;; DW_AT_name
                               800  				;; DW_AT_data_member_location
-00000331  02                  801  		DC	0x2	;;   size of loc_exp
-00000332  23                  802  		DC	0x23	;;   DW_OP_plus_uconst
-00000333  01                  803  		DC	0x1	;;     operand
-00000334  00000000          + 804  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000033c  02                  801  		DC	0x2	;;   size of loc_exp
+0000033d  23                  802  		DC	0x23	;;   DW_OP_plus_uconst
+0000033e  01                  803  		DC	0x1	;;     operand
+0000033f  00000000          + 804  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               805  	;; NULL ENTRY 70
-00000338  00                  806  		DC	0x0
+00000343  00                  806  		DC	0x0
                               807  	;; entry 71
-00000339                      808  	.LDW20
-00000339  04                  809  		DC	0x4	;; abbrev_code
-0000033a  04                  810  		DC	0x4	;; DW_AT_byte_size
+00000344                      808  	.LDW20
+00000344  04                  809  		DC	0x4	;; abbrev_code
+00000345  04                  810  		DC	0x4	;; DW_AT_byte_size
                               811  	;; entry 72
-0000033b  05                  812  		DC	0x5	;; abbrev_code
-0000033c  6C6F7700            813  		DC	"low",0x0	;; DW_AT_name
+00000346  05                  812  		DC	0x5	;; abbrev_code
+00000347  6C6F7700            813  		DC	"low",0x0	;; DW_AT_name
                               814  				;; DW_AT_data_member_location
-00000340  02                  815  		DC	0x2	;;   size of loc_exp
-00000341  23                  816  		DC	0x23	;;   DW_OP_plus_uconst
-00000342  00                  817  		DC	0x0	;;     operand
-00000343  00000000          + 818  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+0000034b  02                  815  		DC	0x2	;;   size of loc_exp
+0000034c  23                  816  		DC	0x23	;;   DW_OP_plus_uconst
+0000034d  00                  817  		DC	0x0	;;     operand
+0000034e  00000000          + 818  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               819  	;; entry 73
-00000347  05                  820  		DC	0x5	;; abbrev_code
-00000348  6869676800          821  		DC	"high",0x0	;; DW_AT_name
+00000352  05                  820  		DC	0x5	;; abbrev_code
+00000353  6869676800          821  		DC	"high",0x0	;; DW_AT_name
                               822  				;; DW_AT_data_member_location
-0000034d  02                  823  		DC	0x2	;;   size of loc_exp
-0000034e  23                  824  		DC	0x23	;;   DW_OP_plus_uconst
-0000034f  01                  825  		DC	0x1	;;     operand
-00000350  00000000          + 826  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000358  02                  823  		DC	0x2	;;   size of loc_exp
+00000359  23                  824  		DC	0x23	;;   DW_OP_plus_uconst
+0000035a  01                  825  		DC	0x1	;;     operand
+0000035b  00000000          + 826  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               827  	;; NULL ENTRY 74
-00000354  00                  828  		DC	0x0
+0000035f  00                  828  		DC	0x0
                               829  	;; entry 75
-00000355                      830  	.LDW21
-00000355  06                  831  		DC	0x6	;; abbrev_code
-00000356  04                  832  		DC	0x4	;; DW_AT_byte_size
+00000360                      830  	.LDW21
+00000360  06                  831  		DC	0x6	;; abbrev_code
+00000361  04                  832  		DC	0x4	;; DW_AT_byte_size
                               833  	;; entry 76
-00000357  05                  834  		DC	0x5	;; abbrev_code
-00000358  776F726400          835  		DC	"word",0x0	;; DW_AT_name
+00000362  05                  834  		DC	0x5	;; abbrev_code
+00000363  776F726400          835  		DC	"word",0x0	;; DW_AT_name
                               836  				;; DW_AT_data_member_location
-0000035d  02                  837  		DC	0x2	;;   size of loc_exp
-0000035e  23                  838  		DC	0x23	;;   DW_OP_plus_uconst
-0000035f  00                  839  		DC	0x0	;;     operand
-00000360  00000000          + 840  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000368  02                  837  		DC	0x2	;;   size of loc_exp
+00000369  23                  838  		DC	0x23	;;   DW_OP_plus_uconst
+0000036a  00                  839  		DC	0x0	;;     operand
+0000036b  00000000          + 840  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               841  	;; entry 77
-00000364  05                  842  		DC	0x5	;; abbrev_code
-00000365  6279746500          843  		DC	"byte",0x0	;; DW_AT_name
+0000036f  05                  842  		DC	0x5	;; abbrev_code
+00000370  6279746500          843  		DC	"byte",0x0	;; DW_AT_name
                               844  				;; DW_AT_data_member_location
-0000036a  02                  845  		DC	0x2	;;   size of loc_exp
-0000036b  23                  846  		DC	0x23	;;   DW_OP_plus_uconst
-0000036c  00                  847  		DC	0x0	;;     operand
-0000036d  00000000          + 848  		DD	.LDW19-.LI_TOP	;; DW_AT_type
+00000375  02                  845  		DC	0x2	;;   size of loc_exp
+00000376  23                  846  		DC	0x23	;;   DW_OP_plus_uconst
+00000377  00                  847  		DC	0x0	;;     operand
+00000378  00000000          + 848  		DD	.LDW19-.LI_TOP	;; DW_AT_type
                               849  	;; entry 78
-00000371  05                  850  		DC	0x5	;; abbrev_code
-00000372  75776F726400        851  		DC	"uword",0x0	;; DW_AT_name
+0000037c  05                  850  		DC	0x5	;; abbrev_code
+0000037d  75776F726400        851  		DC	"uword",0x0	;; DW_AT_name
                               852  				;; DW_AT_data_member_location
-00000378  02                  853  		DC	0x2	;;   size of loc_exp
-00000379  23                  854  		DC	0x23	;;   DW_OP_plus_uconst
-0000037a  00                  855  		DC	0x0	;;     operand
-0000037b  00000000          + 856  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000383  02                  853  		DC	0x2	;;   size of loc_exp
+00000384  23                  854  		DC	0x23	;;   DW_OP_plus_uconst
+00000385  00                  855  		DC	0x0	;;     operand
+00000386  00000000          + 856  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               857  	;; entry 79
-0000037f  05                  858  		DC	0x5	;; abbrev_code
-00000380  756279746500        859  		DC	"ubyte",0x0	;; DW_AT_name
+0000038a  05                  858  		DC	0x5	;; abbrev_code
+0000038b  756279746500        859  		DC	"ubyte",0x0	;; DW_AT_name
                               860  				;; DW_AT_data_member_location
-00000386  02                  861  		DC	0x2	;;   size of loc_exp
-00000387  23                  862  		DC	0x23	;;   DW_OP_plus_uconst
-00000388  00                  863  		DC	0x0	;;     operand
-00000389  00000000          + 864  		DD	.LDW20-.LI_TOP	;; DW_AT_type
+00000391  02                  861  		DC	0x2	;;   size of loc_exp
+00000392  23                  862  		DC	0x23	;;   DW_OP_plus_uconst
+00000393  00                  863  		DC	0x0	;;     operand
+00000394  00000000          + 864  		DD	.LDW20-.LI_TOP	;; DW_AT_type
                               865  	;; NULL ENTRY 80
-0000038d  00                  866  		DC	0x0
+00000398  00                  866  		DC	0x0
                               867  	;; entry 81
-0000038e  03                  868  		DC	0x3	;; abbrev_code
-0000038f  776F72645F747970    869  		DC	"word_type",0x0	;; DW_AT_name
-00000397  6500                869  	
-00000399  00000000          + 870  		DD	.LDW21-.LI_TOP	;; DW_AT_type
+00000399  03                  868  		DC	0x3	;; abbrev_code
+0000039a  776F72645F747970    869  		DC	"word_type",0x0	;; DW_AT_name
+000003a2  6500                869  	
+000003a4  00000000          + 870  		DD	.LDW21-.LI_TOP	;; DW_AT_type
                               871  	;; entry 82
-0000039d                      872  	.LDW22
-0000039d  04                  873  		DC	0x4	;; abbrev_code
-0000039e  04                  874  		DC	0x4	;; DW_AT_byte_size
+000003a8                      872  	.LDW22
+000003a8  04                  873  		DC	0x4	;; abbrev_code
+000003a9  04                  874  		DC	0x4	;; DW_AT_byte_size
                               875  	;; entry 83
-0000039f  07                  876  		DC	0x7	;; abbrev_code
-000003a0  6269743000          877  		DC	"bit0",0x0	;; DW_AT_name
-000003a5  02                  878  		DC	0x2	;; DW_AT_byte_size
-000003a6  0F                  879  		DC	0xf	;; DW_AT_bit_offset
-000003a7  01                  880  		DC	0x1	;; DW_AT_bit_size
+000003aa  07                  876  		DC	0x7	;; abbrev_code
+000003ab  6269743000          877  		DC	"bit0",0x0	;; DW_AT_name
+000003b0  02                  878  		DC	0x2	;; DW_AT_byte_size
+000003b1  0F                  879  		DC	0xf	;; DW_AT_bit_offset
+000003b2  01                  880  		DC	0x1	;; DW_AT_bit_size
                               881  				;; DW_AT_data_member_location
-000003a8  02                  882  		DC	0x2	;;   size of loc_exp
-000003a9  23                  883  		DC	0x23	;;   DW_OP_plus_uconst
-000003aa  00                  884  		DC	0x0	;;     operand
-000003ab  00000000          + 885  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003b3  02                  882  		DC	0x2	;;   size of loc_exp
+000003b4  23                  883  		DC	0x23	;;   DW_OP_plus_uconst
+000003b5  00                  884  		DC	0x0	;;     operand
+000003b6  00000000          + 885  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               886  	;; entry 84
-000003af  07                  887  		DC	0x7	;; abbrev_code
-000003b0  6269743100          888  		DC	"bit1",0x0	;; DW_AT_name
-000003b5  02                  889  		DC	0x2	;; DW_AT_byte_size
-000003b6  0E                  890  		DC	0xe	;; DW_AT_bit_offset
-000003b7  01                  891  		DC	0x1	;; DW_AT_bit_size
+000003ba  07                  887  		DC	0x7	;; abbrev_code
+000003bb  6269743100          888  		DC	"bit1",0x0	;; DW_AT_name
+000003c0  02                  889  		DC	0x2	;; DW_AT_byte_size
+000003c1  0E                  890  		DC	0xe	;; DW_AT_bit_offset
+000003c2  01                  891  		DC	0x1	;; DW_AT_bit_size
                               892  				;; DW_AT_data_member_location
-000003b8  02                  893  		DC	0x2	;;   size of loc_exp
-000003b9  23                  894  		DC	0x23	;;   DW_OP_plus_uconst
-000003ba  00                  895  		DC	0x0	;;     operand
-000003bb  00000000          + 896  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003c3  02                  893  		DC	0x2	;;   size of loc_exp
+000003c4  23                  894  		DC	0x23	;;   DW_OP_plus_uconst
+000003c5  00                  895  		DC	0x0	;;     operand
+000003c6  00000000          + 896  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               897  	;; entry 85
-000003bf  07                  898  		DC	0x7	;; abbrev_code
-000003c0  6269743200          899  		DC	"bit2",0x0	;; DW_AT_name
-000003c5  02                  900  		DC	0x2	;; DW_AT_byte_size
-000003c6  0D                  901  		DC	0xd	;; DW_AT_bit_offset
-000003c7  01                  902  		DC	0x1	;; DW_AT_bit_size
+000003ca  07                  898  		DC	0x7	;; abbrev_code
+000003cb  6269743200          899  		DC	"bit2",0x0	;; DW_AT_name
+000003d0  02                  900  		DC	0x2	;; DW_AT_byte_size
+000003d1  0D                  901  		DC	0xd	;; DW_AT_bit_offset
+000003d2  01                  902  		DC	0x1	;; DW_AT_bit_size
                               903  				;; DW_AT_data_member_location
-000003c8  02                  904  		DC	0x2	;;   size of loc_exp
-000003c9  23                  905  		DC	0x23	;;   DW_OP_plus_uconst
-000003ca  00                  906  		DC	0x0	;;     operand
-000003cb  00000000          + 907  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003d3  02                  904  		DC	0x2	;;   size of loc_exp
+000003d4  23                  905  		DC	0x23	;;   DW_OP_plus_uconst
+000003d5  00                  906  		DC	0x0	;;     operand
+000003d6  00000000          + 907  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               908  	;; entry 86
-000003cf  07                  909  		DC	0x7	;; abbrev_code
-000003d0  6269743300          910  		DC	"bit3",0x0	;; DW_AT_name
-000003d5  02                  911  		DC	0x2	;; DW_AT_byte_size
-000003d6  0C                  912  		DC	0xc	;; DW_AT_bit_offset
-000003d7  01                  913  		DC	0x1	;; DW_AT_bit_size
+000003da  07                  909  		DC	0x7	;; abbrev_code
+000003db  6269743300          910  		DC	"bit3",0x0	;; DW_AT_name
+000003e0  02                  911  		DC	0x2	;; DW_AT_byte_size
+000003e1  0C                  912  		DC	0xc	;; DW_AT_bit_offset
+000003e2  01                  913  		DC	0x1	;; DW_AT_bit_size
                               914  				;; DW_AT_data_member_location
-000003d8  02                  915  		DC	0x2	;;   size of loc_exp
-000003d9  23                  916  		DC	0x23	;;   DW_OP_plus_uconst
-000003da  00                  917  		DC	0x0	;;     operand
-000003db  00000000          + 918  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003e3  02                  915  		DC	0x2	;;   size of loc_exp
+000003e4  23                  916  		DC	0x23	;;   DW_OP_plus_uconst
+000003e5  00                  917  		DC	0x0	;;     operand
+000003e6  00000000          + 918  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               919  	;; entry 87
-000003df  07                  920  		DC	0x7	;; abbrev_code
-000003e0  6269743400          921  		DC	"bit4",0x0	;; DW_AT_name
-000003e5  02                  922  		DC	0x2	;; DW_AT_byte_size
-000003e6  0B                  923  		DC	0xb	;; DW_AT_bit_offset
-000003e7  01                  924  		DC	0x1	;; DW_AT_bit_size
+000003ea  07                  920  		DC	0x7	;; abbrev_code
+000003eb  6269743400          921  		DC	"bit4",0x0	;; DW_AT_name
+000003f0  02                  922  		DC	0x2	;; DW_AT_byte_size
+000003f1  0B                  923  		DC	0xb	;; DW_AT_bit_offset
+000003f2  01                  924  		DC	0x1	;; DW_AT_bit_size
                               925  				;; DW_AT_data_member_location
-000003e8  02                  926  		DC	0x2	;;   size of loc_exp
-000003e9  23                  927  		DC	0x23	;;   DW_OP_plus_uconst
-000003ea  00                  928  		DC	0x0	;;     operand
-000003eb  00000000          + 929  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003f3  02                  926  		DC	0x2	;;   size of loc_exp
+000003f4  23                  927  		DC	0x23	;;   DW_OP_plus_uconst
+000003f5  00                  928  		DC	0x0	;;     operand
+000003f6  00000000          + 929  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               930  	;; entry 88
-000003ef  07                  931  		DC	0x7	;; abbrev_code
-000003f0  6269743500          932  		DC	"bit5",0x0	;; DW_AT_name
-000003f5  02                  933  		DC	0x2	;; DW_AT_byte_size
-000003f6  0A                  934  		DC	0xa	;; DW_AT_bit_offset
-000003f7  01                  935  		DC	0x1	;; DW_AT_bit_size
+000003fa  07                  931  		DC	0x7	;; abbrev_code
+000003fb  6269743500          932  		DC	"bit5",0x0	;; DW_AT_name
+00000400  02                  933  		DC	0x2	;; DW_AT_byte_size
+00000401  0A                  934  		DC	0xa	;; DW_AT_bit_offset
+00000402  01                  935  		DC	0x1	;; DW_AT_bit_size
                               936  				;; DW_AT_data_member_location
-000003f8  02                  937  		DC	0x2	;;   size of loc_exp
-000003f9  23                  938  		DC	0x23	;;   DW_OP_plus_uconst
-000003fa  00                  939  		DC	0x0	;;     operand
-000003fb  00000000          + 940  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000403  02                  937  		DC	0x2	;;   size of loc_exp
+00000404  23                  938  		DC	0x23	;;   DW_OP_plus_uconst
+00000405  00                  939  		DC	0x0	;;     operand
+00000406  00000000          + 940  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               941  	;; entry 89
-000003ff  07                  942  		DC	0x7	;; abbrev_code
-00000400  6269743600          943  		DC	"bit6",0x0	;; DW_AT_name
-00000405  02                  944  		DC	0x2	;; DW_AT_byte_size
-00000406  09                  945  		DC	0x9	;; DW_AT_bit_offset
-00000407  01                  946  		DC	0x1	;; DW_AT_bit_size
+0000040a  07                  942  		DC	0x7	;; abbrev_code
+0000040b  6269743600          943  		DC	"bit6",0x0	;; DW_AT_name
+00000410  02                  944  		DC	0x2	;; DW_AT_byte_size
+00000411  09                  945  		DC	0x9	;; DW_AT_bit_offset
+00000412  01                  946  		DC	0x1	;; DW_AT_bit_size
                               947  				;; DW_AT_data_member_location
-00000408  02                  948  		DC	0x2	;;   size of loc_exp
-00000409  23                  949  		DC	0x23	;;   DW_OP_plus_uconst
-0000040a  00                  950  		DC	0x0	;;     operand
-0000040b  00000000          + 951  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000413  02                  948  		DC	0x2	;;   size of loc_exp
+00000414  23                  949  		DC	0x23	;;   DW_OP_plus_uconst
+00000415  00                  950  		DC	0x0	;;     operand
+00000416  00000000          + 951  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               952  	;; entry 90
-0000040f  07                  953  		DC	0x7	;; abbrev_code
-00000410  6269743700          954  		DC	"bit7",0x0	;; DW_AT_name
-00000415  02                  955  		DC	0x2	;; DW_AT_byte_size
-00000416  08                  956  		DC	0x8	;; DW_AT_bit_offset
-00000417  01                  957  		DC	0x1	;; DW_AT_bit_size
+0000041a  07                  953  		DC	0x7	;; abbrev_code
+0000041b  6269743700          954  		DC	"bit7",0x0	;; DW_AT_name
+00000420  02                  955  		DC	0x2	;; DW_AT_byte_size
+00000421  08                  956  		DC	0x8	;; DW_AT_bit_offset
+00000422  01                  957  		DC	0x1	;; DW_AT_bit_size
                               958  				;; DW_AT_data_member_location
-00000418  02                  959  		DC	0x2	;;   size of loc_exp
-00000419  23                  960  		DC	0x23	;;   DW_OP_plus_uconst
-0000041a  00                  961  		DC	0x0	;;     operand
-0000041b  00000000          + 962  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000423  02                  959  		DC	0x2	;;   size of loc_exp
+00000424  23                  960  		DC	0x23	;;   DW_OP_plus_uconst
+00000425  00                  961  		DC	0x0	;;     operand
+00000426  00000000          + 962  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               963  	;; entry 91
-0000041f  07                  964  		DC	0x7	;; abbrev_code
-00000420  6269743800          965  		DC	"bit8",0x0	;; DW_AT_name
-00000425  02                  966  		DC	0x2	;; DW_AT_byte_size
-00000426  07                  967  		DC	0x7	;; DW_AT_bit_offset
-00000427  01                  968  		DC	0x1	;; DW_AT_bit_size
+0000042a  07                  964  		DC	0x7	;; abbrev_code
+0000042b  6269743800          965  		DC	"bit8",0x0	;; DW_AT_name
+00000430  02                  966  		DC	0x2	;; DW_AT_byte_size
+00000431  07                  967  		DC	0x7	;; DW_AT_bit_offset
+00000432  01                  968  		DC	0x1	;; DW_AT_bit_size
                               969  				;; DW_AT_data_member_location
-00000428  02                  970  		DC	0x2	;;   size of loc_exp
-00000429  23                  971  		DC	0x23	;;   DW_OP_plus_uconst
-0000042a  00                  972  		DC	0x0	;;     operand
-0000042b  00000000          + 973  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000433  02                  970  		DC	0x2	;;   size of loc_exp
+00000434  23                  971  		DC	0x23	;;   DW_OP_plus_uconst
+00000435  00                  972  		DC	0x0	;;     operand
+00000436  00000000          + 973  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               974  	;; entry 92
-0000042f  07                  975  		DC	0x7	;; abbrev_code
-00000430  6269743900          976  		DC	"bit9",0x0	;; DW_AT_name
-00000435  02                  977  		DC	0x2	;; DW_AT_byte_size
-00000436  06                  978  		DC	0x6	;; DW_AT_bit_offset
-00000437  01                  979  		DC	0x1	;; DW_AT_bit_size
+0000043a  07                  975  		DC	0x7	;; abbrev_code
+0000043b  6269743900          976  		DC	"bit9",0x0	;; DW_AT_name
+00000440  02                  977  		DC	0x2	;; DW_AT_byte_size
+00000441  06                  978  		DC	0x6	;; DW_AT_bit_offset
+00000442  01                  979  		DC	0x1	;; DW_AT_bit_size
                               980  				;; DW_AT_data_member_location
-00000438  02                  981  		DC	0x2	;;   size of loc_exp
-00000439  23                  982  		DC	0x23	;;   DW_OP_plus_uconst
-0000043a  00                  983  		DC	0x0	;;     operand
-0000043b  00000000          + 984  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000443  02                  981  		DC	0x2	;;   size of loc_exp
+00000444  23                  982  		DC	0x23	;;   DW_OP_plus_uconst
+00000445  00                  983  		DC	0x0	;;     operand
+00000446  00000000          + 984  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               985  	;; entry 93
-0000043f  07                  986  		DC	0x7	;; abbrev_code
-00000440  626974313000        987  		DC	"bit10",0x0	;; DW_AT_name
-00000446  02                  988  		DC	0x2	;; DW_AT_byte_size
-00000447  05                  989  		DC	0x5	;; DW_AT_bit_offset
-00000448  01                  990  		DC	0x1	;; DW_AT_bit_size
+0000044a  07                  986  		DC	0x7	;; abbrev_code
+0000044b  626974313000        987  		DC	"bit10",0x0	;; DW_AT_name
+00000451  02                  988  		DC	0x2	;; DW_AT_byte_size
+00000452  05                  989  		DC	0x5	;; DW_AT_bit_offset
+00000453  01                  990  		DC	0x1	;; DW_AT_bit_size
                               991  				;; DW_AT_data_member_location
-00000449  02                  992  		DC	0x2	;;   size of loc_exp
-0000044a  23                  993  		DC	0x23	;;   DW_OP_plus_uconst
-0000044b  00                  994  		DC	0x0	;;     operand
-0000044c  00000000          + 995  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000454  02                  992  		DC	0x2	;;   size of loc_exp
+00000455  23                  993  		DC	0x23	;;   DW_OP_plus_uconst
+00000456  00                  994  		DC	0x0	;;     operand
+00000457  00000000          + 995  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               996  	;; entry 94
-00000450  07                  997  		DC	0x7	;; abbrev_code
-00000451  626974313100        998  		DC	"bit11",0x0	;; DW_AT_name
-00000457  02                  999  		DC	0x2	;; DW_AT_byte_size
-00000458  04                  1000  		DC	0x4	;; DW_AT_bit_offset
-00000459  01                  1001  		DC	0x1	;; DW_AT_bit_size
+0000045b  07                  997  		DC	0x7	;; abbrev_code
+0000045c  626974313100        998  		DC	"bit11",0x0	;; DW_AT_name
+00000462  02                  999  		DC	0x2	;; DW_AT_byte_size
+00000463  04                  1000  		DC	0x4	;; DW_AT_bit_offset
+00000464  01                  1001  		DC	0x1	;; DW_AT_bit_size
                               1002  				;; DW_AT_data_member_location
-0000045a  02                  1003  		DC	0x2	;;   size of loc_exp
-0000045b  23                  1004  		DC	0x23	;;   DW_OP_plus_uconst
-0000045c  00                  1005  		DC	0x0	;;     operand
-0000045d  00000000          + 1006  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000465  02                  1003  		DC	0x2	;;   size of loc_exp
+00000466  23                  1004  		DC	0x23	;;   DW_OP_plus_uconst
+00000467  00                  1005  		DC	0x0	;;     operand
+00000468  00000000          + 1006  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1007  	;; entry 95
-00000461  07                  1008  		DC	0x7	;; abbrev_code
-00000462  626974313200        1009  		DC	"bit12",0x0	;; DW_AT_name
-00000468  02                  1010  		DC	0x2	;; DW_AT_byte_size
-00000469  03                  1011  		DC	0x3	;; DW_AT_bit_offset
-0000046a  01                  1012  		DC	0x1	;; DW_AT_bit_size
+0000046c  07                  1008  		DC	0x7	;; abbrev_code
+0000046d  626974313200        1009  		DC	"bit12",0x0	;; DW_AT_name
+00000473  02                  1010  		DC	0x2	;; DW_AT_byte_size
+00000474  03                  1011  		DC	0x3	;; DW_AT_bit_offset
+00000475  01                  1012  		DC	0x1	;; DW_AT_bit_size
                               1013  				;; DW_AT_data_member_location
-0000046b  02                  1014  		DC	0x2	;;   size of loc_exp
-0000046c  23                  1015  		DC	0x23	;;   DW_OP_plus_uconst
-0000046d  00                  1016  		DC	0x0	;;     operand
-0000046e  00000000          + 1017  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000476  02                  1014  		DC	0x2	;;   size of loc_exp
+00000477  23                  1015  		DC	0x23	;;   DW_OP_plus_uconst
+00000478  00                  1016  		DC	0x0	;;     operand
+00000479  00000000          + 1017  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1018  	;; entry 96
-00000472  07                  1019  		DC	0x7	;; abbrev_code
-00000473  626974313300        1020  		DC	"bit13",0x0	;; DW_AT_name
-00000479  02                  1021  		DC	0x2	;; DW_AT_byte_size
-0000047a  02                  1022  		DC	0x2	;; DW_AT_bit_offset
-0000047b  01                  1023  		DC	0x1	;; DW_AT_bit_size
+0000047d  07                  1019  		DC	0x7	;; abbrev_code
+0000047e  626974313300        1020  		DC	"bit13",0x0	;; DW_AT_name
+00000484  02                  1021  		DC	0x2	;; DW_AT_byte_size
+00000485  02                  1022  		DC	0x2	;; DW_AT_bit_offset
+00000486  01                  1023  		DC	0x1	;; DW_AT_bit_size
                               1024  				;; DW_AT_data_member_location
-0000047c  02                  1025  		DC	0x2	;;   size of loc_exp
-0000047d  23                  1026  		DC	0x23	;;   DW_OP_plus_uconst
-0000047e  00                  1027  		DC	0x0	;;     operand
-0000047f  00000000          + 1028  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000487  02                  1025  		DC	0x2	;;   size of loc_exp
+00000488  23                  1026  		DC	0x23	;;   DW_OP_plus_uconst
+00000489  00                  1027  		DC	0x0	;;     operand
+0000048a  00000000          + 1028  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1029  	;; entry 97
-00000483  07                  1030  		DC	0x7	;; abbrev_code
-00000484  626974313400        1031  		DC	"bit14",0x0	;; DW_AT_name
-0000048a  02                  1032  		DC	0x2	;; DW_AT_byte_size
-0000048b  01                  1033  		DC	0x1	;; DW_AT_bit_offset
-0000048c  01                  1034  		DC	0x1	;; DW_AT_bit_size
+0000048e  07                  1030  		DC	0x7	;; abbrev_code
+0000048f  626974313400        1031  		DC	"bit14",0x0	;; DW_AT_name
+00000495  02                  1032  		DC	0x2	;; DW_AT_byte_size
+00000496  01                  1033  		DC	0x1	;; DW_AT_bit_offset
+00000497  01                  1034  		DC	0x1	;; DW_AT_bit_size
                               1035  				;; DW_AT_data_member_location
-0000048d  02                  1036  		DC	0x2	;;   size of loc_exp
-0000048e  23                  1037  		DC	0x23	;;   DW_OP_plus_uconst
-0000048f  00                  1038  		DC	0x0	;;     operand
-00000490  00000000          + 1039  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000498  02                  1036  		DC	0x2	;;   size of loc_exp
+00000499  23                  1037  		DC	0x23	;;   DW_OP_plus_uconst
+0000049a  00                  1038  		DC	0x0	;;     operand
+0000049b  00000000          + 1039  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1040  	;; entry 98
-00000494  07                  1041  		DC	0x7	;; abbrev_code
-00000495  626974313500        1042  		DC	"bit15",0x0	;; DW_AT_name
-0000049b  02                  1043  		DC	0x2	;; DW_AT_byte_size
-0000049c  00                  1044  		DC	0x0	;; DW_AT_bit_offset
-0000049d  01                  1045  		DC	0x1	;; DW_AT_bit_size
+0000049f  07                  1041  		DC	0x7	;; abbrev_code
+000004a0  626974313500        1042  		DC	"bit15",0x0	;; DW_AT_name
+000004a6  02                  1043  		DC	0x2	;; DW_AT_byte_size
+000004a7  00                  1044  		DC	0x0	;; DW_AT_bit_offset
+000004a8  01                  1045  		DC	0x1	;; DW_AT_bit_size
                               1046  				;; DW_AT_data_member_location
-0000049e  02                  1047  		DC	0x2	;;   size of loc_exp
-0000049f  23                  1048  		DC	0x23	;;   DW_OP_plus_uconst
-000004a0  00                  1049  		DC	0x0	;;     operand
-000004a1  00000000          + 1050  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000004a9  02                  1047  		DC	0x2	;;   size of loc_exp
+000004aa  23                  1048  		DC	0x23	;;   DW_OP_plus_uconst
+000004ab  00                  1049  		DC	0x0	;;     operand
+000004ac  00000000          + 1050  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1051  	;; NULL ENTRY 99
-000004a5  00                  1052  		DC	0x0
+000004b0  00                  1052  		DC	0x0
                               1053  	;; entry 100
-000004a6                      1054  	.LDW23
-000004a6  06                  1055  		DC	0x6	;; abbrev_code
-000004a7  04                  1056  		DC	0x4	;; DW_AT_byte_size
+000004b1                      1054  	.LDW23
+000004b1  06                  1055  		DC	0x6	;; abbrev_code
+000004b2  04                  1056  		DC	0x4	;; DW_AT_byte_size
                               1057  	;; entry 101
-000004a8  05                  1058  		DC	0x5	;; abbrev_code
-000004a9  75776F726400        1059  		DC	"uword",0x0	;; DW_AT_name
+000004b3  05                  1058  		DC	0x5	;; abbrev_code
+000004b4  75776F726400        1059  		DC	"uword",0x0	;; DW_AT_name
                               1060  				;; DW_AT_data_member_location
-000004af  02                  1061  		DC	0x2	;;   size of loc_exp
-000004b0  23                  1062  		DC	0x23	;;   DW_OP_plus_uconst
-000004b1  00                  1063  		DC	0x0	;;     operand
-000004b2  00000000          + 1064  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000004ba  02                  1061  		DC	0x2	;;   size of loc_exp
+000004bb  23                  1062  		DC	0x23	;;   DW_OP_plus_uconst
+000004bc  00                  1063  		DC	0x0	;;     operand
+000004bd  00000000          + 1064  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               1065  	;; entry 102
-000004b6  05                  1066  		DC	0x5	;; abbrev_code
-000004b7  6269747300          1067  		DC	"bits",0x0	;; DW_AT_name
+000004c1  05                  1066  		DC	0x5	;; abbrev_code
+000004c2  6269747300          1067  		DC	"bits",0x0	;; DW_AT_name
                               1068  				;; DW_AT_data_member_location
-000004bc  02                  1069  		DC	0x2	;;   size of loc_exp
-000004bd  23                  1070  		DC	0x23	;;   DW_OP_plus_uconst
-000004be  00                  1071  		DC	0x0	;;     operand
-000004bf  00000000          + 1072  		DD	.LDW22-.LI_TOP	;; DW_AT_type
+000004c7  02                  1069  		DC	0x2	;;   size of loc_exp
+000004c8  23                  1070  		DC	0x23	;;   DW_OP_plus_uconst
+000004c9  00                  1071  		DC	0x0	;;     operand
+000004ca  00000000          + 1072  		DD	.LDW22-.LI_TOP	;; DW_AT_type
                               1073  	;; NULL ENTRY 103
-000004c3  00                  1074  		DC	0x0
+000004ce  00                  1074  		DC	0x0
                               1075  	;; entry 104
-000004c4  03                  1076  		DC	0x3	;; abbrev_code
-000004c5  666C61675F747970    1077  		DC	"flag_type",0x0	;; DW_AT_name
-000004cd  6500                1077  	
-000004cf  00000000          + 1078  		DD	.LDW23-.LI_TOP	;; DW_AT_type
+000004cf  03                  1076  		DC	0x3	;; abbrev_code
+000004d0  666C61675F747970    1077  		DC	"flag_type",0x0	;; DW_AT_name
+000004d8  6500                1077  	
+000004da  00000000          + 1078  		DD	.LDW23-.LI_TOP	;; DW_AT_type
                               1079  	;; entry 105
-000004d3                      1080  	.LDW24
-000004d3  04                  1081  		DC	0x4	;; abbrev_code
-000004d4  0C                  1082  		DC	0xc	;; DW_AT_byte_size
+000004de                      1080  	.LDW24
+000004de  04                  1081  		DC	0x4	;; abbrev_code
+000004df  0C                  1082  		DC	0xc	;; DW_AT_byte_size
                               1083  	;; entry 106
-000004d5  05                  1084  		DC	0x5	;; abbrev_code
-000004d6  76616C756500        1085  		DC	"value",0x0	;; DW_AT_name
+000004e0  05                  1084  		DC	0x5	;; abbrev_code
+000004e1  76616C756500        1085  		DC	"value",0x0	;; DW_AT_name
                               1086  				;; DW_AT_data_member_location
-000004dc  02                  1087  		DC	0x2	;;   size of loc_exp
-000004dd  23                  1088  		DC	0x23	;;   DW_OP_plus_uconst
-000004de  00                  1089  		DC	0x0	;;     operand
-000004df  00000000          + 1090  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000004e7  02                  1087  		DC	0x2	;;   size of loc_exp
+000004e8  23                  1088  		DC	0x23	;;   DW_OP_plus_uconst
+000004e9  00                  1089  		DC	0x0	;;     operand
+000004ea  00000000          + 1090  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               1091  	;; entry 107
-000004e3  05                  1092  		DC	0x5	;; abbrev_code
-000004e4  6D617800            1093  		DC	"max",0x0	;; DW_AT_name
+000004ee  05                  1092  		DC	0x5	;; abbrev_code
+000004ef  6D617800            1093  		DC	"max",0x0	;; DW_AT_name
                               1094  				;; DW_AT_data_member_location
-000004e8  02                  1095  		DC	0x2	;;   size of loc_exp
-000004e9  23                  1096  		DC	0x23	;;   DW_OP_plus_uconst
-000004ea  02                  1097  		DC	0x2	;;     operand
-000004eb  00000000          + 1098  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000004f3  02                  1095  		DC	0x2	;;   size of loc_exp
+000004f4  23                  1096  		DC	0x23	;;   DW_OP_plus_uconst
+000004f5  02                  1097  		DC	0x2	;;     operand
+000004f6  00000000          + 1098  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               1099  	;; entry 108
-000004ef  05                  1100  		DC	0x5	;; abbrev_code
-000004f0  6D696E00            1101  		DC	"min",0x0	;; DW_AT_name
+000004fa  05                  1100  		DC	0x5	;; abbrev_code
+000004fb  6D696E00            1101  		DC	"min",0x0	;; DW_AT_name
                               1102  				;; DW_AT_data_member_location
-000004f4  02                  1103  		DC	0x2	;;   size of loc_exp
-000004f5  23                  1104  		DC	0x23	;;   DW_OP_plus_uconst
-000004f6  04                  1105  		DC	0x4	;;     operand
-000004f7  00000000          + 1106  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000004ff  02                  1103  		DC	0x2	;;   size of loc_exp
+00000500  23                  1104  		DC	0x23	;;   DW_OP_plus_uconst
+00000501  04                  1105  		DC	0x4	;;     operand
+00000502  00000000          + 1106  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               1107  	;; entry 109
-000004fb  05                  1108  		DC	0x5	;; abbrev_code
-000004fc  6564697472617465    1109  		DC	"editrate",0x0	;; DW_AT_name
-00000504  00                  1109  	
+00000506  05                  1108  		DC	0x5	;; abbrev_code
+00000507  6564697472617465    1109  		DC	"editrate",0x0	;; DW_AT_name
+0000050f  00                  1109  	
                               1110  				;; DW_AT_data_member_location
-00000505  02                  1111  		DC	0x2	;;   size of loc_exp
-00000506  23                  1112  		DC	0x23	;;   DW_OP_plus_uconst
-00000507  06                  1113  		DC	0x6	;;     operand
-00000508  00000000          + 1114  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000510  02                  1111  		DC	0x2	;;   size of loc_exp
+00000511  23                  1112  		DC	0x23	;;   DW_OP_plus_uconst
+00000512  06                  1113  		DC	0x6	;;     operand
+00000513  00000000          + 1114  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               1115  	;; entry 110
-0000050c  05                  1116  		DC	0x5	;; abbrev_code
-0000050d  6469737072617465    1117  		DC	"disprate",0x0	;; DW_AT_name
-00000515  00                  1117  	
+00000517  05                  1116  		DC	0x5	;; abbrev_code
+00000518  6469737072617465    1117  		DC	"disprate",0x0	;; DW_AT_name
+00000520  00                  1117  	
                               1118  				;; DW_AT_data_member_location
-00000516  02                  1119  		DC	0x2	;;   size of loc_exp
-00000517  23                  1120  		DC	0x23	;;   DW_OP_plus_uconst
-00000518  08                  1121  		DC	0x8	;;     operand
-00000519  00000000          + 1122  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000521  02                  1119  		DC	0x2	;;   size of loc_exp
+00000522  23                  1120  		DC	0x23	;;   DW_OP_plus_uconst
+00000523  08                  1121  		DC	0x8	;;     operand
+00000524  00000000          + 1122  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               1123  	;; NULL ENTRY 111
-0000051d  00                  1124  		DC	0x0
+00000528  00                  1124  		DC	0x0
                               1125  	;; entry 112
-0000051e  03                  1126  		DC	0x3	;; abbrev_code
-0000051f  706172615F737479    1127  		DC	"para_style",0x0	;; DW_AT_name
-00000527  6C6500              1127  	
-0000052a  00000000          + 1128  		DD	.LDW24-.LI_TOP	;; DW_AT_type
+00000529  03                  1126  		DC	0x3	;; abbrev_code
+0000052a  706172615F737479    1127  		DC	"para_style",0x0	;; DW_AT_name
+00000532  6C6500              1127  	
+00000535  00000000          + 1128  		DD	.LDW24-.LI_TOP	;; DW_AT_type
                               1129  	;; entry 113
-0000052e  08                  1130  		DC	0x8	;; abbrev_code
-0000052f  6C6F77706173735F    1131  		DC	"lowpass_filter",0x0	;; DW_AT_name
-00000537  66696C74657200      1131  	
-0000053e  00000000          + 1132  		DD	_lowpass_filter	;; DW_AT_low_pc
-00000542  00000000          + 1133  		DD	.LDW25	;; DW_AT_high_pc
-00000546  01                  1134  		DC	0x1	;; DW_AT_prototyped
-00000547  01                  1135  		DC	0x1	;; DW_AT_decl_file
-00000548  64                  1136  		DC	0x64	;; DW_AT_decl_line
-00000549  01                  1137  		DC	0x1	;; DW_AT_external
+00000539  08                  1130  		DC	0x8	;; abbrev_code
+0000053a  6C6F77706173735F    1131  		DC	"lowpass_filter",0x0	;; DW_AT_name
+00000542  66696C74657200      1131  	
+00000549  00000000          + 1132  		DD	_lowpass_filter	;; DW_AT_low_pc
+0000054d  00000000          + 1133  		DD	.LDW25	;; DW_AT_high_pc
+00000551  01                  1134  		DC	0x1	;; DW_AT_prototyped
+00000552  01                  1135  		DC	0x1	;; DW_AT_decl_file
+00000553  64                  1136  		DC	0x64	;; DW_AT_decl_line
+00000554  01                  1137  		DC	0x1	;; DW_AT_external
                               1138  				;; DW_AT_frame_base
-0000054a  01                  1139  		DC	0x1	;;   size of loc_exp
-0000054b  59                  1140  		DC	0x59	;;   DW_OP_reg9
-0000054c  00000000          + 1141  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+00000555  01                  1139  		DC	0x1	;;   size of loc_exp
+00000556  59                  1140  		DC	0x59	;;   DW_OP_reg9
+00000557  00000000          + 1141  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               1142  				;; DW_AT_MN_return_value_location
-00000550  01                  1143  		DC	0x1	;;   size of loc_exp
-00000551  50                  1144  		DC	0x50	;;   DW_OP_reg0
+0000055b  01                  1143  		DC	0x1	;;   size of loc_exp
+0000055c  50                  1144  		DC	0x50	;;   DW_OP_reg0
                               1145  	;; entry 114
-00000552  09                  1146  		DC	0x9	;; abbrev_code
-00000553  6C6173745F76616C    1147  		DC	"last_val",0x0	;; DW_AT_name
-0000055b  00                  1147  	
-0000055c  00000000          + 1148  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000560  00000000          + 1149  		DD	.LDW29	;; DW_AT_MN_resource
+0000055d  09                  1146  		DC	0x9	;; abbrev_code
+0000055e  6C6173745F76616C    1147  		DC	"last_val",0x0	;; DW_AT_name
+00000566  00                  1147  	
+00000567  00000000          + 1148  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000056b  00000000          + 1149  		DD	.LDW29	;; DW_AT_MN_resource
                               1150  	;; entry 115
-00000564  09                  1151  		DC	0x9	;; abbrev_code
-00000565  6C6173745F6D6F64    1152  		DC	"last_mod",0x0	;; DW_AT_name
-0000056d  00                  1152  	
-0000056e  00000000          + 1153  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000572  00000000          + 1154  		DD	.LDW32	;; DW_AT_MN_resource
+0000056f  09                  1151  		DC	0x9	;; abbrev_code
+00000570  6C6173745F6D6F64    1152  		DC	"last_mod",0x0	;; DW_AT_name
+00000578  00                  1152  	
+00000579  00000000          + 1153  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000057d  00000000          + 1154  		DD	.LDW32	;; DW_AT_MN_resource
                               1155  	;; entry 116
-00000576  09                  1156  		DC	0x9	;; abbrev_code
-00000577  6E6F775F76616C00    1157  		DC	"now_val",0x0	;; DW_AT_name
-0000057f  00000000          + 1158  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000583  00000000          + 1159  		DD	.LDW26	;; DW_AT_MN_resource
+00000581  09                  1156  		DC	0x9	;; abbrev_code
+00000582  6E6F775F76616C00    1157  		DC	"now_val",0x0	;; DW_AT_name
+0000058a  00000000          + 1158  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000058e  00000000          + 1159  		DD	.LDW26	;; DW_AT_MN_resource
                               1160  	;; entry 117
-00000587  09                  1161  		DC	0x9	;; abbrev_code
-00000588  696E64657800        1162  		DC	"index",0x0	;; DW_AT_name
-0000058e  00000000          + 1163  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000592  00000000          + 1164  		DD	.LDW35	;; DW_AT_MN_resource
+00000592  09                  1161  		DC	0x9	;; abbrev_code
+00000593  696E64657800        1162  		DC	"index",0x0	;; DW_AT_name
+00000599  00000000          + 1163  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000059d  00000000          + 1164  		DD	.LDW35	;; DW_AT_MN_resource
                               1165  	;; entry 118
-00000596  0A                  1166  		DC	0xa	;; abbrev_code
+000005a1  0A                  1166  		DC	0xa	;; abbrev_code
                               1167  				;; DW_AT_location
-00000597  02                  1168  		DC	0x2	;;   size of loc_exp
-00000598  91                  1169  		DC	0x91	;;   DW_OP_fbreg
-00000599  00                  1170  		DC	0x0	;;     operand
-0000059a  746D7000            1171  		DC	"tmp",0x0	;; DW_AT_name
-0000059e  00                  1172  		DC	0x0	;; DW_AT_external
-0000059f  00000000          + 1173  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+000005a2  02                  1168  		DC	0x2	;;   size of loc_exp
+000005a3  91                  1169  		DC	0x91	;;   DW_OP_fbreg
+000005a4  00                  1170  		DC	0x0	;;     operand
+000005a5  746D7000            1171  		DC	"tmp",0x0	;; DW_AT_name
+000005a9  00                  1172  		DC	0x0	;; DW_AT_external
+000005aa  00000000          + 1173  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               1174  	;; entry 119
-000005a3  0A                  1175  		DC	0xa	;; abbrev_code
+000005ae  0A                  1175  		DC	0xa	;; abbrev_code
                               1176  				;; DW_AT_location
-000005a4  02                  1177  		DC	0x2	;;   size of loc_exp
-000005a5  91                  1178  		DC	0x91	;;   DW_OP_fbreg
-000005a6  04                  1179  		DC	0x4	;;     operand
-000005a7  726573756C7400      1180  		DC	"result",0x0	;; DW_AT_name
-000005ae  00                  1181  		DC	0x0	;; DW_AT_external
-000005af  00000000          + 1182  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+000005af  02                  1177  		DC	0x2	;;   size of loc_exp
+000005b0  91                  1178  		DC	0x91	;;   DW_OP_fbreg
+000005b1  04                  1179  		DC	0x4	;;     operand
+000005b2  726573756C7400      1180  		DC	"result",0x0	;; DW_AT_name
+000005b9  00                  1181  		DC	0x0	;; DW_AT_external
+000005ba  00000000          + 1182  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               1183  	;; NULL ENTRY 120
-000005b3  00                  1184  		DC	0x0
+000005be  00                  1184  		DC	0x0
                               1185  	;; NULL ENTRY 121
-000005b4  00                  1186  		DC	0x0
-000005b5                      1187  	.LI_E
+000005bf  00                  1186  		DC	0x0
+000005c0                      1187  	.LI_E
                               1188  	;; End of Debugging Information Entries
                               1189  	.debug_line		SECTION
                               1190  	;; Line Number Information
@@ -1414,33 +1415,33 @@ Address/Value	Class	Section			  Symbol
 00000070	L	.text                     .LPC_END
 00000000	L	.debug_abbrev             .LAB_TOP
 00000000	L	.debug_info               .LI_TOP
-000005b5	L	.debug_info               .LI_E
+000005c0	L	.debug_info               .LI_E
 00000004	L	.debug_info               .LI_B
 00000000	L	.debug_line               .LLN_TOP
-0000009c	L	.debug_info               .LDW10
-000000a7	L	.debug_info               .LDW9
-000000b1	L	.debug_info               .LDW8
-000000bf	L	.debug_info               .LDW7
-000000c8	L	.debug_info               .LDW6
-000000d2	L	.debug_info               .LDW5
-000000db	L	.debug_info               .LDW4
-000000e9	L	.debug_info               .LDW3
-000000f2	L	.debug_info               .LDW2
-000000fc	L	.debug_info               .LDW1
-00000199	L	.debug_info               .LDW11
-000001b5	L	.debug_info               .LDW12
-000001d1	L	.debug_info               .LDW13
-00000221	L	.debug_info               .LDW14
-0000023d	L	.debug_info               .LDW15
-0000026c	L	.debug_info               .LDW16
-00000288	L	.debug_info               .LDW17
-000002b7	L	.debug_info               .LDW18
-0000031d	L	.debug_info               .LDW19
-00000339	L	.debug_info               .LDW20
-00000355	L	.debug_info               .LDW21
-0000039d	L	.debug_info               .LDW22
-000004a6	L	.debug_info               .LDW23
-000004d3	L	.debug_info               .LDW24
+000000a7	L	.debug_info               .LDW10
+000000b2	L	.debug_info               .LDW9
+000000bc	L	.debug_info               .LDW8
+000000ca	L	.debug_info               .LDW7
+000000d3	L	.debug_info               .LDW6
+000000dd	L	.debug_info               .LDW5
+000000e6	L	.debug_info               .LDW4
+000000f4	L	.debug_info               .LDW3
+000000fd	L	.debug_info               .LDW2
+00000107	L	.debug_info               .LDW1
+000001a4	L	.debug_info               .LDW11
+000001c0	L	.debug_info               .LDW12
+000001dc	L	.debug_info               .LDW13
+0000022c	L	.debug_info               .LDW14
+00000248	L	.debug_info               .LDW15
+00000277	L	.debug_info               .LDW16
+00000293	L	.debug_info               .LDW17
+000002c2	L	.debug_info               .LDW18
+00000328	L	.debug_info               .LDW19
+00000344	L	.debug_info               .LDW20
+00000360	L	.debug_info               .LDW21
+000003a8	L	.debug_info               .LDW22
+000004b1	L	.debug_info               .LDW23
+000004de	L	.debug_info               .LDW24
 00000103	L	.debug_line               .LLN_E
 00000004	L	.debug_line               .LLN_B
 0000002e	L	.debug_line               .LLN_P_E

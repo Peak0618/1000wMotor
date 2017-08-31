@@ -1,4 +1,4 @@
-                                                OP0c.lst	Page 1
+                                                OP0g.lst	Page 1
 ***   PanaX Series MN103S/MN103L Cross Assembler   ***
 Loc       Object            Line        Source
 
@@ -3425,1644 +3425,1645 @@ Loc       Object            Line        Source
 00000024  00000000          + 3419  		DD	.LPC_TOP	;; DW_AT_low_pc
 00000028  00000000          + 3420  		DD	.LPC_END	;; DW_AT_high_pc
 0000002c  0100                3421  		DW	0x1	;; DW_AT_language
-0000002e  463A5C576F726B20    3422  		DC	"F:\\Work Projects\\MotorDrive\\1000W_MotorDrive\\SoftWare\\1000W",0x0	;; DW_AT_comp_dir
+0000002e  463A5C576F726B20    3422  		DC	"F:\\Work Projects\\MotorDrive\\1000W_MotorDrive\\SoftWare\\1000wMotor\\1000W",0x0	;; DW_AT_comp_dir
 00000036  50726F6A65637473    3422  	
 0000003e  5C4D6F746F724472    3422  	
 00000046  6976655C31303030    3422  	
 0000004e  575F4D6F746F7244    3422  	
 00000056  726976655C536F66    3422  	
 0000005e  74576172655C3130    3422  	
-00000066  30305700            3422  	
-0000006a  4D4E313033532053    3423  		DC	"MN103S Series C Compiler Windows V5.4R1 Nov 30 2011",0x0	;; DW_AT_producer
-00000072  6572696573204320    3423  	
-0000007a  436F6D70696C6572    3423  	
-00000082  2057696E646F7773    3423  	
-0000008a  2056352E34523120    3423  	
-00000092  4E6F762033302032    3423  	
-0000009a  30313100            3423  	
-0000009e  00                  3424  		DC	0x0	;; DW_AT_identifier_case
+00000066  3030774D6F746F72    3422  	
+0000006e  5C313030305700      3422  	
+00000075  4D4E313033532053    3423  		DC	"MN103S Series C Compiler Windows V5.4R1 Nov 30 2011",0x0	;; DW_AT_producer
+0000007d  6572696573204320    3423  	
+00000085  436F6D70696C6572    3423  	
+0000008d  2057696E646F7773    3423  	
+00000095  2056352E34523120    3423  	
+0000009d  4E6F762033302032    3423  	
+000000a5  30313100            3423  	
+000000a9  00                  3424  		DC	0x0	;; DW_AT_identifier_case
                               3425  	;; entry 2
-0000009f                      3426  	.LDW10
-0000009f  02                  3427  		DC	0x2	;; abbrev_code
-000000a0  646F75626C6500      3428  		DC	"double",0x0	;; DW_AT_name
-000000a7  08                  3429  		DC	0x8	;; DW_AT_byte_size
-000000a8  0400                3430  		DW	0x4	;; DW_AT_encoding
+000000aa                      3426  	.LDW10
+000000aa  02                  3427  		DC	0x2	;; abbrev_code
+000000ab  646F75626C6500      3428  		DC	"double",0x0	;; DW_AT_name
+000000b2  08                  3429  		DC	0x8	;; DW_AT_byte_size
+000000b3  0400                3430  		DW	0x4	;; DW_AT_encoding
                               3431  	;; entry 3
-000000aa                      3432  	.LDW9
-000000aa  02                  3433  		DC	0x2	;; abbrev_code
-000000ab  666C6F617400        3434  		DC	"float",0x0	;; DW_AT_name
-000000b1  04                  3435  		DC	0x4	;; DW_AT_byte_size
-000000b2  0400                3436  		DW	0x4	;; DW_AT_encoding
+000000b5                      3432  	.LDW9
+000000b5  02                  3433  		DC	0x2	;; abbrev_code
+000000b6  666C6F617400        3434  		DC	"float",0x0	;; DW_AT_name
+000000bc  04                  3435  		DC	0x4	;; DW_AT_byte_size
+000000bd  0400                3436  		DW	0x4	;; DW_AT_encoding
                               3437  	;; entry 4
-000000b4                      3438  	.LDW8
-000000b4  02                  3439  		DC	0x2	;; abbrev_code
-000000b5  6C6F6E67206C6F6E    3440  		DC	"long long",0x0	;; DW_AT_name
-000000bd  6700                3440  	
-000000bf  08                  3441  		DC	0x8	;; DW_AT_byte_size
-000000c0  0700                3442  		DW	0x7	;; DW_AT_encoding
+000000bf                      3438  	.LDW8
+000000bf  02                  3439  		DC	0x2	;; abbrev_code
+000000c0  6C6F6E67206C6F6E    3440  		DC	"long long",0x0	;; DW_AT_name
+000000c8  6700                3440  	
+000000ca  08                  3441  		DC	0x8	;; DW_AT_byte_size
+000000cb  0700                3442  		DW	0x7	;; DW_AT_encoding
                               3443  	;; entry 5
-000000c2                      3444  	.LDW7
-000000c2  02                  3445  		DC	0x2	;; abbrev_code
-000000c3  6C6F6E6700          3446  		DC	"long",0x0	;; DW_AT_name
-000000c8  04                  3447  		DC	0x4	;; DW_AT_byte_size
-000000c9  0700                3448  		DW	0x7	;; DW_AT_encoding
+000000cd                      3444  	.LDW7
+000000cd  02                  3445  		DC	0x2	;; abbrev_code
+000000ce  6C6F6E6700          3446  		DC	"long",0x0	;; DW_AT_name
+000000d3  04                  3447  		DC	0x4	;; DW_AT_byte_size
+000000d4  0700                3448  		DW	0x7	;; DW_AT_encoding
                               3449  	;; entry 6
-000000cb                      3450  	.LDW6
-000000cb  02                  3451  		DC	0x2	;; abbrev_code
-000000cc  73686F727400        3452  		DC	"short",0x0	;; DW_AT_name
-000000d2  02                  3453  		DC	0x2	;; DW_AT_byte_size
-000000d3  0700                3454  		DW	0x7	;; DW_AT_encoding
+000000d6                      3450  	.LDW6
+000000d6  02                  3451  		DC	0x2	;; abbrev_code
+000000d7  73686F727400        3452  		DC	"short",0x0	;; DW_AT_name
+000000dd  02                  3453  		DC	0x2	;; DW_AT_byte_size
+000000de  0700                3454  		DW	0x7	;; DW_AT_encoding
                               3455  	;; entry 7
-000000d5                      3456  	.LDW5
-000000d5  02                  3457  		DC	0x2	;; abbrev_code
-000000d6  6368617200          3458  		DC	"char",0x0	;; DW_AT_name
-000000db  01                  3459  		DC	0x1	;; DW_AT_byte_size
-000000dc  0800                3460  		DW	0x8	;; DW_AT_encoding
+000000e0                      3456  	.LDW5
+000000e0  02                  3457  		DC	0x2	;; abbrev_code
+000000e1  6368617200          3458  		DC	"char",0x0	;; DW_AT_name
+000000e6  01                  3459  		DC	0x1	;; DW_AT_byte_size
+000000e7  0800                3460  		DW	0x8	;; DW_AT_encoding
                               3461  	;; entry 8
-000000de                      3462  	.LDW4
-000000de  02                  3463  		DC	0x2	;; abbrev_code
-000000df  6C6F6E67206C6F6E    3464  		DC	"long long",0x0	;; DW_AT_name
-000000e7  6700                3464  	
-000000e9  08                  3465  		DC	0x8	;; DW_AT_byte_size
-000000ea  0500                3466  		DW	0x5	;; DW_AT_encoding
+000000e9                      3462  	.LDW4
+000000e9  02                  3463  		DC	0x2	;; abbrev_code
+000000ea  6C6F6E67206C6F6E    3464  		DC	"long long",0x0	;; DW_AT_name
+000000f2  6700                3464  	
+000000f4  08                  3465  		DC	0x8	;; DW_AT_byte_size
+000000f5  0500                3466  		DW	0x5	;; DW_AT_encoding
                               3467  	;; entry 9
-000000ec                      3468  	.LDW3
-000000ec  02                  3469  		DC	0x2	;; abbrev_code
-000000ed  6C6F6E6700          3470  		DC	"long",0x0	;; DW_AT_name
-000000f2  04                  3471  		DC	0x4	;; DW_AT_byte_size
-000000f3  0500                3472  		DW	0x5	;; DW_AT_encoding
+000000f7                      3468  	.LDW3
+000000f7  02                  3469  		DC	0x2	;; abbrev_code
+000000f8  6C6F6E6700          3470  		DC	"long",0x0	;; DW_AT_name
+000000fd  04                  3471  		DC	0x4	;; DW_AT_byte_size
+000000fe  0500                3472  		DW	0x5	;; DW_AT_encoding
                               3473  	;; entry 10
-000000f5                      3474  	.LDW2
-000000f5  02                  3475  		DC	0x2	;; abbrev_code
-000000f6  73686F727400        3476  		DC	"short",0x0	;; DW_AT_name
-000000fc  02                  3477  		DC	0x2	;; DW_AT_byte_size
-000000fd  0500                3478  		DW	0x5	;; DW_AT_encoding
+00000100                      3474  	.LDW2
+00000100  02                  3475  		DC	0x2	;; abbrev_code
+00000101  73686F727400        3476  		DC	"short",0x0	;; DW_AT_name
+00000107  02                  3477  		DC	0x2	;; DW_AT_byte_size
+00000108  0500                3478  		DW	0x5	;; DW_AT_encoding
                               3479  	;; entry 11
-000000ff                      3480  	.LDW1
-000000ff  02                  3481  		DC	0x2	;; abbrev_code
-00000100  6368617200          3482  		DC	"char",0x0	;; DW_AT_name
-00000105  01                  3483  		DC	0x1	;; DW_AT_byte_size
-00000106  0600                3484  		DW	0x6	;; DW_AT_encoding
+0000010a                      3480  	.LDW1
+0000010a  02                  3481  		DC	0x2	;; abbrev_code
+0000010b  6368617200          3482  		DC	"char",0x0	;; DW_AT_name
+00000110  01                  3483  		DC	0x1	;; DW_AT_byte_size
+00000111  0600                3484  		DW	0x6	;; DW_AT_encoding
                               3485  	;; entry 12
-00000108  03                  3486  		DC	0x3	;; abbrev_code
-00000109  636861725F7400      3487  		DC	"char_t",0x0	;; DW_AT_name
-00000110  00000000          + 3488  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000113  03                  3486  		DC	0x3	;; abbrev_code
+00000114  636861725F7400      3487  		DC	"char_t",0x0	;; DW_AT_name
+0000011b  00000000          + 3488  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3489  	;; entry 13
-00000114  03                  3490  		DC	0x3	;; abbrev_code
-00000115  696E74385F7400      3491  		DC	"int8_t",0x0	;; DW_AT_name
-0000011c  00000000          + 3492  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000011f  03                  3490  		DC	0x3	;; abbrev_code
+00000120  696E74385F7400      3491  		DC	"int8_t",0x0	;; DW_AT_name
+00000127  00000000          + 3492  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3493  	;; entry 14
-00000120  03                  3494  		DC	0x3	;; abbrev_code
-00000121  696E7431365F7400    3495  		DC	"int16_t",0x0	;; DW_AT_name
-00000129  00000000          + 3496  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000012b  03                  3494  		DC	0x3	;; abbrev_code
+0000012c  696E7431365F7400    3495  		DC	"int16_t",0x0	;; DW_AT_name
+00000134  00000000          + 3496  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               3497  	;; entry 15
-0000012d  03                  3498  		DC	0x3	;; abbrev_code
-0000012e  696E7433325F7400    3499  		DC	"int32_t",0x0	;; DW_AT_name
-00000136  00000000          + 3500  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+00000138  03                  3498  		DC	0x3	;; abbrev_code
+00000139  696E7433325F7400    3499  		DC	"int32_t",0x0	;; DW_AT_name
+00000141  00000000          + 3500  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               3501  	;; entry 16
-0000013a  03                  3502  		DC	0x3	;; abbrev_code
-0000013b  696E7436345F7400    3503  		DC	"int64_t",0x0	;; DW_AT_name
-00000143  00000000          + 3504  		DD	.LDW4-.LI_TOP	;; DW_AT_type
+00000145  03                  3502  		DC	0x3	;; abbrev_code
+00000146  696E7436345F7400    3503  		DC	"int64_t",0x0	;; DW_AT_name
+0000014e  00000000          + 3504  		DD	.LDW4-.LI_TOP	;; DW_AT_type
                               3505  	;; entry 17
-00000147  03                  3506  		DC	0x3	;; abbrev_code
-00000148  75696E74385F7400    3507  		DC	"uint8_t",0x0	;; DW_AT_name
-00000150  00000000          + 3508  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000152  03                  3506  		DC	0x3	;; abbrev_code
+00000153  75696E74385F7400    3507  		DC	"uint8_t",0x0	;; DW_AT_name
+0000015b  00000000          + 3508  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3509  	;; entry 18
-00000154  03                  3510  		DC	0x3	;; abbrev_code
-00000155  75696E7431365F74    3511  		DC	"uint16_t",0x0	;; DW_AT_name
-0000015d  00                  3511  	
-0000015e  00000000          + 3512  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000015f  03                  3510  		DC	0x3	;; abbrev_code
+00000160  75696E7431365F74    3511  		DC	"uint16_t",0x0	;; DW_AT_name
+00000168  00                  3511  	
+00000169  00000000          + 3512  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3513  	;; entry 19
-00000162  03                  3514  		DC	0x3	;; abbrev_code
-00000163  75696E7433325F74    3515  		DC	"uint32_t",0x0	;; DW_AT_name
-0000016b  00                  3515  	
-0000016c  00000000          + 3516  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+0000016d  03                  3514  		DC	0x3	;; abbrev_code
+0000016e  75696E7433325F74    3515  		DC	"uint32_t",0x0	;; DW_AT_name
+00000176  00                  3515  	
+00000177  00000000          + 3516  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               3517  	;; entry 20
-00000170  03                  3518  		DC	0x3	;; abbrev_code
-00000171  75696E7436345F74    3519  		DC	"uint64_t",0x0	;; DW_AT_name
-00000179  00                  3519  	
-0000017a  00000000          + 3520  		DD	.LDW8-.LI_TOP	;; DW_AT_type
+0000017b  03                  3518  		DC	0x3	;; abbrev_code
+0000017c  75696E7436345F74    3519  		DC	"uint64_t",0x0	;; DW_AT_name
+00000184  00                  3519  	
+00000185  00000000          + 3520  		DD	.LDW8-.LI_TOP	;; DW_AT_type
                               3521  	;; entry 21
-0000017e  03                  3522  		DC	0x3	;; abbrev_code
-0000017f  666C6F617433325F    3523  		DC	"float32_t",0x0	;; DW_AT_name
-00000187  7400                3523  	
-00000189  00000000          + 3524  		DD	.LDW9-.LI_TOP	;; DW_AT_type
+00000189  03                  3522  		DC	0x3	;; abbrev_code
+0000018a  666C6F617433325F    3523  		DC	"float32_t",0x0	;; DW_AT_name
+00000192  7400                3523  	
+00000194  00000000          + 3524  		DD	.LDW9-.LI_TOP	;; DW_AT_type
                               3525  	;; entry 22
-0000018d  03                  3526  		DC	0x3	;; abbrev_code
-0000018e  666C6F617436345F    3527  		DC	"float64_t",0x0	;; DW_AT_name
-00000196  7400                3527  	
-00000198  00000000          + 3528  		DD	.LDW10-.LI_TOP	;; DW_AT_type
+00000198  03                  3526  		DC	0x3	;; abbrev_code
+00000199  666C6F617436345F    3527  		DC	"float64_t",0x0	;; DW_AT_name
+000001a1  7400                3527  	
+000001a3  00000000          + 3528  		DD	.LDW10-.LI_TOP	;; DW_AT_type
                               3529  	;; entry 23
-0000019c                      3530  	.LDW11
-0000019c  04                  3531  		DC	0x4	;; abbrev_code
-0000019d  08                  3532  		DC	0x8	;; DW_AT_byte_size
+000001a7                      3530  	.LDW11
+000001a7  04                  3531  		DC	0x4	;; abbrev_code
+000001a8  08                  3532  		DC	0x8	;; DW_AT_byte_size
                               3533  	;; entry 24
-0000019e  05                  3534  		DC	0x5	;; abbrev_code
-0000019f  6C6F7700            3535  		DC	"low",0x0	;; DW_AT_name
+000001a9  05                  3534  		DC	0x5	;; abbrev_code
+000001aa  6C6F7700            3535  		DC	"low",0x0	;; DW_AT_name
                               3536  				;; DW_AT_data_member_location
-000001a3  02                  3537  		DC	0x2	;;   size of loc_exp
-000001a4  23                  3538  		DC	0x23	;;   DW_OP_plus_uconst
-000001a5  00                  3539  		DC	0x0	;;     operand
-000001a6  00000000          + 3540  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000001ae  02                  3537  		DC	0x2	;;   size of loc_exp
+000001af  23                  3538  		DC	0x23	;;   DW_OP_plus_uconst
+000001b0  00                  3539  		DC	0x0	;;     operand
+000001b1  00000000          + 3540  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               3541  	;; entry 25
-000001aa  05                  3542  		DC	0x5	;; abbrev_code
-000001ab  6869676800          3543  		DC	"high",0x0	;; DW_AT_name
+000001b5  05                  3542  		DC	0x5	;; abbrev_code
+000001b6  6869676800          3543  		DC	"high",0x0	;; DW_AT_name
                               3544  				;; DW_AT_data_member_location
-000001b0  02                  3545  		DC	0x2	;;   size of loc_exp
-000001b1  23                  3546  		DC	0x23	;;   DW_OP_plus_uconst
-000001b2  04                  3547  		DC	0x4	;;     operand
-000001b3  00000000          + 3548  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000001bb  02                  3545  		DC	0x2	;;   size of loc_exp
+000001bc  23                  3546  		DC	0x23	;;   DW_OP_plus_uconst
+000001bd  04                  3547  		DC	0x4	;;     operand
+000001be  00000000          + 3548  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               3549  	;; NULL ENTRY 26
-000001b7  00                  3550  		DC	0x0
+000001c2  00                  3550  		DC	0x0
                               3551  	;; entry 27
-000001b8                      3552  	.LDW12
-000001b8  04                  3553  		DC	0x4	;; abbrev_code
-000001b9  08                  3554  		DC	0x8	;; DW_AT_byte_size
+000001c3                      3552  	.LDW12
+000001c3  04                  3553  		DC	0x4	;; abbrev_code
+000001c4  08                  3554  		DC	0x8	;; DW_AT_byte_size
                               3555  	;; entry 28
-000001ba  05                  3556  		DC	0x5	;; abbrev_code
-000001bb  6C6F7700            3557  		DC	"low",0x0	;; DW_AT_name
+000001c5  05                  3556  		DC	0x5	;; abbrev_code
+000001c6  6C6F7700            3557  		DC	"low",0x0	;; DW_AT_name
                               3558  				;; DW_AT_data_member_location
-000001bf  02                  3559  		DC	0x2	;;   size of loc_exp
-000001c0  23                  3560  		DC	0x23	;;   DW_OP_plus_uconst
-000001c1  00                  3561  		DC	0x0	;;     operand
-000001c2  00000000          + 3562  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000001ca  02                  3559  		DC	0x2	;;   size of loc_exp
+000001cb  23                  3560  		DC	0x23	;;   DW_OP_plus_uconst
+000001cc  00                  3561  		DC	0x0	;;     operand
+000001cd  00000000          + 3562  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               3563  	;; entry 29
-000001c6  05                  3564  		DC	0x5	;; abbrev_code
-000001c7  6869676800          3565  		DC	"high",0x0	;; DW_AT_name
+000001d1  05                  3564  		DC	0x5	;; abbrev_code
+000001d2  6869676800          3565  		DC	"high",0x0	;; DW_AT_name
                               3566  				;; DW_AT_data_member_location
-000001cc  02                  3567  		DC	0x2	;;   size of loc_exp
-000001cd  23                  3568  		DC	0x23	;;   DW_OP_plus_uconst
-000001ce  04                  3569  		DC	0x4	;;     operand
-000001cf  00000000          + 3570  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000001d7  02                  3567  		DC	0x2	;;   size of loc_exp
+000001d8  23                  3568  		DC	0x23	;;   DW_OP_plus_uconst
+000001d9  04                  3569  		DC	0x4	;;     operand
+000001da  00000000          + 3570  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               3571  	;; NULL ENTRY 30
-000001d3  00                  3572  		DC	0x0
+000001de  00                  3572  		DC	0x0
                               3573  	;; entry 31
-000001d4                      3574  	.LDW13
-000001d4  06                  3575  		DC	0x6	;; abbrev_code
-000001d5  08                  3576  		DC	0x8	;; DW_AT_byte_size
+000001df                      3574  	.LDW13
+000001df  06                  3575  		DC	0x6	;; abbrev_code
+000001e0  08                  3576  		DC	0x8	;; DW_AT_byte_size
                               3577  	;; entry 32
-000001d6  05                  3578  		DC	0x5	;; abbrev_code
-000001d7  646C776F726400      3579  		DC	"dlword",0x0	;; DW_AT_name
+000001e1  05                  3578  		DC	0x5	;; abbrev_code
+000001e2  646C776F726400      3579  		DC	"dlword",0x0	;; DW_AT_name
                               3580  				;; DW_AT_data_member_location
-000001de  02                  3581  		DC	0x2	;;   size of loc_exp
-000001df  23                  3582  		DC	0x23	;;   DW_OP_plus_uconst
-000001e0  00                  3583  		DC	0x0	;;     operand
-000001e1  00000000          + 3584  		DD	.LDW4-.LI_TOP	;; DW_AT_type
+000001e9  02                  3581  		DC	0x2	;;   size of loc_exp
+000001ea  23                  3582  		DC	0x23	;;   DW_OP_plus_uconst
+000001eb  00                  3583  		DC	0x0	;;     operand
+000001ec  00000000          + 3584  		DD	.LDW4-.LI_TOP	;; DW_AT_type
                               3585  	;; entry 33
-000001e5  05                  3586  		DC	0x5	;; abbrev_code
-000001e6  6C776F726400        3587  		DC	"lword",0x0	;; DW_AT_name
+000001f0  05                  3586  		DC	0x5	;; abbrev_code
+000001f1  6C776F726400        3587  		DC	"lword",0x0	;; DW_AT_name
                               3588  				;; DW_AT_data_member_location
-000001ec  02                  3589  		DC	0x2	;;   size of loc_exp
-000001ed  23                  3590  		DC	0x23	;;   DW_OP_plus_uconst
-000001ee  00                  3591  		DC	0x0	;;     operand
-000001ef  00000000          + 3592  		DD	.LDW11-.LI_TOP	;; DW_AT_type
+000001f7  02                  3589  		DC	0x2	;;   size of loc_exp
+000001f8  23                  3590  		DC	0x23	;;   DW_OP_plus_uconst
+000001f9  00                  3591  		DC	0x0	;;     operand
+000001fa  00000000          + 3592  		DD	.LDW11-.LI_TOP	;; DW_AT_type
                               3593  	;; entry 34
-000001f3  05                  3594  		DC	0x5	;; abbrev_code
-000001f4  75646C776F726400    3595  		DC	"udlword",0x0	;; DW_AT_name
+000001fe  05                  3594  		DC	0x5	;; abbrev_code
+000001ff  75646C776F726400    3595  		DC	"udlword",0x0	;; DW_AT_name
                               3596  				;; DW_AT_data_member_location
-000001fc  02                  3597  		DC	0x2	;;   size of loc_exp
-000001fd  23                  3598  		DC	0x23	;;   DW_OP_plus_uconst
-000001fe  00                  3599  		DC	0x0	;;     operand
-000001ff  00000000          + 3600  		DD	.LDW8-.LI_TOP	;; DW_AT_type
+00000207  02                  3597  		DC	0x2	;;   size of loc_exp
+00000208  23                  3598  		DC	0x23	;;   DW_OP_plus_uconst
+00000209  00                  3599  		DC	0x0	;;     operand
+0000020a  00000000          + 3600  		DD	.LDW8-.LI_TOP	;; DW_AT_type
                               3601  	;; entry 35
-00000203  05                  3602  		DC	0x5	;; abbrev_code
-00000204  756C776F726400      3603  		DC	"ulword",0x0	;; DW_AT_name
+0000020e  05                  3602  		DC	0x5	;; abbrev_code
+0000020f  756C776F726400      3603  		DC	"ulword",0x0	;; DW_AT_name
                               3604  				;; DW_AT_data_member_location
-0000020b  02                  3605  		DC	0x2	;;   size of loc_exp
-0000020c  23                  3606  		DC	0x23	;;   DW_OP_plus_uconst
-0000020d  00                  3607  		DC	0x0	;;     operand
-0000020e  00000000          + 3608  		DD	.LDW12-.LI_TOP	;; DW_AT_type
+00000216  02                  3605  		DC	0x2	;;   size of loc_exp
+00000217  23                  3606  		DC	0x23	;;   DW_OP_plus_uconst
+00000218  00                  3607  		DC	0x0	;;     operand
+00000219  00000000          + 3608  		DD	.LDW12-.LI_TOP	;; DW_AT_type
                               3609  	;; NULL ENTRY 36
-00000212  00                  3610  		DC	0x0
+0000021d  00                  3610  		DC	0x0
                               3611  	;; entry 37
-00000213  03                  3612  		DC	0x3	;; abbrev_code
-00000214  646C776F72645F74    3613  		DC	"dlword_type",0x0	;; DW_AT_name
-0000021c  79706500            3613  	
-00000220  00000000          + 3614  		DD	.LDW13-.LI_TOP	;; DW_AT_type
+0000021e  03                  3612  		DC	0x3	;; abbrev_code
+0000021f  646C776F72645F74    3613  		DC	"dlword_type",0x0	;; DW_AT_name
+00000227  79706500            3613  	
+0000022b  00000000          + 3614  		DD	.LDW13-.LI_TOP	;; DW_AT_type
                               3615  	;; entry 38
-00000224                      3616  	.LDW14
-00000224  04                  3617  		DC	0x4	;; abbrev_code
-00000225  04                  3618  		DC	0x4	;; DW_AT_byte_size
+0000022f                      3616  	.LDW14
+0000022f  04                  3617  		DC	0x4	;; abbrev_code
+00000230  04                  3618  		DC	0x4	;; DW_AT_byte_size
                               3619  	;; entry 39
-00000226  05                  3620  		DC	0x5	;; abbrev_code
-00000227  6C6F7700            3621  		DC	"low",0x0	;; DW_AT_name
+00000231  05                  3620  		DC	0x5	;; abbrev_code
+00000232  6C6F7700            3621  		DC	"low",0x0	;; DW_AT_name
                               3622  				;; DW_AT_data_member_location
-0000022b  02                  3623  		DC	0x2	;;   size of loc_exp
-0000022c  23                  3624  		DC	0x23	;;   DW_OP_plus_uconst
-0000022d  00                  3625  		DC	0x0	;;     operand
-0000022e  00000000          + 3626  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000236  02                  3623  		DC	0x2	;;   size of loc_exp
+00000237  23                  3624  		DC	0x23	;;   DW_OP_plus_uconst
+00000238  00                  3625  		DC	0x0	;;     operand
+00000239  00000000          + 3626  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               3627  	;; entry 40
-00000232  05                  3628  		DC	0x5	;; abbrev_code
-00000233  6869676800          3629  		DC	"high",0x0	;; DW_AT_name
+0000023d  05                  3628  		DC	0x5	;; abbrev_code
+0000023e  6869676800          3629  		DC	"high",0x0	;; DW_AT_name
                               3630  				;; DW_AT_data_member_location
-00000238  02                  3631  		DC	0x2	;;   size of loc_exp
-00000239  23                  3632  		DC	0x23	;;   DW_OP_plus_uconst
-0000023a  02                  3633  		DC	0x2	;;     operand
-0000023b  00000000          + 3634  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000243  02                  3631  		DC	0x2	;;   size of loc_exp
+00000244  23                  3632  		DC	0x23	;;   DW_OP_plus_uconst
+00000245  02                  3633  		DC	0x2	;;     operand
+00000246  00000000          + 3634  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               3635  	;; NULL ENTRY 41
-0000023f  00                  3636  		DC	0x0
+0000024a  00                  3636  		DC	0x0
                               3637  	;; entry 42
-00000240                      3638  	.LDW15
-00000240  04                  3639  		DC	0x4	;; abbrev_code
-00000241  04                  3640  		DC	0x4	;; DW_AT_byte_size
+0000024b                      3638  	.LDW15
+0000024b  04                  3639  		DC	0x4	;; abbrev_code
+0000024c  04                  3640  		DC	0x4	;; DW_AT_byte_size
                               3641  	;; entry 43
-00000242  05                  3642  		DC	0x5	;; abbrev_code
-00000243  4C4C00              3643  		DC	"LL",0x0	;; DW_AT_name
+0000024d  05                  3642  		DC	0x5	;; abbrev_code
+0000024e  4C4C00              3643  		DC	"LL",0x0	;; DW_AT_name
                               3644  				;; DW_AT_data_member_location
-00000246  02                  3645  		DC	0x2	;;   size of loc_exp
-00000247  23                  3646  		DC	0x23	;;   DW_OP_plus_uconst
-00000248  00                  3647  		DC	0x0	;;     operand
-00000249  00000000          + 3648  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000251  02                  3645  		DC	0x2	;;   size of loc_exp
+00000252  23                  3646  		DC	0x23	;;   DW_OP_plus_uconst
+00000253  00                  3647  		DC	0x0	;;     operand
+00000254  00000000          + 3648  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3649  	;; entry 44
-0000024d  05                  3650  		DC	0x5	;; abbrev_code
-0000024e  4C4800              3651  		DC	"LH",0x0	;; DW_AT_name
+00000258  05                  3650  		DC	0x5	;; abbrev_code
+00000259  4C4800              3651  		DC	"LH",0x0	;; DW_AT_name
                               3652  				;; DW_AT_data_member_location
-00000251  02                  3653  		DC	0x2	;;   size of loc_exp
-00000252  23                  3654  		DC	0x23	;;   DW_OP_plus_uconst
-00000253  01                  3655  		DC	0x1	;;     operand
-00000254  00000000          + 3656  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000025c  02                  3653  		DC	0x2	;;   size of loc_exp
+0000025d  23                  3654  		DC	0x23	;;   DW_OP_plus_uconst
+0000025e  01                  3655  		DC	0x1	;;     operand
+0000025f  00000000          + 3656  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3657  	;; entry 45
-00000258  05                  3658  		DC	0x5	;; abbrev_code
-00000259  484C00              3659  		DC	"HL",0x0	;; DW_AT_name
+00000263  05                  3658  		DC	0x5	;; abbrev_code
+00000264  484C00              3659  		DC	"HL",0x0	;; DW_AT_name
                               3660  				;; DW_AT_data_member_location
-0000025c  02                  3661  		DC	0x2	;;   size of loc_exp
-0000025d  23                  3662  		DC	0x23	;;   DW_OP_plus_uconst
-0000025e  02                  3663  		DC	0x2	;;     operand
-0000025f  00000000          + 3664  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000267  02                  3661  		DC	0x2	;;   size of loc_exp
+00000268  23                  3662  		DC	0x23	;;   DW_OP_plus_uconst
+00000269  02                  3663  		DC	0x2	;;     operand
+0000026a  00000000          + 3664  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3665  	;; entry 46
-00000263  05                  3666  		DC	0x5	;; abbrev_code
-00000264  484800              3667  		DC	"HH",0x0	;; DW_AT_name
+0000026e  05                  3666  		DC	0x5	;; abbrev_code
+0000026f  484800              3667  		DC	"HH",0x0	;; DW_AT_name
                               3668  				;; DW_AT_data_member_location
-00000267  02                  3669  		DC	0x2	;;   size of loc_exp
-00000268  23                  3670  		DC	0x23	;;   DW_OP_plus_uconst
-00000269  03                  3671  		DC	0x3	;;     operand
-0000026a  00000000          + 3672  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000272  02                  3669  		DC	0x2	;;   size of loc_exp
+00000273  23                  3670  		DC	0x23	;;   DW_OP_plus_uconst
+00000274  03                  3671  		DC	0x3	;;     operand
+00000275  00000000          + 3672  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3673  	;; NULL ENTRY 47
-0000026e  00                  3674  		DC	0x0
+00000279  00                  3674  		DC	0x0
                               3675  	;; entry 48
-0000026f                      3676  	.LDW16
-0000026f  04                  3677  		DC	0x4	;; abbrev_code
-00000270  04                  3678  		DC	0x4	;; DW_AT_byte_size
+0000027a                      3676  	.LDW16
+0000027a  04                  3677  		DC	0x4	;; abbrev_code
+0000027b  04                  3678  		DC	0x4	;; DW_AT_byte_size
                               3679  	;; entry 49
-00000271  05                  3680  		DC	0x5	;; abbrev_code
-00000272  6C6F7700            3681  		DC	"low",0x0	;; DW_AT_name
+0000027c  05                  3680  		DC	0x5	;; abbrev_code
+0000027d  6C6F7700            3681  		DC	"low",0x0	;; DW_AT_name
                               3682  				;; DW_AT_data_member_location
-00000276  02                  3683  		DC	0x2	;;   size of loc_exp
-00000277  23                  3684  		DC	0x23	;;   DW_OP_plus_uconst
-00000278  00                  3685  		DC	0x0	;;     operand
-00000279  00000000          + 3686  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000281  02                  3683  		DC	0x2	;;   size of loc_exp
+00000282  23                  3684  		DC	0x23	;;   DW_OP_plus_uconst
+00000283  00                  3685  		DC	0x0	;;     operand
+00000284  00000000          + 3686  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3687  	;; entry 50
-0000027d  05                  3688  		DC	0x5	;; abbrev_code
-0000027e  6869676800          3689  		DC	"high",0x0	;; DW_AT_name
+00000288  05                  3688  		DC	0x5	;; abbrev_code
+00000289  6869676800          3689  		DC	"high",0x0	;; DW_AT_name
                               3690  				;; DW_AT_data_member_location
-00000283  02                  3691  		DC	0x2	;;   size of loc_exp
-00000284  23                  3692  		DC	0x23	;;   DW_OP_plus_uconst
-00000285  02                  3693  		DC	0x2	;;     operand
-00000286  00000000          + 3694  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000028e  02                  3691  		DC	0x2	;;   size of loc_exp
+0000028f  23                  3692  		DC	0x23	;;   DW_OP_plus_uconst
+00000290  02                  3693  		DC	0x2	;;     operand
+00000291  00000000          + 3694  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3695  	;; NULL ENTRY 51
-0000028a  00                  3696  		DC	0x0
+00000295  00                  3696  		DC	0x0
                               3697  	;; entry 52
-0000028b                      3698  	.LDW17
-0000028b  04                  3699  		DC	0x4	;; abbrev_code
-0000028c  04                  3700  		DC	0x4	;; DW_AT_byte_size
+00000296                      3698  	.LDW17
+00000296  04                  3699  		DC	0x4	;; abbrev_code
+00000297  04                  3700  		DC	0x4	;; DW_AT_byte_size
                               3701  	;; entry 53
-0000028d  05                  3702  		DC	0x5	;; abbrev_code
-0000028e  4C4C00              3703  		DC	"LL",0x0	;; DW_AT_name
+00000298  05                  3702  		DC	0x5	;; abbrev_code
+00000299  4C4C00              3703  		DC	"LL",0x0	;; DW_AT_name
                               3704  				;; DW_AT_data_member_location
-00000291  02                  3705  		DC	0x2	;;   size of loc_exp
-00000292  23                  3706  		DC	0x23	;;   DW_OP_plus_uconst
-00000293  00                  3707  		DC	0x0	;;     operand
-00000294  00000000          + 3708  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+0000029c  02                  3705  		DC	0x2	;;   size of loc_exp
+0000029d  23                  3706  		DC	0x23	;;   DW_OP_plus_uconst
+0000029e  00                  3707  		DC	0x0	;;     operand
+0000029f  00000000          + 3708  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3709  	;; entry 54
-00000298  05                  3710  		DC	0x5	;; abbrev_code
-00000299  4C4800              3711  		DC	"LH",0x0	;; DW_AT_name
+000002a3  05                  3710  		DC	0x5	;; abbrev_code
+000002a4  4C4800              3711  		DC	"LH",0x0	;; DW_AT_name
                               3712  				;; DW_AT_data_member_location
-0000029c  02                  3713  		DC	0x2	;;   size of loc_exp
-0000029d  23                  3714  		DC	0x23	;;   DW_OP_plus_uconst
-0000029e  01                  3715  		DC	0x1	;;     operand
-0000029f  00000000          + 3716  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002a7  02                  3713  		DC	0x2	;;   size of loc_exp
+000002a8  23                  3714  		DC	0x23	;;   DW_OP_plus_uconst
+000002a9  01                  3715  		DC	0x1	;;     operand
+000002aa  00000000          + 3716  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3717  	;; entry 55
-000002a3  05                  3718  		DC	0x5	;; abbrev_code
-000002a4  484C00              3719  		DC	"HL",0x0	;; DW_AT_name
+000002ae  05                  3718  		DC	0x5	;; abbrev_code
+000002af  484C00              3719  		DC	"HL",0x0	;; DW_AT_name
                               3720  				;; DW_AT_data_member_location
-000002a7  02                  3721  		DC	0x2	;;   size of loc_exp
-000002a8  23                  3722  		DC	0x23	;;   DW_OP_plus_uconst
-000002a9  02                  3723  		DC	0x2	;;     operand
-000002aa  00000000          + 3724  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002b2  02                  3721  		DC	0x2	;;   size of loc_exp
+000002b3  23                  3722  		DC	0x23	;;   DW_OP_plus_uconst
+000002b4  02                  3723  		DC	0x2	;;     operand
+000002b5  00000000          + 3724  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3725  	;; entry 56
-000002ae  05                  3726  		DC	0x5	;; abbrev_code
-000002af  484800              3727  		DC	"HH",0x0	;; DW_AT_name
+000002b9  05                  3726  		DC	0x5	;; abbrev_code
+000002ba  484800              3727  		DC	"HH",0x0	;; DW_AT_name
                               3728  				;; DW_AT_data_member_location
-000002b2  02                  3729  		DC	0x2	;;   size of loc_exp
-000002b3  23                  3730  		DC	0x23	;;   DW_OP_plus_uconst
-000002b4  03                  3731  		DC	0x3	;;     operand
-000002b5  00000000          + 3732  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+000002bd  02                  3729  		DC	0x2	;;   size of loc_exp
+000002be  23                  3730  		DC	0x23	;;   DW_OP_plus_uconst
+000002bf  03                  3731  		DC	0x3	;;     operand
+000002c0  00000000          + 3732  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3733  	;; NULL ENTRY 57
-000002b9  00                  3734  		DC	0x0
+000002c4  00                  3734  		DC	0x0
                               3735  	;; entry 58
-000002ba                      3736  	.LDW18
-000002ba  06                  3737  		DC	0x6	;; abbrev_code
-000002bb  04                  3738  		DC	0x4	;; DW_AT_byte_size
+000002c5                      3736  	.LDW18
+000002c5  06                  3737  		DC	0x6	;; abbrev_code
+000002c6  04                  3738  		DC	0x4	;; DW_AT_byte_size
                               3739  	;; entry 59
-000002bc  05                  3740  		DC	0x5	;; abbrev_code
-000002bd  6C776F726400        3741  		DC	"lword",0x0	;; DW_AT_name
+000002c7  05                  3740  		DC	0x5	;; abbrev_code
+000002c8  6C776F726400        3741  		DC	"lword",0x0	;; DW_AT_name
                               3742  				;; DW_AT_data_member_location
-000002c3  02                  3743  		DC	0x2	;;   size of loc_exp
-000002c4  23                  3744  		DC	0x23	;;   DW_OP_plus_uconst
-000002c5  00                  3745  		DC	0x0	;;     operand
-000002c6  00000000          + 3746  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+000002ce  02                  3743  		DC	0x2	;;   size of loc_exp
+000002cf  23                  3744  		DC	0x23	;;   DW_OP_plus_uconst
+000002d0  00                  3745  		DC	0x0	;;     operand
+000002d1  00000000          + 3746  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               3747  	;; entry 60
-000002ca  05                  3748  		DC	0x5	;; abbrev_code
-000002cb  776F726400          3749  		DC	"word",0x0	;; DW_AT_name
+000002d5  05                  3748  		DC	0x5	;; abbrev_code
+000002d6  776F726400          3749  		DC	"word",0x0	;; DW_AT_name
                               3750  				;; DW_AT_data_member_location
-000002d0  02                  3751  		DC	0x2	;;   size of loc_exp
-000002d1  23                  3752  		DC	0x23	;;   DW_OP_plus_uconst
-000002d2  00                  3753  		DC	0x0	;;     operand
-000002d3  00000000          + 3754  		DD	.LDW14-.LI_TOP	;; DW_AT_type
+000002db  02                  3751  		DC	0x2	;;   size of loc_exp
+000002dc  23                  3752  		DC	0x23	;;   DW_OP_plus_uconst
+000002dd  00                  3753  		DC	0x0	;;     operand
+000002de  00000000          + 3754  		DD	.LDW14-.LI_TOP	;; DW_AT_type
                               3755  	;; entry 61
-000002d7  05                  3756  		DC	0x5	;; abbrev_code
-000002d8  6279746500          3757  		DC	"byte",0x0	;; DW_AT_name
+000002e2  05                  3756  		DC	0x5	;; abbrev_code
+000002e3  6279746500          3757  		DC	"byte",0x0	;; DW_AT_name
                               3758  				;; DW_AT_data_member_location
-000002dd  02                  3759  		DC	0x2	;;   size of loc_exp
-000002de  23                  3760  		DC	0x23	;;   DW_OP_plus_uconst
-000002df  00                  3761  		DC	0x0	;;     operand
-000002e0  00000000          + 3762  		DD	.LDW15-.LI_TOP	;; DW_AT_type
+000002e8  02                  3759  		DC	0x2	;;   size of loc_exp
+000002e9  23                  3760  		DC	0x23	;;   DW_OP_plus_uconst
+000002ea  00                  3761  		DC	0x0	;;     operand
+000002eb  00000000          + 3762  		DD	.LDW15-.LI_TOP	;; DW_AT_type
                               3763  	;; entry 62
-000002e4  05                  3764  		DC	0x5	;; abbrev_code
-000002e5  756C776F726400      3765  		DC	"ulword",0x0	;; DW_AT_name
+000002ef  05                  3764  		DC	0x5	;; abbrev_code
+000002f0  756C776F726400      3765  		DC	"ulword",0x0	;; DW_AT_name
                               3766  				;; DW_AT_data_member_location
-000002ec  02                  3767  		DC	0x2	;;   size of loc_exp
-000002ed  23                  3768  		DC	0x23	;;   DW_OP_plus_uconst
-000002ee  00                  3769  		DC	0x0	;;     operand
-000002ef  00000000          + 3770  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000002f7  02                  3767  		DC	0x2	;;   size of loc_exp
+000002f8  23                  3768  		DC	0x23	;;   DW_OP_plus_uconst
+000002f9  00                  3769  		DC	0x0	;;     operand
+000002fa  00000000          + 3770  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               3771  	;; entry 63
-000002f3  05                  3772  		DC	0x5	;; abbrev_code
-000002f4  75776F726400        3773  		DC	"uword",0x0	;; DW_AT_name
+000002fe  05                  3772  		DC	0x5	;; abbrev_code
+000002ff  75776F726400        3773  		DC	"uword",0x0	;; DW_AT_name
                               3774  				;; DW_AT_data_member_location
-000002fa  02                  3775  		DC	0x2	;;   size of loc_exp
-000002fb  23                  3776  		DC	0x23	;;   DW_OP_plus_uconst
-000002fc  00                  3777  		DC	0x0	;;     operand
-000002fd  00000000          + 3778  		DD	.LDW16-.LI_TOP	;; DW_AT_type
+00000305  02                  3775  		DC	0x2	;;   size of loc_exp
+00000306  23                  3776  		DC	0x23	;;   DW_OP_plus_uconst
+00000307  00                  3777  		DC	0x0	;;     operand
+00000308  00000000          + 3778  		DD	.LDW16-.LI_TOP	;; DW_AT_type
                               3779  	;; entry 64
-00000301  05                  3780  		DC	0x5	;; abbrev_code
-00000302  756279746500        3781  		DC	"ubyte",0x0	;; DW_AT_name
+0000030c  05                  3780  		DC	0x5	;; abbrev_code
+0000030d  756279746500        3781  		DC	"ubyte",0x0	;; DW_AT_name
                               3782  				;; DW_AT_data_member_location
-00000308  02                  3783  		DC	0x2	;;   size of loc_exp
-00000309  23                  3784  		DC	0x23	;;   DW_OP_plus_uconst
-0000030a  00                  3785  		DC	0x0	;;     operand
-0000030b  00000000          + 3786  		DD	.LDW17-.LI_TOP	;; DW_AT_type
+00000313  02                  3783  		DC	0x2	;;   size of loc_exp
+00000314  23                  3784  		DC	0x23	;;   DW_OP_plus_uconst
+00000315  00                  3785  		DC	0x0	;;     operand
+00000316  00000000          + 3786  		DD	.LDW17-.LI_TOP	;; DW_AT_type
                               3787  	;; NULL ENTRY 65
-0000030f  00                  3788  		DC	0x0
+0000031a  00                  3788  		DC	0x0
                               3789  	;; entry 66
-00000310  03                  3790  		DC	0x3	;; abbrev_code
-00000311  6C776F72645F7479    3791  		DC	"lword_type",0x0	;; DW_AT_name
-00000319  706500              3791  	
-0000031c  00000000          + 3792  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+0000031b  03                  3790  		DC	0x3	;; abbrev_code
+0000031c  6C776F72645F7479    3791  		DC	"lword_type",0x0	;; DW_AT_name
+00000324  706500              3791  	
+00000327  00000000          + 3792  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               3793  	;; entry 67
-00000320                      3794  	.LDW19
-00000320  04                  3795  		DC	0x4	;; abbrev_code
-00000321  04                  3796  		DC	0x4	;; DW_AT_byte_size
+0000032b                      3794  	.LDW19
+0000032b  04                  3795  		DC	0x4	;; abbrev_code
+0000032c  04                  3796  		DC	0x4	;; DW_AT_byte_size
                               3797  	;; entry 68
-00000322  05                  3798  		DC	0x5	;; abbrev_code
-00000323  6C6F7700            3799  		DC	"low",0x0	;; DW_AT_name
+0000032d  05                  3798  		DC	0x5	;; abbrev_code
+0000032e  6C6F7700            3799  		DC	"low",0x0	;; DW_AT_name
                               3800  				;; DW_AT_data_member_location
-00000327  02                  3801  		DC	0x2	;;   size of loc_exp
-00000328  23                  3802  		DC	0x23	;;   DW_OP_plus_uconst
-00000329  00                  3803  		DC	0x0	;;     operand
-0000032a  00000000          + 3804  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000332  02                  3801  		DC	0x2	;;   size of loc_exp
+00000333  23                  3802  		DC	0x23	;;   DW_OP_plus_uconst
+00000334  00                  3803  		DC	0x0	;;     operand
+00000335  00000000          + 3804  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3805  	;; entry 69
-0000032e  05                  3806  		DC	0x5	;; abbrev_code
-0000032f  6869676800          3807  		DC	"high",0x0	;; DW_AT_name
+00000339  05                  3806  		DC	0x5	;; abbrev_code
+0000033a  6869676800          3807  		DC	"high",0x0	;; DW_AT_name
                               3808  				;; DW_AT_data_member_location
-00000334  02                  3809  		DC	0x2	;;   size of loc_exp
-00000335  23                  3810  		DC	0x23	;;   DW_OP_plus_uconst
-00000336  01                  3811  		DC	0x1	;;     operand
-00000337  00000000          + 3812  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+0000033f  02                  3809  		DC	0x2	;;   size of loc_exp
+00000340  23                  3810  		DC	0x23	;;   DW_OP_plus_uconst
+00000341  01                  3811  		DC	0x1	;;     operand
+00000342  00000000          + 3812  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               3813  	;; NULL ENTRY 70
-0000033b  00                  3814  		DC	0x0
+00000346  00                  3814  		DC	0x0
                               3815  	;; entry 71
-0000033c                      3816  	.LDW20
-0000033c  04                  3817  		DC	0x4	;; abbrev_code
-0000033d  04                  3818  		DC	0x4	;; DW_AT_byte_size
+00000347                      3816  	.LDW20
+00000347  04                  3817  		DC	0x4	;; abbrev_code
+00000348  04                  3818  		DC	0x4	;; DW_AT_byte_size
                               3819  	;; entry 72
-0000033e  05                  3820  		DC	0x5	;; abbrev_code
-0000033f  6C6F7700            3821  		DC	"low",0x0	;; DW_AT_name
+00000349  05                  3820  		DC	0x5	;; abbrev_code
+0000034a  6C6F7700            3821  		DC	"low",0x0	;; DW_AT_name
                               3822  				;; DW_AT_data_member_location
-00000343  02                  3823  		DC	0x2	;;   size of loc_exp
-00000344  23                  3824  		DC	0x23	;;   DW_OP_plus_uconst
-00000345  00                  3825  		DC	0x0	;;     operand
-00000346  00000000          + 3826  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+0000034e  02                  3823  		DC	0x2	;;   size of loc_exp
+0000034f  23                  3824  		DC	0x23	;;   DW_OP_plus_uconst
+00000350  00                  3825  		DC	0x0	;;     operand
+00000351  00000000          + 3826  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3827  	;; entry 73
-0000034a  05                  3828  		DC	0x5	;; abbrev_code
-0000034b  6869676800          3829  		DC	"high",0x0	;; DW_AT_name
+00000355  05                  3828  		DC	0x5	;; abbrev_code
+00000356  6869676800          3829  		DC	"high",0x0	;; DW_AT_name
                               3830  				;; DW_AT_data_member_location
-00000350  02                  3831  		DC	0x2	;;   size of loc_exp
-00000351  23                  3832  		DC	0x23	;;   DW_OP_plus_uconst
-00000352  01                  3833  		DC	0x1	;;     operand
-00000353  00000000          + 3834  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+0000035b  02                  3831  		DC	0x2	;;   size of loc_exp
+0000035c  23                  3832  		DC	0x23	;;   DW_OP_plus_uconst
+0000035d  01                  3833  		DC	0x1	;;     operand
+0000035e  00000000          + 3834  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               3835  	;; NULL ENTRY 74
-00000357  00                  3836  		DC	0x0
+00000362  00                  3836  		DC	0x0
                               3837  	;; entry 75
-00000358                      3838  	.LDW21
-00000358  06                  3839  		DC	0x6	;; abbrev_code
-00000359  04                  3840  		DC	0x4	;; DW_AT_byte_size
+00000363                      3838  	.LDW21
+00000363  06                  3839  		DC	0x6	;; abbrev_code
+00000364  04                  3840  		DC	0x4	;; DW_AT_byte_size
                               3841  	;; entry 76
-0000035a  05                  3842  		DC	0x5	;; abbrev_code
-0000035b  776F726400          3843  		DC	"word",0x0	;; DW_AT_name
+00000365  05                  3842  		DC	0x5	;; abbrev_code
+00000366  776F726400          3843  		DC	"word",0x0	;; DW_AT_name
                               3844  				;; DW_AT_data_member_location
-00000360  02                  3845  		DC	0x2	;;   size of loc_exp
-00000361  23                  3846  		DC	0x23	;;   DW_OP_plus_uconst
-00000362  00                  3847  		DC	0x0	;;     operand
-00000363  00000000          + 3848  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+0000036b  02                  3845  		DC	0x2	;;   size of loc_exp
+0000036c  23                  3846  		DC	0x23	;;   DW_OP_plus_uconst
+0000036d  00                  3847  		DC	0x0	;;     operand
+0000036e  00000000          + 3848  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               3849  	;; entry 77
-00000367  05                  3850  		DC	0x5	;; abbrev_code
-00000368  6279746500          3851  		DC	"byte",0x0	;; DW_AT_name
+00000372  05                  3850  		DC	0x5	;; abbrev_code
+00000373  6279746500          3851  		DC	"byte",0x0	;; DW_AT_name
                               3852  				;; DW_AT_data_member_location
-0000036d  02                  3853  		DC	0x2	;;   size of loc_exp
-0000036e  23                  3854  		DC	0x23	;;   DW_OP_plus_uconst
-0000036f  00                  3855  		DC	0x0	;;     operand
-00000370  00000000          + 3856  		DD	.LDW19-.LI_TOP	;; DW_AT_type
+00000378  02                  3853  		DC	0x2	;;   size of loc_exp
+00000379  23                  3854  		DC	0x23	;;   DW_OP_plus_uconst
+0000037a  00                  3855  		DC	0x0	;;     operand
+0000037b  00000000          + 3856  		DD	.LDW19-.LI_TOP	;; DW_AT_type
                               3857  	;; entry 78
-00000374  05                  3858  		DC	0x5	;; abbrev_code
-00000375  75776F726400        3859  		DC	"uword",0x0	;; DW_AT_name
+0000037f  05                  3858  		DC	0x5	;; abbrev_code
+00000380  75776F726400        3859  		DC	"uword",0x0	;; DW_AT_name
                               3860  				;; DW_AT_data_member_location
-0000037b  02                  3861  		DC	0x2	;;   size of loc_exp
-0000037c  23                  3862  		DC	0x23	;;   DW_OP_plus_uconst
-0000037d  00                  3863  		DC	0x0	;;     operand
-0000037e  00000000          + 3864  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000386  02                  3861  		DC	0x2	;;   size of loc_exp
+00000387  23                  3862  		DC	0x23	;;   DW_OP_plus_uconst
+00000388  00                  3863  		DC	0x0	;;     operand
+00000389  00000000          + 3864  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3865  	;; entry 79
-00000382  05                  3866  		DC	0x5	;; abbrev_code
-00000383  756279746500        3867  		DC	"ubyte",0x0	;; DW_AT_name
+0000038d  05                  3866  		DC	0x5	;; abbrev_code
+0000038e  756279746500        3867  		DC	"ubyte",0x0	;; DW_AT_name
                               3868  				;; DW_AT_data_member_location
-00000389  02                  3869  		DC	0x2	;;   size of loc_exp
-0000038a  23                  3870  		DC	0x23	;;   DW_OP_plus_uconst
-0000038b  00                  3871  		DC	0x0	;;     operand
-0000038c  00000000          + 3872  		DD	.LDW20-.LI_TOP	;; DW_AT_type
+00000394  02                  3869  		DC	0x2	;;   size of loc_exp
+00000395  23                  3870  		DC	0x23	;;   DW_OP_plus_uconst
+00000396  00                  3871  		DC	0x0	;;     operand
+00000397  00000000          + 3872  		DD	.LDW20-.LI_TOP	;; DW_AT_type
                               3873  	;; NULL ENTRY 80
-00000390  00                  3874  		DC	0x0
+0000039b  00                  3874  		DC	0x0
                               3875  	;; entry 81
-00000391  03                  3876  		DC	0x3	;; abbrev_code
-00000392  776F72645F747970    3877  		DC	"word_type",0x0	;; DW_AT_name
-0000039a  6500                3877  	
-0000039c  00000000          + 3878  		DD	.LDW21-.LI_TOP	;; DW_AT_type
+0000039c  03                  3876  		DC	0x3	;; abbrev_code
+0000039d  776F72645F747970    3877  		DC	"word_type",0x0	;; DW_AT_name
+000003a5  6500                3877  	
+000003a7  00000000          + 3878  		DD	.LDW21-.LI_TOP	;; DW_AT_type
                               3879  	;; entry 82
-000003a0                      3880  	.LDW22
-000003a0  04                  3881  		DC	0x4	;; abbrev_code
-000003a1  04                  3882  		DC	0x4	;; DW_AT_byte_size
+000003ab                      3880  	.LDW22
+000003ab  04                  3881  		DC	0x4	;; abbrev_code
+000003ac  04                  3882  		DC	0x4	;; DW_AT_byte_size
                               3883  	;; entry 83
-000003a2  07                  3884  		DC	0x7	;; abbrev_code
-000003a3  6269743000          3885  		DC	"bit0",0x0	;; DW_AT_name
-000003a8  02                  3886  		DC	0x2	;; DW_AT_byte_size
-000003a9  0F                  3887  		DC	0xf	;; DW_AT_bit_offset
-000003aa  01                  3888  		DC	0x1	;; DW_AT_bit_size
+000003ad  07                  3884  		DC	0x7	;; abbrev_code
+000003ae  6269743000          3885  		DC	"bit0",0x0	;; DW_AT_name
+000003b3  02                  3886  		DC	0x2	;; DW_AT_byte_size
+000003b4  0F                  3887  		DC	0xf	;; DW_AT_bit_offset
+000003b5  01                  3888  		DC	0x1	;; DW_AT_bit_size
                               3889  				;; DW_AT_data_member_location
-000003ab  02                  3890  		DC	0x2	;;   size of loc_exp
-000003ac  23                  3891  		DC	0x23	;;   DW_OP_plus_uconst
-000003ad  00                  3892  		DC	0x0	;;     operand
-000003ae  00000000          + 3893  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003b6  02                  3890  		DC	0x2	;;   size of loc_exp
+000003b7  23                  3891  		DC	0x23	;;   DW_OP_plus_uconst
+000003b8  00                  3892  		DC	0x0	;;     operand
+000003b9  00000000          + 3893  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3894  	;; entry 84
-000003b2  07                  3895  		DC	0x7	;; abbrev_code
-000003b3  6269743100          3896  		DC	"bit1",0x0	;; DW_AT_name
-000003b8  02                  3897  		DC	0x2	;; DW_AT_byte_size
-000003b9  0E                  3898  		DC	0xe	;; DW_AT_bit_offset
-000003ba  01                  3899  		DC	0x1	;; DW_AT_bit_size
+000003bd  07                  3895  		DC	0x7	;; abbrev_code
+000003be  6269743100          3896  		DC	"bit1",0x0	;; DW_AT_name
+000003c3  02                  3897  		DC	0x2	;; DW_AT_byte_size
+000003c4  0E                  3898  		DC	0xe	;; DW_AT_bit_offset
+000003c5  01                  3899  		DC	0x1	;; DW_AT_bit_size
                               3900  				;; DW_AT_data_member_location
-000003bb  02                  3901  		DC	0x2	;;   size of loc_exp
-000003bc  23                  3902  		DC	0x23	;;   DW_OP_plus_uconst
-000003bd  00                  3903  		DC	0x0	;;     operand
-000003be  00000000          + 3904  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003c6  02                  3901  		DC	0x2	;;   size of loc_exp
+000003c7  23                  3902  		DC	0x23	;;   DW_OP_plus_uconst
+000003c8  00                  3903  		DC	0x0	;;     operand
+000003c9  00000000          + 3904  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3905  	;; entry 85
-000003c2  07                  3906  		DC	0x7	;; abbrev_code
-000003c3  6269743200          3907  		DC	"bit2",0x0	;; DW_AT_name
-000003c8  02                  3908  		DC	0x2	;; DW_AT_byte_size
-000003c9  0D                  3909  		DC	0xd	;; DW_AT_bit_offset
-000003ca  01                  3910  		DC	0x1	;; DW_AT_bit_size
+000003cd  07                  3906  		DC	0x7	;; abbrev_code
+000003ce  6269743200          3907  		DC	"bit2",0x0	;; DW_AT_name
+000003d3  02                  3908  		DC	0x2	;; DW_AT_byte_size
+000003d4  0D                  3909  		DC	0xd	;; DW_AT_bit_offset
+000003d5  01                  3910  		DC	0x1	;; DW_AT_bit_size
                               3911  				;; DW_AT_data_member_location
-000003cb  02                  3912  		DC	0x2	;;   size of loc_exp
-000003cc  23                  3913  		DC	0x23	;;   DW_OP_plus_uconst
-000003cd  00                  3914  		DC	0x0	;;     operand
-000003ce  00000000          + 3915  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003d6  02                  3912  		DC	0x2	;;   size of loc_exp
+000003d7  23                  3913  		DC	0x23	;;   DW_OP_plus_uconst
+000003d8  00                  3914  		DC	0x0	;;     operand
+000003d9  00000000          + 3915  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3916  	;; entry 86
-000003d2  07                  3917  		DC	0x7	;; abbrev_code
-000003d3  6269743300          3918  		DC	"bit3",0x0	;; DW_AT_name
-000003d8  02                  3919  		DC	0x2	;; DW_AT_byte_size
-000003d9  0C                  3920  		DC	0xc	;; DW_AT_bit_offset
-000003da  01                  3921  		DC	0x1	;; DW_AT_bit_size
+000003dd  07                  3917  		DC	0x7	;; abbrev_code
+000003de  6269743300          3918  		DC	"bit3",0x0	;; DW_AT_name
+000003e3  02                  3919  		DC	0x2	;; DW_AT_byte_size
+000003e4  0C                  3920  		DC	0xc	;; DW_AT_bit_offset
+000003e5  01                  3921  		DC	0x1	;; DW_AT_bit_size
                               3922  				;; DW_AT_data_member_location
-000003db  02                  3923  		DC	0x2	;;   size of loc_exp
-000003dc  23                  3924  		DC	0x23	;;   DW_OP_plus_uconst
-000003dd  00                  3925  		DC	0x0	;;     operand
-000003de  00000000          + 3926  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003e6  02                  3923  		DC	0x2	;;   size of loc_exp
+000003e7  23                  3924  		DC	0x23	;;   DW_OP_plus_uconst
+000003e8  00                  3925  		DC	0x0	;;     operand
+000003e9  00000000          + 3926  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3927  	;; entry 87
-000003e2  07                  3928  		DC	0x7	;; abbrev_code
-000003e3  6269743400          3929  		DC	"bit4",0x0	;; DW_AT_name
-000003e8  02                  3930  		DC	0x2	;; DW_AT_byte_size
-000003e9  0B                  3931  		DC	0xb	;; DW_AT_bit_offset
-000003ea  01                  3932  		DC	0x1	;; DW_AT_bit_size
+000003ed  07                  3928  		DC	0x7	;; abbrev_code
+000003ee  6269743400          3929  		DC	"bit4",0x0	;; DW_AT_name
+000003f3  02                  3930  		DC	0x2	;; DW_AT_byte_size
+000003f4  0B                  3931  		DC	0xb	;; DW_AT_bit_offset
+000003f5  01                  3932  		DC	0x1	;; DW_AT_bit_size
                               3933  				;; DW_AT_data_member_location
-000003eb  02                  3934  		DC	0x2	;;   size of loc_exp
-000003ec  23                  3935  		DC	0x23	;;   DW_OP_plus_uconst
-000003ed  00                  3936  		DC	0x0	;;     operand
-000003ee  00000000          + 3937  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000003f6  02                  3934  		DC	0x2	;;   size of loc_exp
+000003f7  23                  3935  		DC	0x23	;;   DW_OP_plus_uconst
+000003f8  00                  3936  		DC	0x0	;;     operand
+000003f9  00000000          + 3937  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3938  	;; entry 88
-000003f2  07                  3939  		DC	0x7	;; abbrev_code
-000003f3  6269743500          3940  		DC	"bit5",0x0	;; DW_AT_name
-000003f8  02                  3941  		DC	0x2	;; DW_AT_byte_size
-000003f9  0A                  3942  		DC	0xa	;; DW_AT_bit_offset
-000003fa  01                  3943  		DC	0x1	;; DW_AT_bit_size
+000003fd  07                  3939  		DC	0x7	;; abbrev_code
+000003fe  6269743500          3940  		DC	"bit5",0x0	;; DW_AT_name
+00000403  02                  3941  		DC	0x2	;; DW_AT_byte_size
+00000404  0A                  3942  		DC	0xa	;; DW_AT_bit_offset
+00000405  01                  3943  		DC	0x1	;; DW_AT_bit_size
                               3944  				;; DW_AT_data_member_location
-000003fb  02                  3945  		DC	0x2	;;   size of loc_exp
-000003fc  23                  3946  		DC	0x23	;;   DW_OP_plus_uconst
-000003fd  00                  3947  		DC	0x0	;;     operand
-000003fe  00000000          + 3948  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000406  02                  3945  		DC	0x2	;;   size of loc_exp
+00000407  23                  3946  		DC	0x23	;;   DW_OP_plus_uconst
+00000408  00                  3947  		DC	0x0	;;     operand
+00000409  00000000          + 3948  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3949  	;; entry 89
-00000402  07                  3950  		DC	0x7	;; abbrev_code
-00000403  6269743600          3951  		DC	"bit6",0x0	;; DW_AT_name
-00000408  02                  3952  		DC	0x2	;; DW_AT_byte_size
-00000409  09                  3953  		DC	0x9	;; DW_AT_bit_offset
-0000040a  01                  3954  		DC	0x1	;; DW_AT_bit_size
+0000040d  07                  3950  		DC	0x7	;; abbrev_code
+0000040e  6269743600          3951  		DC	"bit6",0x0	;; DW_AT_name
+00000413  02                  3952  		DC	0x2	;; DW_AT_byte_size
+00000414  09                  3953  		DC	0x9	;; DW_AT_bit_offset
+00000415  01                  3954  		DC	0x1	;; DW_AT_bit_size
                               3955  				;; DW_AT_data_member_location
-0000040b  02                  3956  		DC	0x2	;;   size of loc_exp
-0000040c  23                  3957  		DC	0x23	;;   DW_OP_plus_uconst
-0000040d  00                  3958  		DC	0x0	;;     operand
-0000040e  00000000          + 3959  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000416  02                  3956  		DC	0x2	;;   size of loc_exp
+00000417  23                  3957  		DC	0x23	;;   DW_OP_plus_uconst
+00000418  00                  3958  		DC	0x0	;;     operand
+00000419  00000000          + 3959  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3960  	;; entry 90
-00000412  07                  3961  		DC	0x7	;; abbrev_code
-00000413  6269743700          3962  		DC	"bit7",0x0	;; DW_AT_name
-00000418  02                  3963  		DC	0x2	;; DW_AT_byte_size
-00000419  08                  3964  		DC	0x8	;; DW_AT_bit_offset
-0000041a  01                  3965  		DC	0x1	;; DW_AT_bit_size
+0000041d  07                  3961  		DC	0x7	;; abbrev_code
+0000041e  6269743700          3962  		DC	"bit7",0x0	;; DW_AT_name
+00000423  02                  3963  		DC	0x2	;; DW_AT_byte_size
+00000424  08                  3964  		DC	0x8	;; DW_AT_bit_offset
+00000425  01                  3965  		DC	0x1	;; DW_AT_bit_size
                               3966  				;; DW_AT_data_member_location
-0000041b  02                  3967  		DC	0x2	;;   size of loc_exp
-0000041c  23                  3968  		DC	0x23	;;   DW_OP_plus_uconst
-0000041d  00                  3969  		DC	0x0	;;     operand
-0000041e  00000000          + 3970  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000426  02                  3967  		DC	0x2	;;   size of loc_exp
+00000427  23                  3968  		DC	0x23	;;   DW_OP_plus_uconst
+00000428  00                  3969  		DC	0x0	;;     operand
+00000429  00000000          + 3970  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3971  	;; entry 91
-00000422  07                  3972  		DC	0x7	;; abbrev_code
-00000423  6269743800          3973  		DC	"bit8",0x0	;; DW_AT_name
-00000428  02                  3974  		DC	0x2	;; DW_AT_byte_size
-00000429  07                  3975  		DC	0x7	;; DW_AT_bit_offset
-0000042a  01                  3976  		DC	0x1	;; DW_AT_bit_size
+0000042d  07                  3972  		DC	0x7	;; abbrev_code
+0000042e  6269743800          3973  		DC	"bit8",0x0	;; DW_AT_name
+00000433  02                  3974  		DC	0x2	;; DW_AT_byte_size
+00000434  07                  3975  		DC	0x7	;; DW_AT_bit_offset
+00000435  01                  3976  		DC	0x1	;; DW_AT_bit_size
                               3977  				;; DW_AT_data_member_location
-0000042b  02                  3978  		DC	0x2	;;   size of loc_exp
-0000042c  23                  3979  		DC	0x23	;;   DW_OP_plus_uconst
-0000042d  00                  3980  		DC	0x0	;;     operand
-0000042e  00000000          + 3981  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000436  02                  3978  		DC	0x2	;;   size of loc_exp
+00000437  23                  3979  		DC	0x23	;;   DW_OP_plus_uconst
+00000438  00                  3980  		DC	0x0	;;     operand
+00000439  00000000          + 3981  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3982  	;; entry 92
-00000432  07                  3983  		DC	0x7	;; abbrev_code
-00000433  6269743900          3984  		DC	"bit9",0x0	;; DW_AT_name
-00000438  02                  3985  		DC	0x2	;; DW_AT_byte_size
-00000439  06                  3986  		DC	0x6	;; DW_AT_bit_offset
-0000043a  01                  3987  		DC	0x1	;; DW_AT_bit_size
+0000043d  07                  3983  		DC	0x7	;; abbrev_code
+0000043e  6269743900          3984  		DC	"bit9",0x0	;; DW_AT_name
+00000443  02                  3985  		DC	0x2	;; DW_AT_byte_size
+00000444  06                  3986  		DC	0x6	;; DW_AT_bit_offset
+00000445  01                  3987  		DC	0x1	;; DW_AT_bit_size
                               3988  				;; DW_AT_data_member_location
-0000043b  02                  3989  		DC	0x2	;;   size of loc_exp
-0000043c  23                  3990  		DC	0x23	;;   DW_OP_plus_uconst
-0000043d  00                  3991  		DC	0x0	;;     operand
-0000043e  00000000          + 3992  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000446  02                  3989  		DC	0x2	;;   size of loc_exp
+00000447  23                  3990  		DC	0x23	;;   DW_OP_plus_uconst
+00000448  00                  3991  		DC	0x0	;;     operand
+00000449  00000000          + 3992  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               3993  	;; entry 93
-00000442  07                  3994  		DC	0x7	;; abbrev_code
-00000443  626974313000        3995  		DC	"bit10",0x0	;; DW_AT_name
-00000449  02                  3996  		DC	0x2	;; DW_AT_byte_size
-0000044a  05                  3997  		DC	0x5	;; DW_AT_bit_offset
-0000044b  01                  3998  		DC	0x1	;; DW_AT_bit_size
+0000044d  07                  3994  		DC	0x7	;; abbrev_code
+0000044e  626974313000        3995  		DC	"bit10",0x0	;; DW_AT_name
+00000454  02                  3996  		DC	0x2	;; DW_AT_byte_size
+00000455  05                  3997  		DC	0x5	;; DW_AT_bit_offset
+00000456  01                  3998  		DC	0x1	;; DW_AT_bit_size
                               3999  				;; DW_AT_data_member_location
-0000044c  02                  4000  		DC	0x2	;;   size of loc_exp
-0000044d  23                  4001  		DC	0x23	;;   DW_OP_plus_uconst
-0000044e  00                  4002  		DC	0x0	;;     operand
-0000044f  00000000          + 4003  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000457  02                  4000  		DC	0x2	;;   size of loc_exp
+00000458  23                  4001  		DC	0x23	;;   DW_OP_plus_uconst
+00000459  00                  4002  		DC	0x0	;;     operand
+0000045a  00000000          + 4003  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4004  	;; entry 94
-00000453  07                  4005  		DC	0x7	;; abbrev_code
-00000454  626974313100        4006  		DC	"bit11",0x0	;; DW_AT_name
-0000045a  02                  4007  		DC	0x2	;; DW_AT_byte_size
-0000045b  04                  4008  		DC	0x4	;; DW_AT_bit_offset
-0000045c  01                  4009  		DC	0x1	;; DW_AT_bit_size
+0000045e  07                  4005  		DC	0x7	;; abbrev_code
+0000045f  626974313100        4006  		DC	"bit11",0x0	;; DW_AT_name
+00000465  02                  4007  		DC	0x2	;; DW_AT_byte_size
+00000466  04                  4008  		DC	0x4	;; DW_AT_bit_offset
+00000467  01                  4009  		DC	0x1	;; DW_AT_bit_size
                               4010  				;; DW_AT_data_member_location
-0000045d  02                  4011  		DC	0x2	;;   size of loc_exp
-0000045e  23                  4012  		DC	0x23	;;   DW_OP_plus_uconst
-0000045f  00                  4013  		DC	0x0	;;     operand
-00000460  00000000          + 4014  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000468  02                  4011  		DC	0x2	;;   size of loc_exp
+00000469  23                  4012  		DC	0x23	;;   DW_OP_plus_uconst
+0000046a  00                  4013  		DC	0x0	;;     operand
+0000046b  00000000          + 4014  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4015  	;; entry 95
-00000464  07                  4016  		DC	0x7	;; abbrev_code
-00000465  626974313200        4017  		DC	"bit12",0x0	;; DW_AT_name
-0000046b  02                  4018  		DC	0x2	;; DW_AT_byte_size
-0000046c  03                  4019  		DC	0x3	;; DW_AT_bit_offset
-0000046d  01                  4020  		DC	0x1	;; DW_AT_bit_size
+0000046f  07                  4016  		DC	0x7	;; abbrev_code
+00000470  626974313200        4017  		DC	"bit12",0x0	;; DW_AT_name
+00000476  02                  4018  		DC	0x2	;; DW_AT_byte_size
+00000477  03                  4019  		DC	0x3	;; DW_AT_bit_offset
+00000478  01                  4020  		DC	0x1	;; DW_AT_bit_size
                               4021  				;; DW_AT_data_member_location
-0000046e  02                  4022  		DC	0x2	;;   size of loc_exp
-0000046f  23                  4023  		DC	0x23	;;   DW_OP_plus_uconst
-00000470  00                  4024  		DC	0x0	;;     operand
-00000471  00000000          + 4025  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000479  02                  4022  		DC	0x2	;;   size of loc_exp
+0000047a  23                  4023  		DC	0x23	;;   DW_OP_plus_uconst
+0000047b  00                  4024  		DC	0x0	;;     operand
+0000047c  00000000          + 4025  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4026  	;; entry 96
-00000475  07                  4027  		DC	0x7	;; abbrev_code
-00000476  626974313300        4028  		DC	"bit13",0x0	;; DW_AT_name
-0000047c  02                  4029  		DC	0x2	;; DW_AT_byte_size
-0000047d  02                  4030  		DC	0x2	;; DW_AT_bit_offset
-0000047e  01                  4031  		DC	0x1	;; DW_AT_bit_size
+00000480  07                  4027  		DC	0x7	;; abbrev_code
+00000481  626974313300        4028  		DC	"bit13",0x0	;; DW_AT_name
+00000487  02                  4029  		DC	0x2	;; DW_AT_byte_size
+00000488  02                  4030  		DC	0x2	;; DW_AT_bit_offset
+00000489  01                  4031  		DC	0x1	;; DW_AT_bit_size
                               4032  				;; DW_AT_data_member_location
-0000047f  02                  4033  		DC	0x2	;;   size of loc_exp
-00000480  23                  4034  		DC	0x23	;;   DW_OP_plus_uconst
-00000481  00                  4035  		DC	0x0	;;     operand
-00000482  00000000          + 4036  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000048a  02                  4033  		DC	0x2	;;   size of loc_exp
+0000048b  23                  4034  		DC	0x23	;;   DW_OP_plus_uconst
+0000048c  00                  4035  		DC	0x0	;;     operand
+0000048d  00000000          + 4036  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4037  	;; entry 97
-00000486  07                  4038  		DC	0x7	;; abbrev_code
-00000487  626974313400        4039  		DC	"bit14",0x0	;; DW_AT_name
-0000048d  02                  4040  		DC	0x2	;; DW_AT_byte_size
-0000048e  01                  4041  		DC	0x1	;; DW_AT_bit_offset
-0000048f  01                  4042  		DC	0x1	;; DW_AT_bit_size
+00000491  07                  4038  		DC	0x7	;; abbrev_code
+00000492  626974313400        4039  		DC	"bit14",0x0	;; DW_AT_name
+00000498  02                  4040  		DC	0x2	;; DW_AT_byte_size
+00000499  01                  4041  		DC	0x1	;; DW_AT_bit_offset
+0000049a  01                  4042  		DC	0x1	;; DW_AT_bit_size
                               4043  				;; DW_AT_data_member_location
-00000490  02                  4044  		DC	0x2	;;   size of loc_exp
-00000491  23                  4045  		DC	0x23	;;   DW_OP_plus_uconst
-00000492  00                  4046  		DC	0x0	;;     operand
-00000493  00000000          + 4047  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000049b  02                  4044  		DC	0x2	;;   size of loc_exp
+0000049c  23                  4045  		DC	0x23	;;   DW_OP_plus_uconst
+0000049d  00                  4046  		DC	0x0	;;     operand
+0000049e  00000000          + 4047  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4048  	;; entry 98
-00000497  07                  4049  		DC	0x7	;; abbrev_code
-00000498  626974313500        4050  		DC	"bit15",0x0	;; DW_AT_name
-0000049e  02                  4051  		DC	0x2	;; DW_AT_byte_size
-0000049f  00                  4052  		DC	0x0	;; DW_AT_bit_offset
-000004a0  01                  4053  		DC	0x1	;; DW_AT_bit_size
+000004a2  07                  4049  		DC	0x7	;; abbrev_code
+000004a3  626974313500        4050  		DC	"bit15",0x0	;; DW_AT_name
+000004a9  02                  4051  		DC	0x2	;; DW_AT_byte_size
+000004aa  00                  4052  		DC	0x0	;; DW_AT_bit_offset
+000004ab  01                  4053  		DC	0x1	;; DW_AT_bit_size
                               4054  				;; DW_AT_data_member_location
-000004a1  02                  4055  		DC	0x2	;;   size of loc_exp
-000004a2  23                  4056  		DC	0x23	;;   DW_OP_plus_uconst
-000004a3  00                  4057  		DC	0x0	;;     operand
-000004a4  00000000          + 4058  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000004ac  02                  4055  		DC	0x2	;;   size of loc_exp
+000004ad  23                  4056  		DC	0x23	;;   DW_OP_plus_uconst
+000004ae  00                  4057  		DC	0x0	;;     operand
+000004af  00000000          + 4058  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4059  	;; NULL ENTRY 99
-000004a8  00                  4060  		DC	0x0
+000004b3  00                  4060  		DC	0x0
                               4061  	;; entry 100
-000004a9                      4062  	.LDW23
-000004a9  06                  4063  		DC	0x6	;; abbrev_code
-000004aa  04                  4064  		DC	0x4	;; DW_AT_byte_size
+000004b4                      4062  	.LDW23
+000004b4  06                  4063  		DC	0x6	;; abbrev_code
+000004b5  04                  4064  		DC	0x4	;; DW_AT_byte_size
                               4065  	;; entry 101
-000004ab  05                  4066  		DC	0x5	;; abbrev_code
-000004ac  75776F726400        4067  		DC	"uword",0x0	;; DW_AT_name
+000004b6  05                  4066  		DC	0x5	;; abbrev_code
+000004b7  75776F726400        4067  		DC	"uword",0x0	;; DW_AT_name
                               4068  				;; DW_AT_data_member_location
-000004b2  02                  4069  		DC	0x2	;;   size of loc_exp
-000004b3  23                  4070  		DC	0x23	;;   DW_OP_plus_uconst
-000004b4  00                  4071  		DC	0x0	;;     operand
-000004b5  00000000          + 4072  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000004bd  02                  4069  		DC	0x2	;;   size of loc_exp
+000004be  23                  4070  		DC	0x23	;;   DW_OP_plus_uconst
+000004bf  00                  4071  		DC	0x0	;;     operand
+000004c0  00000000          + 4072  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4073  	;; entry 102
-000004b9  05                  4074  		DC	0x5	;; abbrev_code
-000004ba  6269747300          4075  		DC	"bits",0x0	;; DW_AT_name
+000004c4  05                  4074  		DC	0x5	;; abbrev_code
+000004c5  6269747300          4075  		DC	"bits",0x0	;; DW_AT_name
                               4076  				;; DW_AT_data_member_location
-000004bf  02                  4077  		DC	0x2	;;   size of loc_exp
-000004c0  23                  4078  		DC	0x23	;;   DW_OP_plus_uconst
-000004c1  00                  4079  		DC	0x0	;;     operand
-000004c2  00000000          + 4080  		DD	.LDW22-.LI_TOP	;; DW_AT_type
+000004ca  02                  4077  		DC	0x2	;;   size of loc_exp
+000004cb  23                  4078  		DC	0x23	;;   DW_OP_plus_uconst
+000004cc  00                  4079  		DC	0x0	;;     operand
+000004cd  00000000          + 4080  		DD	.LDW22-.LI_TOP	;; DW_AT_type
                               4081  	;; NULL ENTRY 103
-000004c6  00                  4082  		DC	0x0
+000004d1  00                  4082  		DC	0x0
                               4083  	;; entry 104
-000004c7  03                  4084  		DC	0x3	;; abbrev_code
-000004c8  666C61675F747970    4085  		DC	"flag_type",0x0	;; DW_AT_name
-000004d0  6500                4085  	
-000004d2  00000000          + 4086  		DD	.LDW23-.LI_TOP	;; DW_AT_type
+000004d2  03                  4084  		DC	0x3	;; abbrev_code
+000004d3  666C61675F747970    4085  		DC	"flag_type",0x0	;; DW_AT_name
+000004db  6500                4085  	
+000004dd  00000000          + 4086  		DD	.LDW23-.LI_TOP	;; DW_AT_type
                               4087  	;; entry 105
-000004d6                      4088  	.LDW24
-000004d6  04                  4089  		DC	0x4	;; abbrev_code
-000004d7  0C                  4090  		DC	0xc	;; DW_AT_byte_size
+000004e1                      4088  	.LDW24
+000004e1  04                  4089  		DC	0x4	;; abbrev_code
+000004e2  0C                  4090  		DC	0xc	;; DW_AT_byte_size
                               4091  	;; entry 106
-000004d8  05                  4092  		DC	0x5	;; abbrev_code
-000004d9  76616C756500        4093  		DC	"value",0x0	;; DW_AT_name
+000004e3  05                  4092  		DC	0x5	;; abbrev_code
+000004e4  76616C756500        4093  		DC	"value",0x0	;; DW_AT_name
                               4094  				;; DW_AT_data_member_location
-000004df  02                  4095  		DC	0x2	;;   size of loc_exp
-000004e0  23                  4096  		DC	0x23	;;   DW_OP_plus_uconst
-000004e1  00                  4097  		DC	0x0	;;     operand
-000004e2  00000000          + 4098  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000004ea  02                  4095  		DC	0x2	;;   size of loc_exp
+000004eb  23                  4096  		DC	0x23	;;   DW_OP_plus_uconst
+000004ec  00                  4097  		DC	0x0	;;     operand
+000004ed  00000000          + 4098  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4099  	;; entry 107
-000004e6  05                  4100  		DC	0x5	;; abbrev_code
-000004e7  6D617800            4101  		DC	"max",0x0	;; DW_AT_name
+000004f1  05                  4100  		DC	0x5	;; abbrev_code
+000004f2  6D617800            4101  		DC	"max",0x0	;; DW_AT_name
                               4102  				;; DW_AT_data_member_location
-000004eb  02                  4103  		DC	0x2	;;   size of loc_exp
-000004ec  23                  4104  		DC	0x23	;;   DW_OP_plus_uconst
-000004ed  02                  4105  		DC	0x2	;;     operand
-000004ee  00000000          + 4106  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000004f6  02                  4103  		DC	0x2	;;   size of loc_exp
+000004f7  23                  4104  		DC	0x23	;;   DW_OP_plus_uconst
+000004f8  02                  4105  		DC	0x2	;;     operand
+000004f9  00000000          + 4106  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4107  	;; entry 108
-000004f2  05                  4108  		DC	0x5	;; abbrev_code
-000004f3  6D696E00            4109  		DC	"min",0x0	;; DW_AT_name
+000004fd  05                  4108  		DC	0x5	;; abbrev_code
+000004fe  6D696E00            4109  		DC	"min",0x0	;; DW_AT_name
                               4110  				;; DW_AT_data_member_location
-000004f7  02                  4111  		DC	0x2	;;   size of loc_exp
-000004f8  23                  4112  		DC	0x23	;;   DW_OP_plus_uconst
-000004f9  04                  4113  		DC	0x4	;;     operand
-000004fa  00000000          + 4114  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000502  02                  4111  		DC	0x2	;;   size of loc_exp
+00000503  23                  4112  		DC	0x23	;;   DW_OP_plus_uconst
+00000504  04                  4113  		DC	0x4	;;     operand
+00000505  00000000          + 4114  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4115  	;; entry 109
-000004fe  05                  4116  		DC	0x5	;; abbrev_code
-000004ff  6564697472617465    4117  		DC	"editrate",0x0	;; DW_AT_name
-00000507  00                  4117  	
+00000509  05                  4116  		DC	0x5	;; abbrev_code
+0000050a  6564697472617465    4117  		DC	"editrate",0x0	;; DW_AT_name
+00000512  00                  4117  	
                               4118  				;; DW_AT_data_member_location
-00000508  02                  4119  		DC	0x2	;;   size of loc_exp
-00000509  23                  4120  		DC	0x23	;;   DW_OP_plus_uconst
-0000050a  06                  4121  		DC	0x6	;;     operand
-0000050b  00000000          + 4122  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000513  02                  4119  		DC	0x2	;;   size of loc_exp
+00000514  23                  4120  		DC	0x23	;;   DW_OP_plus_uconst
+00000515  06                  4121  		DC	0x6	;;     operand
+00000516  00000000          + 4122  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4123  	;; entry 110
-0000050f  05                  4124  		DC	0x5	;; abbrev_code
-00000510  6469737072617465    4125  		DC	"disprate",0x0	;; DW_AT_name
-00000518  00                  4125  	
+0000051a  05                  4124  		DC	0x5	;; abbrev_code
+0000051b  6469737072617465    4125  		DC	"disprate",0x0	;; DW_AT_name
+00000523  00                  4125  	
                               4126  				;; DW_AT_data_member_location
-00000519  02                  4127  		DC	0x2	;;   size of loc_exp
-0000051a  23                  4128  		DC	0x23	;;   DW_OP_plus_uconst
-0000051b  08                  4129  		DC	0x8	;;     operand
-0000051c  00000000          + 4130  		DD	.LDW1-.LI_TOP	;; DW_AT_type
+00000524  02                  4127  		DC	0x2	;;   size of loc_exp
+00000525  23                  4128  		DC	0x23	;;   DW_OP_plus_uconst
+00000526  08                  4129  		DC	0x8	;;     operand
+00000527  00000000          + 4130  		DD	.LDW1-.LI_TOP	;; DW_AT_type
                               4131  	;; NULL ENTRY 111
-00000520  00                  4132  		DC	0x0
+0000052b  00                  4132  		DC	0x0
                               4133  	;; entry 112
-00000521  03                  4134  		DC	0x3	;; abbrev_code
-00000522  706172615F737479    4135  		DC	"para_style",0x0	;; DW_AT_name
-0000052a  6C6500              4135  	
-0000052d  00000000          + 4136  		DD	.LDW24-.LI_TOP	;; DW_AT_type
+0000052c  03                  4134  		DC	0x3	;; abbrev_code
+0000052d  706172615F737479    4135  		DC	"para_style",0x0	;; DW_AT_name
+00000535  6C6500              4135  	
+00000538  00000000          + 4136  		DD	.LDW24-.LI_TOP	;; DW_AT_type
                               4137  	;; entry 113
-00000531  08                  4138  		DC	0x8	;; abbrev_code
+0000053c  08                  4138  		DC	0x8	;; abbrev_code
                               4139  				;; DW_AT_location
-00000532  05                  4140  		DC	0x5	;;   size of loc_exp
-00000533  03                  4141  		DC	0x3	;;   DW_OP_addr
-00000534  00000000          + 4142  		DD	_flg_fault	;;     operand
-00000538  666C675F6661756C    4143  		DC	"flg_fault",0x0	;; DW_AT_name
-00000540  7400                4143  	
-00000542  01                  4144  		DC	0x1	;; DW_AT_external
-00000543  00000000          + 4145  		DD	.LDW23-.LI_TOP	;; DW_AT_type
+0000053d  05                  4140  		DC	0x5	;;   size of loc_exp
+0000053e  03                  4141  		DC	0x3	;;   DW_OP_addr
+0000053f  00000000          + 4142  		DD	_flg_fault	;;     operand
+00000543  666C675F6661756C    4143  		DC	"flg_fault",0x0	;; DW_AT_name
+0000054b  7400                4143  	
+0000054d  01                  4144  		DC	0x1	;; DW_AT_external
+0000054e  00000000          + 4145  		DD	.LDW23-.LI_TOP	;; DW_AT_type
                               4146  	;; entry 114
-00000547  08                  4147  		DC	0x8	;; abbrev_code
+00000552  08                  4147  		DC	0x8	;; abbrev_code
                               4148  				;; DW_AT_location
-00000548  05                  4149  		DC	0x5	;;   size of loc_exp
-00000549  03                  4150  		DC	0x3	;;   DW_OP_addr
-0000054a  00000000          + 4151  		DD	_flg_prot	;;     operand
-0000054e  666C675F70726F74    4152  		DC	"flg_prot",0x0	;; DW_AT_name
-00000556  00                  4152  	
-00000557  01                  4153  		DC	0x1	;; DW_AT_external
-00000558  00000000          + 4154  		DD	.LDW23-.LI_TOP	;; DW_AT_type
+00000553  05                  4149  		DC	0x5	;;   size of loc_exp
+00000554  03                  4150  		DC	0x3	;;   DW_OP_addr
+00000555  00000000          + 4151  		DD	_flg_prot	;;     operand
+00000559  666C675F70726F74    4152  		DC	"flg_prot",0x0	;; DW_AT_name
+00000561  00                  4152  	
+00000562  01                  4153  		DC	0x1	;; DW_AT_external
+00000563  00000000          + 4154  		DD	.LDW23-.LI_TOP	;; DW_AT_type
                               4155  	;; entry 115
-0000055c  08                  4156  		DC	0x8	;; abbrev_code
+00000567  08                  4156  		DC	0x8	;; abbrev_code
                               4157  				;; DW_AT_location
-0000055d  05                  4158  		DC	0x5	;;   size of loc_exp
-0000055e  03                  4159  		DC	0x3	;;   DW_OP_addr
-0000055f  00000000          + 4160  		DD	_gus_Idc_zero_ad_low	;;     operand
-00000563  6775735F4964635F    4161  		DC	"gus_Idc_zero_ad_low",0x0	;; DW_AT_name
-0000056b  7A65726F5F61645F    4161  	
-00000573  6C6F7700            4161  	
-00000577  01                  4162  		DC	0x1	;; DW_AT_external
-00000578  00000000          + 4163  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000568  05                  4158  		DC	0x5	;;   size of loc_exp
+00000569  03                  4159  		DC	0x3	;;   DW_OP_addr
+0000056a  00000000          + 4160  		DD	_gus_Idc_zero_ad_low	;;     operand
+0000056e  6775735F4964635F    4161  		DC	"gus_Idc_zero_ad_low",0x0	;; DW_AT_name
+00000576  7A65726F5F61645F    4161  	
+0000057e  6C6F7700            4161  	
+00000582  01                  4162  		DC	0x1	;; DW_AT_external
+00000583  00000000          + 4163  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4164  	;; entry 116
-0000057c  08                  4165  		DC	0x8	;; abbrev_code
+00000587  08                  4165  		DC	0x8	;; abbrev_code
                               4166  				;; DW_AT_location
-0000057d  05                  4167  		DC	0x5	;;   size of loc_exp
-0000057e  03                  4168  		DC	0x3	;;   DW_OP_addr
-0000057f  00000000          + 4169  		DD	_gus_Idc_zero_ad_up	;;     operand
-00000583  6775735F4964635F    4170  		DC	"gus_Idc_zero_ad_up",0x0	;; DW_AT_name
-0000058b  7A65726F5F61645F    4170  	
-00000593  757000              4170  	
-00000596  01                  4171  		DC	0x1	;; DW_AT_external
-00000597  00000000          + 4172  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000588  05                  4167  		DC	0x5	;;   size of loc_exp
+00000589  03                  4168  		DC	0x3	;;   DW_OP_addr
+0000058a  00000000          + 4169  		DD	_gus_Idc_zero_ad_up	;;     operand
+0000058e  6775735F4964635F    4170  		DC	"gus_Idc_zero_ad_up",0x0	;; DW_AT_name
+00000596  7A65726F5F61645F    4170  	
+0000059e  757000              4170  	
+000005a1  01                  4171  		DC	0x1	;; DW_AT_external
+000005a2  00000000          + 4172  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4173  	;; entry 117
-0000059b  08                  4174  		DC	0x8	;; abbrev_code
+000005a6  08                  4174  		DC	0x8	;; abbrev_code
                               4175  				;; DW_AT_location
-0000059c  05                  4176  		DC	0x5	;;   size of loc_exp
-0000059d  03                  4177  		DC	0x3	;;   DW_OP_addr
-0000059e  00000000          + 4178  		DD	_gus_Idc_zero_cnt	;;     operand
-000005a2  6775735F4964635F    4179  		DC	"gus_Idc_zero_cnt",0x0	;; DW_AT_name
-000005aa  7A65726F5F636E74    4179  	
-000005b2  00                  4179  	
-000005b3  01                  4180  		DC	0x1	;; DW_AT_external
-000005b4  00000000          + 4181  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000005a7  05                  4176  		DC	0x5	;;   size of loc_exp
+000005a8  03                  4177  		DC	0x3	;;   DW_OP_addr
+000005a9  00000000          + 4178  		DD	_gus_Idc_zero_cnt	;;     operand
+000005ad  6775735F4964635F    4179  		DC	"gus_Idc_zero_cnt",0x0	;; DW_AT_name
+000005b5  7A65726F5F636E74    4179  	
+000005bd  00                  4179  	
+000005be  01                  4180  		DC	0x1	;; DW_AT_external
+000005bf  00000000          + 4181  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4182  	;; entry 118
-000005b8  08                  4183  		DC	0x8	;; abbrev_code
+000005c3  08                  4183  		DC	0x8	;; abbrev_code
                               4184  				;; DW_AT_location
-000005b9  05                  4185  		DC	0x5	;;   size of loc_exp
-000005ba  03                  4186  		DC	0x3	;;   DW_OP_addr
-000005bb  00000000          + 4187  		DD	_gul_Idc_zero_ad_sum	;;     operand
-000005bf  67756C5F4964635F    4188  		DC	"gul_Idc_zero_ad_sum",0x0	;; DW_AT_name
-000005c7  7A65726F5F61645F    4188  	
-000005cf  73756D00            4188  	
-000005d3  01                  4189  		DC	0x1	;; DW_AT_external
-000005d4  00000000          + 4190  		DD	.LDW7-.LI_TOP	;; DW_AT_type
+000005c4  05                  4185  		DC	0x5	;;   size of loc_exp
+000005c5  03                  4186  		DC	0x3	;;   DW_OP_addr
+000005c6  00000000          + 4187  		DD	_gul_Idc_zero_ad_sum	;;     operand
+000005ca  67756C5F4964635F    4188  		DC	"gul_Idc_zero_ad_sum",0x0	;; DW_AT_name
+000005d2  7A65726F5F61645F    4188  	
+000005da  73756D00            4188  	
+000005de  01                  4189  		DC	0x1	;; DW_AT_external
+000005df  00000000          + 4190  		DD	.LDW7-.LI_TOP	;; DW_AT_type
                               4191  	;; entry 119
-000005d8  08                  4192  		DC	0x8	;; abbrev_code
+000005e3  08                  4192  		DC	0x8	;; abbrev_code
                               4193  				;; DW_AT_location
-000005d9  05                  4194  		DC	0x5	;;   size of loc_exp
-000005da  03                  4195  		DC	0x3	;;   DW_OP_addr
-000005db  00000000          + 4196  		DD	_gus_Idc_zero_ad	;;     operand
-000005df  6775735F4964635F    4197  		DC	"gus_Idc_zero_ad",0x0	;; DW_AT_name
-000005e7  7A65726F5F616400    4197  	
-000005ef  01                  4198  		DC	0x1	;; DW_AT_external
-000005f0  00000000          + 4199  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000005e4  05                  4194  		DC	0x5	;;   size of loc_exp
+000005e5  03                  4195  		DC	0x3	;;   DW_OP_addr
+000005e6  00000000          + 4196  		DD	_gus_Idc_zero_ad	;;     operand
+000005ea  6775735F4964635F    4197  		DC	"gus_Idc_zero_ad",0x0	;; DW_AT_name
+000005f2  7A65726F5F616400    4197  	
+000005fa  01                  4198  		DC	0x1	;; DW_AT_external
+000005fb  00000000          + 4199  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4200  	;; entry 120
-000005f4  08                  4201  		DC	0x8	;; abbrev_code
+000005ff  08                  4201  		DC	0x8	;; abbrev_code
                               4202  				;; DW_AT_location
-000005f5  05                  4203  		DC	0x5	;;   size of loc_exp
-000005f6  03                  4204  		DC	0x3	;;   DW_OP_addr
-000005f7  00000000          + 4205  		DD	_gus_Idc_fault_cnt	;;     operand
-000005fb  6775735F4964635F    4206  		DC	"gus_Idc_fault_cnt",0x0	;; DW_AT_name
-00000603  6661756C745F636E    4206  	
-0000060b  7400                4206  	
-0000060d  01                  4207  		DC	0x1	;; DW_AT_external
-0000060e  00000000          + 4208  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000600  05                  4203  		DC	0x5	;;   size of loc_exp
+00000601  03                  4204  		DC	0x3	;;   DW_OP_addr
+00000602  00000000          + 4205  		DD	_gus_Idc_fault_cnt	;;     operand
+00000606  6775735F4964635F    4206  		DC	"gus_Idc_fault_cnt",0x0	;; DW_AT_name
+0000060e  6661756C745F636E    4206  	
+00000616  7400                4206  	
+00000618  01                  4207  		DC	0x1	;; DW_AT_external
+00000619  00000000          + 4208  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4209  	;; entry 121
-00000612  08                  4210  		DC	0x8	;; abbrev_code
+0000061d  08                  4210  		DC	0x8	;; abbrev_code
                               4211  				;; DW_AT_location
-00000613  05                  4212  		DC	0x5	;;   size of loc_exp
-00000614  03                  4213  		DC	0x3	;;   DW_OP_addr
-00000615  00000000          + 4214  		DD	_gus_prot_ALM_delaytimer	;;     operand
-00000619  6775735F70726F74    4215  		DC	"gus_prot_ALM_delaytimer",0x0	;; DW_AT_name
-00000621  5F414C4D5F64656C    4215  	
-00000629  617974696D657200    4215  	
-00000631  01                  4216  		DC	0x1	;; DW_AT_external
-00000632  00000000          + 4217  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000061e  05                  4212  		DC	0x5	;;   size of loc_exp
+0000061f  03                  4213  		DC	0x3	;;   DW_OP_addr
+00000620  00000000          + 4214  		DD	_gus_prot_ALM_delaytimer	;;     operand
+00000624  6775735F70726F74    4215  		DC	"gus_prot_ALM_delaytimer",0x0	;; DW_AT_name
+0000062c  5F414C4D5F64656C    4215  	
+00000634  617974696D657200    4215  	
+0000063c  01                  4216  		DC	0x1	;; DW_AT_external
+0000063d  00000000          + 4217  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4218  	;; entry 122
-00000636  08                  4219  		DC	0x8	;; abbrev_code
+00000641  08                  4219  		DC	0x8	;; abbrev_code
                               4220  				;; DW_AT_location
-00000637  05                  4221  		DC	0x5	;;   size of loc_exp
-00000638  03                  4222  		DC	0x3	;;   DW_OP_addr
-00000639  00000000          + 4223  		DD	_gus_quit_ALM_delaytimer	;;     operand
-0000063d  6775735F71756974    4224  		DC	"gus_quit_ALM_delaytimer",0x0	;; DW_AT_name
-00000645  5F414C4D5F64656C    4224  	
-0000064d  617974696D657200    4224  	
-00000655  01                  4225  		DC	0x1	;; DW_AT_external
-00000656  00000000          + 4226  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000642  05                  4221  		DC	0x5	;;   size of loc_exp
+00000643  03                  4222  		DC	0x3	;;   DW_OP_addr
+00000644  00000000          + 4223  		DD	_gus_quit_ALM_delaytimer	;;     operand
+00000648  6775735F71756974    4224  		DC	"gus_quit_ALM_delaytimer",0x0	;; DW_AT_name
+00000650  5F414C4D5F64656C    4224  	
+00000658  617974696D657200    4224  	
+00000660  01                  4225  		DC	0x1	;; DW_AT_external
+00000661  00000000          + 4226  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4227  	;; entry 123
-0000065a  08                  4228  		DC	0x8	;; abbrev_code
+00000665  08                  4228  		DC	0x8	;; abbrev_code
                               4229  				;; DW_AT_location
-0000065b  05                  4230  		DC	0x5	;;   size of loc_exp
-0000065c  03                  4231  		DC	0x3	;;   DW_OP_addr
-0000065d  00000000          + 4232  		DD	_gus_prot_ALM_cnt	;;     operand
-00000661  6775735F70726F74    4233  		DC	"gus_prot_ALM_cnt",0x0	;; DW_AT_name
-00000669  5F414C4D5F636E74    4233  	
-00000671  00                  4233  	
-00000672  01                  4234  		DC	0x1	;; DW_AT_external
-00000673  00000000          + 4235  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000666  05                  4230  		DC	0x5	;;   size of loc_exp
+00000667  03                  4231  		DC	0x3	;;   DW_OP_addr
+00000668  00000000          + 4232  		DD	_gus_prot_ALM_cnt	;;     operand
+0000066c  6775735F70726F74    4233  		DC	"gus_prot_ALM_cnt",0x0	;; DW_AT_name
+00000674  5F414C4D5F636E74    4233  	
+0000067c  00                  4233  	
+0000067d  01                  4234  		DC	0x1	;; DW_AT_external
+0000067e  00000000          + 4235  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4236  	;; entry 124
-00000677  08                  4237  		DC	0x8	;; abbrev_code
+00000682  08                  4237  		DC	0x8	;; abbrev_code
                               4238  				;; DW_AT_location
-00000678  05                  4239  		DC	0x5	;;   size of loc_exp
-00000679  03                  4240  		DC	0x3	;;   DW_OP_addr
-0000067a  00000000          + 4241  		DD	_gus_prot_Iout_POC_ad	;;     operand
-0000067e  6775735F70726F74    4242  		DC	"gus_prot_Iout_POC_ad",0x0	;; DW_AT_name
-00000686  5F496F75745F504F    4242  	
-0000068e  435F616400          4242  	
-00000693  01                  4243  		DC	0x1	;; DW_AT_external
-00000694  00000000          + 4244  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000683  05                  4239  		DC	0x5	;;   size of loc_exp
+00000684  03                  4240  		DC	0x3	;;   DW_OP_addr
+00000685  00000000          + 4241  		DD	_gus_prot_Iout_POC_ad	;;     operand
+00000689  6775735F70726F74    4242  		DC	"gus_prot_Iout_POC_ad",0x0	;; DW_AT_name
+00000691  5F496F75745F504F    4242  	
+00000699  435F616400          4242  	
+0000069e  01                  4243  		DC	0x1	;; DW_AT_external
+0000069f  00000000          + 4244  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4245  	;; entry 125
-00000698  08                  4246  		DC	0x8	;; abbrev_code
+000006a3  08                  4246  		DC	0x8	;; abbrev_code
                               4247  				;; DW_AT_location
-00000699  05                  4248  		DC	0x5	;;   size of loc_exp
-0000069a  03                  4249  		DC	0x3	;;   DW_OP_addr
-0000069b  00000000          + 4250  		DD	_gss_prot_Iout_POC_delaycnt	;;     operand
-0000069f  6773735F70726F74    4251  		DC	"gss_prot_Iout_POC_delaycnt",0x0	;; DW_AT_name
-000006a7  5F496F75745F504F    4251  	
-000006af  435F64656C617963    4251  	
-000006b7  6E7400              4251  	
-000006ba  01                  4252  		DC	0x1	;; DW_AT_external
-000006bb  00000000          + 4253  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000006a4  05                  4248  		DC	0x5	;;   size of loc_exp
+000006a5  03                  4249  		DC	0x3	;;   DW_OP_addr
+000006a6  00000000          + 4250  		DD	_gss_prot_Iout_POC_delaycnt	;;     operand
+000006aa  6773735F70726F74    4251  		DC	"gss_prot_Iout_POC_delaycnt",0x0	;; DW_AT_name
+000006b2  5F496F75745F504F    4251  	
+000006ba  435F64656C617963    4251  	
+000006c2  6E7400              4251  	
+000006c5  01                  4252  		DC	0x1	;; DW_AT_external
+000006c6  00000000          + 4253  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4254  	;; entry 126
-000006bf  08                  4255  		DC	0x8	;; abbrev_code
+000006ca  08                  4255  		DC	0x8	;; abbrev_code
                               4256  				;; DW_AT_location
-000006c0  05                  4257  		DC	0x5	;;   size of loc_exp
-000006c1  03                  4258  		DC	0x3	;;   DW_OP_addr
-000006c2  00000000          + 4259  		DD	_gus_prot_Iout_OC	;;     operand
-000006c6  6775735F70726F74    4260  		DC	"gus_prot_Iout_OC",0x0	;; DW_AT_name
-000006ce  5F496F75745F4F43    4260  	
-000006d6  00                  4260  	
-000006d7  01                  4261  		DC	0x1	;; DW_AT_external
-000006d8  00000000          + 4262  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000006cb  05                  4257  		DC	0x5	;;   size of loc_exp
+000006cc  03                  4258  		DC	0x3	;;   DW_OP_addr
+000006cd  00000000          + 4259  		DD	_gus_prot_Iout_OC	;;     operand
+000006d1  6775735F70726F74    4260  		DC	"gus_prot_Iout_OC",0x0	;; DW_AT_name
+000006d9  5F496F75745F4F43    4260  	
+000006e1  00                  4260  	
+000006e2  01                  4261  		DC	0x1	;; DW_AT_external
+000006e3  00000000          + 4262  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4263  	;; entry 127
-000006dc  08                  4264  		DC	0x8	;; abbrev_code
+000006e7  08                  4264  		DC	0x8	;; abbrev_code
                               4265  				;; DW_AT_location
-000006dd  05                  4266  		DC	0x5	;;   size of loc_exp
-000006de  03                  4267  		DC	0x3	;;   DW_OP_addr
-000006df  00000000          + 4268  		DD	_gss_prot_Iout_OC_delaytimer	;;     operand
-000006e3  6773735F70726F74    4269  		DC	"gss_prot_Iout_OC_delaytimer",0x0	;; DW_AT_name
-000006eb  5F496F75745F4F43    4269  	
-000006f3  5F64656C61797469    4269  	
-000006fb  6D657200            4269  	
-000006ff  01                  4270  		DC	0x1	;; DW_AT_external
-00000700  00000000          + 4271  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000006e8  05                  4266  		DC	0x5	;;   size of loc_exp
+000006e9  03                  4267  		DC	0x3	;;   DW_OP_addr
+000006ea  00000000          + 4268  		DD	_gss_prot_Iout_OC_delaytimer	;;     operand
+000006ee  6773735F70726F74    4269  		DC	"gss_prot_Iout_OC_delaytimer",0x0	;; DW_AT_name
+000006f6  5F496F75745F4F43    4269  	
+000006fe  5F64656C61797469    4269  	
+00000706  6D657200            4269  	
+0000070a  01                  4270  		DC	0x1	;; DW_AT_external
+0000070b  00000000          + 4271  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4272  	;; entry 128
-00000704  08                  4273  		DC	0x8	;; abbrev_code
+0000070f  08                  4273  		DC	0x8	;; abbrev_code
                               4274  				;; DW_AT_location
-00000705  05                  4275  		DC	0x5	;;   size of loc_exp
-00000706  03                  4276  		DC	0x3	;;   DW_OP_addr
-00000707  00000000          + 4277  		DD	_gus_prot_Iout_OL	;;     operand
-0000070b  6775735F70726F74    4278  		DC	"gus_prot_Iout_OL",0x0	;; DW_AT_name
-00000713  5F496F75745F4F4C    4278  	
-0000071b  00                  4278  	
-0000071c  01                  4279  		DC	0x1	;; DW_AT_external
-0000071d  00000000          + 4280  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000710  05                  4275  		DC	0x5	;;   size of loc_exp
+00000711  03                  4276  		DC	0x3	;;   DW_OP_addr
+00000712  00000000          + 4277  		DD	_gus_prot_Iout_OL	;;     operand
+00000716  6775735F70726F74    4278  		DC	"gus_prot_Iout_OL",0x0	;; DW_AT_name
+0000071e  5F496F75745F4F4C    4278  	
+00000726  00                  4278  	
+00000727  01                  4279  		DC	0x1	;; DW_AT_external
+00000728  00000000          + 4280  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4281  	;; entry 129
-00000721  08                  4282  		DC	0x8	;; abbrev_code
+0000072c  08                  4282  		DC	0x8	;; abbrev_code
                               4283  				;; DW_AT_location
-00000722  05                  4284  		DC	0x5	;;   size of loc_exp
-00000723  03                  4285  		DC	0x3	;;   DW_OP_addr
-00000724  00000000          + 4286  		DD	_gsl_prot_Iout_OL_integ_buf	;;     operand
-00000728  67736C5F70726F74    4287  		DC	"gsl_prot_Iout_OL_integ_buf",0x0	;; DW_AT_name
-00000730  5F496F75745F4F4C    4287  	
-00000738  5F696E7465675F62    4287  	
-00000740  756600              4287  	
-00000743  01                  4288  		DC	0x1	;; DW_AT_external
-00000744  00000000          + 4289  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+0000072d  05                  4284  		DC	0x5	;;   size of loc_exp
+0000072e  03                  4285  		DC	0x3	;;   DW_OP_addr
+0000072f  00000000          + 4286  		DD	_gsl_prot_Iout_OL_integ_buf	;;     operand
+00000733  67736C5F70726F74    4287  		DC	"gsl_prot_Iout_OL_integ_buf",0x0	;; DW_AT_name
+0000073b  5F496F75745F4F4C    4287  	
+00000743  5F696E7465675F62    4287  	
+0000074b  756600              4287  	
+0000074e  01                  4288  		DC	0x1	;; DW_AT_external
+0000074f  00000000          + 4289  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               4290  	;; entry 130
-00000748  08                  4291  		DC	0x8	;; abbrev_code
+00000753  08                  4291  		DC	0x8	;; abbrev_code
                               4292  				;; DW_AT_location
-00000749  05                  4293  		DC	0x5	;;   size of loc_exp
-0000074a  03                  4294  		DC	0x3	;;   DW_OP_addr
-0000074b  00000000          + 4295  		DD	_gsl_prot_Iout_OL_integ_max	;;     operand
-0000074f  67736C5F70726F74    4296  		DC	"gsl_prot_Iout_OL_integ_max",0x0	;; DW_AT_name
-00000757  5F496F75745F4F4C    4296  	
-0000075f  5F696E7465675F6D    4296  	
-00000767  617800              4296  	
-0000076a  01                  4297  		DC	0x1	;; DW_AT_external
-0000076b  00000000          + 4298  		DD	.LDW3-.LI_TOP	;; DW_AT_type
+00000754  05                  4293  		DC	0x5	;;   size of loc_exp
+00000755  03                  4294  		DC	0x3	;;   DW_OP_addr
+00000756  00000000          + 4295  		DD	_gsl_prot_Iout_OL_integ_max	;;     operand
+0000075a  67736C5F70726F74    4296  		DC	"gsl_prot_Iout_OL_integ_max",0x0	;; DW_AT_name
+00000762  5F496F75745F4F4C    4296  	
+0000076a  5F696E7465675F6D    4296  	
+00000772  617800              4296  	
+00000775  01                  4297  		DC	0x1	;; DW_AT_external
+00000776  00000000          + 4298  		DD	.LDW3-.LI_TOP	;; DW_AT_type
                               4299  	;; entry 131
-0000076f  08                  4300  		DC	0x8	;; abbrev_code
+0000077a  08                  4300  		DC	0x8	;; abbrev_code
                               4301  				;; DW_AT_location
-00000770  05                  4302  		DC	0x5	;;   size of loc_exp
-00000771  03                  4303  		DC	0x3	;;   DW_OP_addr
-00000772  00000000          + 4304  		DD	_gus_prot_Iout_decfreq_enter	;;     operand
-00000776  6775735F70726F74    4305  		DC	"gus_prot_Iout_decfreq_enter",0x0	;; DW_AT_name
-0000077e  5F496F75745F6465    4305  	
-00000786  63667265715F656E    4305  	
-0000078e  74657200            4305  	
-00000792  01                  4306  		DC	0x1	;; DW_AT_external
-00000793  00000000          + 4307  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000077b  05                  4302  		DC	0x5	;;   size of loc_exp
+0000077c  03                  4303  		DC	0x3	;;   DW_OP_addr
+0000077d  00000000          + 4304  		DD	_gus_prot_Iout_decfreq_enter	;;     operand
+00000781  6775735F70726F74    4305  		DC	"gus_prot_Iout_decfreq_enter",0x0	;; DW_AT_name
+00000789  5F496F75745F6465    4305  	
+00000791  63667265715F656E    4305  	
+00000799  74657200            4305  	
+0000079d  01                  4306  		DC	0x1	;; DW_AT_external
+0000079e  00000000          + 4307  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4308  	;; entry 132
-00000797  08                  4309  		DC	0x8	;; abbrev_code
+000007a2  08                  4309  		DC	0x8	;; abbrev_code
                               4310  				;; DW_AT_location
-00000798  05                  4311  		DC	0x5	;;   size of loc_exp
-00000799  03                  4312  		DC	0x3	;;   DW_OP_addr
-0000079a  00000000          + 4313  		DD	_gus_prot_Iout_decfreq_quit	;;     operand
-0000079e  6775735F70726F74    4314  		DC	"gus_prot_Iout_decfreq_quit",0x0	;; DW_AT_name
-000007a6  5F496F75745F6465    4314  	
-000007ae  63667265715F7175    4314  	
-000007b6  697400              4314  	
-000007b9  01                  4315  		DC	0x1	;; DW_AT_external
-000007ba  00000000          + 4316  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000007a3  05                  4311  		DC	0x5	;;   size of loc_exp
+000007a4  03                  4312  		DC	0x3	;;   DW_OP_addr
+000007a5  00000000          + 4313  		DD	_gus_prot_Iout_decfreq_quit	;;     operand
+000007a9  6775735F70726F74    4314  		DC	"gus_prot_Iout_decfreq_quit",0x0	;; DW_AT_name
+000007b1  5F496F75745F6465    4314  	
+000007b9  63667265715F7175    4314  	
+000007c1  697400              4314  	
+000007c4  01                  4315  		DC	0x1	;; DW_AT_external
+000007c5  00000000          + 4316  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4317  	;; entry 133
-000007be  08                  4318  		DC	0x8	;; abbrev_code
+000007c9  08                  4318  		DC	0x8	;; abbrev_code
                               4319  				;; DW_AT_location
-000007bf  05                  4320  		DC	0x5	;;   size of loc_exp
-000007c0  03                  4321  		DC	0x3	;;   DW_OP_addr
-000007c1  00000000          + 4322  		DD	_gss_prot_Iout_decfreq_enter_delaytimer	;;     operand
-000007c5  6773735F70726F74    4323  		DC	"gss_prot_Iout_decfreq_enter_delaytimer",0x0	;; DW_AT_name
-000007cd  5F496F75745F6465    4323  	
-000007d5  63667265715F656E    4323  	
-000007dd  7465725F64656C61    4323  	
-000007e5  7974696D657200      4323  	
-000007ec  01                  4324  		DC	0x1	;; DW_AT_external
-000007ed  00000000          + 4325  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000007ca  05                  4320  		DC	0x5	;;   size of loc_exp
+000007cb  03                  4321  		DC	0x3	;;   DW_OP_addr
+000007cc  00000000          + 4322  		DD	_gss_prot_Iout_decfreq_enter_delaytimer	;;     operand
+000007d0  6773735F70726F74    4323  		DC	"gss_prot_Iout_decfreq_enter_delaytimer",0x0	;; DW_AT_name
+000007d8  5F496F75745F6465    4323  	
+000007e0  63667265715F656E    4323  	
+000007e8  7465725F64656C61    4323  	
+000007f0  7974696D657200      4323  	
+000007f7  01                  4324  		DC	0x1	;; DW_AT_external
+000007f8  00000000          + 4325  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4326  	;; entry 134
-000007f1  08                  4327  		DC	0x8	;; abbrev_code
+000007fc  08                  4327  		DC	0x8	;; abbrev_code
                               4328  				;; DW_AT_location
-000007f2  05                  4329  		DC	0x5	;;   size of loc_exp
-000007f3  03                  4330  		DC	0x3	;;   DW_OP_addr
-000007f4  00000000          + 4331  		DD	_gss_prot_Iout_decfreq_quit_delaytimer	;;     operand
-000007f8  6773735F70726F74    4332  		DC	"gss_prot_Iout_decfreq_quit_delaytimer",0x0	;; DW_AT_name
-00000800  5F496F75745F6465    4332  	
-00000808  63667265715F7175    4332  	
-00000810  69745F64656C6179    4332  	
-00000818  74696D657200        4332  	
-0000081e  01                  4333  		DC	0x1	;; DW_AT_external
-0000081f  00000000          + 4334  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+000007fd  05                  4329  		DC	0x5	;;   size of loc_exp
+000007fe  03                  4330  		DC	0x3	;;   DW_OP_addr
+000007ff  00000000          + 4331  		DD	_gss_prot_Iout_decfreq_quit_delaytimer	;;     operand
+00000803  6773735F70726F74    4332  		DC	"gss_prot_Iout_decfreq_quit_delaytimer",0x0	;; DW_AT_name
+0000080b  5F496F75745F6465    4332  	
+00000813  63667265715F7175    4332  	
+0000081b  69745F64656C6179    4332  	
+00000823  74696D657200        4332  	
+00000829  01                  4333  		DC	0x1	;; DW_AT_external
+0000082a  00000000          + 4334  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4335  	;; entry 135
-00000823  08                  4336  		DC	0x8	;; abbrev_code
+0000082e  08                  4336  		DC	0x8	;; abbrev_code
                               4337  				;; DW_AT_location
-00000824  05                  4338  		DC	0x5	;;   size of loc_exp
-00000825  03                  4339  		DC	0x3	;;   DW_OP_addr
-00000826  00000000          + 4340  		DD	_gus_prot_Iout_freq	;;     operand
-0000082a  6775735F70726F74    4341  		DC	"gus_prot_Iout_freq",0x0	;; DW_AT_name
-00000832  5F496F75745F6672    4341  	
-0000083a  657100              4341  	
-0000083d  01                  4342  		DC	0x1	;; DW_AT_external
-0000083e  00000000          + 4343  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000082f  05                  4338  		DC	0x5	;;   size of loc_exp
+00000830  03                  4339  		DC	0x3	;;   DW_OP_addr
+00000831  00000000          + 4340  		DD	_gus_prot_Iout_freq	;;     operand
+00000835  6775735F70726F74    4341  		DC	"gus_prot_Iout_freq",0x0	;; DW_AT_name
+0000083d  5F496F75745F6672    4341  	
+00000845  657100              4341  	
+00000848  01                  4342  		DC	0x1	;; DW_AT_external
+00000849  00000000          + 4343  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4344  	;; entry 136
-00000842  08                  4345  		DC	0x8	;; abbrev_code
+0000084d  08                  4345  		DC	0x8	;; abbrev_code
                               4346  				;; DW_AT_location
-00000843  05                  4347  		DC	0x5	;;   size of loc_exp
-00000844  03                  4348  		DC	0x3	;;   DW_OP_addr
-00000845  00000000          + 4349  		DD	_gus_prot_Iout_stall_enter	;;     operand
-00000849  6775735F70726F74    4350  		DC	"gus_prot_Iout_stall_enter",0x0	;; DW_AT_name
-00000851  5F496F75745F7374    4350  	
-00000859  616C6C5F656E7465    4350  	
-00000861  7200                4350  	
-00000863  01                  4351  		DC	0x1	;; DW_AT_external
-00000864  00000000          + 4352  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000084e  05                  4347  		DC	0x5	;;   size of loc_exp
+0000084f  03                  4348  		DC	0x3	;;   DW_OP_addr
+00000850  00000000          + 4349  		DD	_gus_prot_Iout_stall_enter	;;     operand
+00000854  6775735F70726F74    4350  		DC	"gus_prot_Iout_stall_enter",0x0	;; DW_AT_name
+0000085c  5F496F75745F7374    4350  	
+00000864  616C6C5F656E7465    4350  	
+0000086c  7200                4350  	
+0000086e  01                  4351  		DC	0x1	;; DW_AT_external
+0000086f  00000000          + 4352  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4353  	;; entry 137
-00000868  08                  4354  		DC	0x8	;; abbrev_code
+00000873  08                  4354  		DC	0x8	;; abbrev_code
                               4355  				;; DW_AT_location
-00000869  05                  4356  		DC	0x5	;;   size of loc_exp
-0000086a  03                  4357  		DC	0x3	;;   DW_OP_addr
-0000086b  00000000          + 4358  		DD	_gus_prot_Iout_stall_quit	;;     operand
-0000086f  6775735F70726F74    4359  		DC	"gus_prot_Iout_stall_quit",0x0	;; DW_AT_name
-00000877  5F496F75745F7374    4359  	
-0000087f  616C6C5F71756974    4359  	
-00000887  00                  4359  	
-00000888  01                  4360  		DC	0x1	;; DW_AT_external
-00000889  00000000          + 4361  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000874  05                  4356  		DC	0x5	;;   size of loc_exp
+00000875  03                  4357  		DC	0x3	;;   DW_OP_addr
+00000876  00000000          + 4358  		DD	_gus_prot_Iout_stall_quit	;;     operand
+0000087a  6775735F70726F74    4359  		DC	"gus_prot_Iout_stall_quit",0x0	;; DW_AT_name
+00000882  5F496F75745F7374    4359  	
+0000088a  616C6C5F71756974    4359  	
+00000892  00                  4359  	
+00000893  01                  4360  		DC	0x1	;; DW_AT_external
+00000894  00000000          + 4361  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4362  	;; entry 138
-0000088d  08                  4363  		DC	0x8	;; abbrev_code
+00000898  08                  4363  		DC	0x8	;; abbrev_code
                               4364  				;; DW_AT_location
-0000088e  05                  4365  		DC	0x5	;;   size of loc_exp
-0000088f  03                  4366  		DC	0x3	;;   DW_OP_addr
-00000890  00000000          + 4367  		DD	_gss_prot_Iout_stall_delaytimer	;;     operand
-00000894  6773735F70726F74    4368  		DC	"gss_prot_Iout_stall_delaytimer",0x0	;; DW_AT_name
-0000089c  5F496F75745F7374    4368  	
-000008a4  616C6C5F64656C61    4368  	
-000008ac  7974696D657200      4368  	
-000008b3  01                  4369  		DC	0x1	;; DW_AT_external
-000008b4  00000000          + 4370  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000899  05                  4365  		DC	0x5	;;   size of loc_exp
+0000089a  03                  4366  		DC	0x3	;;   DW_OP_addr
+0000089b  00000000          + 4367  		DD	_gss_prot_Iout_stall_delaytimer	;;     operand
+0000089f  6773735F70726F74    4368  		DC	"gss_prot_Iout_stall_delaytimer",0x0	;; DW_AT_name
+000008a7  5F496F75745F7374    4368  	
+000008af  616C6C5F64656C61    4368  	
+000008b7  7974696D657200      4368  	
+000008be  01                  4369  		DC	0x1	;; DW_AT_external
+000008bf  00000000          + 4370  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4371  	;; entry 139
-000008b8  08                  4372  		DC	0x8	;; abbrev_code
+000008c3  08                  4372  		DC	0x8	;; abbrev_code
                               4373  				;; DW_AT_location
-000008b9  05                  4374  		DC	0x5	;;   size of loc_exp
-000008ba  03                  4375  		DC	0x3	;;   DW_OP_addr
-000008bb  00000000          + 4376  		DD	_gus_prot_Iout_stall_amp	;;     operand
-000008bf  6775735F70726F74    4377  		DC	"gus_prot_Iout_stall_amp",0x0	;; DW_AT_name
-000008c7  5F496F75745F7374    4377  	
-000008cf  616C6C5F616D7000    4377  	
-000008d7  01                  4378  		DC	0x1	;; DW_AT_external
-000008d8  00000000          + 4379  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000008c4  05                  4374  		DC	0x5	;;   size of loc_exp
+000008c5  03                  4375  		DC	0x3	;;   DW_OP_addr
+000008c6  00000000          + 4376  		DD	_gus_prot_Iout_stall_amp	;;     operand
+000008ca  6775735F70726F74    4377  		DC	"gus_prot_Iout_stall_amp",0x0	;; DW_AT_name
+000008d2  5F496F75745F7374    4377  	
+000008da  616C6C5F616D7000    4377  	
+000008e2  01                  4378  		DC	0x1	;; DW_AT_external
+000008e3  00000000          + 4379  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4380  	;; entry 140
-000008dc  08                  4381  		DC	0x8	;; abbrev_code
+000008e7  08                  4381  		DC	0x8	;; abbrev_code
                               4382  				;; DW_AT_location
-000008dd  05                  4383  		DC	0x5	;;   size of loc_exp
-000008de  03                  4384  		DC	0x3	;;   DW_OP_addr
-000008df  00000000          + 4385  		DD	_gus_prot_Udc_POU_ad	;;     operand
-000008e3  6775735F70726F74    4386  		DC	"gus_prot_Udc_POU_ad",0x0	;; DW_AT_name
-000008eb  5F5564635F504F55    4386  	
-000008f3  5F616400            4386  	
-000008f7  01                  4387  		DC	0x1	;; DW_AT_external
-000008f8  00000000          + 4388  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000008e8  05                  4383  		DC	0x5	;;   size of loc_exp
+000008e9  03                  4384  		DC	0x3	;;   DW_OP_addr
+000008ea  00000000          + 4385  		DD	_gus_prot_Udc_POU_ad	;;     operand
+000008ee  6775735F70726F74    4386  		DC	"gus_prot_Udc_POU_ad",0x0	;; DW_AT_name
+000008f6  5F5564635F504F55    4386  	
+000008fe  5F616400            4386  	
+00000902  01                  4387  		DC	0x1	;; DW_AT_external
+00000903  00000000          + 4388  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4389  	;; entry 141
-000008fc  08                  4390  		DC	0x8	;; abbrev_code
+00000907  08                  4390  		DC	0x8	;; abbrev_code
                               4391  				;; DW_AT_location
-000008fd  05                  4392  		DC	0x5	;;   size of loc_exp
-000008fe  03                  4393  		DC	0x3	;;   DW_OP_addr
-000008ff  00000000          + 4394  		DD	_gss_prot_Udc_POU_delaycnt	;;     operand
-00000903  6773735F70726F74    4395  		DC	"gss_prot_Udc_POU_delaycnt",0x0	;; DW_AT_name
-0000090b  5F5564635F504F55    4395  	
-00000913  5F64656C6179636E    4395  	
-0000091b  7400                4395  	
-0000091d  01                  4396  		DC	0x1	;; DW_AT_external
-0000091e  00000000          + 4397  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000908  05                  4392  		DC	0x5	;;   size of loc_exp
+00000909  03                  4393  		DC	0x3	;;   DW_OP_addr
+0000090a  00000000          + 4394  		DD	_gss_prot_Udc_POU_delaycnt	;;     operand
+0000090e  6773735F70726F74    4395  		DC	"gss_prot_Udc_POU_delaycnt",0x0	;; DW_AT_name
+00000916  5F5564635F504F55    4395  	
+0000091e  5F64656C6179636E    4395  	
+00000926  7400                4395  	
+00000928  01                  4396  		DC	0x1	;; DW_AT_external
+00000929  00000000          + 4397  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4398  	;; entry 142
-00000922  08                  4399  		DC	0x8	;; abbrev_code
+0000092d  08                  4399  		DC	0x8	;; abbrev_code
                               4400  				;; DW_AT_location
-00000923  05                  4401  		DC	0x5	;;   size of loc_exp
-00000924  03                  4402  		DC	0x3	;;   DW_OP_addr
-00000925  00000000          + 4403  		DD	_gus_prot_Udc_stall_amp	;;     operand
-00000929  6775735F70726F74    4404  		DC	"gus_prot_Udc_stall_amp",0x0	;; DW_AT_name
-00000931  5F5564635F737461    4404  	
-00000939  6C6C5F616D7000      4404  	
-00000940  01                  4405  		DC	0x1	;; DW_AT_external
-00000941  00000000          + 4406  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+0000092e  05                  4401  		DC	0x5	;;   size of loc_exp
+0000092f  03                  4402  		DC	0x3	;;   DW_OP_addr
+00000930  00000000          + 4403  		DD	_gus_prot_Udc_stall_amp	;;     operand
+00000934  6775735F70726F74    4404  		DC	"gus_prot_Udc_stall_amp",0x0	;; DW_AT_name
+0000093c  5F5564635F737461    4404  	
+00000944  6C6C5F616D7000      4404  	
+0000094b  01                  4405  		DC	0x1	;; DW_AT_external
+0000094c  00000000          + 4406  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4407  	;; entry 143
-00000945  08                  4408  		DC	0x8	;; abbrev_code
+00000950  08                  4408  		DC	0x8	;; abbrev_code
                               4409  				;; DW_AT_location
-00000946  05                  4410  		DC	0x5	;;   size of loc_exp
-00000947  03                  4411  		DC	0x3	;;   DW_OP_addr
-00000948  00000000          + 4412  		DD	_gus_prot_Tm_OH_delaytimer	;;     operand
-0000094c  6775735F70726F74    4413  		DC	"gus_prot_Tm_OH_delaytimer",0x0	;; DW_AT_name
-00000954  5F546D5F4F485F64    4413  	
-0000095c  656C617974696D65    4413  	
-00000964  7200                4413  	
-00000966  01                  4414  		DC	0x1	;; DW_AT_external
-00000967  00000000          + 4415  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000951  05                  4410  		DC	0x5	;;   size of loc_exp
+00000952  03                  4411  		DC	0x3	;;   DW_OP_addr
+00000953  00000000          + 4412  		DD	_gus_prot_Tm_OH_delaytimer	;;     operand
+00000957  6775735F70726F74    4413  		DC	"gus_prot_Tm_OH_delaytimer",0x0	;; DW_AT_name
+0000095f  5F546D5F4F485F64    4413  	
+00000967  656C617974696D65    4413  	
+0000096f  7200                4413  	
+00000971  01                  4414  		DC	0x1	;; DW_AT_external
+00000972  00000000          + 4415  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4416  	;; entry 144
-0000096b  08                  4417  		DC	0x8	;; abbrev_code
+00000976  08                  4417  		DC	0x8	;; abbrev_code
                               4418  				;; DW_AT_location
-0000096c  05                  4419  		DC	0x5	;;   size of loc_exp
-0000096d  03                  4420  		DC	0x3	;;   DW_OP_addr
-0000096e  00000000          + 4421  		DD	_gus_prot_Tm_decfreq_enter_delaytimer	;;     operand
-00000972  6775735F70726F74    4422  		DC	"gus_prot_Tm_decfreq_enter_delaytimer",0x0	;; DW_AT_name
-0000097a  5F546D5F64656366    4422  	
-00000982  7265715F656E7465    4422  	
-0000098a  725F64656C617974    4422  	
-00000992  696D657200          4422  	
-00000997  01                  4423  		DC	0x1	;; DW_AT_external
-00000998  00000000          + 4424  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000977  05                  4419  		DC	0x5	;;   size of loc_exp
+00000978  03                  4420  		DC	0x3	;;   DW_OP_addr
+00000979  00000000          + 4421  		DD	_gus_prot_Tm_decfreq_enter_delaytimer	;;     operand
+0000097d  6775735F70726F74    4422  		DC	"gus_prot_Tm_decfreq_enter_delaytimer",0x0	;; DW_AT_name
+00000985  5F546D5F64656366    4422  	
+0000098d  7265715F656E7465    4422  	
+00000995  725F64656C617974    4422  	
+0000099d  696D657200          4422  	
+000009a2  01                  4423  		DC	0x1	;; DW_AT_external
+000009a3  00000000          + 4424  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4425  	;; entry 145
-0000099c  08                  4426  		DC	0x8	;; abbrev_code
+000009a7  08                  4426  		DC	0x8	;; abbrev_code
                               4427  				;; DW_AT_location
-0000099d  05                  4428  		DC	0x5	;;   size of loc_exp
-0000099e  03                  4429  		DC	0x3	;;   DW_OP_addr
-0000099f  00000000          + 4430  		DD	_gus_prot_Tm_decfreq_quit_delaytimer	;;     operand
-000009a3  6775735F70726F74    4431  		DC	"gus_prot_Tm_decfreq_quit_delaytimer",0x0	;; DW_AT_name
-000009ab  5F546D5F64656366    4431  	
-000009b3  7265715F71756974    4431  	
-000009bb  5F64656C61797469    4431  	
-000009c3  6D657200            4431  	
-000009c7  01                  4432  		DC	0x1	;; DW_AT_external
-000009c8  00000000          + 4433  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000009a8  05                  4428  		DC	0x5	;;   size of loc_exp
+000009a9  03                  4429  		DC	0x3	;;   DW_OP_addr
+000009aa  00000000          + 4430  		DD	_gus_prot_Tm_decfreq_quit_delaytimer	;;     operand
+000009ae  6775735F70726F74    4431  		DC	"gus_prot_Tm_decfreq_quit_delaytimer",0x0	;; DW_AT_name
+000009b6  5F546D5F64656366    4431  	
+000009be  7265715F71756974    4431  	
+000009c6  5F64656C61797469    4431  	
+000009ce  6D657200            4431  	
+000009d2  01                  4432  		DC	0x1	;; DW_AT_external
+000009d3  00000000          + 4433  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4434  	;; entry 146
-000009cc  08                  4435  		DC	0x8	;; abbrev_code
+000009d7  08                  4435  		DC	0x8	;; abbrev_code
                               4436  				;; DW_AT_location
-000009cd  05                  4437  		DC	0x5	;;   size of loc_exp
-000009ce  03                  4438  		DC	0x3	;;   DW_OP_addr
-000009cf  00000000          + 4439  		DD	_gus_prot_Tm_freq	;;     operand
-000009d3  6775735F70726F74    4440  		DC	"gus_prot_Tm_freq",0x0	;; DW_AT_name
-000009db  5F546D5F66726571    4440  	
-000009e3  00                  4440  	
-000009e4  01                  4441  		DC	0x1	;; DW_AT_external
-000009e5  00000000          + 4442  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000009d8  05                  4437  		DC	0x5	;;   size of loc_exp
+000009d9  03                  4438  		DC	0x3	;;   DW_OP_addr
+000009da  00000000          + 4439  		DD	_gus_prot_Tm_freq	;;     operand
+000009de  6775735F70726F74    4440  		DC	"gus_prot_Tm_freq",0x0	;; DW_AT_name
+000009e6  5F546D5F66726571    4440  	
+000009ee  00                  4440  	
+000009ef  01                  4441  		DC	0x1	;; DW_AT_external
+000009f0  00000000          + 4442  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4443  	;; entry 147
-000009e9  08                  4444  		DC	0x8	;; abbrev_code
+000009f4  08                  4444  		DC	0x8	;; abbrev_code
                               4445  				;; DW_AT_location
-000009ea  05                  4446  		DC	0x5	;;   size of loc_exp
-000009eb  03                  4447  		DC	0x3	;;   DW_OP_addr
-000009ec  00000000          + 4448  		DD	_gus_prot_Tm_stall_delaytimer	;;     operand
-000009f0  6775735F70726F74    4449  		DC	"gus_prot_Tm_stall_delaytimer",0x0	;; DW_AT_name
-000009f8  5F546D5F7374616C    4449  	
-00000a00  6C5F64656C617974    4449  	
-00000a08  696D657200          4449  	
-00000a0d  01                  4450  		DC	0x1	;; DW_AT_external
-00000a0e  00000000          + 4451  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+000009f5  05                  4446  		DC	0x5	;;   size of loc_exp
+000009f6  03                  4447  		DC	0x3	;;   DW_OP_addr
+000009f7  00000000          + 4448  		DD	_gus_prot_Tm_stall_delaytimer	;;     operand
+000009fb  6775735F70726F74    4449  		DC	"gus_prot_Tm_stall_delaytimer",0x0	;; DW_AT_name
+00000a03  5F546D5F7374616C    4449  	
+00000a0b  6C5F64656C617974    4449  	
+00000a13  696D657200          4449  	
+00000a18  01                  4450  		DC	0x1	;; DW_AT_external
+00000a19  00000000          + 4451  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4452  	;; entry 148
-00000a12  08                  4453  		DC	0x8	;; abbrev_code
+00000a1d  08                  4453  		DC	0x8	;; abbrev_code
                               4454  				;; DW_AT_location
-00000a13  05                  4455  		DC	0x5	;;   size of loc_exp
-00000a14  03                  4456  		DC	0x3	;;   DW_OP_addr
-00000a15  00000000          + 4457  		DD	_gus_prot_Tm_stall_amp	;;     operand
-00000a19  6775735F70726F74    4458  		DC	"gus_prot_Tm_stall_amp",0x0	;; DW_AT_name
-00000a21  5F546D5F7374616C    4458  	
-00000a29  6C5F616D7000        4458  	
-00000a2f  01                  4459  		DC	0x1	;; DW_AT_external
-00000a30  00000000          + 4460  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000a1e  05                  4455  		DC	0x5	;;   size of loc_exp
+00000a1f  03                  4456  		DC	0x3	;;   DW_OP_addr
+00000a20  00000000          + 4457  		DD	_gus_prot_Tm_stall_amp	;;     operand
+00000a24  6775735F70726F74    4458  		DC	"gus_prot_Tm_stall_amp",0x0	;; DW_AT_name
+00000a2c  5F546D5F7374616C    4458  	
+00000a34  6C5F616D7000        4458  	
+00000a3a  01                  4459  		DC	0x1	;; DW_AT_external
+00000a3b  00000000          + 4460  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4461  	;; entry 149
-00000a34  08                  4462  		DC	0x8	;; abbrev_code
+00000a3f  08                  4462  		DC	0x8	;; abbrev_code
                               4463  				;; DW_AT_location
-00000a35  05                  4464  		DC	0x5	;;   size of loc_exp
-00000a36  03                  4465  		DC	0x3	;;   DW_OP_addr
-00000a37  00000000          + 4466  		DD	_gss_motor_stall_delaytimer	;;     operand
-00000a3b  6773735F6D6F746F    4467  		DC	"gss_motor_stall_delaytimer",0x0	;; DW_AT_name
-00000a43  725F7374616C6C5F    4467  	
-00000a4b  64656C617974696D    4467  	
-00000a53  657200              4467  	
-00000a56  01                  4468  		DC	0x1	;; DW_AT_external
-00000a57  00000000          + 4469  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000a40  05                  4464  		DC	0x5	;;   size of loc_exp
+00000a41  03                  4465  		DC	0x3	;;   DW_OP_addr
+00000a42  00000000          + 4466  		DD	_gss_motor_stall_delaytimer	;;     operand
+00000a46  6773735F6D6F746F    4467  		DC	"gss_motor_stall_delaytimer",0x0	;; DW_AT_name
+00000a4e  725F7374616C6C5F    4467  	
+00000a56  64656C617974696D    4467  	
+00000a5e  657200              4467  	
+00000a61  01                  4468  		DC	0x1	;; DW_AT_external
+00000a62  00000000          + 4469  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4470  	;; entry 150
-00000a5b  08                  4471  		DC	0x8	;; abbrev_code
+00000a66  08                  4471  		DC	0x8	;; abbrev_code
                               4472  				;; DW_AT_location
-00000a5c  05                  4473  		DC	0x5	;;   size of loc_exp
-00000a5d  03                  4474  		DC	0x3	;;   DW_OP_addr
-00000a5e  00000000          + 4475  		DD	_gss_motor_block_delaytimer	;;     operand
-00000a62  6773735F6D6F746F    4476  		DC	"gss_motor_block_delaytimer",0x0	;; DW_AT_name
-00000a6a  725F626C6F636B5F    4476  	
-00000a72  64656C617974696D    4476  	
-00000a7a  657200              4476  	
-00000a7d  01                  4477  		DC	0x1	;; DW_AT_external
-00000a7e  00000000          + 4478  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000a67  05                  4473  		DC	0x5	;;   size of loc_exp
+00000a68  03                  4474  		DC	0x3	;;   DW_OP_addr
+00000a69  00000000          + 4475  		DD	_gss_motor_block_delaytimer	;;     operand
+00000a6d  6773735F6D6F746F    4476  		DC	"gss_motor_block_delaytimer",0x0	;; DW_AT_name
+00000a75  725F626C6F636B5F    4476  	
+00000a7d  64656C617974696D    4476  	
+00000a85  657200              4476  	
+00000a88  01                  4477  		DC	0x1	;; DW_AT_external
+00000a89  00000000          + 4478  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4479  	;; entry 151
-00000a82  08                  4480  		DC	0x8	;; abbrev_code
+00000a8d  08                  4480  		DC	0x8	;; abbrev_code
                               4481  				;; DW_AT_location
-00000a83  05                  4482  		DC	0x5	;;   size of loc_exp
-00000a84  03                  4483  		DC	0x3	;;   DW_OP_addr
-00000a85  00000000          + 4484  		DD	_gss_motor_overspeed_delaytimer	;;     operand
-00000a89  6773735F6D6F746F    4485  		DC	"gss_motor_overspeed_delaytimer",0x0	;; DW_AT_name
-00000a91  725F6F7665727370    4485  	
-00000a99  6565645F64656C61    4485  	
-00000aa1  7974696D657200      4485  	
-00000aa8  01                  4486  		DC	0x1	;; DW_AT_external
-00000aa9  00000000          + 4487  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000a8e  05                  4482  		DC	0x5	;;   size of loc_exp
+00000a8f  03                  4483  		DC	0x3	;;   DW_OP_addr
+00000a90  00000000          + 4484  		DD	_gss_motor_overspeed_delaytimer	;;     operand
+00000a94  6773735F6D6F746F    4485  		DC	"gss_motor_overspeed_delaytimer",0x0	;; DW_AT_name
+00000a9c  725F6F7665727370    4485  	
+00000aa4  6565645F64656C61    4485  	
+00000aac  7974696D657200      4485  	
+00000ab3  01                  4486  		DC	0x1	;; DW_AT_external
+00000ab4  00000000          + 4487  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4488  	;; entry 152
-00000aad  08                  4489  		DC	0x8	;; abbrev_code
+00000ab8  08                  4489  		DC	0x8	;; abbrev_code
                               4490  				;; DW_AT_location
-00000aae  05                  4491  		DC	0x5	;;   size of loc_exp
-00000aaf  03                  4492  		DC	0x3	;;   DW_OP_addr
-00000ab0  00000000          + 4493  		DD	_gss_trip_lock_delaytimer	;;     operand
-00000ab4  6773735F74726970    4494  		DC	"gss_trip_lock_delaytimer",0x0	;; DW_AT_name
-00000abc  5F6C6F636B5F6465    4494  	
-00000ac4  6C617974696D6572    4494  	
-00000acc  00                  4494  	
-00000acd  01                  4495  		DC	0x1	;; DW_AT_external
-00000ace  00000000          + 4496  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000ab9  05                  4491  		DC	0x5	;;   size of loc_exp
+00000aba  03                  4492  		DC	0x3	;;   DW_OP_addr
+00000abb  00000000          + 4493  		DD	_gss_trip_lock_delaytimer	;;     operand
+00000abf  6773735F74726970    4494  		DC	"gss_trip_lock_delaytimer",0x0	;; DW_AT_name
+00000ac7  5F6C6F636B5F6465    4494  	
+00000acf  6C617974696D6572    4494  	
+00000ad7  00                  4494  	
+00000ad8  01                  4495  		DC	0x1	;; DW_AT_external
+00000ad9  00000000          + 4496  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4497  	;; entry 153
-00000ad2  08                  4498  		DC	0x8	;; abbrev_code
+00000add  08                  4498  		DC	0x8	;; abbrev_code
                               4499  				;; DW_AT_location
-00000ad3  05                  4500  		DC	0x5	;;   size of loc_exp
-00000ad4  03                  4501  		DC	0x3	;;   DW_OP_addr
-00000ad5  00000000          + 4502  		DD	_gss_stop_space_delaytimer	;;     operand
-00000ad9  6773735F73746F70    4503  		DC	"gss_stop_space_delaytimer",0x0	;; DW_AT_name
-00000ae1  5F73706163655F64    4503  	
-00000ae9  656C617974696D65    4503  	
-00000af1  7200                4503  	
-00000af3  01                  4504  		DC	0x1	;; DW_AT_external
-00000af4  00000000          + 4505  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000ade  05                  4500  		DC	0x5	;;   size of loc_exp
+00000adf  03                  4501  		DC	0x3	;;   DW_OP_addr
+00000ae0  00000000          + 4502  		DD	_gss_stop_space_delaytimer	;;     operand
+00000ae4  6773735F73746F70    4503  		DC	"gss_stop_space_delaytimer",0x0	;; DW_AT_name
+00000aec  5F73706163655F64    4503  	
+00000af4  656C617974696D65    4503  	
+00000afc  7200                4503  	
+00000afe  01                  4504  		DC	0x1	;; DW_AT_external
+00000aff  00000000          + 4505  		DD	.LDW2-.LI_TOP	;; DW_AT_type
                               4506  	;; entry 154
-00000af8  08                  4507  		DC	0x8	;; abbrev_code
+00000b03  08                  4507  		DC	0x8	;; abbrev_code
                               4508  				;; DW_AT_location
-00000af9  05                  4509  		DC	0x5	;;   size of loc_exp
-00000afa  03                  4510  		DC	0x3	;;   DW_OP_addr
-00000afb  00000000          + 4511  		DD	_guc_state_code	;;     operand
-00000aff  6775635F73746174    4512  		DC	"guc_state_code",0x0	;; DW_AT_name
-00000b07  655F636F646500      4512  	
-00000b0e  01                  4513  		DC	0x1	;; DW_AT_external
-00000b0f  00000000          + 4514  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000b04  05                  4509  		DC	0x5	;;   size of loc_exp
+00000b05  03                  4510  		DC	0x3	;;   DW_OP_addr
+00000b06  00000000          + 4511  		DD	_guc_state_code	;;     operand
+00000b0a  6775635F73746174    4512  		DC	"guc_state_code",0x0	;; DW_AT_name
+00000b12  655F636F646500      4512  	
+00000b19  01                  4513  		DC	0x1	;; DW_AT_external
+00000b1a  00000000          + 4514  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4515  	;; entry 155
-00000b13  08                  4516  		DC	0x8	;; abbrev_code
+00000b1e  08                  4516  		DC	0x8	;; abbrev_code
                               4517  				;; DW_AT_location
-00000b14  05                  4518  		DC	0x5	;;   size of loc_exp
-00000b15  03                  4519  		DC	0x3	;;   DW_OP_addr
-00000b16  00000000          + 4520  		DD	_guc_lamp_trip_code	;;     operand
-00000b1a  6775635F6C616D70    4521  		DC	"guc_lamp_trip_code",0x0	;; DW_AT_name
-00000b22  5F747269705F636F    4521  	
-00000b2a  646500              4521  	
-00000b2d  01                  4522  		DC	0x1	;; DW_AT_external
-00000b2e  00000000          + 4523  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000b1f  05                  4518  		DC	0x5	;;   size of loc_exp
+00000b20  03                  4519  		DC	0x3	;;   DW_OP_addr
+00000b21  00000000          + 4520  		DD	_guc_lamp_trip_code	;;     operand
+00000b25  6775635F6C616D70    4521  		DC	"guc_lamp_trip_code",0x0	;; DW_AT_name
+00000b2d  5F747269705F636F    4521  	
+00000b35  646500              4521  	
+00000b38  01                  4522  		DC	0x1	;; DW_AT_external
+00000b39  00000000          + 4523  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4524  	;; entry 156
-00000b32  08                  4525  		DC	0x8	;; abbrev_code
+00000b3d  08                  4525  		DC	0x8	;; abbrev_code
                               4526  				;; DW_AT_location
-00000b33  05                  4527  		DC	0x5	;;   size of loc_exp
-00000b34  03                  4528  		DC	0x3	;;   DW_OP_addr
-00000b35  00000000          + 4529  		DD	_gus_trip_release_cnt	;;     operand
-00000b39  6775735F74726970    4530  		DC	"gus_trip_release_cnt",0x0	;; DW_AT_name
-00000b41  5F72656C65617365    4530  	
-00000b49  5F636E7400          4530  	
-00000b4e  01                  4531  		DC	0x1	;; DW_AT_external
-00000b4f  00000000          + 4532  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000b3e  05                  4527  		DC	0x5	;;   size of loc_exp
+00000b3f  03                  4528  		DC	0x3	;;   DW_OP_addr
+00000b40  00000000          + 4529  		DD	_gus_trip_release_cnt	;;     operand
+00000b44  6775735F74726970    4530  		DC	"gus_trip_release_cnt",0x0	;; DW_AT_name
+00000b4c  5F72656C65617365    4530  	
+00000b54  5F636E7400          4530  	
+00000b59  01                  4531  		DC	0x1	;; DW_AT_external
+00000b5a  00000000          + 4532  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4533  	;; entry 157
-00000b53  08                  4534  		DC	0x8	;; abbrev_code
+00000b5e  08                  4534  		DC	0x8	;; abbrev_code
                               4535  				;; DW_AT_location
-00000b54  05                  4536  		DC	0x5	;;   size of loc_exp
-00000b55  03                  4537  		DC	0x3	;;   DW_OP_addr
-00000b56  00000000          + 4538  		DD	_guc_trip_code	;;     operand
-00000b5a  6775635F74726970    4539  		DC	"guc_trip_code",0x0	;; DW_AT_name
-00000b62  5F636F646500        4539  	
-00000b68  01                  4540  		DC	0x1	;; DW_AT_external
-00000b69  00000000          + 4541  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000b5f  05                  4536  		DC	0x5	;;   size of loc_exp
+00000b60  03                  4537  		DC	0x3	;;   DW_OP_addr
+00000b61  00000000          + 4538  		DD	_guc_trip_code	;;     operand
+00000b65  6775635F74726970    4539  		DC	"guc_trip_code",0x0	;; DW_AT_name
+00000b6d  5F636F646500        4539  	
+00000b73  01                  4540  		DC	0x1	;; DW_AT_external
+00000b74  00000000          + 4541  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4542  	;; entry 158
-00000b6d  08                  4543  		DC	0x8	;; abbrev_code
+00000b78  08                  4543  		DC	0x8	;; abbrev_code
                               4544  				;; DW_AT_location
-00000b6e  05                  4545  		DC	0x5	;;   size of loc_exp
-00000b6f  03                  4546  		DC	0x3	;;   DW_OP_addr
-00000b70  00000000          + 4547  		DD	_guc_trip_stop_cnt	;;     operand
-00000b74  6775635F74726970    4548  		DC	"guc_trip_stop_cnt",0x0	;; DW_AT_name
-00000b7c  5F73746F705F636E    4548  	
-00000b84  7400                4548  	
-00000b86  01                  4549  		DC	0x1	;; DW_AT_external
-00000b87  00000000          + 4550  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000b79  05                  4545  		DC	0x5	;;   size of loc_exp
+00000b7a  03                  4546  		DC	0x3	;;   DW_OP_addr
+00000b7b  00000000          + 4547  		DD	_guc_trip_stop_cnt	;;     operand
+00000b7f  6775635F74726970    4548  		DC	"guc_trip_stop_cnt",0x0	;; DW_AT_name
+00000b87  5F73746F705F636E    4548  	
+00000b8f  7400                4548  	
+00000b91  01                  4549  		DC	0x1	;; DW_AT_external
+00000b92  00000000          + 4550  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4551  	;; entry 159
-00000b8b  08                  4552  		DC	0x8	;; abbrev_code
+00000b96  08                  4552  		DC	0x8	;; abbrev_code
                               4553  				;; DW_AT_location
-00000b8c  05                  4554  		DC	0x5	;;   size of loc_exp
-00000b8d  03                  4555  		DC	0x3	;;   DW_OP_addr
-00000b8e  00000000          + 4556  		DD	_guc_motor_block_cnt	;;     operand
-00000b92  6775635F6D6F746F    4557  		DC	"guc_motor_block_cnt",0x0	;; DW_AT_name
-00000b9a  725F626C6F636B5F    4557  	
-00000ba2  636E7400            4557  	
-00000ba6  01                  4558  		DC	0x1	;; DW_AT_external
-00000ba7  00000000          + 4559  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000b97  05                  4554  		DC	0x5	;;   size of loc_exp
+00000b98  03                  4555  		DC	0x3	;;   DW_OP_addr
+00000b99  00000000          + 4556  		DD	_guc_motor_block_cnt	;;     operand
+00000b9d  6775635F6D6F746F    4557  		DC	"guc_motor_block_cnt",0x0	;; DW_AT_name
+00000ba5  725F626C6F636B5F    4557  	
+00000bad  636E7400            4557  	
+00000bb1  01                  4558  		DC	0x1	;; DW_AT_external
+00000bb2  00000000          + 4559  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4560  	;; entry 160
-00000bab  08                  4561  		DC	0x8	;; abbrev_code
+00000bb6  08                  4561  		DC	0x8	;; abbrev_code
                               4562  				;; DW_AT_location
-00000bac  05                  4563  		DC	0x5	;;   size of loc_exp
-00000bad  03                  4564  		DC	0x3	;;   DW_OP_addr
-00000bae  00000000          + 4565  		DD	_guc_Iout_fault_cnt	;;     operand
-00000bb2  6775635F496F7574    4566  		DC	"guc_Iout_fault_cnt",0x0	;; DW_AT_name
-00000bba  5F6661756C745F63    4566  	
-00000bc2  6E7400              4566  	
-00000bc5  01                  4567  		DC	0x1	;; DW_AT_external
-00000bc6  00000000          + 4568  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000bb7  05                  4563  		DC	0x5	;;   size of loc_exp
+00000bb8  03                  4564  		DC	0x3	;;   DW_OP_addr
+00000bb9  00000000          + 4565  		DD	_guc_Iout_fault_cnt	;;     operand
+00000bbd  6775635F496F7574    4566  		DC	"guc_Iout_fault_cnt",0x0	;; DW_AT_name
+00000bc5  5F6661756C745F63    4566  	
+00000bcd  6E7400              4566  	
+00000bd0  01                  4567  		DC	0x1	;; DW_AT_external
+00000bd1  00000000          + 4568  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4569  	;; entry 161
-00000bca  08                  4570  		DC	0x8	;; abbrev_code
+00000bd5  08                  4570  		DC	0x8	;; abbrev_code
                               4571  				;; DW_AT_location
-00000bcb  05                  4572  		DC	0x5	;;   size of loc_exp
-00000bcc  03                  4573  		DC	0x3	;;   DW_OP_addr
-00000bcd  00000000          + 4574  		DD	_guc_ALM_fault_cnt	;;     operand
-00000bd1  6775635F414C4D5F    4575  		DC	"guc_ALM_fault_cnt",0x0	;; DW_AT_name
-00000bd9  6661756C745F636E    4575  	
-00000be1  7400                4575  	
-00000be3  01                  4576  		DC	0x1	;; DW_AT_external
-00000be4  00000000          + 4577  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000bd6  05                  4572  		DC	0x5	;;   size of loc_exp
+00000bd7  03                  4573  		DC	0x3	;;   DW_OP_addr
+00000bd8  00000000          + 4574  		DD	_guc_ALM_fault_cnt	;;     operand
+00000bdc  6775635F414C4D5F    4575  		DC	"guc_ALM_fault_cnt",0x0	;; DW_AT_name
+00000be4  6661756C745F636E    4575  	
+00000bec  7400                4575  	
+00000bee  01                  4576  		DC	0x1	;; DW_AT_external
+00000bef  00000000          + 4577  		DD	.LDW5-.LI_TOP	;; DW_AT_type
                               4578  	;; entry 162
-00000be8  09                  4579  		DC	0x9	;; abbrev_code
-00000be9  496F75745F70726F    4580  		DC	"Iout_prot_variable_init",0x0	;; DW_AT_name
-00000bf1  745F766172696162    4580  	
-00000bf9  6C655F696E697400    4580  	
-00000c01  00000000          + 4581  		DD	_Iout_prot_variable_init	;; DW_AT_low_pc
-00000c05  00000000          + 4582  		DD	.LDW25	;; DW_AT_high_pc
-00000c09  01                  4583  		DC	0x1	;; DW_AT_prototyped
-00000c0a  01                  4584  		DC	0x1	;; DW_AT_decl_file
-00000c0b  8301                4585  		DC	0x83,0x1	;; DW_AT_decl_line
-00000c0d  01                  4586  		DC	0x1	;; DW_AT_external
+00000bf3  09                  4579  		DC	0x9	;; abbrev_code
+00000bf4  496F75745F70726F    4580  		DC	"Iout_prot_variable_init",0x0	;; DW_AT_name
+00000bfc  745F766172696162    4580  	
+00000c04  6C655F696E697400    4580  	
+00000c0c  00000000          + 4581  		DD	_Iout_prot_variable_init	;; DW_AT_low_pc
+00000c10  00000000          + 4582  		DD	.LDW25	;; DW_AT_high_pc
+00000c14  01                  4583  		DC	0x1	;; DW_AT_prototyped
+00000c15  01                  4584  		DC	0x1	;; DW_AT_decl_file
+00000c16  8301                4585  		DC	0x83,0x1	;; DW_AT_decl_line
+00000c18  01                  4586  		DC	0x1	;; DW_AT_external
                               4587  				;; DW_AT_frame_base
-00000c0e  01                  4588  		DC	0x1	;;   size of loc_exp
-00000c0f  59                  4589  		DC	0x59	;;   DW_OP_reg9
+00000c19  01                  4588  		DC	0x1	;;   size of loc_exp
+00000c1a  59                  4589  		DC	0x59	;;   DW_OP_reg9
                               4590  	;; entry 163
-00000c10  08                  4591  		DC	0x8	;; abbrev_code
+00000c1b  08                  4591  		DC	0x8	;; abbrev_code
                               4592  				;; DW_AT_location
-00000c11  02                  4593  		DC	0x2	;;   size of loc_exp
-00000c12  91                  4594  		DC	0x91	;;   DW_OP_fbreg
-00000c13  00                  4595  		DC	0x0	;;     operand
-00000c14  6C746D703100        4596  		DC	"ltmp1",0x0	;; DW_AT_name
-00000c1a  00                  4597  		DC	0x0	;; DW_AT_external
-00000c1b  00000000          + 4598  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+00000c1c  02                  4593  		DC	0x2	;;   size of loc_exp
+00000c1d  91                  4594  		DC	0x91	;;   DW_OP_fbreg
+00000c1e  00                  4595  		DC	0x0	;;     operand
+00000c1f  6C746D703100        4596  		DC	"ltmp1",0x0	;; DW_AT_name
+00000c25  00                  4597  		DC	0x0	;; DW_AT_external
+00000c26  00000000          + 4598  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               4599  	;; NULL ENTRY 164
-00000c1f  00                  4600  		DC	0x0
+00000c2a  00                  4600  		DC	0x0
                               4601  	;; entry 165
-00000c20  09                  4602  		DC	0x9	;; abbrev_code
-00000c21  4964635F7A65726F    4603  		DC	"Idc_zero_adjust",0x0	;; DW_AT_name
-00000c29  5F61646A75737400    4603  	
-00000c31  00000000          + 4604  		DD	_Idc_zero_adjust	;; DW_AT_low_pc
-00000c35  00000000          + 4605  		DD	.LDW26	;; DW_AT_high_pc
-00000c39  01                  4606  		DC	0x1	;; DW_AT_prototyped
-00000c3a  01                  4607  		DC	0x1	;; DW_AT_decl_file
-00000c3b  CA01                4608  		DC	0xca,0x1	;; DW_AT_decl_line
-00000c3d  01                  4609  		DC	0x1	;; DW_AT_external
+00000c2b  09                  4602  		DC	0x9	;; abbrev_code
+00000c2c  4964635F7A65726F    4603  		DC	"Idc_zero_adjust",0x0	;; DW_AT_name
+00000c34  5F61646A75737400    4603  	
+00000c3c  00000000          + 4604  		DD	_Idc_zero_adjust	;; DW_AT_low_pc
+00000c40  00000000          + 4605  		DD	.LDW26	;; DW_AT_high_pc
+00000c44  01                  4606  		DC	0x1	;; DW_AT_prototyped
+00000c45  01                  4607  		DC	0x1	;; DW_AT_decl_file
+00000c46  CA01                4608  		DC	0xca,0x1	;; DW_AT_decl_line
+00000c48  01                  4609  		DC	0x1	;; DW_AT_external
                               4610  				;; DW_AT_frame_base
-00000c3e  01                  4611  		DC	0x1	;;   size of loc_exp
-00000c3f  59                  4612  		DC	0x59	;;   DW_OP_reg9
+00000c49  01                  4611  		DC	0x1	;;   size of loc_exp
+00000c4a  59                  4612  		DC	0x59	;;   DW_OP_reg9
                               4613  	;; entry 166
-00000c40  0A                  4614  		DC	0xa	;; abbrev_code
-00000c41  6C75735F4964635F    4615  		DC	"lus_Idc_ad",0x0	;; DW_AT_name
-00000c49  616400              4615  	
-00000c4c  00                  4616  		DC	0x0	;; DW_AT_external
-00000c4d  00000000          + 4617  		DD	.LDW6-.LI_TOP	;; DW_AT_type
+00000c4b  0A                  4614  		DC	0xa	;; abbrev_code
+00000c4c  6C75735F4964635F    4615  		DC	"lus_Idc_ad",0x0	;; DW_AT_name
+00000c54  616400              4615  	
+00000c57  00                  4616  		DC	0x0	;; DW_AT_external
+00000c58  00000000          + 4617  		DD	.LDW6-.LI_TOP	;; DW_AT_type
                               4618  	;; NULL ENTRY 167
-00000c51  00                  4619  		DC	0x0
+00000c5c  00                  4619  		DC	0x0
                               4620  	;; entry 168
-00000c52  09                  4621  		DC	0x9	;; abbrev_code
-00000c53  70726F745F414C4D    4622  		DC	"prot_ALM_delaytime",0x0	;; DW_AT_name
-00000c5b  5F64656C61797469    4622  	
-00000c63  6D6500              4622  	
-00000c66  00000000          + 4623  		DD	_prot_ALM_delaytime	;; DW_AT_low_pc
-00000c6a  00000000          + 4624  		DD	.LDW27	;; DW_AT_high_pc
-00000c6e  01                  4625  		DC	0x1	;; DW_AT_prototyped
-00000c6f  01                  4626  		DC	0x1	;; DW_AT_decl_file
-00000c70  F001                4627  		DC	0xf0,0x1	;; DW_AT_decl_line
-00000c72  01                  4628  		DC	0x1	;; DW_AT_external
+00000c5d  09                  4621  		DC	0x9	;; abbrev_code
+00000c5e  70726F745F414C4D    4622  		DC	"prot_ALM_delaytime",0x0	;; DW_AT_name
+00000c66  5F64656C61797469    4622  	
+00000c6e  6D6500              4622  	
+00000c71  00000000          + 4623  		DD	_prot_ALM_delaytime	;; DW_AT_low_pc
+00000c75  00000000          + 4624  		DD	.LDW27	;; DW_AT_high_pc
+00000c79  01                  4625  		DC	0x1	;; DW_AT_prototyped
+00000c7a  01                  4626  		DC	0x1	;; DW_AT_decl_file
+00000c7b  F001                4627  		DC	0xf0,0x1	;; DW_AT_decl_line
+00000c7d  01                  4628  		DC	0x1	;; DW_AT_external
                               4629  				;; DW_AT_frame_base
-00000c73  01                  4630  		DC	0x1	;;   size of loc_exp
-00000c74  59                  4631  		DC	0x59	;;   DW_OP_reg9
+00000c7e  01                  4630  		DC	0x1	;;   size of loc_exp
+00000c7f  59                  4631  		DC	0x59	;;   DW_OP_reg9
                               4632  	;; NULL ENTRY 169
-00000c75  00                  4633  		DC	0x0
+00000c80  00                  4633  		DC	0x0
                               4634  	;; entry 170
-00000c76  09                  4635  		DC	0x9	;; abbrev_code
-00000c77  414C4D5F70726F74    4636  		DC	"ALM_prot_int",0x0	;; DW_AT_name
-00000c7f  5F696E7400          4636  	
-00000c84  00000000          + 4637  		DD	_ALM_prot_int	;; DW_AT_low_pc
-00000c88  00000000          + 4638  		DD	.LDW28	;; DW_AT_high_pc
-00000c8c  01                  4639  		DC	0x1	;; DW_AT_prototyped
-00000c8d  01                  4640  		DC	0x1	;; DW_AT_decl_file
-00000c8e  9602                4641  		DC	0x96,0x2	;; DW_AT_decl_line
-00000c90  01                  4642  		DC	0x1	;; DW_AT_external
+00000c81  09                  4635  		DC	0x9	;; abbrev_code
+00000c82  414C4D5F70726F74    4636  		DC	"ALM_prot_int",0x0	;; DW_AT_name
+00000c8a  5F696E7400          4636  	
+00000c8f  00000000          + 4637  		DD	_ALM_prot_int	;; DW_AT_low_pc
+00000c93  00000000          + 4638  		DD	.LDW28	;; DW_AT_high_pc
+00000c97  01                  4639  		DC	0x1	;; DW_AT_prototyped
+00000c98  01                  4640  		DC	0x1	;; DW_AT_decl_file
+00000c99  9602                4641  		DC	0x96,0x2	;; DW_AT_decl_line
+00000c9b  01                  4642  		DC	0x1	;; DW_AT_external
                               4643  				;; DW_AT_frame_base
-00000c91  01                  4644  		DC	0x1	;;   size of loc_exp
-00000c92  59                  4645  		DC	0x59	;;   DW_OP_reg9
+00000c9c  01                  4644  		DC	0x1	;;   size of loc_exp
+00000c9d  59                  4645  		DC	0x59	;;   DW_OP_reg9
                               4646  	;; NULL ENTRY 171
-00000c93  00                  4647  		DC	0x0
+00000c9e  00                  4647  		DC	0x0
                               4648  	;; entry 172
-00000c94  09                  4649  		DC	0x9	;; abbrev_code
-00000c95  70726F745F414C4D    4650  		DC	"prot_ALM_deal",0x0	;; DW_AT_name
-00000c9d  5F6465616C00        4650  	
-00000ca3  00000000          + 4651  		DD	_prot_ALM_deal	;; DW_AT_low_pc
-00000ca7  00000000          + 4652  		DD	.LDW29	;; DW_AT_high_pc
-00000cab  01                  4653  		DC	0x1	;; DW_AT_prototyped
-00000cac  01                  4654  		DC	0x1	;; DW_AT_decl_file
-00000cad  B202                4655  		DC	0xb2,0x2	;; DW_AT_decl_line
-00000caf  01                  4656  		DC	0x1	;; DW_AT_external
+00000c9f  09                  4649  		DC	0x9	;; abbrev_code
+00000ca0  70726F745F414C4D    4650  		DC	"prot_ALM_deal",0x0	;; DW_AT_name
+00000ca8  5F6465616C00        4650  	
+00000cae  00000000          + 4651  		DD	_prot_ALM_deal	;; DW_AT_low_pc
+00000cb2  00000000          + 4652  		DD	.LDW29	;; DW_AT_high_pc
+00000cb6  01                  4653  		DC	0x1	;; DW_AT_prototyped
+00000cb7  01                  4654  		DC	0x1	;; DW_AT_decl_file
+00000cb8  B202                4655  		DC	0xb2,0x2	;; DW_AT_decl_line
+00000cba  01                  4656  		DC	0x1	;; DW_AT_external
                               4657  				;; DW_AT_frame_base
-00000cb0  01                  4658  		DC	0x1	;;   size of loc_exp
-00000cb1  59                  4659  		DC	0x59	;;   DW_OP_reg9
+00000cbb  01                  4658  		DC	0x1	;;   size of loc_exp
+00000cbc  59                  4659  		DC	0x59	;;   DW_OP_reg9
                               4660  	;; NULL ENTRY 173
-00000cb2  00                  4661  		DC	0x0
+00000cbd  00                  4661  		DC	0x0
                               4662  	;; entry 174
-00000cb3  09                  4663  		DC	0x9	;; abbrev_code
-00000cb4  70726F745F496F75    4664  		DC	"prot_Iout_POC_deal",0x0	;; DW_AT_name
-00000cbc  745F504F435F6465    4664  	
-00000cc4  616C00              4664  	
-00000cc7  00000000          + 4665  		DD	_prot_Iout_POC_deal	;; DW_AT_low_pc
-00000ccb  00000000          + 4666  		DD	.LDW30	;; DW_AT_high_pc
-00000ccf  01                  4667  		DC	0x1	;; DW_AT_prototyped
-00000cd0  01                  4668  		DC	0x1	;; DW_AT_decl_file
-00000cd1  D302                4669  		DC	0xd3,0x2	;; DW_AT_decl_line
-00000cd3  01                  4670  		DC	0x1	;; DW_AT_external
+00000cbe  09                  4663  		DC	0x9	;; abbrev_code
+00000cbf  70726F745F496F75    4664  		DC	"prot_Iout_POC_deal",0x0	;; DW_AT_name
+00000cc7  745F504F435F6465    4664  	
+00000ccf  616C00              4664  	
+00000cd2  00000000          + 4665  		DD	_prot_Iout_POC_deal	;; DW_AT_low_pc
+00000cd6  00000000          + 4666  		DD	.LDW30	;; DW_AT_high_pc
+00000cda  01                  4667  		DC	0x1	;; DW_AT_prototyped
+00000cdb  01                  4668  		DC	0x1	;; DW_AT_decl_file
+00000cdc  D302                4669  		DC	0xd3,0x2	;; DW_AT_decl_line
+00000cde  01                  4670  		DC	0x1	;; DW_AT_external
                               4671  				;; DW_AT_frame_base
-00000cd4  01                  4672  		DC	0x1	;;   size of loc_exp
-00000cd5  59                  4673  		DC	0x59	;;   DW_OP_reg9
+00000cdf  01                  4672  		DC	0x1	;;   size of loc_exp
+00000ce0  59                  4673  		DC	0x59	;;   DW_OP_reg9
                               4674  	;; entry 175
-00000cd6  0B                  4675  		DC	0xb	;; abbrev_code
-00000cd7  6C73735F496F7574    4676  		DC	"lss_Iout_ad",0x0	;; DW_AT_name
-00000cdf  5F616400            4676  	
-00000ce3  00                  4677  		DC	0x0	;; DW_AT_external
-00000ce4  00000000          + 4678  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000ce8  00000000          + 4679  		DD	.LDW155	;; DW_AT_MN_resource
+00000ce1  0B                  4675  		DC	0xb	;; abbrev_code
+00000ce2  6C73735F496F7574    4676  		DC	"lss_Iout_ad",0x0	;; DW_AT_name
+00000cea  5F616400            4676  	
+00000cee  00                  4677  		DC	0x0	;; DW_AT_external
+00000cef  00000000          + 4678  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000cf3  00000000          + 4679  		DD	.LDW155	;; DW_AT_MN_resource
                               4680  	;; NULL ENTRY 176
-00000cec  00                  4681  		DC	0x0
+00000cf7  00                  4681  		DC	0x0
                               4682  	;; entry 177
-00000ced  09                  4683  		DC	0x9	;; abbrev_code
-00000cee  70726F745F496F75    4684  		DC	"prot_Iout_delaytime",0x0	;; DW_AT_name
-00000cf6  745F64656C617974    4684  	
-00000cfe  696D6500            4684  	
-00000d02  00000000          + 4685  		DD	_prot_Iout_delaytime	;; DW_AT_low_pc
-00000d06  00000000          + 4686  		DD	.LDW31	;; DW_AT_high_pc
-00000d0a  01                  4687  		DC	0x1	;; DW_AT_prototyped
-00000d0b  01                  4688  		DC	0x1	;; DW_AT_decl_file
-00000d0c  FB02                4689  		DC	0xfb,0x2	;; DW_AT_decl_line
-00000d0e  01                  4690  		DC	0x1	;; DW_AT_external
+00000cf8  09                  4683  		DC	0x9	;; abbrev_code
+00000cf9  70726F745F496F75    4684  		DC	"prot_Iout_delaytime",0x0	;; DW_AT_name
+00000d01  745F64656C617974    4684  	
+00000d09  696D6500            4684  	
+00000d0d  00000000          + 4685  		DD	_prot_Iout_delaytime	;; DW_AT_low_pc
+00000d11  00000000          + 4686  		DD	.LDW31	;; DW_AT_high_pc
+00000d15  01                  4687  		DC	0x1	;; DW_AT_prototyped
+00000d16  01                  4688  		DC	0x1	;; DW_AT_decl_file
+00000d17  FB02                4689  		DC	0xfb,0x2	;; DW_AT_decl_line
+00000d19  01                  4690  		DC	0x1	;; DW_AT_external
                               4691  				;; DW_AT_frame_base
-00000d0f  01                  4692  		DC	0x1	;;   size of loc_exp
-00000d10  59                  4693  		DC	0x59	;;   DW_OP_reg9
+00000d1a  01                  4692  		DC	0x1	;;   size of loc_exp
+00000d1b  59                  4693  		DC	0x59	;;   DW_OP_reg9
                               4694  	;; entry 178
-00000d11  0B                  4695  		DC	0xb	;; abbrev_code
-00000d12  6C73735F746D7000    4696  		DC	"lss_tmp",0x0	;; DW_AT_name
-00000d1a  00                  4697  		DC	0x0	;; DW_AT_external
-00000d1b  00000000          + 4698  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000d1f  00000000          + 4699  		DD	.LDW180	;; DW_AT_MN_resource
+00000d1c  0B                  4695  		DC	0xb	;; abbrev_code
+00000d1d  6C73735F746D7000    4696  		DC	"lss_tmp",0x0	;; DW_AT_name
+00000d25  00                  4697  		DC	0x0	;; DW_AT_external
+00000d26  00000000          + 4698  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000d2a  00000000          + 4699  		DD	.LDW180	;; DW_AT_MN_resource
                               4700  	;; NULL ENTRY 179
-00000d23  00                  4701  		DC	0x0
+00000d2e  00                  4701  		DC	0x0
                               4702  	;; entry 180
-00000d24  09                  4703  		DC	0x9	;; abbrev_code
-00000d25  5564635F70726F74    4704  		DC	"Udc_prot_variable_init",0x0	;; DW_AT_name
-00000d2d  5F7661726961626C    4704  	
-00000d35  655F696E697400      4704  	
-00000d3c  00000000          + 4705  		DD	_Udc_prot_variable_init	;; DW_AT_low_pc
-00000d40  00000000          + 4706  		DD	.LDW32	;; DW_AT_high_pc
-00000d44  01                  4707  		DC	0x1	;; DW_AT_prototyped
-00000d45  01                  4708  		DC	0x1	;; DW_AT_decl_file
-00000d46  A604                4709  		DC	0xa6,0x4	;; DW_AT_decl_line
-00000d48  01                  4710  		DC	0x1	;; DW_AT_external
+00000d2f  09                  4703  		DC	0x9	;; abbrev_code
+00000d30  5564635F70726F74    4704  		DC	"Udc_prot_variable_init",0x0	;; DW_AT_name
+00000d38  5F7661726961626C    4704  	
+00000d40  655F696E697400      4704  	
+00000d47  00000000          + 4705  		DD	_Udc_prot_variable_init	;; DW_AT_low_pc
+00000d4b  00000000          + 4706  		DD	.LDW32	;; DW_AT_high_pc
+00000d4f  01                  4707  		DC	0x1	;; DW_AT_prototyped
+00000d50  01                  4708  		DC	0x1	;; DW_AT_decl_file
+00000d51  A604                4709  		DC	0xa6,0x4	;; DW_AT_decl_line
+00000d53  01                  4710  		DC	0x1	;; DW_AT_external
                               4711  				;; DW_AT_frame_base
-00000d49  01                  4712  		DC	0x1	;;   size of loc_exp
-00000d4a  59                  4713  		DC	0x59	;;   DW_OP_reg9
+00000d54  01                  4712  		DC	0x1	;;   size of loc_exp
+00000d55  59                  4713  		DC	0x59	;;   DW_OP_reg9
                               4714  	;; entry 181
-00000d4b  08                  4715  		DC	0x8	;; abbrev_code
+00000d56  08                  4715  		DC	0x8	;; abbrev_code
                               4716  				;; DW_AT_location
-00000d4c  02                  4717  		DC	0x2	;;   size of loc_exp
-00000d4d  91                  4718  		DC	0x91	;;   DW_OP_fbreg
-00000d4e  00                  4719  		DC	0x0	;;     operand
-00000d4f  6C746D703100        4720  		DC	"ltmp1",0x0	;; DW_AT_name
-00000d55  00                  4721  		DC	0x0	;; DW_AT_external
-00000d56  00000000          + 4722  		DD	.LDW18-.LI_TOP	;; DW_AT_type
+00000d57  02                  4717  		DC	0x2	;;   size of loc_exp
+00000d58  91                  4718  		DC	0x91	;;   DW_OP_fbreg
+00000d59  00                  4719  		DC	0x0	;;     operand
+00000d5a  6C746D703100        4720  		DC	"ltmp1",0x0	;; DW_AT_name
+00000d60  00                  4721  		DC	0x0	;; DW_AT_external
+00000d61  00000000          + 4722  		DD	.LDW18-.LI_TOP	;; DW_AT_type
                               4723  	;; NULL ENTRY 182
-00000d5a  00                  4724  		DC	0x0
+00000d65  00                  4724  		DC	0x0
                               4725  	;; entry 183
-00000d5b  09                  4726  		DC	0x9	;; abbrev_code
-00000d5c  70726F745F556463    4727  		DC	"prot_Udc_POU_deal",0x0	;; DW_AT_name
-00000d64  5F504F555F646561    4727  	
-00000d6c  6C00                4727  	
-00000d6e  00000000          + 4728  		DD	_prot_Udc_POU_deal	;; DW_AT_low_pc
-00000d72  00000000          + 4729  		DD	.LDW33	;; DW_AT_high_pc
-00000d76  01                  4730  		DC	0x1	;; DW_AT_prototyped
-00000d77  01                  4731  		DC	0x1	;; DW_AT_decl_file
-00000d78  B504                4732  		DC	0xb5,0x4	;; DW_AT_decl_line
-00000d7a  01                  4733  		DC	0x1	;; DW_AT_external
+00000d66  09                  4726  		DC	0x9	;; abbrev_code
+00000d67  70726F745F556463    4727  		DC	"prot_Udc_POU_deal",0x0	;; DW_AT_name
+00000d6f  5F504F555F646561    4727  	
+00000d77  6C00                4727  	
+00000d79  00000000          + 4728  		DD	_prot_Udc_POU_deal	;; DW_AT_low_pc
+00000d7d  00000000          + 4729  		DD	.LDW33	;; DW_AT_high_pc
+00000d81  01                  4730  		DC	0x1	;; DW_AT_prototyped
+00000d82  01                  4731  		DC	0x1	;; DW_AT_decl_file
+00000d83  B504                4732  		DC	0xb5,0x4	;; DW_AT_decl_line
+00000d85  01                  4733  		DC	0x1	;; DW_AT_external
                               4734  				;; DW_AT_frame_base
-00000d7b  01                  4735  		DC	0x1	;;   size of loc_exp
-00000d7c  59                  4736  		DC	0x59	;;   DW_OP_reg9
+00000d86  01                  4735  		DC	0x1	;;   size of loc_exp
+00000d87  59                  4736  		DC	0x59	;;   DW_OP_reg9
                               4737  	;; NULL ENTRY 184
-00000d7d  00                  4738  		DC	0x0
+00000d88  00                  4738  		DC	0x0
                               4739  	;; entry 185
-00000d7e  09                  4740  		DC	0x9	;; abbrev_code
-00000d7f  70726F745F556463    4741  		DC	"prot_Udc_delaytime",0x0	;; DW_AT_name
-00000d87  5F64656C61797469    4741  	
-00000d8f  6D6500              4741  	
-00000d92  00000000          + 4742  		DD	_prot_Udc_delaytime	;; DW_AT_low_pc
-00000d96  00000000          + 4743  		DD	.LDW34	;; DW_AT_high_pc
-00000d9a  01                  4744  		DC	0x1	;; DW_AT_prototyped
-00000d9b  01                  4745  		DC	0x1	;; DW_AT_decl_file
-00000d9c  D604                4746  		DC	0xd6,0x4	;; DW_AT_decl_line
-00000d9e  01                  4747  		DC	0x1	;; DW_AT_external
+00000d89  09                  4740  		DC	0x9	;; abbrev_code
+00000d8a  70726F745F556463    4741  		DC	"prot_Udc_delaytime",0x0	;; DW_AT_name
+00000d92  5F64656C61797469    4741  	
+00000d9a  6D6500              4741  	
+00000d9d  00000000          + 4742  		DD	_prot_Udc_delaytime	;; DW_AT_low_pc
+00000da1  00000000          + 4743  		DD	.LDW34	;; DW_AT_high_pc
+00000da5  01                  4744  		DC	0x1	;; DW_AT_prototyped
+00000da6  01                  4745  		DC	0x1	;; DW_AT_decl_file
+00000da7  D604                4746  		DC	0xd6,0x4	;; DW_AT_decl_line
+00000da9  01                  4747  		DC	0x1	;; DW_AT_external
                               4748  				;; DW_AT_frame_base
-00000d9f  01                  4749  		DC	0x1	;;   size of loc_exp
-00000da0  59                  4750  		DC	0x59	;;   DW_OP_reg9
+00000daa  01                  4749  		DC	0x1	;;   size of loc_exp
+00000dab  59                  4750  		DC	0x59	;;   DW_OP_reg9
                               4751  	;; NULL ENTRY 186
-00000da1  00                  4752  		DC	0x0
+00000dac  00                  4752  		DC	0x0
                               4753  	;; entry 187
-00000da2  09                  4754  		DC	0x9	;; abbrev_code
-00000da3  70726F745F546D5F    4755  		DC	"prot_Tm_delaytime",0x0	;; DW_AT_name
-00000dab  64656C617974696D    4755  	
-00000db3  6500                4755  	
-00000db5  00000000          + 4756  		DD	_prot_Tm_delaytime	;; DW_AT_low_pc
-00000db9  00000000          + 4757  		DD	.LDW35	;; DW_AT_high_pc
-00000dbd  01                  4758  		DC	0x1	;; DW_AT_prototyped
-00000dbe  01                  4759  		DC	0x1	;; DW_AT_decl_file
-00000dbf  9B05                4760  		DC	0x9b,0x5	;; DW_AT_decl_line
-00000dc1  01                  4761  		DC	0x1	;; DW_AT_external
+00000dad  09                  4754  		DC	0x9	;; abbrev_code
+00000dae  70726F745F546D5F    4755  		DC	"prot_Tm_delaytime",0x0	;; DW_AT_name
+00000db6  64656C617974696D    4755  	
+00000dbe  6500                4755  	
+00000dc0  00000000          + 4756  		DD	_prot_Tm_delaytime	;; DW_AT_low_pc
+00000dc4  00000000          + 4757  		DD	.LDW35	;; DW_AT_high_pc
+00000dc8  01                  4758  		DC	0x1	;; DW_AT_prototyped
+00000dc9  01                  4759  		DC	0x1	;; DW_AT_decl_file
+00000dca  9B05                4760  		DC	0x9b,0x5	;; DW_AT_decl_line
+00000dcc  01                  4761  		DC	0x1	;; DW_AT_external
                               4762  				;; DW_AT_frame_base
-00000dc2  01                  4763  		DC	0x1	;;   size of loc_exp
-00000dc3  59                  4764  		DC	0x59	;;   DW_OP_reg9
+00000dcd  01                  4763  		DC	0x1	;;   size of loc_exp
+00000dce  59                  4764  		DC	0x59	;;   DW_OP_reg9
                               4765  	;; entry 188
-00000dc4  0B                  4766  		DC	0xb	;; abbrev_code
-00000dc5  6C73735F746D7000    4767  		DC	"lss_tmp",0x0	;; DW_AT_name
-00000dcd  00                  4768  		DC	0x0	;; DW_AT_external
-00000dce  00000000          + 4769  		DD	.LDW2-.LI_TOP	;; DW_AT_type
-00000dd2  00000000          + 4770  		DD	.LDW324	;; DW_AT_MN_resource
+00000dcf  0B                  4766  		DC	0xb	;; abbrev_code
+00000dd0  6C73735F746D7000    4767  		DC	"lss_tmp",0x0	;; DW_AT_name
+00000dd8  00                  4768  		DC	0x0	;; DW_AT_external
+00000dd9  00000000          + 4769  		DD	.LDW2-.LI_TOP	;; DW_AT_type
+00000ddd  00000000          + 4770  		DD	.LDW324	;; DW_AT_MN_resource
                               4771  	;; NULL ENTRY 189
-00000dd6  00                  4772  		DC	0x0
+00000de1  00                  4772  		DC	0x0
                               4773  	;; entry 190
-00000dd7  09                  4774  		DC	0x9	;; abbrev_code
-00000dd8  70726F745F6D6F74    4775  		DC	"prot_motor_stall_delaytime",0x0	;; DW_AT_name
-00000de0  6F725F7374616C6C    4775  	
-00000de8  5F64656C61797469    4775  	
-00000df0  6D6500              4775  	
-00000df3  00000000          + 4776  		DD	_prot_motor_stall_delaytime	;; DW_AT_low_pc
-00000df7  00000000          + 4777  		DD	.LDW36	;; DW_AT_high_pc
-00000dfb  01                  4778  		DC	0x1	;; DW_AT_prototyped
-00000dfc  01                  4779  		DC	0x1	;; DW_AT_decl_file
-00000dfd  9B06                4780  		DC	0x9b,0x6	;; DW_AT_decl_line
-00000dff  01                  4781  		DC	0x1	;; DW_AT_external
+00000de2  09                  4774  		DC	0x9	;; abbrev_code
+00000de3  70726F745F6D6F74    4775  		DC	"prot_motor_stall_delaytime",0x0	;; DW_AT_name
+00000deb  6F725F7374616C6C    4775  	
+00000df3  5F64656C61797469    4775  	
+00000dfb  6D6500              4775  	
+00000dfe  00000000          + 4776  		DD	_prot_motor_stall_delaytime	;; DW_AT_low_pc
+00000e02  00000000          + 4777  		DD	.LDW36	;; DW_AT_high_pc
+00000e06  01                  4778  		DC	0x1	;; DW_AT_prototyped
+00000e07  01                  4779  		DC	0x1	;; DW_AT_decl_file
+00000e08  9B06                4780  		DC	0x9b,0x6	;; DW_AT_decl_line
+00000e0a  01                  4781  		DC	0x1	;; DW_AT_external
                               4782  				;; DW_AT_frame_base
-00000e00  01                  4783  		DC	0x1	;;   size of loc_exp
-00000e01  59                  4784  		DC	0x59	;;   DW_OP_reg9
+00000e0b  01                  4783  		DC	0x1	;;   size of loc_exp
+00000e0c  59                  4784  		DC	0x59	;;   DW_OP_reg9
                               4785  	;; NULL ENTRY 191
-00000e02  00                  4786  		DC	0x0
+00000e0d  00                  4786  		DC	0x0
                               4787  	;; entry 192
-00000e03  09                  4788  		DC	0x9	;; abbrev_code
-00000e04  70726F745F6D6F74    4789  		DC	"prot_motor_block_delaytime",0x0	;; DW_AT_name
-00000e0c  6F725F626C6F636B    4789  	
-00000e14  5F64656C61797469    4789  	
-00000e1c  6D6500              4789  	
-00000e1f  00000000          + 4790  		DD	_prot_motor_block_delaytime	;; DW_AT_low_pc
-00000e23  00000000          + 4791  		DD	.LDW37	;; DW_AT_high_pc
-00000e27  01                  4792  		DC	0x1	;; DW_AT_prototyped
-00000e28  01                  4793  		DC	0x1	;; DW_AT_decl_file
-00000e29  BC06                4794  		DC	0xbc,0x6	;; DW_AT_decl_line
-00000e2b  01                  4795  		DC	0x1	;; DW_AT_external
+00000e0e  09                  4788  		DC	0x9	;; abbrev_code
+00000e0f  70726F745F6D6F74    4789  		DC	"prot_motor_block_delaytime",0x0	;; DW_AT_name
+00000e17  6F725F626C6F636B    4789  	
+00000e1f  5F64656C61797469    4789  	
+00000e27  6D6500              4789  	
+00000e2a  00000000          + 4790  		DD	_prot_motor_block_delaytime	;; DW_AT_low_pc
+00000e2e  00000000          + 4791  		DD	.LDW37	;; DW_AT_high_pc
+00000e32  01                  4792  		DC	0x1	;; DW_AT_prototyped
+00000e33  01                  4793  		DC	0x1	;; DW_AT_decl_file
+00000e34  BC06                4794  		DC	0xbc,0x6	;; DW_AT_decl_line
+00000e36  01                  4795  		DC	0x1	;; DW_AT_external
                               4796  				;; DW_AT_frame_base
-00000e2c  01                  4797  		DC	0x1	;;   size of loc_exp
-00000e2d  59                  4798  		DC	0x59	;;   DW_OP_reg9
+00000e37  01                  4797  		DC	0x1	;;   size of loc_exp
+00000e38  59                  4798  		DC	0x59	;;   DW_OP_reg9
                               4799  	;; NULL ENTRY 193
-00000e2e  00                  4800  		DC	0x0
+00000e39  00                  4800  		DC	0x0
                               4801  	;; entry 194
-00000e2f  09                  4802  		DC	0x9	;; abbrev_code
-00000e30  70726F745F6D6F74    4803  		DC	"prot_motor_overspeed_delaytime",0x0	;; DW_AT_name
-00000e38  6F725F6F76657273    4803  	
-00000e40  706565645F64656C    4803  	
-00000e48  617974696D6500      4803  	
-00000e4f  00000000          + 4804  		DD	_prot_motor_overspeed_delaytime	;; DW_AT_low_pc
-00000e53  00000000          + 4805  		DD	.LDW38	;; DW_AT_high_pc
-00000e57  01                  4806  		DC	0x1	;; DW_AT_prototyped
-00000e58  01                  4807  		DC	0x1	;; DW_AT_decl_file
-00000e59  D806                4808  		DC	0xd8,0x6	;; DW_AT_decl_line
-00000e5b  01                  4809  		DC	0x1	;; DW_AT_external
+00000e3a  09                  4802  		DC	0x9	;; abbrev_code
+00000e3b  70726F745F6D6F74    4803  		DC	"prot_motor_overspeed_delaytime",0x0	;; DW_AT_name
+00000e43  6F725F6F76657273    4803  	
+00000e4b  706565645F64656C    4803  	
+00000e53  617974696D6500      4803  	
+00000e5a  00000000          + 4804  		DD	_prot_motor_overspeed_delaytime	;; DW_AT_low_pc
+00000e5e  00000000          + 4805  		DD	.LDW38	;; DW_AT_high_pc
+00000e62  01                  4806  		DC	0x1	;; DW_AT_prototyped
+00000e63  01                  4807  		DC	0x1	;; DW_AT_decl_file
+00000e64  D806                4808  		DC	0xd8,0x6	;; DW_AT_decl_line
+00000e66  01                  4809  		DC	0x1	;; DW_AT_external
                               4810  				;; DW_AT_frame_base
-00000e5c  01                  4811  		DC	0x1	;;   size of loc_exp
-00000e5d  59                  4812  		DC	0x59	;;   DW_OP_reg9
+00000e67  01                  4811  		DC	0x1	;;   size of loc_exp
+00000e68  59                  4812  		DC	0x59	;;   DW_OP_reg9
                               4813  	;; NULL ENTRY 195
-00000e5e  00                  4814  		DC	0x0
+00000e69  00                  4814  		DC	0x0
                               4815  	;; entry 196
-00000e5f  09                  4816  		DC	0x9	;; abbrev_code
-00000e60  747269705F636F64    4817  		DC	"trip_code_deal",0x0	;; DW_AT_name
-00000e68  655F6465616C00      4817  	
-00000e6f  00000000          + 4818  		DD	_trip_code_deal	;; DW_AT_low_pc
-00000e73  00000000          + 4819  		DD	.LDW39	;; DW_AT_high_pc
-00000e77  01                  4820  		DC	0x1	;; DW_AT_prototyped
-00000e78  01                  4821  		DC	0x1	;; DW_AT_decl_file
-00000e79  F306                4822  		DC	0xf3,0x6	;; DW_AT_decl_line
-00000e7b  01                  4823  		DC	0x1	;; DW_AT_external
+00000e6a  09                  4816  		DC	0x9	;; abbrev_code
+00000e6b  747269705F636F64    4817  		DC	"trip_code_deal",0x0	;; DW_AT_name
+00000e73  655F6465616C00      4817  	
+00000e7a  00000000          + 4818  		DD	_trip_code_deal	;; DW_AT_low_pc
+00000e7e  00000000          + 4819  		DD	.LDW39	;; DW_AT_high_pc
+00000e82  01                  4820  		DC	0x1	;; DW_AT_prototyped
+00000e83  01                  4821  		DC	0x1	;; DW_AT_decl_file
+00000e84  F306                4822  		DC	0xf3,0x6	;; DW_AT_decl_line
+00000e86  01                  4823  		DC	0x1	;; DW_AT_external
                               4824  				;; DW_AT_frame_base
-00000e7c  01                  4825  		DC	0x1	;;   size of loc_exp
-00000e7d  59                  4826  		DC	0x59	;;   DW_OP_reg9
+00000e87  01                  4825  		DC	0x1	;;   size of loc_exp
+00000e88  59                  4826  		DC	0x59	;;   DW_OP_reg9
                               4827  	;; NULL ENTRY 197
-00000e7e  00                  4828  		DC	0x0
+00000e89  00                  4828  		DC	0x0
                               4829  	;; entry 198
-00000e7f  09                  4830  		DC	0x9	;; abbrev_code
-00000e80  73746174655F636F    4831  		DC	"state_code_deal",0x0	;; DW_AT_name
-00000e88  64655F6465616C00    4831  	
-00000e90  00000000          + 4832  		DD	_state_code_deal	;; DW_AT_low_pc
-00000e94  00000000          + 4833  		DD	.LDW40	;; DW_AT_high_pc
-00000e98  01                  4834  		DC	0x1	;; DW_AT_prototyped
-00000e99  01                  4835  		DC	0x1	;; DW_AT_decl_file
-00000e9a  DC07                4836  		DC	0xdc,0x7	;; DW_AT_decl_line
-00000e9c  01                  4837  		DC	0x1	;; DW_AT_external
+00000e8a  09                  4830  		DC	0x9	;; abbrev_code
+00000e8b  73746174655F636F    4831  		DC	"state_code_deal",0x0	;; DW_AT_name
+00000e93  64655F6465616C00    4831  	
+00000e9b  00000000          + 4832  		DD	_state_code_deal	;; DW_AT_low_pc
+00000e9f  00000000          + 4833  		DD	.LDW40	;; DW_AT_high_pc
+00000ea3  01                  4834  		DC	0x1	;; DW_AT_prototyped
+00000ea4  01                  4835  		DC	0x1	;; DW_AT_decl_file
+00000ea5  DC07                4836  		DC	0xdc,0x7	;; DW_AT_decl_line
+00000ea7  01                  4837  		DC	0x1	;; DW_AT_external
                               4838  				;; DW_AT_frame_base
-00000e9d  01                  4839  		DC	0x1	;;   size of loc_exp
-00000e9e  59                  4840  		DC	0x59	;;   DW_OP_reg9
+00000ea8  01                  4839  		DC	0x1	;;   size of loc_exp
+00000ea9  59                  4840  		DC	0x59	;;   DW_OP_reg9
                               4841  	;; NULL ENTRY 199
-00000e9f  00                  4842  		DC	0x0
+00000eaa  00                  4842  		DC	0x0
                               4843  	;; entry 200
-00000ea0  09                  4844  		DC	0x9	;; abbrev_code
-00000ea1  747269705F73746F    4845  		DC	"trip_stop_deal",0x0	;; DW_AT_name
-00000ea9  705F6465616C00      4845  	
-00000eb0  00000000          + 4846  		DD	_trip_stop_deal	;; DW_AT_low_pc
-00000eb4  00000000          + 4847  		DD	.LDW41	;; DW_AT_high_pc
-00000eb8  01                  4848  		DC	0x1	;; DW_AT_prototyped
-00000eb9  01                  4849  		DC	0x1	;; DW_AT_decl_file
-00000eba  F807                4850  		DC	0xf8,0x7	;; DW_AT_decl_line
-00000ebc  01                  4851  		DC	0x1	;; DW_AT_external
+00000eab  09                  4844  		DC	0x9	;; abbrev_code
+00000eac  747269705F73746F    4845  		DC	"trip_stop_deal",0x0	;; DW_AT_name
+00000eb4  705F6465616C00      4845  	
+00000ebb  00000000          + 4846  		DD	_trip_stop_deal	;; DW_AT_low_pc
+00000ebf  00000000          + 4847  		DD	.LDW41	;; DW_AT_high_pc
+00000ec3  01                  4848  		DC	0x1	;; DW_AT_prototyped
+00000ec4  01                  4849  		DC	0x1	;; DW_AT_decl_file
+00000ec5  F807                4850  		DC	0xf8,0x7	;; DW_AT_decl_line
+00000ec7  01                  4851  		DC	0x1	;; DW_AT_external
                               4852  				;; DW_AT_frame_base
-00000ebd  01                  4853  		DC	0x1	;;   size of loc_exp
-00000ebe  59                  4854  		DC	0x59	;;   DW_OP_reg9
+00000ec8  01                  4853  		DC	0x1	;;   size of loc_exp
+00000ec9  59                  4854  		DC	0x59	;;   DW_OP_reg9
                               4855  	;; entry 201
-00000ebf  0C                  4856  		DC	0xc	;; abbrev_code
-00000ec0  6C75635F74726970    4857  		DC	"luc_trip_code",0x0	;; DW_AT_name
-00000ec8  5F636F646500        4857  	
-00000ece  00000000          + 4858  		DD	.LDW5-.LI_TOP	;; DW_AT_type
-00000ed2  00000000          + 4859  		DD	.LDW517	;; DW_AT_MN_resource
+00000eca  0C                  4856  		DC	0xc	;; abbrev_code
+00000ecb  6C75635F74726970    4857  		DC	"luc_trip_code",0x0	;; DW_AT_name
+00000ed3  5F636F646500        4857  	
+00000ed9  00000000          + 4858  		DD	.LDW5-.LI_TOP	;; DW_AT_type
+00000edd  00000000          + 4859  		DD	.LDW517	;; DW_AT_MN_resource
                               4860  	;; NULL ENTRY 202
-00000ed6  00                  4861  		DC	0x0
+00000ee1  00                  4861  		DC	0x0
                               4862  	;; entry 203
-00000ed7  09                  4863  		DC	0x9	;; abbrev_code
-00000ed8  747269705F6C6F63    4864  		DC	"trip_lock_delaytime",0x0	;; DW_AT_name
-00000ee0  6B5F64656C617974    4864  	
-00000ee8  696D6500            4864  	
-00000eec  00000000          + 4865  		DD	_trip_lock_delaytime	;; DW_AT_low_pc
-00000ef0  00000000          + 4866  		DD	.LDW42	;; DW_AT_high_pc
-00000ef4  01                  4867  		DC	0x1	;; DW_AT_prototyped
-00000ef5  01                  4868  		DC	0x1	;; DW_AT_decl_file
-00000ef6  DE08                4869  		DC	0xde,0x8	;; DW_AT_decl_line
-00000ef8  01                  4870  		DC	0x1	;; DW_AT_external
+00000ee2  09                  4863  		DC	0x9	;; abbrev_code
+00000ee3  747269705F6C6F63    4864  		DC	"trip_lock_delaytime",0x0	;; DW_AT_name
+00000eeb  6B5F64656C617974    4864  	
+00000ef3  696D6500            4864  	
+00000ef7  00000000          + 4865  		DD	_trip_lock_delaytime	;; DW_AT_low_pc
+00000efb  00000000          + 4866  		DD	.LDW42	;; DW_AT_high_pc
+00000eff  01                  4867  		DC	0x1	;; DW_AT_prototyped
+00000f00  01                  4868  		DC	0x1	;; DW_AT_decl_file
+00000f01  DE08                4869  		DC	0xde,0x8	;; DW_AT_decl_line
+00000f03  01                  4870  		DC	0x1	;; DW_AT_external
                               4871  				;; DW_AT_frame_base
-00000ef9  01                  4872  		DC	0x1	;;   size of loc_exp
-00000efa  59                  4873  		DC	0x59	;;   DW_OP_reg9
+00000f04  01                  4872  		DC	0x1	;;   size of loc_exp
+00000f05  59                  4873  		DC	0x59	;;   DW_OP_reg9
                               4874  	;; NULL ENTRY 204
-00000efb  00                  4875  		DC	0x0
+00000f06  00                  4875  		DC	0x0
                               4876  	;; NULL ENTRY 205
-00000efc  00                  4877  		DC	0x0
-00000efd                      4878  	.LI_E
+00000f07  00                  4877  		DC	0x0
+00000f08                      4878  	.LI_E
                               4879  	;; End of Debugging Information Entries
                               4880  	.debug_line		SECTION
                               4881  	;; Line Number Information
@@ -7415,7 +7416,7 @@ Loc       Object            Line        Source
                               7225  	;; End of Aranges Information
                               7226  		END
                               7227  	;;ENDFILE 
-                                                OP0c.lst	Page 2
+                                                OP0g.lst	Page 2
 *** Symbol Table ***
 Address/Value	Class	Section			  Symbol
 
@@ -8289,33 +8290,33 @@ Address/Value	Class	Section			  Symbol
 00001345	L	.text                     .LPC_END
 00000000	L	.debug_abbrev             .LAB_TOP
 00000000	L	.debug_info               .LI_TOP
-00000efd	L	.debug_info               .LI_E
+00000f08	L	.debug_info               .LI_E
 00000004	L	.debug_info               .LI_B
 00000000	L	.debug_line               .LLN_TOP
-0000009f	L	.debug_info               .LDW10
-000000aa	L	.debug_info               .LDW9
-000000b4	L	.debug_info               .LDW8
-000000c2	L	.debug_info               .LDW7
-000000cb	L	.debug_info               .LDW6
-000000d5	L	.debug_info               .LDW5
-000000de	L	.debug_info               .LDW4
-000000ec	L	.debug_info               .LDW3
-000000f5	L	.debug_info               .LDW2
-000000ff	L	.debug_info               .LDW1
-0000019c	L	.debug_info               .LDW11
-000001b8	L	.debug_info               .LDW12
-000001d4	L	.debug_info               .LDW13
-00000224	L	.debug_info               .LDW14
-00000240	L	.debug_info               .LDW15
-0000026f	L	.debug_info               .LDW16
-0000028b	L	.debug_info               .LDW17
-000002ba	L	.debug_info               .LDW18
-00000320	L	.debug_info               .LDW19
-0000033c	L	.debug_info               .LDW20
-00000358	L	.debug_info               .LDW21
-000003a0	L	.debug_info               .LDW22
-000004a9	L	.debug_info               .LDW23
-000004d6	L	.debug_info               .LDW24
+000000aa	L	.debug_info               .LDW10
+000000b5	L	.debug_info               .LDW9
+000000bf	L	.debug_info               .LDW8
+000000cd	L	.debug_info               .LDW7
+000000d6	L	.debug_info               .LDW6
+000000e0	L	.debug_info               .LDW5
+000000e9	L	.debug_info               .LDW4
+000000f7	L	.debug_info               .LDW3
+00000100	L	.debug_info               .LDW2
+0000010a	L	.debug_info               .LDW1
+000001a7	L	.debug_info               .LDW11
+000001c3	L	.debug_info               .LDW12
+000001df	L	.debug_info               .LDW13
+0000022f	L	.debug_info               .LDW14
+0000024b	L	.debug_info               .LDW15
+0000027a	L	.debug_info               .LDW16
+00000296	L	.debug_info               .LDW17
+000002c5	L	.debug_info               .LDW18
+0000032b	L	.debug_info               .LDW19
+00000347	L	.debug_info               .LDW20
+00000363	L	.debug_info               .LDW21
+000003ab	L	.debug_info               .LDW22
+000004b4	L	.debug_info               .LDW23
+000004e1	L	.debug_info               .LDW24
 000014fe	L	.debug_line               .LLN_E
 00000004	L	.debug_line               .LLN_B
 00000031	L	.debug_line               .LLN_P_E
